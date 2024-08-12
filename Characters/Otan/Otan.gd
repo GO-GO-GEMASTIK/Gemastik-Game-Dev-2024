@@ -24,8 +24,11 @@ func _physics_process(_delta):
 func _on_body_entered(body):
 	if body.name == "MC":
 		$InstructionBox.set_visible(true)
+		$AnimationPlayer.play("fade_in")
+		$PopSound.play()
 
 
 func _on_body_exited(body):
 	if body.name == "MC":
 		$InstructionBox.set_visible(false)
+		$AnimationPlayer.play("fade_out")

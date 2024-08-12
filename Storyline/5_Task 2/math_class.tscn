@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dwomayjw40mg4" path="res://Sprites/Tasks/Task 2/4 answer bg.png" id="20_tinfn"]
 [ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/Cek.gd" id="20_ydk57"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="26_waqk4"]
-[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="27_llqdg"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="27_llqdg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n3288"]
 animations = [{
@@ -310,6 +310,7 @@ text = "Hari ini aku mendapat
 100 untuk matematika."
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(961.062, 544.219)
 scale = Vector2(1.6049, 1.62898)
 texture = ExtResource("14_rjky4")
@@ -318,9 +319,11 @@ script = ExtResource("15_puprp")
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_waqk4")
 autoplay = true
+bus = &"Music"
 
 [node name="Finish_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_llqdg")
+bus = &"SFX"
 
 [connection signal="gui_input" from="Question_1/Answer1" to="Question_1/Answer1" method="_on_gui_input"]
 [connection signal="mouse_entered" from="Question_1/Answer1" to="Question_1/Answer1" method="_on_mouse_entered"]

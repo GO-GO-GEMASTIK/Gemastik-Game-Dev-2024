@@ -1,8 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://dfxrhn4v0j7we"]
+[gd_scene load_steps=49 format=3 uid="uid://dfxrhn4v0j7we"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/main_room_upper.gd" id="1_dka7d"]
 [ext_resource type="Texture2D" uid="uid://boopa0hjyduwr" path="res://Sprites/Background/lantai_atas.jpg" id="1_lltar"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_7l11l"]
+[ext_resource type="Texture2D" uid="uid://80sbg6w8cfwu" path="res://Sprites/Sekolah/lantai atas front acc.png" id="3_digu7"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="6_f7bmq"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="7_m166u"]
@@ -217,6 +218,12 @@ position = Vector2(4110, 702.25)
 scale = Vector2(1.02137, 1.07639)
 texture = ExtResource("1_lltar")
 
+[node name="FrontFurnitures" type="Sprite2D" parent="MapLayout"]
+z_index = 5
+position = Vector2(4110, 702.25)
+scale = Vector2(1.02137, 1.07639)
+texture = ExtResource("3_digu7")
+
 [node name="LeftWall" type="StaticBody2D" parent="MapLayout"]
 position = Vector2(-524, 630)
 
@@ -237,14 +244,21 @@ scale = Vector2(1, 2.1063)
 texture = ExtResource("2_7l11l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RightWall"]
-position = Vector2(8162, -930)
+position = Vector2(8005, -930)
 shape = SubResource("WorldBoundaryShape2D_n0a4s")
 
 [node name="Floor" type="StaticBody2D" parent="MapLayout"]
-position = Vector2(5066, 1169)
+position = Vector2(5066, 1149)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Floor"]
+position = Vector2(0, 14)
 shape = SubResource("WorldBoundaryShape2D_tlboh")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Floor"]
+z_index = 5
+position = Vector2(-844.611, 234)
+scale = Vector2(6.92935, 0.4858)
+texture = ExtResource("2_7l11l")
 
 [node name="Ceiling" type="Sprite2D" parent="MapLayout"]
 position = Vector2(4084, 18)

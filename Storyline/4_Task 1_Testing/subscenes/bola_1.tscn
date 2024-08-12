@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://nxmtope16u53"]
+
+[ext_resource type="Texture2D" uid="uid://c1pkqwb5mdm55" path="res://Sprites/Tasks/Task 1/Items/bola_1.png" id="1_8rm8t"]
+[ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Bola.gd" id="2_1l4hr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ny3l"]
+radius = 102.329
+
+[node name="Bola1" type="Sprite2D"]
+texture = ExtResource("1_8rm8t")
+script = ExtResource("2_1l4hr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2ny3l")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

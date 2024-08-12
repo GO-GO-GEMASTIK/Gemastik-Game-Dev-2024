@@ -39,10 +39,13 @@ directories/dtl_directory={
 "dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "gudang": "res://Dialogue/Timelines/gudang.dtl",
+"gudang_buba": "res://Dialogue/Timelines/gudang_buba.dtl",
+"intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
 "ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
 "ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
 "ke_koridor_utama": "res://Dialogue/Timelines/ke_koridor_utama.dtl",
 "locked_door": "res://Dialogue/Timelines/locked_door.dtl",
+"main_room": "res://Dialogue/Timelines/main_room.dtl",
 "otan": "res://Dialogue/Timelines/main_room.dtl",
 "papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
 "scary": "res://Dialogue/Timelines/scary.dtl",
@@ -78,7 +81,7 @@ text/autopauses={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]
@@ -163,4 +166,6 @@ key_d={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.051971, 0.051971, 0.051971, 1)

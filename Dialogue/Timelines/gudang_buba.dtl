@@ -1,0 +1,15 @@
+Buba: Hey, kamu pasti Ucing kan?
+- Uhh iya aku ucing
+	Buba: Salam kenal Ucing
+- ... [if {} == ""]
+	Buba: Kamu tidak perlu gugup
+Buba: Namaku Buba, kamu pasti terjebak disini karena memang terkadang pintu gudang ini suka macet
+Buba: Sudah jarang sekali dikunjungi, apa yang kamu lakukan disini?
+Ucing: Seekor orang utan yang menyuruhku kesini tadi...
+Buba: Oh itu pasti Otan, dia memang suka usil.
+Buba: Ayo aku antarkan ke ruang kepala asrama, karena kamu juga masih baru disini
+- Okay, terima kasih banyak Buba, aku menghargai bantuanmu
+	Buba: Tidak apa-apa Ucing
+- Okay..
+	Buba: Sebagai pengingat, hidupmu disini akan diterima dengan lebih baik jika kamu terbiasa mengembalikan rasa terima kasih ke orang-orang
+Buba: Okay, sebaiknya kita segera kesana karena ini sudah mulai sore...

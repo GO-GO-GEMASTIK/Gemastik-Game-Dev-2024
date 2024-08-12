@@ -1,0 +1,164 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkrt61rtbqi5"]
+
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="1_bqa46"]
+[ext_resource type="Script" path="res://Storyline/14_TBC/to_be_continued.gd" id="1_nme1x"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dx8mi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qitvp"]
+font = ExtResource("1_bqa46")
+font_size = 46
+
+[node name="ToBeContinued" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nme1x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -959.0
+offset_top = -539.5
+offset_right = 959.0
+offset_bottom = 539.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_dx8mi")
+
+[node name="WarningBox" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -508.0
+offset_top = -348.0
+offset_right = 508.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Terima Kasih telah bermain
+Detective Ucing: The Hollow Woods
+Prototype kami masih dalam work in progress
+Silakan mencoba untuk memainkan ke-8 task
+berikut yang muncul di versi lengkap
+yang akan datang!"
+label_settings = SubResource("LabelSettings_qitvp")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = 34.0
+offset_right = 337.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 1"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 2"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 3"
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 4"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = 172.5
+offset_right = 337.0
+offset_bottom = 239.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button5" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 5"
+
+[node name="Button6" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 6"
+
+[node name="Button7" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 7"
+
+[node name="Button8" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Task 8"
+
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.5
+offset_top = 360.0
+offset_right = 182.5
+offset_bottom = 427.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_bqa46")
+theme_override_font_sizes/font_size = 40
+text = "Back to Main Menu"
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

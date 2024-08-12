@@ -8,6 +8,8 @@ extends Node2D
 
 var placed_puzzle := 0
 
+var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().create_timer(1.0).timeout
@@ -24,3 +26,6 @@ func _on_plus_one():
 func task_finished():
 	finished_puzzle.set_visible(true)
 	finish.play()
+	TransitionScreen.transition_between()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_packed(tbc)

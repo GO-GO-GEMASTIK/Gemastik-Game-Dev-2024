@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5a4iig3jy8nq"]
+[gd_scene load_steps=4 format=3 uid="uid://xfcepi2ygm4g"]
 
 [ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="1_kq27f"]
 [ext_resource type="Script" path="res://Characters/Otan/Otan.gd" id="1_uqxan"]

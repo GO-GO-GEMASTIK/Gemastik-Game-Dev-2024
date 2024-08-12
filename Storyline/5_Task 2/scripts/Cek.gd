@@ -18,6 +18,8 @@ extends Area2D
 
 var collect = [0,0,0,0]
 
+var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -67,3 +69,7 @@ func _on_input_event(viewport, event, shape_idx):
 				base.visible = true
 				berhasil.visible = true
 				finish.play()
+				TransitionScreen.transition_between()
+				await TransitionScreen.on_transition_finished
+				get_tree().change_scene_to_packed(tbc)
+

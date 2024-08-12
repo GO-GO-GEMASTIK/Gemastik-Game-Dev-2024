@@ -14,6 +14,8 @@ var highest_z_index: int = 5
 
 @export var finish_sound: AudioStreamPlayer2D
 
+var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+
 # DUPLICATION CHECK
 func _process(_delta):
 	if Input.is_action_just_released("click"):
@@ -84,6 +86,9 @@ func _on_plate_ebi_input_event(_viewport, _event, _shape_idx):
 
 func _task_done():
 	finish_sound.play()
+	TransitionScreen.transition_between()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_packed(tbc)
 
 
 func get_new_highest_z_index():

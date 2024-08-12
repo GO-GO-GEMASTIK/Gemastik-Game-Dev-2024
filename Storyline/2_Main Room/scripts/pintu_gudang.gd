@@ -22,3 +22,4 @@ func _input(event):
 			TransitionScreen.transition_between()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_packed(gudang)
+			

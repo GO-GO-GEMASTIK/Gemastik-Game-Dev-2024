@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgaisr12ewerl"]
+[gd_scene load_steps=4 format=3 uid="uid://dgaisr12ewerl"]
 
 [ext_resource type="VideoStream" path="res://Sprites/Pembuka_Cerita.ogv" id="2_nlvdb"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/Room background/Hutan.mp3" id="3_6fcqs"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/IntroDialogue.gd" id="3_6p770"]
 
 [node name="Node2D" type="Node2D"]
@@ -12,5 +13,11 @@ scale = Vector2(1.5, 1.5)
 stream = ExtResource("2_nlvdb")
 autoplay = true
 script = ExtResource("3_6p770")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6fcqs")
+volume_db = -20.9
+autoplay = true
+bus = &"Music"
 
 [connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

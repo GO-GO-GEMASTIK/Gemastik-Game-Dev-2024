@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=3 uid="uid://clwyw6sghyy2c"]
+
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/main_room_upper.gd" id="1_a0tuu"]
+[ext_resource type="Texture2D" uid="uid://bjvlnyn6uy21t" path="res://Sprites/Background/laundry/laundry_room.jpg" id="2_55855"]
+[ext_resource type="Texture2D" uid="uid://80sbg6w8cfwu" path="res://Sprites/Sekolah/lantai atas front acc.png" id="3_bw8a5"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="4_00sqk"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_78ggp"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="6_7o4ms"]
+[ext_resource type="AudioStream" uid="uid://dlioh11jaccqe" path="res://Sounds/Room background/Laundry room backsound.wav" id="8_k2wrd"]
+[ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="39_7ndfw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k0ayi"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n0a4s"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tlboh"]
+
+[node name="LaundryRoom" type="Node2D"]
+position = Vector2(162, 1652)
+script = ExtResource("1_a0tuu")
+
+[node name="MapLayout" type="Node2D" parent="."]
+position = Vector2(-3000, -1776)
+
+[node name="LantaiAtas" type="Sprite2D" parent="MapLayout"]
+position = Vector2(4110, 702.25)
+scale = Vector2(1.02137, 1.07639)
+texture = ExtResource("2_55855")
+
+[node name="FrontFurnitures" type="Sprite2D" parent="MapLayout"]
+z_index = 5
+position = Vector2(4110, 702.25)
+scale = Vector2(1.02137, 1.07639)
+texture = ExtResource("3_bw8a5")
+
+[node name="LeftWall" type="StaticBody2D" parent="MapLayout"]
+position = Vector2(2252, 630)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/LeftWall"]
+scale = Vector2(1, 2.1063)
+texture = ExtResource("4_00sqk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapLayout/LeftWall"]
+position = Vector2(600, 0)
+shape = SubResource("WorldBoundaryShape2D_k0ayi")
+
+[node name="RightWall" type="StaticBody2D" parent="MapLayout"]
+position = Vector2(-2623, 1652)
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/RightWall"]
+position = Vector2(8605, -1013.13)
+scale = Vector2(1, 2.1063)
+texture = ExtResource("4_00sqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RightWall"]
+position = Vector2(8005, -930)
+shape = SubResource("WorldBoundaryShape2D_n0a4s")
+
+[node name="Floor" type="StaticBody2D" parent="MapLayout"]
+position = Vector2(4202, 1149)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Floor"]
+position = Vector2(0, 14)
+shape = SubResource("WorldBoundaryShape2D_tlboh")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Floor"]
+z_index = 5
+position = Vector2(-844.611, 234)
+scale = Vector2(6.92935, 0.4858)
+texture = ExtResource("4_00sqk")
+
+[node name="Ceiling" type="Sprite2D" parent="MapLayout"]
+position = Vector2(1844, 18)
+scale = Vector2(8.515, 0.296983)
+texture = ExtResource("4_00sqk")
+
+[node name="MC" parent="." instance=ExtResource("5_78ggp")]
+position = Vector2(1947, -1087)
+script = ExtResource("6_7o4ms")
+
+[node name="GuideIcon" type="Node" parent="."]
+
+[node name="Pintu1" parent="GuideIcon" instance=ExtResource("39_7ndfw")]
+position = Vector2(2170, 784)
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_k2wrd")
+volume_db = -17.655
+autoplay = true
+bus = &"Music"
+
+[connection signal="body_entered" from="GuideIcon/Pintu1" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="GuideIcon/Pintu1" to="." method="_on_body_exited"]

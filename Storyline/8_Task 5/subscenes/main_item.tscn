@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://3irljempc08e" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0015.png" id="16_xnoik"]
 [ext_resource type="Texture2D" uid="uid://d4eacshrxw63i" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0016.png" id="17_m1vpt"]
 [ext_resource type="Script" path="res://Storyline/8_Task 5/scripts/main_item.gd" id="18_30n5t"]
-[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="19_4revk"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="19_4revk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d4a3v"]
 animations = [{

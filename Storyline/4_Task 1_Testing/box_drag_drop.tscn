@@ -1,0 +1,338 @@
+[gd_scene load_steps=41 format=3 uid="uid://6fiftu8ufng2"]
+
+[ext_resource type="Script" path="res://Storyline/4_Task 1_Testing/box_drag_drop_test.gd" id="1_cga0s"]
+[ext_resource type="Texture2D" uid="uid://bqdl4kk2kqg3c" path="res://Sprites/Tasks/Task 1/Background.jpg" id="2_en8uj"]
+[ext_resource type="Texture2D" uid="uid://bdaadupd5i20y" path="res://Sprites/Tasks/Task 1/Boxes/Bola off.png" id="3_awmqg"]
+[ext_resource type="Texture2D" uid="uid://bkyutlelr2mp2" path="res://Sprites/Tasks/Task 1/Boxes/Bola on.png" id="4_qtsp2"]
+[ext_resource type="Texture2D" uid="uid://ccjmv1m76ms24" path="res://Sprites/Tasks/Task 1/Boxes/boneka off.png" id="5_touat"]
+[ext_resource type="Texture2D" uid="uid://b77n6jdvaakau" path="res://Sprites/Tasks/Task 1/Boxes/boneka on.png" id="6_tvgtn"]
+[ext_resource type="Texture2D" uid="uid://d33nl3fqqst0y" path="res://Sprites/Tasks/Task 1/Boxes/buku off.png" id="7_uref6"]
+[ext_resource type="Texture2D" uid="uid://bl8634im78btw" path="res://Sprites/Tasks/Task 1/Boxes/buku on.png" id="8_ciq3w"]
+[ext_resource type="Texture2D" uid="uid://c1pkqwb5mdm55" path="res://Sprites/Tasks/Task 1/Items/bola_1.png" id="9_osums"]
+[ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Bola.gd" id="10_seyiw"]
+[ext_resource type="Texture2D" uid="uid://d4eba08dbit2g" path="res://Sprites/Tasks/Task 1/Items/boneka_1.png" id="11_1irxb"]
+[ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Boneka.gd" id="12_i6xru"]
+[ext_resource type="Texture2D" uid="uid://c0vkru64bgduo" path="res://Sprites/Tasks/Task 1/Items/buku_1.png" id="13_funbx"]
+[ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Buku.gd" id="14_555eq"]
+[ext_resource type="Texture2D" uid="uid://dbxyh77x45tek" path="res://Sprites/Tasks/Task 1/Items/bola_2.png" id="15_wncve"]
+[ext_resource type="Texture2D" uid="uid://dpldviqy0tsv8" path="res://Sprites/Tasks/Task 1/Items/boneka_2.png" id="16_jwib3"]
+[ext_resource type="Texture2D" uid="uid://di5g3kg0gdxbo" path="res://Sprites/Tasks/Task 1/Items/buku_2.png" id="17_n02yl"]
+[ext_resource type="Texture2D" uid="uid://6bmp3hecp3tx" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="18_chs6h"]
+[ext_resource type="Texture2D" uid="uid://shnfkq3q7j7w" path="res://Sprites/Tasks/Task 1/Items/boneka_3.png" id="19_lr0fu"]
+[ext_resource type="Texture2D" uid="uid://dutps5njwhrrc" path="res://Sprites/Tasks/Task 1/Items/buku_3.png" id="20_nikh2"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="21_e2gij"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="22_uj5xe"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="23_lrjcu"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="24_w5qd5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jexdr"]
+atlas = ExtResource("3_awmqg")
+region = Rect2(0, 0, 421, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvgvr"]
+atlas = ExtResource("4_qtsp2")
+region = Rect2(0, 0, 483, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_shjtw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jexdr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvgvr")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0pja"]
+size = Vector2(416.5, 359)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc05s"]
+atlas = ExtResource("5_touat")
+region = Rect2(0, 0, 415, 357)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag860"]
+atlas = ExtResource("6_tvgtn")
+region = Rect2(0, 0, 483, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3yeh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc05s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag860")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iegvg"]
+size = Vector2(412, 356)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm084"]
+atlas = ExtResource("7_uref6")
+region = Rect2(0, 0, 415, 357)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ken8o"]
+atlas = ExtResource("8_ciq3w")
+region = Rect2(0, 0, 483, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_octyt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm084")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ken8o")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sin8u"]
+size = Vector2(414, 358)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ny3l"]
+radius = 102.329
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0t633"]
+radius = 102.329
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyt2f"]
+size = Vector2(23.86, 20.605)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k53q2"]
+size = Vector2(33.3389, 35.6574)
+
+[node name="Node" type="Node2D"]
+script = ExtResource("1_cga0s")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_en8uj")
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxBola" type="AnimatedSprite2D" parent="." groups=["box_ball", "zone"]]
+unique_name_in_owner = true
+position = Vector2(450, 350)
+sprite_frames = SubResource("SpriteFrames_shjtw")
+
+[node name="BoxBola" type="Area2D" parent="BoxBola"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBola/BoxBola"]
+visible = false
+shape = SubResource("RectangleShape2D_i0pja")
+
+[node name="BoxBoneka" type="AnimatedSprite2D" parent="." groups=["box_boneka", "zone"]]
+unique_name_in_owner = true
+position = Vector2(950, 350)
+sprite_frames = SubResource("SpriteFrames_o3yeh")
+
+[node name="BoxBoneka" type="Area2D" parent="BoxBoneka"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBoneka/BoxBoneka"]
+visible = false
+shape = SubResource("RectangleShape2D_iegvg")
+
+[node name="BoxBuku" type="AnimatedSprite2D" parent="." groups=["box_buku", "zone"]]
+unique_name_in_owner = true
+position = Vector2(1450, 350)
+sprite_frames = SubResource("SpriteFrames_octyt")
+
+[node name="BoxBuku" type="Area2D" parent="BoxBuku"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBuku/BoxBuku"]
+visible = false
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_sin8u")
+
+[node name="DropZones" type="Node2D" parent="."]
+
+[node name="DropZone" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(694, 893)
+
+[node name="DropZone2" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(369, 981)
+
+[node name="DropZone3" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(893, 1005)
+
+[node name="DropZone4" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(486, 822)
+
+[node name="DropZone5" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1456, 877)
+
+[node name="DropZone6" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1262, 806)
+
+[node name="DropZone7" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1328, 979)
+
+[node name="DropZone8" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1093, 903)
+
+[node name="DropZone9" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(883, 808)
+
+[node name="Bola1" type="Sprite2D" parent="."]
+texture = ExtResource("9_osums")
+script = ExtResource("10_seyiw")
+
+[node name="Area2D" type="Area2D" parent="Bola1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola1/Area2D"]
+shape = SubResource("CircleShape2D_2ny3l")
+
+[node name="Boneka1" type="Sprite2D" parent="."]
+texture = ExtResource("11_1irxb")
+script = ExtResource("12_i6xru")
+
+[node name="Area2D" type="Area2D" parent="Boneka1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boneka1/Area2D"]
+position = Vector2(-11, -11)
+rotation = -0.523598
+scale = Vector2(1.34029, 0.713122)
+shape = SubResource("CircleShape2D_0t633")
+
+[node name="Buku1" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("13_funbx")
+script = ExtResource("14_555eq")
+
+[node name="Area2D" type="Area2D" parent="Buku1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buku1/Area2D"]
+position = Vector2(-22.8571, -8.57143)
+rotation = -0.261799
+scale = Vector2(6.22909, 12.798)
+shape = SubResource("RectangleShape2D_cyt2f")
+
+[node name="Bola2" type="Sprite2D" parent="."]
+scale = Vector2(0.769901, 0.769901)
+texture = ExtResource("15_wncve")
+script = ExtResource("10_seyiw")
+
+[node name="Area2D" type="Area2D" parent="Bola2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola2/Area2D"]
+shape = SubResource("CircleShape2D_0t633")
+
+[node name="Boneka2" type="Sprite2D" parent="."]
+texture = ExtResource("16_jwib3")
+script = ExtResource("12_i6xru")
+
+[node name="Area2D" type="Area2D" parent="Boneka2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boneka2/Area2D"]
+position = Vector2(6, 10)
+rotation = 0.523598
+scale = Vector2(0.729349, 1.28695)
+shape = SubResource("CircleShape2D_0t633")
+
+[node name="Buku2" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("17_n02yl")
+script = ExtResource("14_555eq")
+
+[node name="Area2D" type="Area2D" parent="Buku2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buku2/Area2D"]
+scale = Vector2(12.4423, 7.99865)
+shape = SubResource("RectangleShape2D_cyt2f")
+
+[node name="Bola3" type="Sprite2D" parent="."]
+scale = Vector2(0.598446, 0.598446)
+texture = ExtResource("18_chs6h")
+script = ExtResource("10_seyiw")
+
+[node name="Area2D" type="Area2D" parent="Bola3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola3/Area2D"]
+shape = SubResource("CircleShape2D_0t633")
+
+[node name="Boneka3" type="Sprite2D" parent="."]
+texture = ExtResource("19_lr0fu")
+script = ExtResource("12_i6xru")
+
+[node name="Area2D" type="Area2D" parent="Boneka3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boneka3/Area2D"]
+position = Vector2(7, 13)
+rotation = 0.261799
+scale = Vector2(1.1641, 0.711884)
+shape = SubResource("CircleShape2D_0t633")
+
+[node name="Buku3" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("20_nikh2")
+script = ExtResource("14_555eq")
+
+[node name="Area2D" type="Area2D" parent="Buku3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buku3/Area2D"]
+position = Vector2(-14.2857, -4.28572)
+rotation = 1.0472
+scale = Vector2(8.92556, 4.41503)
+shape = SubResource("RectangleShape2D_k53q2")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Backsound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("21_e2gij")
+autoplay = true
+bus = &"Music"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("22_uj5xe")
+bus = &"SFX"
+
+[node name="Finish" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("23_lrjcu")
+bus = &"SFX"
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("24_w5qd5")
+bus = &"SFX"
+
+[connection signal="input_event" from="Bola1/Area2D" to="Bola1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Boneka1/Area2D" to="Boneka1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Buku1/Area2D" to="Buku1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Bola2/Area2D" to="Bola2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Boneka2/Area2D" to="Boneka2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Buku2/Area2D" to="Buku2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Bola3/Area2D" to="Bola3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Boneka3/Area2D" to="Boneka3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Buku3/Area2D" to="Buku3" method="_on_area_2d_input_event"]

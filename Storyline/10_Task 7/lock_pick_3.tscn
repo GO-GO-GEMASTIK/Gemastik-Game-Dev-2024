@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://ch55r430spwep"]
+[gd_scene load_steps=18 format=3 uid="uid://ch55r430spwep"]
 
 [ext_resource type="Texture2D" uid="uid://drs6ow3dcl7r5" path="res://Sprites/Tasks/Task 7/Level 3/base.jpg" id="1_n6fjq"]
 [ext_resource type="Script" path="res://Storyline/10_Task 7/scripts/lock_pick.gd" id="1_tusyj"]
 [ext_resource type="Texture2D" uid="uid://npu868d1vca3" path="res://Sprites/Tasks/Task 7/Level 1/kotak opsi pilihan.png" id="2_kh286"]
+[ext_resource type="PackedScene" uid="uid://bkrt61rtbqi5" path="res://Storyline/14_TBC/to_be_continued.tscn" id="2_oet8f"]
 [ext_resource type="Script" path="res://Storyline/10_Task 7/scripts/kunci.gd" id="3_t0qcs"]
 [ext_resource type="Texture2D" uid="uid://digkbq3maxo7f" path="res://Sprites/Tasks/Task 7/Level 1/kotak on.png" id="4_s2qar"]
 [ext_resource type="Texture2D" uid="uid://cap5nwqix4hxk" path="res://Sprites/Tasks/Task 7/Level 1/kotak jawaban salah.png" id="5_abign"]
@@ -21,6 +22,7 @@ size = Vector2(524, 252)
 
 [node name="LockPick3" type="Node2D" node_paths=PackedStringArray("correct_kunci", "finish_sound")]
 script = ExtResource("1_tusyj")
+scene = ExtResource("2_oet8f")
 correct_kunci = NodePath("Kunci4")
 finish_sound = NodePath("Finish")
 

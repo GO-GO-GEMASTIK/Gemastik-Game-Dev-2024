@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://ii8qstyd4h85"]
+[gd_scene load_steps=51 format=3 uid="uid://ii8qstyd4h85"]
 
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/storage_room_aftertask.gd" id="1_pgsjq"]
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_nmais"]
@@ -40,7 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Sprites/lighting animasi/box jatuh_0011.png" id="39_ro3xq"]
 [ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Sprites/lighting animasi/box jatuh_0012.png" id="40_d16tp"]
 [ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/animasi jatuh/box jatuh_0000.png" id="41_kowig"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="42_j8vj4"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="42_j8vj4"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="43_70aeb"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="43_qqf5e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
@@ -218,6 +219,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
 size = Vector2(47.5101, 8.52518)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr76q"]
+
 [node name="StorageRoom" type="Node2D"]
 script = ExtResource("1_pgsjq")
 
@@ -279,3 +282,19 @@ shape = SubResource("RectangleShape2D_6d3xw")
 [node name="MC" parent="." instance=ExtResource("42_j8vj4")]
 position = Vector2(1760, 582)
 script = ExtResource("43_qqf5e")
+
+[node name="Buba" type="Area2D" parent="."]
+position = Vector2(3212, 798)
+
+[node name="Sprite2D" type="Sprite2D" parent="Buba"]
+position = Vector2(0, 60)
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("43_70aeb")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buba"]
+position = Vector2(-226, 0)
+scale = Vector2(8.90422, 11.7853)
+shape = SubResource("RectangleShape2D_fr76q")
+
+[connection signal="body_entered" from="Buba" to="." method="_on_buba_body_entered"]

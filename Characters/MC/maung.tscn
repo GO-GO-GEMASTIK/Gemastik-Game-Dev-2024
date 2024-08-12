@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b42ewuvqwy8m6"]
+[gd_scene load_steps=4 format=3 uid="uid://d4hl5mb03n3sn"]
 
 [ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Sprites/Main Characters/Maung/Maung.png" id="1_3nuu4"]
 [ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="1_d6qx8"]

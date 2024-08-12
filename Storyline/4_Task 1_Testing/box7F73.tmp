@@ -1,0 +1,108 @@
+[gd_scene load_steps=17 format=3 uid="uid://biaqrikmnejos"]
+
+[ext_resource type="Texture2D" uid="uid://bqdl4kk2kqg3c" path="res://Sprites/Tasks/Task 1/Background.jpg" id="1_jvm5v"]
+[ext_resource type="PackedScene" uid="uid://c4l210mx7csop" path="res://Storyline/4_Task 1/subscenes/box_bola.tscn" id="2_at18e"]
+[ext_resource type="PackedScene" uid="uid://b3lkgcf5aku4y" path="res://Storyline/4_Task 1/subscenes/box_boneka.tscn" id="3_huwl0"]
+[ext_resource type="PackedScene" uid="uid://bvp3l652utlm0" path="res://Storyline/4_Task 1/subscenes/box_buku.tscn" id="4_6bdwv"]
+[ext_resource type="PackedScene" uid="uid://d25h0oyxdrucj" path="res://Storyline/4_Task 1/subscenes/bola_1.tscn" id="5_ooo14"]
+[ext_resource type="Texture2D" uid="uid://ciy8qjbxwyvhe" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="6_040il"]
+[ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Bola.gd" id="7_b58jc"]
+[ext_resource type="Texture2D" uid="uid://d4eba08dbit2g" path="res://Sprites/Tasks/Task 1/Items/boneka_1.png" id="7_uxobq"]
+[ext_resource type="Texture2D" uid="uid://dpldviqy0tsv8" path="res://Sprites/Tasks/Task 1/Items/boneka_2.png" id="8_xo7s5"]
+[ext_resource type="Texture2D" uid="uid://shnfkq3q7j7w" path="res://Sprites/Tasks/Task 1/Items/boneka_3.png" id="9_5b6nh"]
+[ext_resource type="Texture2D" uid="uid://c0vkru64bgduo" path="res://Sprites/Tasks/Task 1/Items/buku_1.png" id="10_6q3qb"]
+[ext_resource type="Texture2D" uid="uid://di5g3kg0gdxbo" path="res://Sprites/Tasks/Task 1/Items/buku_2.png" id="11_gtk5y"]
+[ext_resource type="Texture2D" uid="uid://dutps5njwhrrc" path="res://Sprites/Tasks/Task 1/Items/buku_3.png" id="12_f3qtf"]
+[ext_resource type="Texture2D" uid="uid://dbxyh77x45tek" path="res://Sprites/Tasks/Task 1/Items/bola_2.png" id="13_8s645"]
+[ext_resource type="PackedScene" uid="uid://b7kgnyec7hva8" path="res://Storyline/4_Task 1/subscenes/drop_zone.tscn" id="15_12sj2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ny3l"]
+radius = 102.329
+
+[node name="Node" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_jvm5v")
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxBola" parent="." instance=ExtResource("2_at18e")]
+position = Vector2(-59, -54)
+
+[node name="Bola_1" parent="." instance=ExtResource("5_ooo14")]
+position = Vector2(299, 827)
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BoxBoneka" parent="Node" instance=ExtResource("3_huwl0")]
+visible = false
+position = Vector2(942, 342)
+
+[node name="BoxBuku" parent="Node" instance=ExtResource("4_6bdwv")]
+visible = false
+position = Vector2(1502, 343)
+
+[node name="Bola2" type="Sprite2D" parent="Node" groups=["draggable"]]
+visible = false
+position = Vector2(800, 890)
+scale = Vector2(0.932836, 0.932836)
+texture = ExtResource("13_8s645")
+script = ExtResource("7_b58jc")
+
+[node name="Area2D" type="Area2D" parent="Node/Bola2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Bola2/Area2D"]
+shape = SubResource("CircleShape2D_2ny3l")
+
+[node name="Bola3" type="Sprite2D" parent="Node" groups=["draggable"]]
+visible = false
+position = Vector2(684, 793)
+scale = Vector2(0.598446, 0.598446)
+texture = ExtResource("6_040il")
+script = ExtResource("7_b58jc")
+
+[node name="Area2D" type="Area2D" parent="Node/Bola3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Bola3/Area2D"]
+shape = SubResource("CircleShape2D_2ny3l")
+
+[node name="Boneka1" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(654.5, 1542.5)
+texture = ExtResource("7_uxobq")
+
+[node name="Boneka2" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(357.5, 1487.5)
+texture = ExtResource("8_xo7s5")
+
+[node name="Boneka3" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(1061.5, 1285.5)
+texture = ExtResource("9_5b6nh")
+
+[node name="Buku1" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(831.5, 1405.5)
+texture = ExtResource("10_6q3qb")
+
+[node name="Buku2" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(1320.5, 1533.5)
+texture = ExtResource("11_gtk5y")
+
+[node name="Buku3" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(1507, 1406.5)
+texture = ExtResource("12_f3qtf")
+
+[node name="DropZone" parent="." instance=ExtResource("15_12sj2")]
+position = Vector2(958, 336)
+
+[node name="DropZone2" parent="." instance=ExtResource("15_12sj2")]
+position = Vector2(1289, 162)
+
+[connection signal="input_event" from="Node/Bola2/Area2D" to="Node/Bola2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Node/Bola3/Area2D" to="Node/Bola3" method="_on_area_2d_input_event"]
