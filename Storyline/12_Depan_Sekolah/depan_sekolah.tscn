@@ -1,0 +1,82 @@
+[gd_scene load_steps=16 format=3 uid="uid://cas8107ok4b61"]
+
+[ext_resource type="Texture2D" uid="uid://ct7cy3a02st2x" path="res://Sprites/BG/Dekat_Hutan.png" id="1_p7twg"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_4yltf"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_2fvck"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="4_y46n3"]
+[ext_resource type="PackedScene" uid="uid://b42ewuvqwy8m6" path="res://Characters/MC/maung.tscn" id="5_dfdp5"]
+[ext_resource type="PackedScene" uid="uid://c5a4iig3jy8nq" path="res://Characters/MC/buba.tscn" id="6_pybkq"]
+[ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="7_01jhq"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="8_kd1wv"]
+[ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="9_2r0et"]
+[ext_resource type="Script" path="res://Storyline/12_Depan_Sekolah/Talk.gd" id="10_hioge"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nd8q5"]
+distance = -110.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1od36"]
+normal = Vector2(-0.999983, 0.00576359)
+distance = 1432.15
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8hdb1"]
+normal = Vector2(1, 0)
+distance = 28.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7v1et"]
+size = Vector2(2260, 147)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_idy4e"]
+radius = 66.0984
+
+[node name="DepanSekolah" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2300.0
+offset_bottom = 1300.0
+texture = ExtResource("1_p7twg")
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(2078, 992)
+shape = SubResource("WorldBoundaryShape2D_nd8q5")
+one_way_collision_margin = 0.0
+
+[node name="RightCollision" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(3610, 546)
+shape = SubResource("WorldBoundaryShape2D_1od36")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(135, 505)
+shape = SubResource("WorldBoundaryShape2D_8hdb1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(1120, 1313.5)
+shape = SubResource("RectangleShape2D_7v1et")
+
+[node name="Sprite2D" type="Sprite2D" parent="Collisions"]
+position = Vector2(1156, 1256.13)
+scale = Vector2(1.92333, 0.391481)
+texture = ExtResource("2_4yltf")
+
+[node name="MC" parent="." instance=ExtResource("3_2fvck")]
+position = Vector2(1111, 757)
+script = ExtResource("4_y46n3")
+SPEED = 400.0
+
+[node name="Maung" parent="." instance=ExtResource("5_dfdp5")]
+position = Vector2(-222, 436)
+
+[node name="Buba" parent="." instance=ExtResource("6_pybkq")]
+position = Vector2(57, 348)
+script = ExtResource("7_01jhq")
+
+[node name="Cula" parent="." instance=ExtResource("8_kd1wv")]
+position = Vector2(460, -4)
+script = ExtResource("9_2r0et")
+
+[node name="Talk" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(4883, 133)
+shape = SubResource("CircleShape2D_idy4e")
+script = ExtResource("10_hioge")
