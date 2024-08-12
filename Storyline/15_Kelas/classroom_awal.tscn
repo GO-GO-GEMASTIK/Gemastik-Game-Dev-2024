@@ -1,0 +1,82 @@
+[gd_scene load_steps=15 format=3 uid="uid://dp4q43eecf64x"]
+
+[ext_resource type="Texture2D" uid="uid://boopa0hjyduwr" path="res://Sprites/Background/lantai_atas.jpg" id="1_vqkfv"]
+[ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="2_evrr6"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_opwib"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_5g55p"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="4_ay8mx"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="5_6dxc0"]
+[ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="5_c0as7"]
+[ext_resource type="PackedScene" uid="uid://xfcepi2ygm4g" path="res://Characters/MC/buba.tscn" id="6_n025k"]
+[ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="7_55h6y"]
+[ext_resource type="Script" path="res://Storyline/15_Kelas/Dialog_Kelas_1.gd" id="10_c1502"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
+normal = Vector2(0.00943929, -0.999955)
+distance = -11.0058
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6lnco"]
+normal = Vector2(-0.999966, -0.00829742)
+distance = -1308.31
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2op6"]
+normal = Vector2(0.99997, -0.00779094)
+distance = -3066.38
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evosh"]
+radius = 66.0984
+
+[node name="Kelas" type="Node2D"]
+
+[node name="MapLayout" type="Node" parent="."]
+
+[node name="KelasDummy" type="Sprite2D" parent="MapLayout"]
+position = Vector2(4089, 588)
+scale = Vector2(1.02137, 1.07639)
+texture = ExtResource("1_vqkfv")
+
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
+position = Vector2(3032, 38)
+scale = Vector2(1.02137, 1.07639)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2078, 992)
+shape = SubResource("WorldBoundaryShape2D_jgpxr")
+
+[node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(3610, 546)
+shape = SubResource("WorldBoundaryShape2D_6lnco")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(135, 505)
+shape = SubResource("WorldBoundaryShape2D_t2op6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Collisions"]
+visible = false
+position = Vector2(1041.79, 1086.97)
+scale = Vector2(6.65128, 0.22)
+texture = ExtResource("2_opwib")
+
+[node name="Maung" parent="MapLayout" instance=ExtResource("2_evrr6")]
+position = Vector2(973, 405)
+
+[node name="Buba" parent="MapLayout" instance=ExtResource("6_n025k")]
+position = Vector2(731, 329)
+script = ExtResource("7_55h6y")
+
+[node name="Cula" parent="MapLayout" instance=ExtResource("4_ay8mx")]
+position = Vector2(549, -23)
+script = ExtResource("5_c0as7")
+
+[node name="MC" parent="MapLayout" instance=ExtResource("4_5g55p")]
+position = Vector2(934, 599)
+scale = Vector2(1.02137, 1.07639)
+script = ExtResource("5_6dxc0")
+SPEED = 400.0
+
+[node name="Talk" type="CollisionShape2D" parent="MapLayout"]
+unique_name_in_owner = true
+position = Vector2(1892, 100)
+scale = Vector2(1.02137, 1.07639)
+shape = SubResource("CircleShape2D_evosh")
+script = ExtResource("10_c1502")
