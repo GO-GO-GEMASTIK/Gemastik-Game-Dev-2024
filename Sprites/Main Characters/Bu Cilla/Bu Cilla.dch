@@ -8,22 +8,22 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "KepalaMaung",
+"default_portrait": "Bu Cilla",
 "description": "",
-"display_name": "Maung",
+"display_name": "Bu Cilla",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"KepalaMaung": {
+"Bu Cilla": {
 "export_overrides": {
-"image": "\"res://Sprites/Main Characters/Maung/Maung.png\""
+"image": "\"res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 200),
-"scale": 1.5,
+"scale": 3.0,
 "scene": ""
 }
 },
-"scale": 2.0
+"scale": 1.0
 }

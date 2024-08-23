@@ -1,0 +1,117 @@
+[gd_scene load_steps=20 format=3 uid="uid://drranplgl0ijr"]
+
+[ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_evwll"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_0tfsx"]
+[ext_resource type="Script" path="res://Characters/Bu Cilla/BuCilla_After Kelas.gd" id="4_exoob"]
+[ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_21djg"]
+[ext_resource type="Script" path="res://Characters/Otan/Otan_Alt.gd" id="6_b4ucb"]
+[ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="7_irefg"]
+[ext_resource type="PackedScene" uid="uid://xfcepi2ygm4g" path="res://Characters/MC/buba.tscn" id="8_de3tv"]
+[ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="9_rj5jb"]
+[ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_jpt1t"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="11_c567g"]
+[ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="12_n05jt"]
+[ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="13_jly4w"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ekvcv"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="15_5e41x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
+normal = Vector2(-0.00358052, -0.999994)
+distance = 75.9657
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6lnco"]
+normal = Vector2(-0.999966, -0.00829742)
+distance = 3227.38
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2op6"]
+normal = Vector2(0.99997, -0.00779094)
+distance = -2525.19
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
+size = Vector2(260, 573)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6c8"]
+size = Vector2(178, 451)
+
+[node name="Kelas_Akhir" type="Node2D"]
+
+[node name="MapLayout" type="Node" parent="."]
+
+[node name="Kelas" type="Sprite2D" parent="MapLayout"]
+position = Vector2(1972, 595)
+scale = Vector2(1.02137, 1.07639)
+texture = ExtResource("1_evwll")
+
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
+position = Vector2(3032, 38)
+scale = Vector2(1.02137, 1.07639)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2078, 992)
+shape = SubResource("WorldBoundaryShape2D_jgpxr")
+
+[node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(3610, 546)
+shape = SubResource("WorldBoundaryShape2D_6lnco")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(135, 505)
+shape = SubResource("WorldBoundaryShape2D_t2op6")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Collisions"]
+visible = false
+position = Vector2(-1050.55, 1086.97)
+scale = Vector2(3.16405, 0.22)
+texture = ExtResource("3_0tfsx")
+
+[node name="BuCilla" type="Area2D" parent="MapLayout"]
+position = Vector2(3161, 585)
+script = ExtResource("4_exoob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/BuCilla"]
+position = Vector2(224, 201)
+shape = SubResource("RectangleShape2D_eho2w")
+
+[node name="SpriteBuCilla" type="Sprite2D" parent="MapLayout/BuCilla"]
+position = Vector2(217, 166)
+scale = Vector2(0.772, 0.814)
+texture = ExtResource("5_21djg")
+
+[node name="Otan" type="Area2D" parent="MapLayout"]
+position = Vector2(4, 458)
+script = ExtResource("6_b4ucb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Otan"]
+position = Vector2(1053, 401)
+shape = SubResource("RectangleShape2D_gl6c8")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Otan"]
+position = Vector2(1055, 428)
+scale = Vector2(0.640741, 0.624537)
+texture = ExtResource("7_irefg")
+
+[node name="Buba" parent="MapLayout" instance=ExtResource("8_de3tv")]
+position = Vector2(1572, 305)
+script = ExtResource("9_rj5jb")
+
+[node name="FrontAccKelas" type="Sprite2D" parent="MapLayout"]
+position = Vector2(1982.5, 619.5)
+scale = Vector2(1.01484, 1.00463)
+texture = ExtResource("10_jpt1t")
+
+[node name="Cula" parent="MapLayout" instance=ExtResource("11_c567g")]
+position = Vector2(-785, -22)
+script = ExtResource("12_n05jt")
+
+[node name="Maung" parent="MapLayout" instance=ExtResource("13_jly4w")]
+position = Vector2(1404, 349)
+
+[node name="MC" parent="MapLayout" instance=ExtResource("14_ekvcv")]
+position = Vector2(1524, 683)
+scale = Vector2(1.02137, 1.07639)
+script = ExtResource("15_5e41x")
+SPEED = 400.0
+
+[node name="FadeOutTimer" type="Timer" parent="MapLayout"]
+
+[node name="FadeInTimer" type="Timer" parent="MapLayout"]

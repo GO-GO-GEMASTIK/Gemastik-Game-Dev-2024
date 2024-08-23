@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://demipxcjfphxj"
-path="res://.godot/imported/Cula.png-5e1b32dfe3c8ce836ca68892dd3c6516.ctex"
+uid="uid://n46nj10lllvl"
+path="res://.godot/imported/Bu Cilla.png-d7492630f03efece1df2340ef85dd50d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Main Characters/Cula/Cula.png"
-dest_files=["res://.godot/imported/Cula.png-5e1b32dfe3c8ce836ca68892dd3c6516.ctex"]
+source_file="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png"
+dest_files=["res://.godot/imported/Bu Cilla.png-d7492630f03efece1df2340ef85dd50d.ctex"]
 
 [params]
 

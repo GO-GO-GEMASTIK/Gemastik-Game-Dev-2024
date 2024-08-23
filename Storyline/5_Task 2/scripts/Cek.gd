@@ -18,7 +18,7 @@ extends Area2D
 
 var collect = [0,0,0,0]
 
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var tbc = load("res://Storyline/15_Kelas/classroom_akhir.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -66,8 +66,6 @@ func _on_input_event(viewport, event, shape_idx):
 			else:
 				print(collect[0] + collect[1] + collect[2] + collect[3])
 				print("Benar semua!")
-				base.visible = true
-				berhasil.visible = true
 				finish.play()
 				TransitionScreen.transition_between()
 				await TransitionScreen.on_transition_finished

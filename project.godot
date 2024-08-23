@@ -26,6 +26,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Bu Cilla": "res://Sprites/Main Characters/Bu Cilla/Bu Cilla.dch",
 "Buba": "res://Dialogue/Characters/Buba.dch",
 "Characters/Maung": "res://Dialogue/Characters/Maung.dch",
 "Cula": "res://Characters/Cula/Cula.dch",
@@ -38,6 +39,9 @@ directories/dtl_directory={
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "dialog_kelas": "res://Dialogue/Timelines/dialog_kelas.dtl",
+"dialog_kelas_after": "res://Dialogue/Timelines/dialog_kelas_after.dtl",
+"dialog_kelas_after_2": "res://Dialogue/Timelines/dialog_kelas_after_2.dtl",
+"dialog_perkenalan": "res://Dialogue/Timelines/dialog_perkenalan.dtl",
 "dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "gudang": "res://Dialogue/Timelines/gudang.dtl",

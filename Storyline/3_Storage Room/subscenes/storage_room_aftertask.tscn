@@ -287,13 +287,13 @@ script = ExtResource("43_qqf5e")
 position = Vector2(3212, 798)
 
 [node name="Sprite2D" type="Sprite2D" parent="Buba"]
-position = Vector2(0, 60)
-scale = Vector2(0.725, 0.725)
+position = Vector2(-192.125, 23.875)
+scale = Vector2(0.49825, 0.52175)
 texture = ExtResource("43_70aeb")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buba"]
-position = Vector2(-226, 0)
+position = Vector2(-226, 68)
 scale = Vector2(8.90422, 11.7853)
 shape = SubResource("RectangleShape2D_fr76q")
 
