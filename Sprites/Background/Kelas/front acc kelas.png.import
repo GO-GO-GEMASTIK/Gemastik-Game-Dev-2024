@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://demipxcjfphxj"
-path="res://.godot/imported/Cula.png-5e1b32dfe3c8ce836ca68892dd3c6516.ctex"
+uid="uid://c6lkdgu2d2okt"
+path="res://.godot/imported/front acc kelas.png-92218efcba09baebe832fedf573c87ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Main Characters/Cula/Cula.png"
-dest_files=["res://.godot/imported/Cula.png-5e1b32dfe3c8ce836ca68892dd3c6516.ctex"]
+source_file="res://Sprites/Background/Kelas/front acc kelas.png"
+dest_files=["res://.godot/imported/front acc kelas.png-92218efcba09baebe832fedf573c87ba.ctex"]
 
 [params]
 

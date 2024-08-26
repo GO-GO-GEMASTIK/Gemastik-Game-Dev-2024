@@ -1,20 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://wmk0nqgr21fk"]
+[gd_scene load_steps=5 format=3 uid="uid://wmk0nqgr21fk"]
 
 [ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="1_j88bg"]
-[ext_resource type="Texture2D" uid="uid://na14yqw1rutj" path="res://Sprites/Main Characters/badak idle 2.png" id="2_ntxna"]
+[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Sprites/Main Characters/Cula/Cula.png" id="2_oqo3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwhoi"]
 size = Vector2(147, 378)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hf1he"]
-atlas = ExtResource("2_ntxna")
-region = Rect2(0, 0, 100, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqpgf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hf1he")
+"texture": ExtResource("2_oqo3a")
 }],
 "loop": true,
 "name": &"default",
@@ -29,7 +25,7 @@ position = Vector2(1638.5, 939)
 shape = SubResource("RectangleShape2D_gwhoi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1636, 935.25)
-scale = Vector2(3.6, 3.56641)
+position = Vector2(1625, 907)
+scale = Vector2(0.645875, 0.662869)
 sprite_frames = SubResource("SpriteFrames_pqpgf")
 autoplay = "default"

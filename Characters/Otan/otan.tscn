@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://dnyv5ckw26ug8"]
 
 [ext_resource type="Script" path="res://Characters/Otan/Otan.gd" id="1_pyt5c"]
-[ext_resource type="Texture2D" uid="uid://dru6fltws8qeg" path="res://Sprites/Main Characters/Otan/sketch-removebg-preview.png" id="2_xcg0r"]
+[ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="2_tqv08"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="3_78e6i"]
 [ext_resource type="Texture2D" uid="uid://n0ll744r5ydv" path="res://Sprites/Guide Icon/chat/chat_0000.png" id="4_ydyib"]
 [ext_resource type="Texture2D" uid="uid://3da1cdra3368" path="res://Sprites/Guide Icon/chat/chat_0001.png" id="5_un324"]
@@ -136,7 +136,7 @@ script = ExtResource("1_pyt5c")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 48)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("2_xcg0r")
+texture = ExtResource("2_tqv08")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
