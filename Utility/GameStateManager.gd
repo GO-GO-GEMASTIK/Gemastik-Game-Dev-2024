@@ -1,6 +1,6 @@
 extends Node
 
-var ucing_pos_main := Vector2(1152.0, 628.0)
+var ucing_pos_main := Vector2(800.0, 628.0)
 
 
 func update_pos_main(newPos: Vector2):

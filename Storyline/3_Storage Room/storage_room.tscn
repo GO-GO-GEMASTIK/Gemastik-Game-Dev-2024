@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=58 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/storage_room.gd" id="1_qp5mm"]
@@ -43,7 +43,10 @@
 [ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Sprites/lighting animasi/box jatuh_0011.png" id="40_42jci"]
 [ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Sprites/lighting animasi/box jatuh_0012.png" id="41_amnve"]
 [ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/animasi jatuh/box jatuh_0000.png" id="42_kf0wf"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="44_hlwxj"]
 [ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/Room background/gudang.mp3" id="44_u1iqs"]
+[ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Sprites/Guide Icon/warnings/warning box.png" id="45_gcn08"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="46_a40nk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -220,6 +223,58 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
 size = Vector2(47.5101, 8.52518)
 
+[sub_resource type="Animation" id="Animation_x2136"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0vlkl"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mluc"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fe4pt"]
+_data = {
+"RESET": SubResource("Animation_x2136"),
+"fade_to_black": SubResource("Animation_0vlkl"),
+"fade_to_normal": SubResource("Animation_0mluc")
+}
+
 [node name="StorageRoom" type="Node2D"]
 script = ExtResource("1_qp5mm")
 
@@ -249,7 +304,7 @@ texture = ExtResource("1_is3rv")
 [node name="Collisions" type="StaticBody2D" parent="MapLayout"]
 
 [node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
-position = Vector2(2078, 992)
+position = Vector2(2078, 1012)
 shape = SubResource("WorldBoundaryShape2D_qon2x")
 
 [node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
@@ -285,11 +340,72 @@ position = Vector2(2996, 566)
 script = ExtResource("29_vyccd")
 SPEED = 400.0
 
+[node name="Buba" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(3160, 865)
+scale = Vector2(0.725, 0.725)
+texture = ExtResource("44_hlwxj")
+flip_h = true
+
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1946, 67)
 stream = ExtResource("44_u1iqs")
 autoplay = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_fe4pt")
+}
+
+[node name="TaskWarning" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_gcn08")
+
+[node name="Button" type="Button" parent="CanvasLayer/TaskWarning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("46_a40nk")
+
 [connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
 [connection signal="start_task" from="Box" to="." method="_on_box_start_task"]
 [connection signal="animation_finished" from="Box/AnimatedSprite2D" to="Box" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="Box" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/TaskWarning/Button" to="Box" method="_on_button_pressed"]

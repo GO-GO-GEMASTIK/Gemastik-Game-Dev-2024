@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://ii8qstyd4h85"]
+[gd_scene load_steps=63 format=3 uid="uid://ii8qstyd4h85"]
 
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/storage_room_aftertask.gd" id="1_pgsjq"]
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_nmais"]
@@ -43,6 +43,18 @@
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="42_j8vj4"]
 [ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="43_70aeb"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="43_qqf5e"]
+[ext_resource type="Texture2D" uid="uid://bt1dnr10hswby" path="res://Sprites/Loading/loading_scene_0000.png" id="44_sqf3l"]
+[ext_resource type="Texture2D" uid="uid://mhr37iao75q6" path="res://Sprites/Loading/loading_scene_0001.png" id="45_mrkeu"]
+[ext_resource type="Texture2D" uid="uid://xnkgu6g7hfk7" path="res://Sprites/Loading/loading_scene_0002.png" id="46_ybi6n"]
+[ext_resource type="Texture2D" uid="uid://du0l6ldv8ibcp" path="res://Sprites/Loading/loading_scene_0003.png" id="47_p64sp"]
+[ext_resource type="Texture2D" uid="uid://dd6kbi8m7o3er" path="res://Sprites/Loading/loading_scene_0004.png" id="48_ygclb"]
+[ext_resource type="Texture2D" uid="uid://d360sb8kfmfej" path="res://Sprites/Loading/loading_scene_0005.png" id="49_lqxjv"]
+[ext_resource type="Texture2D" uid="uid://51hep3kc6npk" path="res://Sprites/Loading/loading_scene_0006.png" id="50_7swjx"]
+[ext_resource type="Texture2D" uid="uid://c1ijom7dwemfq" path="res://Sprites/Loading/loading_scene_0007.png" id="51_51hsn"]
+[ext_resource type="Texture2D" uid="uid://bootg05f10pb1" path="res://Sprites/Loading/loading_scene_0008.png" id="52_68r7j"]
+[ext_resource type="Texture2D" uid="uid://b8px8og8tijba" path="res://Sprites/Loading/loading_scene_0009.png" id="53_2f6hx"]
+[ext_resource type="Texture2D" uid="uid://cw1m8lqmdsp7" path="res://Sprites/Loading/loading_scene_0010.png" id="54_26a7w"]
+[ext_resource type="Texture2D" uid="uid://cok1ujgk7tdfl" path="res://Sprites/Loading/loading_scene_0011.png" id="55_fokfi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -219,7 +231,49 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
 size = Vector2(47.5101, 8.52518)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fr76q"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_imy2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_sqf3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_mrkeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ybi6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_p64sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ygclb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_lqxjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_7swjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_51hsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_68r7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_2f6hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_26a7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_fokfi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="StorageRoom" type="Node2D"]
 script = ExtResource("1_pgsjq")
@@ -250,7 +304,7 @@ texture = ExtResource("26_6qj8n")
 [node name="Collisions" type="StaticBody2D" parent="MapLayout"]
 
 [node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
-position = Vector2(2078, 992)
+position = Vector2(1936, 1011)
 shape = SubResource("WorldBoundaryShape2D_qon2x")
 
 [node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
@@ -280,21 +334,20 @@ scale = Vector2(2.98735, 51.7618)
 shape = SubResource("RectangleShape2D_6d3xw")
 
 [node name="MC" parent="." instance=ExtResource("42_j8vj4")]
-position = Vector2(1760, 582)
+position = Vector2(1760, 597)
 script = ExtResource("43_qqf5e")
 
-[node name="Buba" type="Area2D" parent="."]
-position = Vector2(3212, 798)
-
-[node name="Sprite2D" type="Sprite2D" parent="Buba"]
-position = Vector2(0, 60)
+[node name="Buba" type="Sprite2D" parent="."]
+position = Vector2(2087, 862)
 scale = Vector2(0.725, 0.725)
 texture = ExtResource("43_70aeb")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buba"]
-position = Vector2(-226, 0)
-scale = Vector2(8.90422, 11.7853)
-shape = SubResource("RectangleShape2D_fr76q")
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
-[connection signal="body_entered" from="Buba" to="." method="_on_buba_body_entered"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_imy2c")
+frame = 11
+frame_progress = 1.0

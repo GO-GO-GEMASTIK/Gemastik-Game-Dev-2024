@@ -17,6 +17,8 @@ func _ready():
 		await get_tree().create_timer(0.5).timeout
 		camera.set_position_smoothing_enabled(true)
 
+
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

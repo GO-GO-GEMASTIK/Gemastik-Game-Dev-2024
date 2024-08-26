@@ -15,3 +15,5 @@ Ucing: Apakah itu ruang guru?
 Otan: Cari saja~!
 Otan: Kamu pasti akan menyukainya!!!
 Otan: Hihihi..
+[signal arg="door_instruction_1"]
+[signal arg="enable_door"]
