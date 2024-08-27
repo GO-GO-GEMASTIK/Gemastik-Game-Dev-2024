@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cas8107ok4b61"]
 
-[ext_resource type="Texture2D" uid="uid://ct7cy3a02st2x" path="res://Sprites/BG/Dekat_Hutan.png" id="1_p7twg"]
+[ext_resource type="Texture2D" uid="uid://ct7cy3a02st2x" path="res://Sprites/MainMenu/Dekat_Hutan.png" id="1_p7twg"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_4yltf"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_2fvck"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="4_y46n3"]

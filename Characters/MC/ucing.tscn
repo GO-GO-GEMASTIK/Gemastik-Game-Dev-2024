@@ -74,7 +74,6 @@ size = Vector2(368.425, 564.647)
 z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1, 1)
 rotation = 1.31249
 scale = Vector2(3, -1.649)
 position_smoothing_enabled = true
@@ -82,7 +81,7 @@ drag_vertical_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(36, 248)
-scale = Vector2(0.548, 0.588)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_38lki")
 animation = &"idle"
 autoplay = "idle"
