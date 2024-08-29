@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 @onready var ucing = $Sprite2D
 @onready var walking_sound = $Walk
 @onready var camera = $Camera2D
+@onready var good_bad_traits_script: Script = preload("res://Utility/GoodBadTraits.gd")
 
 var movement_enabled = true
 
@@ -16,6 +17,8 @@ func _ready():
 		camera.position = Vector2.ZERO
 		await get_tree().create_timer(0.5).timeout
 		camera.set_position_smoothing_enabled(true)
+		
+	good_bad_traits_script = good_bad_traits_script.new()
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -72,3 +75,8 @@ func enable_movement():
 
 
 
+
+
+func _on_dialogic_game_handler_signal_event(argument):
+	#print(argument)
+	good_bad_traits_script._change_traits(argument)
