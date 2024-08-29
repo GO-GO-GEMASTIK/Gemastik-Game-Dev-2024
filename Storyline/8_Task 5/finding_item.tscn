@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c8wy8odruvygc"]
+[gd_scene load_steps=40 format=3 uid="uid://c8wy8odruvygc"]
 
 [ext_resource type="Texture2D" uid="uid://2tmae7o253d5" path="res://Sprites/Tasks/Task 5/background.jpg" id="1_py7ey"]
 [ext_resource type="Script" path="res://Storyline/8_Task 5/finding_item.gd" id="1_ycj8x"]
@@ -40,13 +40,51 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aboxl"]
 
+[sub_resource type="Animation" id="Animation_3tmru"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainItem:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rjcws"]
+resource_name = "main_item"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainItem:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v4318"]
+_data = {
+"RESET": SubResource("Animation_3tmru"),
+"main_item": SubResource("Animation_rjcws")
+}
+
 [node name="FindingItem" type="Node2D"]
 script = ExtResource("1_ycj8x")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="BG" type="Node2D" parent="."]
 z_index = -5
-offset_right = 40.0
-offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="BG"]
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_py7ey")
 
 [node name="MainItem" parent="." instance=ExtResource("2_8buma")]
@@ -405,6 +443,11 @@ shape = SubResource("CircleShape2D_aboxl")
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("33_33423")
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_v4318")
+}
 
 [connection signal="input_event" from="Trashes/Trash/Area2D" to="Trashes/Trash" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Trashes/Trash/Area2D" to="Trashes/Trash" method="_on_mouse_entered"]

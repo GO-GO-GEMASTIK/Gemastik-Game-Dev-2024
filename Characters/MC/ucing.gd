@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 @onready var camera = $Camera2D
 
 var movement_enabled = true
+var last_facing_left = false
 
 func _ready():
 	if owner.name == "Main":
@@ -16,7 +17,6 @@ func _ready():
 		camera.position = Vector2.ZERO
 		await get_tree().create_timer(0.5).timeout
 		camera.set_position_smoothing_enabled(true)
-
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -34,7 +34,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and movement_enabled:
 		velocity.y = JUMP_VELOCITY
 		if walking_sound.playing:
 			walking_sound.stop()
@@ -44,21 +44,21 @@ func _physics_process(delta):
 		var direction = Input.get_axis("left", "right")
 		if direction:
 			velocity.x = direction * SPEED
+			
+			# Update last facing direction
+			if direction < 0:
+				last_facing_left = true
+			elif direction > 0:
+				last_facing_left = false
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED-50)
 		
-		# Play or stop walking sound based on movement and ground state
-		if direction != 0 and is_on_floor():
-			if not walking_sound.playing:
-				walking_sound.play()
-		else:
-			if walking_sound.playing:
-				walking_sound.stop()
-
+		# Play or stop walking sound based on movement and ground state...
+	
 	move_and_slide()
 
-	var isLeft = velocity.x < 0
-	ucing.flip_h = isLeft
+	# Set sprite flip based on the last direction faced
+	ucing.flip_h = last_facing_left
 #endregion =============================================
 	
 
@@ -72,5 +72,11 @@ func disable_movement():
 func enable_movement():
 	movement_enabled = true
 
+func look_left():
+	last_facing_left = true
+	ucing.flip_h = true
 
+func look_right():
+	last_facing_left = false
+	ucing.flip_h = false
 

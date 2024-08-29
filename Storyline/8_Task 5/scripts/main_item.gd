@@ -2,9 +2,12 @@ extends AnimatedSprite2D
 
 @export var finish_sound: AudioStreamPlayer2D
 
+@onready var main_item = $"."
+@onready var animation_player = $"../AnimationPlayer"
+
 var group := "dragable"
 
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var tbc = load("res://Storyline/16_Bagian4/kamar/kamar.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,7 +22,11 @@ func _process(delta):
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if event.is_action_pressed("click"):
 		if _is_on_top():
+			main_item.set_z_index(30)
+			animation_player.play("main_item")
 			finish_sound.play()
+			GameStateManager.complete_task(5)
+			await get_tree().create_timer(3.0).timeout
 			TransitionScreen.transition_between()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_packed(tbc)

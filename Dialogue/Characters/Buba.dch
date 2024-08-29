@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "speaker_textbox"
 },
 "default_portrait": "KepalaBuba",
 "description": "",
@@ -21,8 +21,8 @@
 },
 "ignore_char_scale": false,
 "mirror": false,
-"offset": Vector2(0, 150),
-"scale": 1.1,
+"offset": Vector2(0, 125),
+"scale": 1.0,
 "scene": ""
 }
 },

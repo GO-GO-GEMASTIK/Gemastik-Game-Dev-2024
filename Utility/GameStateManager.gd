@@ -16,7 +16,7 @@ var tasks := {
 var free_roam_states := {
 	"Gudang": false,
 	"Kantin": false,
-	"Laundry": false
+	"Laundry": false,
 }
 
 func update_pos_main(newPos: Vector2):
