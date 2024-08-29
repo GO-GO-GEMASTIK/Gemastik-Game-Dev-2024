@@ -61,7 +61,7 @@ directories/dtl_directory={
 "unable_door": "res://Dialogue/Timelines/unable_door.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
-layout/style_list=["res://Dialogue/speaker_textbox.tres"]
+layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/bubble_textbox.tres", "res://Dialogue/custom_textbox.tres"]
 layout/default_style="res://Dialogue/speaker_textbox.tres"
 glossary/default_case_sensitive=true
 variables={}

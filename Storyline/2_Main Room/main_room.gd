@@ -7,11 +7,19 @@ var door_dialogue := false
 var on_otan := false
 var on_door := false
 
+@onready var cari_pintu = $CanvasLayer/CariPintu
+
 func _ready():
 # PRELOAD TIMELINE TO REDUCE LAG
 	style.prepare()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
+func _on_dialogic_signal(argument:String):
+	if argument == "door_instruction_1":
+		cari_pintu.set_visible(true)
+	if argument == "enable_door":
+		door_dialogue = true
 
 #region DIALOGUE MANAGER
 func _dialogue_start(body, dialogue: String):
@@ -36,7 +44,6 @@ func _input(event):
 	if !dialogue_is_running:
 		if event.is_action_pressed("talk") and on_otan:
 			dialogue_starter("otan")
-			door_dialogue = true
 		if event.is_action_pressed("talk") and on_door:
 			if door_dialogue:
 				dialogue_starter("wrong_door")

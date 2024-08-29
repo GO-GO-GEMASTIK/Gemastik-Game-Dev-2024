@@ -1,49 +1,55 @@
-[gd_scene load_steps=51 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=61 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/storage_room.gd" id="1_qp5mm"]
-[ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_dn7qr"]
-[ext_resource type="Texture2D" uid="uid://r6uyc6w0rqk5" path="res://Sprites/lighting animasi/lighting animation_0000.png" id="3_clcht"]
-[ext_resource type="Texture2D" uid="uid://dxpkblquk0k7m" path="res://Sprites/lighting animasi/lighting animation_0001.png" id="4_sbou6"]
-[ext_resource type="Texture2D" uid="uid://y4oytpbcgr0h" path="res://Sprites/lighting animasi/lighting animation_0002.png" id="5_ykg3p"]
-[ext_resource type="Texture2D" uid="uid://2bnr3ckobsit" path="res://Sprites/lighting animasi/lighting animation_0003.png" id="6_kv11r"]
-[ext_resource type="Texture2D" uid="uid://dwfmmk8u7a4av" path="res://Sprites/lighting animasi/lighting animation_0004.png" id="7_74xw6"]
-[ext_resource type="Texture2D" uid="uid://13pg2y4p4wb4" path="res://Sprites/lighting animasi/lighting animation_0005.png" id="8_rd27h"]
-[ext_resource type="Texture2D" uid="uid://yq71b2gjsgcx" path="res://Sprites/lighting animasi/lighting animation_0006.png" id="9_i72y3"]
-[ext_resource type="Texture2D" uid="uid://t5dgjvydkufi" path="res://Sprites/lighting animasi/lighting animation_0007.png" id="10_46ymg"]
-[ext_resource type="Texture2D" uid="uid://bxu23igimcu6y" path="res://Sprites/lighting animasi/lighting animation_0008.png" id="11_1icxb"]
-[ext_resource type="Texture2D" uid="uid://dp15e711qcjdv" path="res://Sprites/lighting animasi/lighting animation_0009.png" id="12_3fahp"]
-[ext_resource type="Texture2D" uid="uid://exj012aqdvbf" path="res://Sprites/lighting animasi/lighting animation_0010.png" id="13_76xub"]
-[ext_resource type="Texture2D" uid="uid://dkpsi6jhsvan0" path="res://Sprites/lighting animasi/lighting animation_0011.png" id="14_mn83y"]
-[ext_resource type="Texture2D" uid="uid://b1q1o3tuqrgiq" path="res://Sprites/lighting animasi/lighting animation_0012.png" id="15_bpero"]
-[ext_resource type="Texture2D" uid="uid://dfm0tyyfsyabl" path="res://Sprites/lighting animasi/lighting animation_0013.png" id="16_glvpm"]
-[ext_resource type="Texture2D" uid="uid://m4aa8usoppuc" path="res://Sprites/lighting animasi/lighting animation_0014.png" id="17_lc6lt"]
-[ext_resource type="Texture2D" uid="uid://bbwwvsdo4pu3s" path="res://Sprites/lighting animasi/lighting animation_0015.png" id="18_s35d2"]
-[ext_resource type="Texture2D" uid="uid://brfe2cf4medsg" path="res://Sprites/lighting animasi/lighting animation_0016.png" id="19_8n7g5"]
-[ext_resource type="Texture2D" uid="uid://bhtlvdiuy11f0" path="res://Sprites/lighting animasi/lighting animation_0017.png" id="20_c3hsg"]
-[ext_resource type="Texture2D" uid="uid://tmegati2ov1g" path="res://Sprites/lighting animasi/lighting animation_0018.png" id="21_715vq"]
-[ext_resource type="Texture2D" uid="uid://dqmjyycmbqplq" path="res://Sprites/lighting animasi/lighting animation_0019.png" id="22_78wos"]
-[ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Sprites/lighting animasi/lighting animation_0020.png" id="23_gw6c8"]
-[ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
-[ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/lighting animasi/lighting animation_0022.png" id="25_bahit"]
+[ext_resource type="Texture2D" uid="uid://l4pl62b5cyt3" path="res://Sprites/Background/Gudang/base.jpg" id="2_yfugn"]
+[ext_resource type="Texture2D" uid="uid://r6uyc6w0rqk5" path="res://Sprites/Props/lighting animasi/lighting animation_0000.png" id="3_clcht"]
+[ext_resource type="Texture2D" uid="uid://buo7t2c6nqqca" path="res://Sprites/Background/Gudang/front acc.png" id="3_h4gmm"]
+[ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Sprites/Background/Gudang/front lighting.png" id="4_gjhbj"]
+[ext_resource type="Texture2D" uid="uid://dxpkblquk0k7m" path="res://Sprites/Props/lighting animasi/lighting animation_0001.png" id="4_sbou6"]
+[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Sprites/Background/Gudang/lighting on.png" id="5_1b8qv"]
+[ext_resource type="Texture2D" uid="uid://y4oytpbcgr0h" path="res://Sprites/Props/lighting animasi/lighting animation_0002.png" id="5_ykg3p"]
+[ext_resource type="Texture2D" uid="uid://2bnr3ckobsit" path="res://Sprites/Props/lighting animasi/lighting animation_0003.png" id="6_kv11r"]
+[ext_resource type="Texture2D" uid="uid://dwfmmk8u7a4av" path="res://Sprites/Props/lighting animasi/lighting animation_0004.png" id="7_74xw6"]
+[ext_resource type="Texture2D" uid="uid://13pg2y4p4wb4" path="res://Sprites/Props/lighting animasi/lighting animation_0005.png" id="8_rd27h"]
+[ext_resource type="Texture2D" uid="uid://yq71b2gjsgcx" path="res://Sprites/Props/lighting animasi/lighting animation_0006.png" id="9_i72y3"]
+[ext_resource type="Texture2D" uid="uid://t5dgjvydkufi" path="res://Sprites/Props/lighting animasi/lighting animation_0007.png" id="10_46ymg"]
+[ext_resource type="Texture2D" uid="uid://bxu23igimcu6y" path="res://Sprites/Props/lighting animasi/lighting animation_0008.png" id="11_1icxb"]
+[ext_resource type="Texture2D" uid="uid://dp15e711qcjdv" path="res://Sprites/Props/lighting animasi/lighting animation_0009.png" id="12_3fahp"]
+[ext_resource type="Texture2D" uid="uid://exj012aqdvbf" path="res://Sprites/Props/lighting animasi/lighting animation_0010.png" id="13_76xub"]
+[ext_resource type="Texture2D" uid="uid://dkpsi6jhsvan0" path="res://Sprites/Props/lighting animasi/lighting animation_0011.png" id="14_mn83y"]
+[ext_resource type="Texture2D" uid="uid://b1q1o3tuqrgiq" path="res://Sprites/Props/lighting animasi/lighting animation_0012.png" id="15_bpero"]
+[ext_resource type="Texture2D" uid="uid://dfm0tyyfsyabl" path="res://Sprites/Props/lighting animasi/lighting animation_0013.png" id="16_glvpm"]
+[ext_resource type="Texture2D" uid="uid://m4aa8usoppuc" path="res://Sprites/Props/lighting animasi/lighting animation_0014.png" id="17_lc6lt"]
+[ext_resource type="Texture2D" uid="uid://bbwwvsdo4pu3s" path="res://Sprites/Props/lighting animasi/lighting animation_0015.png" id="18_s35d2"]
+[ext_resource type="Texture2D" uid="uid://brfe2cf4medsg" path="res://Sprites/Props/lighting animasi/lighting animation_0016.png" id="19_8n7g5"]
+[ext_resource type="Texture2D" uid="uid://bhtlvdiuy11f0" path="res://Sprites/Props/lighting animasi/lighting animation_0017.png" id="20_c3hsg"]
+[ext_resource type="Texture2D" uid="uid://tmegati2ov1g" path="res://Sprites/Props/lighting animasi/lighting animation_0018.png" id="21_715vq"]
+[ext_resource type="Texture2D" uid="uid://dqmjyycmbqplq" path="res://Sprites/Props/lighting animasi/lighting animation_0019.png" id="22_78wos"]
+[ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Sprites/Props/lighting animasi/lighting animation_0020.png" id="23_gw6c8"]
+[ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/Props/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
+[ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/Props/lighting animasi/lighting animation_0022.png" id="25_bahit"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/Box.gd" id="28_gjxsm"]
-[ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Sprites/lighting animasi/box jatuh_0000.png" id="29_injsf"]
+[ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Sprites/Props/lighting animasi/box jatuh_0000.png" id="29_injsf"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="29_vyccd"]
-[ext_resource type="Texture2D" uid="uid://b3y1dyoa4hq6f" path="res://Sprites/lighting animasi/box jatuh_0001.png" id="30_1oqi7"]
-[ext_resource type="Texture2D" uid="uid://hc6n0iucrdan" path="res://Sprites/lighting animasi/box jatuh_0002.png" id="31_l4hrt"]
-[ext_resource type="Texture2D" uid="uid://hdwds2cgwhc2" path="res://Sprites/lighting animasi/box jatuh_0003.png" id="32_5673p"]
-[ext_resource type="Texture2D" uid="uid://644uvfa8gooy" path="res://Sprites/lighting animasi/box jatuh_0004.png" id="33_h1eqg"]
-[ext_resource type="Texture2D" uid="uid://1dc5sednmma8" path="res://Sprites/lighting animasi/box jatuh_0005.png" id="34_uvobn"]
-[ext_resource type="Texture2D" uid="uid://4t8btidyeqt" path="res://Sprites/lighting animasi/box jatuh_0006.png" id="35_lymjm"]
-[ext_resource type="Texture2D" uid="uid://bgtrs82edumib" path="res://Sprites/lighting animasi/box jatuh_0007.png" id="36_2noam"]
-[ext_resource type="Texture2D" uid="uid://ce1wmhna4ntsu" path="res://Sprites/lighting animasi/box jatuh_0008.png" id="37_yg3ib"]
-[ext_resource type="Texture2D" uid="uid://cerorxydwubcm" path="res://Sprites/lighting animasi/box jatuh_0009.png" id="38_x017k"]
-[ext_resource type="Texture2D" uid="uid://btk08lqdktfix" path="res://Sprites/lighting animasi/box jatuh_0010.png" id="39_jmost"]
-[ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Sprites/lighting animasi/box jatuh_0011.png" id="40_42jci"]
-[ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Sprites/lighting animasi/box jatuh_0012.png" id="41_amnve"]
-[ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/animasi jatuh/box jatuh_0000.png" id="42_kf0wf"]
+[ext_resource type="Texture2D" uid="uid://b3y1dyoa4hq6f" path="res://Sprites/Props/lighting animasi/box jatuh_0001.png" id="30_1oqi7"]
+[ext_resource type="Texture2D" uid="uid://hc6n0iucrdan" path="res://Sprites/Props/lighting animasi/box jatuh_0002.png" id="31_l4hrt"]
+[ext_resource type="Texture2D" uid="uid://hdwds2cgwhc2" path="res://Sprites/Props/lighting animasi/box jatuh_0003.png" id="32_5673p"]
+[ext_resource type="Texture2D" uid="uid://644uvfa8gooy" path="res://Sprites/Props/lighting animasi/box jatuh_0004.png" id="33_h1eqg"]
+[ext_resource type="Texture2D" uid="uid://1dc5sednmma8" path="res://Sprites/Props/lighting animasi/box jatuh_0005.png" id="34_uvobn"]
+[ext_resource type="Texture2D" uid="uid://4t8btidyeqt" path="res://Sprites/Props/lighting animasi/box jatuh_0006.png" id="35_lymjm"]
+[ext_resource type="Texture2D" uid="uid://bgtrs82edumib" path="res://Sprites/Props/lighting animasi/box jatuh_0007.png" id="36_2noam"]
+[ext_resource type="Texture2D" uid="uid://ce1wmhna4ntsu" path="res://Sprites/Props/lighting animasi/box jatuh_0008.png" id="37_yg3ib"]
+[ext_resource type="Texture2D" uid="uid://cerorxydwubcm" path="res://Sprites/Props/lighting animasi/box jatuh_0009.png" id="38_x017k"]
+[ext_resource type="Texture2D" uid="uid://btk08lqdktfix" path="res://Sprites/Props/lighting animasi/box jatuh_0010.png" id="39_jmost"]
+[ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Sprites/Props/lighting animasi/box jatuh_0011.png" id="40_42jci"]
+[ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Sprites/Props/lighting animasi/box jatuh_0012.png" id="41_amnve"]
+[ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/Props/box jatuh/box jatuh_0000.png" id="42_kf0wf"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="44_hlwxj"]
 [ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/Room background/gudang.mp3" id="44_u1iqs"]
+[ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Sprites/Guide Icon/warnings/warning box.png" id="45_gcn08"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="46_a40nk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -220,6 +226,58 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
 size = Vector2(47.5101, 8.52518)
 
+[sub_resource type="Animation" id="Animation_x2136"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0vlkl"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mluc"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fe4pt"]
+_data = {
+"RESET": SubResource("Animation_x2136"),
+"fade_to_black": SubResource("Animation_0vlkl"),
+"fade_to_normal": SubResource("Animation_0mluc")
+}
+
 [node name="StorageRoom" type="Node2D"]
 script = ExtResource("1_qp5mm")
 
@@ -228,28 +286,52 @@ script = ExtResource("1_qp5mm")
 [node name="Gudang" type="TextureRect" parent="MapLayout"]
 offset_right = 3780.0
 offset_bottom = 1080.0
-texture = ExtResource("2_dn7qr")
+texture = ExtResource("2_yfugn")
+stretch_mode = 2
+
+[node name="FrontProps" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(884, 532)
+texture = ExtResource("3_h4gmm")
+
+[node name="DarkLightning" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(1394, 531)
+texture = ExtResource("4_gjhbj")
+
+[node name="SpotLightning" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(650, 540)
+texture = ExtResource("5_1b8qv")
 
 [node name="LightAnimation" type="AnimatedSprite2D" parent="MapLayout"]
-position = Vector2(1872, 538)
+visible = false
+position = Vector2(1462, 538)
 sprite_frames = SubResource("SpriteFrames_6j02s")
 autoplay = "default"
-frame_progress = 0.990728
+frame_progress = 0.232318
 
 [node name="LeftWall" type="Sprite2D" parent="MapLayout"]
-position = Vector2(-581, 377)
+z_index = 10
+position = Vector2(-711, 377)
 scale = Vector2(1.19261, 2.2563)
 texture = ExtResource("1_is3rv")
 
 [node name="RightWall" type="Sprite2D" parent="MapLayout"]
-position = Vector2(4733, 544)
+position = Vector2(3899, 544)
 scale = Vector2(1.85208, 2.23556)
+texture = ExtResource("1_is3rv")
+
+[node name="Floor" type="Sprite2D" parent="MapLayout"]
+z_index = 11
+position = Vector2(1618, 1074)
+scale = Vector2(4.80417, 0.22)
 texture = ExtResource("1_is3rv")
 
 [node name="Collisions" type="StaticBody2D" parent="MapLayout"]
 
 [node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
-position = Vector2(2078, 992)
+position = Vector2(2078, 999)
 shape = SubResource("WorldBoundaryShape2D_qon2x")
 
 [node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
@@ -260,13 +342,8 @@ shape = SubResource("WorldBoundaryShape2D_hwl7q")
 position = Vector2(135, 505)
 shape = SubResource("WorldBoundaryShape2D_3ncbp")
 
-[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Collisions"]
-position = Vector2(1618, 1138)
-scale = Vector2(4.80417, 0.22)
-texture = ExtResource("1_is3rv")
-
 [node name="Box" type="Area2D" parent="." node_paths=PackedStringArray("ucing")]
-position = Vector2(1789, 584)
+position = Vector2(646, 560)
 script = ExtResource("28_gjxsm")
 ucing = NodePath("../MC")
 
@@ -281,15 +358,76 @@ scale = Vector2(2.98735, 51.7618)
 shape = SubResource("RectangleShape2D_6d3xw")
 
 [node name="MC" parent="." instance=ExtResource("27_2hg52")]
-position = Vector2(2996, 566)
+position = Vector2(2272, 586)
 script = ExtResource("29_vyccd")
 SPEED = 400.0
+
+[node name="Buba" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(2381, 805)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("44_hlwxj")
+flip_h = true
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1946, 67)
 stream = ExtResource("44_u1iqs")
 autoplay = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_fe4pt")
+}
+
+[node name="TaskWarning" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_gcn08")
+
+[node name="Button" type="Button" parent="CanvasLayer/TaskWarning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("46_a40nk")
+
 [connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
 [connection signal="start_task" from="Box" to="." method="_on_box_start_task"]
 [connection signal="animation_finished" from="Box/AnimatedSprite2D" to="Box" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="Box" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/TaskWarning/Button" to="Box" method="_on_button_pressed"]

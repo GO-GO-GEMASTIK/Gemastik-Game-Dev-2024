@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://clwyw6sghyy2c"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/main_room_upper.gd" id="1_a0tuu"]
-[ext_resource type="Texture2D" uid="uid://bjvlnyn6uy21t" path="res://Sprites/Background/laundry/laundry_room.jpg" id="2_55855"]
+[ext_resource type="Texture2D" uid="uid://bjvlnyn6uy21t" path="res://Sprites/Background/Laundry/laundry_room.jpg" id="2_55855"]
 [ext_resource type="Texture2D" uid="uid://80sbg6w8cfwu" path="res://Sprites/Sekolah/lantai atas front acc.png" id="3_bw8a5"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="4_00sqk"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_78ggp"]

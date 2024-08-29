@@ -140,8 +140,8 @@ texture = ExtResource("2_tqv08")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 21)
-scale = Vector2(1.13864, 20.8548)
+position = Vector2(-101, 21)
+scale = Vector2(0.651146, 23.3157)
 shape = SubResource("RectangleShape2D_4s1hg")
 
 [node name="InstructionBox" type="TextEdit" parent="."]

@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="3_poik3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n583p"]
-size = Vector2(92.9198, 108.478)
+size = Vector2(72.8866, 81.766)
 
 [sub_resource type="Animation" id="Animation_pklfw"]
 length = 0.001

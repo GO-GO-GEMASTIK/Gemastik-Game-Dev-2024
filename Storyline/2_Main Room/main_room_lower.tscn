@@ -1,10 +1,11 @@
-[gd_scene load_steps=55 format=3 uid="uid://d27chi846yccw"]
+[gd_scene load_steps=56 format=3 uid="uid://d27chi846yccw"]
 
-[ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
+[ext_resource type="Texture2D" uid="uid://dfnhm5u2rbrw5" path="res://Sprites/Sekolah/Lantai Bawah/base.jpg" id="1_dx853"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="2_imv5t"]
-[ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
-[ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
+[ext_resource type="Texture2D" uid="uid://btc4fequts7" path="res://Sprites/Sekolah/Lantai Bawah/front tiang.png" id="2_u2a7l"]
+[ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/Props/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
+[ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/Props/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_egu37"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="6_w8ao2"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="11_8woac"]
@@ -332,12 +333,16 @@ _data = {
 z_index = -1
 
 [node name="LantaiBawah" type="Sprite2D" parent="MapLayout"]
-position = Vector2(2708, 520)
-scale = Vector2(1, 1.04444)
-texture = ExtResource("1_iwbfb")
+position = Vector2(1596, 540)
+texture = ExtResource("1_dx853")
+
+[node name="FrontTiang" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(1596, 540)
+texture = ExtResource("2_u2a7l")
 
 [node name="Floor" type="StaticBody2D" parent="MapLayout"]
-position = Vector2(2364, 982)
+position = Vector2(1541, 1004)
 
 [node name="Sprite2D" type="Sprite2D" parent="MapLayout/Floor"]
 visible = false
@@ -356,7 +361,7 @@ position = Vector2(8, 635)
 shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="RWall" type="StaticBody2D" parent="MapLayout"]
-position = Vector2(-625, 0)
+position = Vector2(-2431, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RWall"]
 position = Vector2(5409, 630)
@@ -364,19 +369,22 @@ rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="LightAnimation" type="AnimatedSprite2D" parent="MapLayout"]
+z_index = 11
 position = Vector2(2700.5, 583)
 scale = Vector2(1.0758, 1.246)
 sprite_frames = SubResource("SpriteFrames_884v1")
 autoplay = "default"
+frame = 15
+frame_progress = 0.78939
 
 [node name="MC" parent="." instance=ExtResource("2_imv5t")]
-position = Vector2(2575, 517)
+position = Vector2(1514, 591)
 script = ExtResource("6_w8ao2")
 
 [node name="IconGuide" type="Node" parent="."]
 
 [node name="PintuGudang" type="Area2D" parent="IconGuide"]
-position = Vector2(913, 622)
+position = Vector2(522, 703)
 script = ExtResource("12_mhhey")
 
 [node name="BoxWarning" type="TextEdit" parent="IconGuide/PintuGudang"]
@@ -394,7 +402,8 @@ Tapi aku akan masuk!
    - ketik 'X' untuk membuka pintu!-"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconGuide/PintuGudang"]
-scale = Vector2(4.69222, 6.13947)
+position = Vector2(0, 34)
+scale = Vector2(3.42323, 5.42717)
 shape = SubResource("RectangleShape2D_n583p")
 
 [node name="Sprite2D" type="Sprite2D" parent="IconGuide/PintuGudang"]
@@ -413,7 +422,7 @@ stream = ExtResource("14_vm3bq")
 bus = &"SFX"
 
 [node name="IconToMain" type="Area2D" parent="IconGuide"]
-position = Vector2(3214, 425)
+position = Vector2(1990, 473)
 script = ExtResource("11_8woac")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconGuide/IconToMain"]
