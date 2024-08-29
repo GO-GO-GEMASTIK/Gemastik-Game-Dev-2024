@@ -4,9 +4,11 @@ Otan: Hai, apakah kau penghuni baru?
 [wait time="0.5"]
 - Ya
 	Ucing: Ya, aku murid baru sekolah ini.
+	[signal arg="Jujur"]
 	Otan: Oh, selamat datang!
 - Tidak
 	Ucing: Tidak, aku cuma berkunjung.
+	[signal arg="Bohong"]
 	Otan: Apakah kamu membohongiku? Kamu terlihat kebingungan, dan aku tidak pernah melihatmu.
 Otan: Namaku Otan!
 Otan: Cobalah cari ruangan tak terkunci dengan pintu warna biru!

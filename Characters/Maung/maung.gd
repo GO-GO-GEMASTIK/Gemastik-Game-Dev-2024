@@ -18,4 +18,4 @@ func _physics_process(_delta):
 			if maung:
 				maung.flip_h = false
 	else:
-		print("Ucing, aku takut!")
+		pass

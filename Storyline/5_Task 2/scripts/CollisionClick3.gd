@@ -17,8 +17,8 @@ func _ready():
 func _process(delta):
 	var mouse_position_3 = get_global_mouse_position()
 	var distance_to_mouse_3 = global_position.distance_to(mouse_position_3)
-	print("E: ",mouse_position_3)
-	print("F: ",distance_to_mouse_3)
+	#print("E: ",mouse_position_3)
+	#print("F: ",distance_to_mouse_3)
 
 func _input(event):
 	# Check if the left mouse button is pressed

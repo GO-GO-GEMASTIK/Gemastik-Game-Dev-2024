@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dp4q43eecf64x"]
+[gd_scene load_steps=40 format=3 uid="uid://dp4q43eecf64x"]
 
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_m3k3c"]
 [ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="2_evrr6"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://vgknqypeb3yl" path="res://Sprites/Guide Icon/view/view_0012.png" id="29_uw7bq"]
 [ext_resource type="Texture2D" uid="uid://c68nsfwlyifey" path="res://Sprites/Guide Icon/view/view_0013.png" id="30_4d6wq"]
 [ext_resource type="Texture2D" uid="uid://bgau2wsop1ok4" path="res://Sprites/Guide Icon/view/view_0014.png" id="31_o0h4v"]
+[ext_resource type="Script" path="res://addons/dialogic/Core/DialogicGameHandler.gd" id="32_oyv2l"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 normal = Vector2(-0.00358052, -0.999994)
@@ -208,3 +209,8 @@ frame_progress = 0.392557
 [node name="FadeOutTimer" type="Timer" parent="MapLayout"]
 
 [node name="FadeInTimer" type="Timer" parent="MapLayout"]
+
+[node name="DialogicGameHandler" type="Node" parent="."]
+script = ExtResource("32_oyv2l")
+
+[connection signal="signal_event" from="DialogicGameHandler" to="MapLayout/MC" method="_on_dialogic_game_handler_signal_event"]
