@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs33ytfubnq2b"
-path="res://.godot/imported/warning box.png-1d6e2032bd053b534d199e20f52a28b3.ctex"
+path="res://.godot/imported/warning box.png-930223050025f10651001751b3b6126f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Storyline/16_Bagian4/kamar/sprites/Task Guide/warning box.png"
-dest_files=["res://.godot/imported/warning box.png-1d6e2032bd053b534d199e20f52a28b3.ctex"]
+source_file="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/warning box.png"
+dest_files=["res://.godot/imported/warning box.png-930223050025f10651001751b3b6126f.ctex"]
 
 [params]
 

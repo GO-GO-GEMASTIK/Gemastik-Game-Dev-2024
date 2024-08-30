@@ -3,10 +3,14 @@ extends Node2D
 var dialogue_is_running := false
 var on_door := false
 
+@onready var guide_player = $CanvasLayer/GuidePlayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 # PRELOAD TIMELINE TO REDUCE LAG
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
+	if GameStateManager.get_string_state("GuidePintuKuning"):
+		guide_player.play("show_guide_pintu")
 
 
 func _input(event):

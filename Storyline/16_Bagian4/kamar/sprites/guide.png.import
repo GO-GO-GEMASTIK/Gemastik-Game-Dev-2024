@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bye6swr8vyyp"
-path="res://.godot/imported/guide.png-dd707e4741e8dc1a0d226f6f50f42e89.ctex"
+path="res://.godot/imported/guide.png-4966a19aff44188a78397dae70989e00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Storyline/16_Bagian4/kamar/sprites/guide.png"
-dest_files=["res://.godot/imported/guide.png-dd707e4741e8dc1a0d226f6f50f42e89.ctex"]
+source_file="res://Storyline/16_Bagian4/Kamar/sprites/guide.png"
+dest_files=["res://.godot/imported/guide.png-4966a19aff44188a78397dae70989e00.ctex"]
 
 [params]
 

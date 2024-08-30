@@ -1,22 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmkk7p8p8bkol"]
+[gd_scene load_steps=4 format=3 uid="uid://bbpsrvdoqv676"]
 
-[ext_resource type="Texture2D" uid="uid://dlhc01p8auulc" path="res://Sprites/Tasks/Task 5/Trash item/2.png" id="1_m6b6i"]
-[ext_resource type="Script" path="res://Storyline/8_Task 5/scripts/trash.gd" id="2_61ssn"]
+[ext_resource type="Texture2D" uid="uid://cwrmrb6yuqw0u" path="res://Sprites/Tasks/Task 5/Trash item/3.png" id="1_o11l1"]
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/Task 5/scripts/trash.gd" id="2_mpe1g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l57g8"]
 
-[node name="Trash2" type="Sprite2D"]
-position = Vector2(428, 578)
+[node name="Trash3" type="Sprite2D"]
+position = Vector2(556, 342)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("1_m6b6i")
-script = ExtResource("2_61ssn")
+texture = ExtResource("1_o11l1")
+script = ExtResource("2_mpe1g")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(28, 20)
-rotation = -0.523598
-scale = Vector2(13.6061, 5.41675)
+position = Vector2(22, 50)
+rotation = 0.523598
+scale = Vector2(14.2336, -6.57706)
 shape = SubResource("CircleShape2D_l57g8")
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -19,7 +19,7 @@ func _ready():
 		await get_tree().create_timer(0.5).timeout
 		camera.set_position_smoothing_enabled(true)
 		
-	good_bad_traits_script = good_bad_traits_script.new()
+	#good_bad_traits_script = good_bad_traits_script.new()
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

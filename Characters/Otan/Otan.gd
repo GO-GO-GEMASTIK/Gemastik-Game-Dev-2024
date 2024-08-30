@@ -1,7 +1,8 @@
 extends Area2D
 
 @export var player: CharacterBody2D
-@onready var otan = $Sprite2D
+@onready var otan = $OtanSprite
+@onready var icon_player = $IconPlayer
 
 func _physics_process(_delta):
 	if player:
@@ -23,12 +24,11 @@ func _physics_process(_delta):
 
 func _on_body_entered(body):
 	if body.name == "MC":
-		$InstructionBox.set_visible(true)
-		$AnimationPlayer.play("fade_in")
+		icon_player.play("fade_in")
+		icon_player.queue("float_loop")
 		$PopSound.play()
 
 
 func _on_body_exited(body):
 	if body.name == "MC":
-		$InstructionBox.set_visible(false)
-		$AnimationPlayer.play("fade_out")
+		icon_player.play("fade_out")

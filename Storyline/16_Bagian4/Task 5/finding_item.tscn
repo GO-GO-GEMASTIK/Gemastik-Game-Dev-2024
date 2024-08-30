@@ -1,10 +1,10 @@
 [gd_scene load_steps=40 format=3 uid="uid://c8wy8odruvygc"]
 
 [ext_resource type="Texture2D" uid="uid://2tmae7o253d5" path="res://Sprites/Tasks/Task 5/background.jpg" id="1_py7ey"]
-[ext_resource type="Script" path="res://Storyline/8_Task 5/finding_item.gd" id="1_ycj8x"]
-[ext_resource type="PackedScene" uid="uid://b4pai623exbp1" path="res://Storyline/8_Task 5/subscenes/main_item.tscn" id="2_8buma"]
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/Task 5/finding_item.gd" id="1_ycj8x"]
+[ext_resource type="PackedScene" uid="uid://b4pai623exbp1" path="res://Storyline/16_Bagian4/Task 5/subscenes/main_item.tscn" id="2_8buma"]
 [ext_resource type="Texture2D" uid="uid://bn3sdmo2rsle8" path="res://Sprites/Tasks/Task 5/Trash item/1.png" id="3_a71q3"]
-[ext_resource type="Script" path="res://Storyline/8_Task 5/scripts/trash.gd" id="4_d02vn"]
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/Task 5/scripts/trash.gd" id="4_d02vn"]
 [ext_resource type="Texture2D" uid="uid://dlhc01p8auulc" path="res://Sprites/Tasks/Task 5/Trash item/2.png" id="5_ddqqx"]
 [ext_resource type="Texture2D" uid="uid://cwrmrb6yuqw0u" path="res://Sprites/Tasks/Task 5/Trash item/3.png" id="6_vif4o"]
 [ext_resource type="Texture2D" uid="uid://dol2iefvb8cob" path="res://Sprites/Tasks/Task 5/Trash item/4.png" id="8_j4g1y"]
