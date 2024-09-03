@@ -1,119 +1,75 @@
-[gd_scene load_steps=26 format=3 uid="uid://dnyv5ckw26ug8"]
+[gd_scene load_steps=11 format=3 uid="uid://dnyv5ckw26ug8"]
 
 [ext_resource type="Script" path="res://Characters/Otan/Otan.gd" id="1_pyt5c"]
 [ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="2_tqv08"]
-[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="3_78e6i"]
 [ext_resource type="Texture2D" uid="uid://n0ll744r5ydv" path="res://Sprites/Guide Icon/chat/chat_0000.png" id="4_ydyib"]
-[ext_resource type="Texture2D" uid="uid://3da1cdra3368" path="res://Sprites/Guide Icon/chat/chat_0001.png" id="5_un324"]
-[ext_resource type="Texture2D" uid="uid://faxnp3xjhbf3" path="res://Sprites/Guide Icon/chat/chat_0002.png" id="6_kfj24"]
-[ext_resource type="Texture2D" uid="uid://cfo6vsfiqqupt" path="res://Sprites/Guide Icon/chat/chat_0003.png" id="7_qonvw"]
-[ext_resource type="Texture2D" uid="uid://drqmgnghmt022" path="res://Sprites/Guide Icon/chat/chat_0004.png" id="8_llh2x"]
-[ext_resource type="Texture2D" uid="uid://bahqyteiyifq6" path="res://Sprites/Guide Icon/chat/chat_0005.png" id="9_iqe8a"]
-[ext_resource type="Texture2D" uid="uid://8vdao70o138n" path="res://Sprites/Guide Icon/chat/chat_0006.png" id="10_i1xf1"]
-[ext_resource type="Texture2D" uid="uid://cyr8na120wkji" path="res://Sprites/Guide Icon/chat/chat_0007.png" id="11_o2rpe"]
-[ext_resource type="Texture2D" uid="uid://ccv56cltjy63r" path="res://Sprites/Guide Icon/chat/chat_0008.png" id="12_gdab0"]
-[ext_resource type="Texture2D" uid="uid://c8pvul25dgupv" path="res://Sprites/Guide Icon/chat/chat_0009.png" id="13_nnygk"]
-[ext_resource type="Texture2D" uid="uid://b3ae1ftspfgrc" path="res://Sprites/Guide Icon/chat/chat_0010.png" id="14_aot4p"]
-[ext_resource type="Texture2D" uid="uid://mublts2fktme" path="res://Sprites/Guide Icon/chat/chat_0011.png" id="15_actmd"]
-[ext_resource type="Texture2D" uid="uid://bi6tyt5s3awpn" path="res://Sprites/Guide Icon/chat/chat_0012.png" id="16_c0gyh"]
-[ext_resource type="Texture2D" uid="uid://66pajjwv48hb" path="res://Sprites/Guide Icon/chat/chat_0013.png" id="17_r1axc"]
-[ext_resource type="Texture2D" uid="uid://b8e12beiy8hry" path="res://Sprites/Guide Icon/chat/chat_0014.png" id="18_guygu"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="19_44dwe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s1hg"]
-size = Vector2(929, 5.75)
+size = Vector2(1301.49, 5.75)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w7jjh"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("4_ydyib")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_un324")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_kfj24")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_qonvw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_llh2x")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_iqe8a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_i1xf1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_o2rpe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_gdab0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_nnygk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_aot4p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_actmd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_c0gyh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_r1axc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_guygu")
-}],
-"loop": true,
-"name": &"default",
-"speed": 15.0
-}]
-
-[sub_resource type="Animation" id="Animation_x420k"]
+[sub_resource type="Animation" id="Animation_tkg3s"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
+"values": [Vector2(0, -520)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_4rwtg"]
+[sub_resource type="Animation" id="Animation_0y1ne"]
 resource_name = "fade_in"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
+"values": [Vector2(0, -500), Vector2(0, -480)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_8ue3q"]
+[sub_resource type="Animation" id="Animation_6lffw"]
 resource_name = "fade_out"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/path = NodePath("Sprite2D:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -123,55 +79,57 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_em5c1"]
+[sub_resource type="Animation" id="Animation_qdubd"]
+resource_name = "float_loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -480), Vector2(0, -500), Vector2(0, -480)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ck3iv"]
 _data = {
-"RESET": SubResource("Animation_x420k"),
-"fade_in": SubResource("Animation_4rwtg"),
-"fade_out": SubResource("Animation_8ue3q")
+"RESET": SubResource("Animation_tkg3s"),
+"fade_in": SubResource("Animation_0y1ne"),
+"fade_out": SubResource("Animation_6lffw"),
+"float_loop": SubResource("Animation_qdubd")
 }
 
 [node name="Otan" type="Area2D"]
 script = ExtResource("1_pyt5c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(311.25, 106)
-scale = Vector2(0.588426, 0.55)
+[node name="OtanSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -83)
 texture = ExtResource("2_tqv08")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-101, 21)
+position = Vector2(20.2714, 21)
 scale = Vector2(0.651146, 23.3157)
 shape = SubResource("RectangleShape2D_4s1hg")
 
-[node name="InstructionBox" type="TextEdit" parent="."]
-visible = false
-offset_left = -505.0
-offset_top = -227.0
-offset_right = -154.0
-offset_bottom = -119.0
-theme_override_fonts/font = ExtResource("3_78e6i")
-theme_override_font_sizes/font_size = 20
-text = "
---Tekan X untuk berinteraksi--"
-wrap_mode = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(0, -361)
-scale = Vector2(0.480474, 0.480474)
-sprite_frames = SubResource("SpriteFrames_w7jjh")
-autoplay = "default"
-frame_progress = 0.865461
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_em5c1")
-}
+position = Vector2(0, -520)
+scale = Vector2(0.389857, 0.389857)
+texture = ExtResource("4_ydyib")
 
 [node name="PopSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_44dwe")
 bus = &"SFX"
+
+[node name="IconPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ck3iv")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -28,16 +28,25 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "Bu Cilla": "res://Sprites/Main Characters/Bu Cilla/Bu Cilla.dch",
 "Buba": "res://Dialogue/Characters/Buba.dch",
-"Characters/Maung": "res://Dialogue/Characters/Maung.dch",
 "Cula": "res://Characters/Cula/Cula.dch",
+"Maung": "res://Dialogue/Characters/Maung.dch",
+"Monster": "res://Dialogue/Characters/Monster.dch",
 "Otan": "res://Dialogue/Characters/Otan.dch",
 "Ucing": "res://Dialogue/Characters/Ucing.dch",
 "character": "res://Characters/Maung/character.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
-"B3_monolog_kamar": "res://Dialogue/Timelines/Bagian 3/B3_monolog_kamar.dtl",
+"B4_10_monster_end": "res://Dialogue/Timelines/Bagian 4/B4_10_monster_end.dtl",
+"B4_1_kamar_malam": "res://Dialogue/Timelines/Bagian 4/B4_1_kamar_malam.dtl",
+"B4_2_kamar_pagi": "res://Dialogue/Timelines/Bagian 4/B4_2_kamar_pagi.dtl",
+"B4_3_kamar_malam_kedua": "res://Dialogue/Timelines/Bagian 4/B4_3_kamar_malam_kedua.dtl",
+"B4_4_orangtua_ucing_maung": "res://Dialogue/Timelines/Bagian 4/B4_4_orangtua_ucing_maung.dtl",
+"B4_5_hutan_ketemu_kamera": "res://Dialogue/Timelines/Bagian 4/B4_5_hutan_ketemu_kamera.dtl",
+"B4_6_hutan_after_kamera": "res://Dialogue/Timelines/Bagian 4/B4_6_hutan_after_kamera.dtl",
+"B4_7_senter_rusak": "res://Dialogue/Timelines/Bagian 4/B4_7_senter_rusak.dtl",
+"B4_8_senter_fixed": "res://Dialogue/Timelines/Bagian 4/B4_8_senter_fixed.dtl",
+"B4_9_after_gembok": "res://Dialogue/Timelines/Bagian 4/B4_9_after_gembok.dtl",
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "dialog_kelas": "res://Dialogue/Timelines/dialog_kelas.dtl",
