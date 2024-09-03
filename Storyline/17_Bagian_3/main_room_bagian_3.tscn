@@ -1,14 +1,13 @@
-[gd_scene load_steps=78 format=3 uid="uid://esafcnvhddjk"]
+[gd_scene load_steps=77 format=3 uid="uid://esafcnvhddjk"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_67irq"]
-[ext_resource type="Texture2D" uid="uid://dvlitpew1cfxa" path="res://Sprites/Sekolah/lantai dasar.jpg" id="2_nf6mw"]
+[ext_resource type="Texture2D" uid="uid://qcijt33hlfx0" path="res://Sprites/Sekolah/Lantai Dasar/Lantai dasar.jpg" id="2_13oy7"]
 [ext_resource type="Texture2D" uid="uid://oc5s7i86txx8" path="res://Sprites/Sekolah/tangga ke atas.png" id="3_6g777"]
 [ext_resource type="Texture2D" uid="uid://dsej27wehpbhf" path="res://Sprites/Sekolah/tangga ke bawah.png" id="4_trgq2"]
 [ext_resource type="Texture2D" uid="uid://o5seqiljyu2o" path="res://Sprites/Sekolah/front acc lantai dasar.png" id="5_004bx"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="6_bn0du"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="7_3x4sx"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="8_5m0rm"]
-[ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="9_mo15b"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="10_pr1wr"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="11_jwh01"]
 [ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="12_7f5h6"]
@@ -397,7 +396,7 @@ script = ExtResource("1_67irq")
 [node name="Koridor" type="Sprite2D" parent="MapLayout"]
 z_index = -1
 position = Vector2(5207, 465)
-texture = ExtResource("2_nf6mw")
+texture = ExtResource("2_13oy7")
 
 [node name="TanggaAtas" type="Sprite2D" parent="MapLayout"]
 position = Vector2(5853, 508)
@@ -470,10 +469,6 @@ shape = SubResource("WorldBoundaryShape2D_ebfbm")
 [node name="MC" parent="." instance=ExtResource("7_3x4sx")]
 position = Vector2(5674, 658)
 script = ExtResource("8_5m0rm")
-
-[node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("9_mo15b")]
-position = Vector2(4164, 789)
-player = NodePath("../MC")
 
 [node name="GuideIcon" type="Node" parent="."]
 
@@ -556,10 +551,10 @@ stream = ExtResource("41_p12gq")
 bus = &"SFX"
 
 [node name="Pintu1" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(775, 657)
+position = Vector2(3224, 644)
 
 [node name="Pintu2" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(2906, 673)
+position = Vector2(3562, 670)
 
 [node name="Pintu3" parent="GuideIcon" instance=ExtResource("57_1glms")]
 position = Vector2(7285, 672)
@@ -572,8 +567,6 @@ stream = ExtResource("58_ve8co")
 autoplay = true
 bus = &"Music"
 
-[connection signal="body_entered" from="Otan" to="." method="_dialogue_start" binds= ["otan"]]
-[connection signal="body_exited" from="Otan" to="." method="_dialogue_stop" binds= ["otan"]]
 [connection signal="area_entered" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_area_entered"]
 [connection signal="body_entered" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_exited"]
