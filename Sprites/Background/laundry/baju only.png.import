@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjmaq1ewep8qw"
-path="res://.godot/imported/baju only.png-e3c0d906bf757bf1ca39d35ef2a7b1e7.ctex"
+path="res://.godot/imported/baju only.png-9f2bf35ef6b34937e95b3152c05a9ed1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/Laundry/baju only.png"
-dest_files=["res://.godot/imported/baju only.png-e3c0d906bf757bf1ca39d35ef2a7b1e7.ctex"]
+source_file="res://Sprites/Background/laundry/baju only.png"
+dest_files=["res://.godot/imported/baju only.png-9f2bf35ef6b34937e95b3152c05a9ed1.ctex"]
 
 [params]
 

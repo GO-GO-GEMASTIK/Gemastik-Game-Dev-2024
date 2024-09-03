@@ -7,7 +7,7 @@ var camera
 @onready var buba = %Buba
 
 var task1_scene = load("res://Storyline/4_Task 1/box_drag_drop.tscn")
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var tbc = load("res://Storyline/15_Kelas/classroom_awal.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

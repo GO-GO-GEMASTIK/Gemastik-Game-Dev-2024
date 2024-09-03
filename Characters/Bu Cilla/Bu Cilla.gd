@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var player = $"../MC"
+@onready var ucing = $"../MC"
 @onready var bu_cilla = $SpriteBuCilla
 @onready var tugas = $"../Tugas"
 
@@ -11,14 +11,18 @@ var fading_out = false
 
 func _ready():
 	# Start dialog
+	#ucing.disable_movement()
 	Dialogic.start("dialog_perkenalan")
+	
 	Dialogic.timeline_ended.connect(_on_dialog_ended)
+	
 	
 
 func _on_dialog_ended():
 	Dialogic.timeline_ended.disconnect(_on_dialog_ended)
 	# Start the fade-in effect after dialogue ends
 	# Ensure Tugas is visible during fade-in
+	ucing.enable_movement()
 	tugas.visible = true
 	tugas.modulate.a = 0
 	
@@ -26,9 +30,9 @@ func _on_dialog_ended():
 		# Set initial alpha
 		
 func _physics_process(_delta):
-	if player:
+	if ucing:
 		# Calculate the direction to the player
-		var direction_to_player = player.global_position - global_position
+		var direction_to_player = ucing.global_position - global_position
 
 		# Flip the character horizontally based on the direction
 		if direction_to_player.x < 100:
@@ -42,7 +46,7 @@ func _physics_process(_delta):
 	
 func _process(delta):
 	
-	if tugas.global_position.x - player.global_position.x > 400:
+	if tugas.global_position.x - ucing.global_position.x > 400:
 		start_fade_out()
 		
 	if fading_in:

@@ -4,16 +4,16 @@
 [ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="1_d6qx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hd24l"]
-size = Vector2(177, 363)
+size = Vector2(141.5, 296.5)
 
 [node name="Maung" type="Area2D"]
 script = ExtResource("1_d6qx8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(667.5, 519.5)
+position = Vector2(707.75, 564.25)
 shape = SubResource("RectangleShape2D_hd24l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(689, 538)
-scale = Vector2(0.654286, 0.70375)
+position = Vector2(718.893, 548.984)
+scale = Vector2(0.509786, 0.541969)
 texture = ExtResource("1_3nuu4")

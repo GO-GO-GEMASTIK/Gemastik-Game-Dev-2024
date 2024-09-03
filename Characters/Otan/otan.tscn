@@ -134,8 +134,8 @@ _data = {
 script = ExtResource("1_pyt5c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(432, -13)
-scale = Vector2(0.812037, 0.77037)
+position = Vector2(311.25, 106)
+scale = Vector2(0.588426, 0.55)
 texture = ExtResource("2_tqv08")
 flip_h = true
 

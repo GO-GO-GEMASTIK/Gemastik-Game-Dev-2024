@@ -80,12 +80,11 @@ position_smoothing_enabled = true
 drag_vertical_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(36, 248)
-scale = Vector2(0.5, 0.5)
+position = Vector2(42.5, 242.5)
+scale = Vector2(0.513, 0.521)
 sprite_frames = SubResource("SpriteFrames_38lki")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.184814
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

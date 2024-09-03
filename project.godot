@@ -36,6 +36,8 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
+"B3_monolog_kamar": "res://Dialogue/Timelines/Bagian 3/B3_monolog_kamar.dtl",
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "dialog_kelas": "res://Dialogue/Timelines/dialog_kelas.dtl",

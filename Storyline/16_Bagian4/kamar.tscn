@@ -21,6 +21,7 @@ normal = Vector2(1, 0)
 offset_right = 3000.0
 offset_bottom = 1080.0
 texture = ExtResource("1_jjbvo")
+metadata/_edit_use_anchors_ = true
 
 [node name="LeftWall" type="Sprite2D" parent="Layout"]
 position = Vector2(-713, 377)
