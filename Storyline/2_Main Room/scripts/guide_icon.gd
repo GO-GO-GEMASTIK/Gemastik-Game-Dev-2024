@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var ucing: CharacterBody2D
+@export var icon_player: AnimationPlayer
 
 var upper_room = load("res://Storyline/2_Main Room/main_room_upper.tscn")
 var lower_room = load("res://Storyline/2_Main Room/main_room_lower.tscn")
@@ -12,10 +13,10 @@ var change_scene_main = false
 
 func _on_body_entered(body):
 	if body.name == "MC":
-		$AnimationPlayer.play("fade_in")
 		$PopSound.play()
+		icon_player.play("fade_in")
+		icon_player.queue("float_loop")
 		if name == "IconNaik":
-			print("printstatement")
 			change_scene_upper = true
 		elif name == "IconTurun":
 			change_scene_lower = true
@@ -25,9 +26,8 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	if body.name == "MC":
-		$AnimationPlayer.play("fade_out")
+		icon_player.play("fade_out")
 		if name == "IconNaik":
-			print("printstatementyyy")
 			change_scene_upper = false
 		elif name == "IconTurun":
 			change_scene_lower = false

@@ -7,17 +7,20 @@ var door_dialogue := false
 var on_otan := false
 var on_door := false
 
-@onready var cari_pintu = $CanvasLayer/CariPintu
+@onready var guide_player = $CanvasLayer/GuidePlayer
 
 func _ready():
 # PRELOAD TIMELINE TO REDUCE LAG
 	style.prepare()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	if GameStateManager.get_string_state("GuidePintuKuning"):
+		guide_player.play("show_guide_pintu")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "door_instruction_1":
-		cari_pintu.set_visible(true)
+		guide_player.play("show_guide_pintu")
+		GameStateManager.set_string_state("GuidePintuKuning", true)
 	if argument == "enable_door":
 		door_dialogue = true
 

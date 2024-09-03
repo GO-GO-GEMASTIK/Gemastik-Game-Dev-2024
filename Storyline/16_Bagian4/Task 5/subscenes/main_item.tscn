@@ -1,0 +1,104 @@
+[gd_scene load_steps=22 format=3 uid="uid://b4pai623exbp1"]
+
+[ext_resource type="Texture2D" uid="uid://m2vppjjan8cc" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0000.png" id="1_wf4y8"]
+[ext_resource type="Texture2D" uid="uid://2748eoea8148" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0001.png" id="2_e2pxg"]
+[ext_resource type="Texture2D" uid="uid://dofu4yx4fvgnb" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0002.png" id="3_dprvu"]
+[ext_resource type="Texture2D" uid="uid://dyohanuoddyyj" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0003.png" id="4_52dxn"]
+[ext_resource type="Texture2D" uid="uid://3dwl1qnl8hrk" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0004.png" id="5_5ygls"]
+[ext_resource type="Texture2D" uid="uid://dw8a20hcm83sq" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0005.png" id="6_pfr47"]
+[ext_resource type="Texture2D" uid="uid://dlxesuqjipi13" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0006.png" id="7_aki1y"]
+[ext_resource type="Texture2D" uid="uid://7uccam8sugnl" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0007.png" id="8_t2jvu"]
+[ext_resource type="Texture2D" uid="uid://2uh26io7f7fk" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0008.png" id="9_ucaxo"]
+[ext_resource type="Texture2D" uid="uid://ylhpdvcq5fvu" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0009.png" id="10_0kddl"]
+[ext_resource type="Texture2D" uid="uid://cg38wn2xvbe2n" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0010.png" id="11_k7s50"]
+[ext_resource type="Texture2D" uid="uid://3dh0d5swn5rs" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0011.png" id="12_llxo7"]
+[ext_resource type="Texture2D" uid="uid://dknr7oe6muf2v" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0012.png" id="13_5bm1u"]
+[ext_resource type="Texture2D" uid="uid://bfsfsqmcntfyw" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0013.png" id="14_cvsep"]
+[ext_resource type="Texture2D" uid="uid://2n7sigcwmw4y" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0014.png" id="15_xwwto"]
+[ext_resource type="Texture2D" uid="uid://3irljempc08e" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0015.png" id="16_xnoik"]
+[ext_resource type="Texture2D" uid="uid://d4eacshrxw63i" path="res://Sprites/Tasks/Task 5/barang yang dicari/Barang yang dicari_0016.png" id="17_m1vpt"]
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/Task 5/scripts/main_item.gd" id="18_30n5t"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="19_4revk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d4a3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wf4y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e2pxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dprvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_52dxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5ygls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pfr47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aki1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_t2jvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ucaxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0kddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k7s50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_llxo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5bm1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cvsep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xwwto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xnoik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_m1vpt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wpaa"]
+
+[node name="MainItem" type="AnimatedSprite2D" node_paths=PackedStringArray("finish_sound")]
+sprite_frames = SubResource("SpriteFrames_d4a3v")
+autoplay = "default"
+frame_progress = 0.794458
+script = ExtResource("18_30n5t")
+finish_sound = NodePath("FinishSound")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = -0.261799
+scale = Vector2(14.3924, 16.7592)
+shape = SubResource("RectangleShape2D_4wpaa")
+
+[node name="FinishSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_4revk")
+bus = &"SFX"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

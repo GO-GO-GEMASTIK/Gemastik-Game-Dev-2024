@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal on_transition_finished
+signal on_full_transition_finished
 
 @onready var color_rect = $ColorRect
 @onready var animation_player = $AnimationPlayer
@@ -25,6 +26,7 @@ func _on_animation_player_animation_finished(anim_name):
 		
 		animation_player.play("fade_to_normal")
 	elif anim_name == "fade_to_normal":
+		on_full_transition_finished.emit()
 		color_rect.visible = false
 
 # Pilih salah satu method di bawah untuk transisi

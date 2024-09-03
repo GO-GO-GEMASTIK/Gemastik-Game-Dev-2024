@@ -1,6 +1,6 @@
 extends Node
 
-var ucing_pos_main := Vector2(800.0, 628.0)
+var ucing_pos_main := Vector2(300.0, 600.0)
 
 var tasks := {
 	1: false,
@@ -13,10 +13,11 @@ var tasks := {
 	8: false
 }
 
-var free_roam_states := {
+var string_states := {
 	"Gudang": false,
 	"Kantin": false,
-	"Laundry": false
+	"Laundry": false,
+	"GuidePintuKuning": false,
 }
 
 func update_pos_main(newPos: Vector2):
@@ -41,14 +42,14 @@ func is_task_completed(task_number: int) -> bool:
 #endregion
 
 
-# Free roam state methods
-func set_free_roam_state(room: String, state: bool):
-	if room in free_roam_states:
-		free_roam_states[room] = state
+# State methods
+func set_string_state(room: String, state: bool):
+	if room in string_states:
+		string_states[room] = state
 
-func get_free_roam_state(room: String) -> bool:
-	return free_roam_states.get(room, false)
+func get_string_state(room: String) -> bool:
+	return string_states.get(room, false)
 
-func add_new_room(room: String):
-	if room not in free_roam_states:
-		free_roam_states[room] = false
+func add_new_state(room: String):
+	if room not in string_states:
+		string_states[room] = false

@@ -1,0 +1,203 @@
+[gd_scene load_steps=35 format=3 uid="uid://c0rujlypx1rqp"]
+
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/kamar/kamar.gd" id="1_0lu7m"]
+[ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Sprites/Background/Kamar/kamar.jpg" id="2_0lktt"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_74mgh"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_7hlar"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="5_4rgqo"]
+[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Sprites/Main Characters/Maung/Maung.png" id="6_bqob5"]
+[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Sprites/Main Characters/Cula/cula.png" id="7_g3wdm"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="8_mkmhn"]
+[ext_resource type="Texture2D" uid="uid://ch6f1xjm4ef8u" path="res://Sprites/Animasi/night to day/Timeline 3_0000.png" id="9_iasrb"]
+[ext_resource type="Texture2D" uid="uid://bdvk1hgdsypyd" path="res://Sprites/Animasi/night to day/Timeline 3_0001.png" id="10_5w3yi"]
+[ext_resource type="Texture2D" uid="uid://bdbejftv5atb6" path="res://Sprites/Animasi/night to day/Timeline 3_0002.png" id="11_qm1tc"]
+[ext_resource type="Texture2D" uid="uid://bbpsnvxo66mya" path="res://Sprites/Animasi/night to day/Timeline 3_0003.png" id="12_cr1a3"]
+[ext_resource type="Texture2D" uid="uid://c1ng4we6pb1u5" path="res://Sprites/Animasi/night to day/Timeline 3_0004.png" id="13_v7qb0"]
+[ext_resource type="Texture2D" uid="uid://cjtng7ucniikk" path="res://Sprites/Animasi/night to day/Timeline 3_0005.png" id="14_ebk23"]
+[ext_resource type="Texture2D" uid="uid://dgnj3px6ictnb" path="res://Sprites/Animasi/night to day/Timeline 3_0006.png" id="15_ch376"]
+[ext_resource type="Texture2D" uid="uid://d3aqm3brcqqyu" path="res://Sprites/Animasi/night to day/Timeline 3_0007.png" id="16_68n3t"]
+[ext_resource type="Texture2D" uid="uid://dldasas6ixqe6" path="res://Sprites/Animasi/night to day/Timeline 3_0008.png" id="17_jjrfa"]
+[ext_resource type="Texture2D" uid="uid://davy5geiaix5k" path="res://Sprites/Animasi/night to day/Timeline 3_0009.png" id="18_fii3e"]
+[ext_resource type="Texture2D" uid="uid://s52mr65ns7rk" path="res://Sprites/Animasi/night to day/Timeline 3_0010.png" id="19_gb0s0"]
+[ext_resource type="Texture2D" uid="uid://de61rk0lbfay2" path="res://Sprites/Animasi/night to day/Timeline 3_0011.png" id="20_xjk7r"]
+[ext_resource type="Texture2D" uid="uid://b501sgerow3n5" path="res://Sprites/Animasi/night to day/Timeline 3_0012.png" id="21_v2fcs"]
+[ext_resource type="Texture2D" uid="uid://bvxlr7stpvmn4" path="res://Sprites/Animasi/night to day/Timeline 3_0013.png" id="22_ojaaa"]
+[ext_resource type="Texture2D" uid="uid://c3sld5qhvuplv" path="res://Sprites/Animasi/night to day/Timeline 3_0014.png" id="23_tn0dq"]
+[ext_resource type="Texture2D" uid="uid://cgoouo2mkr6ox" path="res://Sprites/Animasi/night to day/Timeline 3_0015.png" id="24_abxpl"]
+[ext_resource type="Texture2D" uid="uid://c1dpj6de41tl4" path="res://Sprites/Animasi/night to day/Timeline 3_0016.png" id="25_pik77"]
+[ext_resource type="Texture2D" uid="uid://cxc5vw6n5ri0t" path="res://Sprites/Animasi/night to day/Timeline 3_0017.png" id="26_nrxd2"]
+[ext_resource type="Texture2D" uid="uid://c806jkr0ohuvc" path="res://Sprites/Animasi/night to day/Timeline 3_0018.png" id="27_81gpd"]
+[ext_resource type="Texture2D" uid="uid://dm13gw4v8jwfs" path="res://Sprites/Animasi/night to day/Timeline 3_0019.png" id="28_lok7a"]
+[ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Sprites/Background/Gudang/front lighting.png" id="29_ygo44"]
+[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Sprites/Background/Gudang/lighting on.png" id="30_nilr4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uh6i6"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b62ov"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hyc3v"]
+normal = Vector2(1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu7mp"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"day2night",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_iasrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5w3yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qm1tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cr1a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v7qb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ebk23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ch376")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_68n3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jjrfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_fii3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gb0s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xjk7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_v2fcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ojaaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tn0dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_abxpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pik77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_nrxd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_81gpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lok7a")
+}],
+"loop": false,
+"name": &"night2day",
+"speed": 12.0
+}]
+
+[node name="Kamar" type="Node2D"]
+script = ExtResource("1_0lu7m")
+
+[node name="Layout" type="Node2D" parent="."]
+
+[node name="Kamar" type="TextureRect" parent="Layout"]
+offset_right = 3000.0
+offset_bottom = 1080.0
+texture = ExtResource("2_0lktt")
+
+[node name="LeftWall" type="Sprite2D" parent="Layout"]
+position = Vector2(-713, 377)
+scale = Vector2(1.19261, 2.2563)
+texture = ExtResource("3_74mgh")
+
+[node name="RightWall" type="Sprite2D" parent="Layout"]
+position = Vector2(4110, 544)
+scale = Vector2(1.85208, 2.23556)
+texture = ExtResource("3_74mgh")
+
+[node name="Collisions" type="StaticBody2D" parent="Layout"]
+
+[node name="FloorCollision" type="CollisionShape2D" parent="Layout/Collisions"]
+position = Vector2(1571, 1023)
+shape = SubResource("WorldBoundaryShape2D_uh6i6")
+
+[node name="RightCollision" type="CollisionShape2D" parent="Layout/Collisions"]
+position = Vector2(3000, 546)
+shape = SubResource("WorldBoundaryShape2D_b62ov")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="Layout/Collisions"]
+position = Vector2(-2, 505)
+shape = SubResource("WorldBoundaryShape2D_hyc3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="Layout/Collisions"]
+position = Vector2(1636, 1138)
+scale = Vector2(4.80417, 0.22)
+texture = ExtResource("3_74mgh")
+
+[node name="MC" parent="." instance=ExtResource("4_7hlar")]
+position = Vector2(1527, 609)
+script = ExtResource("5_4rgqo")
+SPEED = 400.0
+
+[node name="Maung" type="Sprite2D" parent="."]
+position = Vector2(1325, 855)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_bqob5")
+
+[node name="Cula" type="Sprite2D" parent="."]
+position = Vector2(1135, 847)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_g3wdm")
+
+[node name="Buba" type="Sprite2D" parent="."]
+position = Vector2(1754, 821)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_mkmhn")
+flip_h = true
+
+[node name="NightAmbience" type="TextureRect" parent="."]
+visible = false
+z_index = 10
+offset_right = 2788.0
+offset_bottom = 1080.0
+texture = ExtResource("29_ygo44")
+
+[node name="Lightning" type="TextureRect" parent="NightAmbience"]
+layout_mode = 0
+offset_right = 2788.0
+offset_bottom = 1080.0
+texture = ExtResource("30_nilr4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Animations" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_eu7mp")
+animation = &"night2day"
