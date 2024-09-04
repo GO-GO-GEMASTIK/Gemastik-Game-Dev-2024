@@ -18,8 +18,23 @@ var string_states := {
 	"Kantin": false,
 	"Laundry": false,
 	"GuidePintuKuning": false,
+	"KeluarKamar": false,
 }
 
+var right_limit := {
+	"lantai_dasar": 8295,
+	"lantai_atas": 1000,
+	"lantai_bawah": 1000,
+	"gudang": 1000,
+	"kamar": 3000,
+	"kelas": 1000,
+	"kantin": 1000,
+	"laundry": 1000,
+	"belakang_sekolah": 11000,
+	"bukit": 9000,
+}
+
+#region Position Update Methods
 func update_pos_main(newPos: Vector2):
 	newPos.x -= 200
 	ucing_pos_main = newPos
@@ -27,8 +42,9 @@ func update_pos_main(newPos: Vector2):
 
 func get_pos_main() -> Vector2:
 	return ucing_pos_main
+#endregion
 
-#region Task-related Methods
+#region Task-related State Methods
 func complete_task(task_number: int):
 	if task_number in tasks:
 		tasks[task_number] = true
@@ -42,7 +58,7 @@ func is_task_completed(task_number: int) -> bool:
 #endregion
 
 
-# State methods
+#region General State methods
 func set_string_state(room: String, state: bool):
 	if room in string_states:
 		string_states[room] = state
@@ -53,3 +69,11 @@ func get_string_state(room: String) -> bool:
 func add_new_state(room: String):
 	if room not in string_states:
 		string_states[room] = false
+#endregion
+
+
+#region Room Limit Methods
+func get_room_right_limit(room: String):
+	if room in right_limit:
+		return right_limit[room]
+#endregion

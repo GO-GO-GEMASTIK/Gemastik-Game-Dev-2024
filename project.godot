@@ -47,6 +47,7 @@ directories/dtl_directory={
 "B4_7_senter_rusak": "res://Dialogue/Timelines/Bagian 4/B4_7_senter_rusak.dtl",
 "B4_8_senter_fixed": "res://Dialogue/Timelines/Bagian 4/B4_8_senter_fixed.dtl",
 "B4_9_after_gembok": "res://Dialogue/Timelines/Bagian 4/B4_9_after_gembok.dtl",
+"B4_melihat_tembok": "res://Dialogue/Timelines/Bagian 4/B4_melihat_tembok.dtl",
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "dialog_kelas": "res://Dialogue/Timelines/dialog_kelas.dtl",
@@ -181,8 +182,13 @@ key_d={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="npc"
+2d_physics/layer_3="ucing"
+2d_physics/layer_4="items"
+
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.051971, 0.051971, 0.051971, 1)

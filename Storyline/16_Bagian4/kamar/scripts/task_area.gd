@@ -1,13 +1,14 @@
 extends Area2D
 
-@onready var task_animation = %TaskAnimation
-@onready var guide_animation = $"../../CanvasLayer/GuideAnimation"
-@onready var task_5 = load("res://Storyline/16_Bagian4/Task 5/finding_item.tscn")
 @onready var task_warning = %TaskWarning
+@onready var task_player = %TaskPlayer
+@onready var guide_player = %GuidePlayer
 
 var on_meja := false
 var task_completed := GameStateManager.is_task_completed(5)
+var task_5 = load("res://Storyline/16_Bagian4/Task 5/finding_item.tscn")
 
+# !!!CURRENTLY DEBUGGING, DO NOT FORGET TO SET TO DEFAULT!!!
 
 func _input(event):
 	if event.is_action_pressed("talk") and on_meja and !task_completed:
@@ -16,16 +17,16 @@ func _input(event):
 
 func _on_body_entered(body):
 	if body.name == "MC" and !task_completed:
-		guide_animation.play("hide_guide")
-		task_animation.play("show_task")
-		task_animation.queue("task_floating")
+		guide_player.play("hide_guide")
+		task_player.play("show_task")
+		task_player.queue("task_floating")
 		on_meja = true
 
 
 func _on_body_exited(body):
 	if body.name == "MC" and !task_completed:
-		task_animation.play("hide_task")
-		guide_animation.play("show_guide")
+		task_player.play("hide_task")
+		guide_player.play("show_guide")
 		on_meja = false
 
 

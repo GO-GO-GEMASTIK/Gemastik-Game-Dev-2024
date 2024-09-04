@@ -11,7 +11,6 @@ Maung: Aku ingat perompak perompak itu sangat jahat, aku sangat takut. Itu sanga
 Maung: Tapi melihatmu ingin meniru kedua orangtua-mu, memberikan aku kekuatan dan keberanian untuk menjadi hebat seperti ayahku.
 Maung: Aku akan ikut denganmu Ucing!
 [signal arg="buba_datang"]
-join Buba 1 [animation="Slide In Left" length="1" wait="true"]
 Buba: Maaf aku mendengar pembicaraan kalian diam-diam.
 Buba: Bolehkah aku ikut dengan kalian???
 [signal arg="buba_pindah"]

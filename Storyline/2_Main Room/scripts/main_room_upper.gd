@@ -1,13 +1,20 @@
 extends Node2D
 
+signal following
+signal l_in
+
+@onready var ucing = $MC
+@onready var guide_player = $CanvasLayer/GuidePlayer
+@onready var icon_to_main = $GuideIcon/IconToMain
+
 var dialogue_is_running := false
 var on_door := false
 
-@onready var guide_player = $CanvasLayer/GuidePlayer
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-# PRELOAD TIMELINE TO REDUCE LAG
+	if GameStateManager.get_string_state("KeluarKamar"):
+		ucing.set_global_position(Vector2(5810, 830))
+		following.emit()
+		l_in.emit()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	if GameStateManager.get_string_state("GuidePintuKuning"):
 		guide_player.play("show_guide_pintu")

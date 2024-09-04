@@ -18,12 +18,17 @@ var passed_2 = false
 var passed_3 = false
 var passed_4 = false
 
+# ======DEBUGGING ONLY!!!======
+var disabled = false
+# ======DEBUGGING ONLY!!!======
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	await get_tree().create_timer(3).timeout
-	tutorial.set_texture(tutor_1)
-	tutorial_player.play("show_tutorial")
-	tutor_1_showed = true
+	if !disabled:
+		await get_tree().create_timer(3).timeout
+		tutorial.set_texture(tutor_1)
+		tutorial_player.play("show_tutorial")
+		tutor_1_showed = true
 
 
 func _on_area_papan_body_entered(body):

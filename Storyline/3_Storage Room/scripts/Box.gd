@@ -2,7 +2,7 @@ extends Area2D
 
 signal start_task
 
-@export var ucing: CharacterBody2D
+@onready var ucing = %MC
 
 @onready var color_rect = %ColorRect
 @onready var animation_player = %AnimationPlayer
@@ -25,6 +25,7 @@ func _on_dialogic_signal(argument:String):
 	if argument == "pan_to_buba":
 		buba.set_visible(true)
 		camera.position = Vector2(1000,0)
+		ucing.look_right()
 	if argument == "fade_pan_ucing":
 		color_rect.visible = true
 		animation_player.play("fade_to_black")

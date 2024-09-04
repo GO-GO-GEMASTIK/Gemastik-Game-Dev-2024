@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dfxrhn4v0j7we"]
+[gd_scene load_steps=28 format=3 uid="uid://dfxrhn4v0j7we"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/main_room_upper.gd" id="1_dka7d"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_7l11l"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="6_f7bmq"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="7_pwahd"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="7_t8o3l"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="8_gwn3g"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="12_jd02c"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/turun tangga/turun_0000.png" id="22_ag37u"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="37_uxaqc"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="38_qxwyd"]
@@ -21,6 +24,7 @@ normal = Vector2(-1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tlboh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp51f"]
+size = Vector2(33.2874, 20)
 
 [sub_resource type="Animation" id="Animation_tkg3s"]
 length = 0.001
@@ -34,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -520)]
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -208,10 +212,9 @@ _data = {
 }
 
 [node name="UpperRoom" type="Node2D"]
-position = Vector2(162, 1652)
 script = ExtResource("1_dka7d")
 
-[node name="MapLayout" type="Node" parent="."]
+[node name="MapLayout" type="Node2D" parent="."]
 
 [node name="LantaiAtas" type="TextureRect" parent="MapLayout"]
 offset_right = 8331.0
@@ -219,7 +222,6 @@ offset_bottom = 1080.0
 texture = ExtResource("2_b5aof")
 
 [node name="FrontFurnitures" type="Sprite2D" parent="MapLayout"]
-z_index = 5
 position = Vector2(4165, 540)
 texture = ExtResource("3_us5g5")
 
@@ -254,25 +256,36 @@ position = Vector2(-896, 14)
 shape = SubResource("WorldBoundaryShape2D_tlboh")
 
 [node name="Sprite2D" type="Sprite2D" parent="MapLayout/Floor"]
-z_index = 5
 position = Vector2(-844.611, 234)
 scale = Vector2(6.92935, 0.4858)
 texture = ExtResource("2_7l11l")
 
 [node name="MC" parent="." instance=ExtResource("5_qr6gu")]
-position = Vector2(4000, -1074)
+position = Vector2(4207, 830)
+collision_layer = 4
 script = ExtResource("7_pwahd")
+
+[node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("7_t8o3l")]
+visible = false
+position = Vector2(6238, 821)
+ucing = NodePath("../MC")
+
+[node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("8_gwn3g")]
+visible = false
+position = Vector2(6035, 850)
+ucing = NodePath("../MC")
 
 [node name="GuideIcon" type="Node" parent="."]
 
 [node name="IconToMain" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing", "icon_player")]
-position = Vector2(4703, 464)
+position = Vector2(4703, 511)
+collision_mask = 5
 script = ExtResource("6_f7bmq")
 ucing = NodePath("../../MC")
 icon_player = NodePath("IconPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconToMain"]
-position = Vector2(-151, 422)
+position = Vector2(0, 386)
 scale = Vector2(18.6257, 9.32412)
 shape = SubResource("RectangleShape2D_hp51f")
 
@@ -282,7 +295,6 @@ bus = &"SFX"
 
 [node name="Sprite2D" type="Sprite2D" parent="GuideIcon/IconToMain"]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(0, -520)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("22_ag37u")
 
@@ -293,15 +305,19 @@ libraries = {
 
 [node name="Pintu1" parent="GuideIcon" instance=ExtResource("38_qxwyd")]
 position = Vector2(1030, 717)
+collision_mask = 5
 
 [node name="Pintu2" parent="GuideIcon" instance=ExtResource("38_qxwyd")]
 position = Vector2(3207, 734)
+collision_mask = 5
 
 [node name="Pintu3" parent="GuideIcon" instance=ExtResource("38_qxwyd")]
 position = Vector2(5524, 732)
+collision_mask = 5
 
 [node name="Pintu4" parent="GuideIcon" instance=ExtResource("38_qxwyd")]
 position = Vector2(7388, 732)
+collision_mask = 5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -322,8 +338,20 @@ offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("40_xssw8")
 
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("12_jd02c")]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-136, -1619)
+
+[connection signal="following" from="." to="Buba" method="_following"]
+[connection signal="following" from="." to="Maung" method="_following"]
+[connection signal="l_in" from="." to="CanvasLayer/DirectionPlayer" method="l_in"]
+[connection signal="b2l" from="GuideIcon/IconToMain" to="CanvasLayer/DirectionPlayer" method="b2l"]
+[connection signal="b2r" from="GuideIcon/IconToMain" to="CanvasLayer/DirectionPlayer" method="b2r"]
 [connection signal="body_entered" from="GuideIcon/IconToMain" to="GuideIcon/IconToMain" method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/IconToMain" to="GuideIcon/IconToMain" method="_on_body_exited"]
+[connection signal="l2b" from="GuideIcon/IconToMain" to="CanvasLayer/DirectionPlayer" method="l2b"]
+[connection signal="r2b" from="GuideIcon/IconToMain" to="CanvasLayer/DirectionPlayer" method="r2b"]
 [connection signal="body_entered" from="GuideIcon/Pintu1" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/Pintu1" to="." method="_on_body_exited"]
 [connection signal="body_entered" from="GuideIcon/Pintu2" to="." method="_on_body_entered"]

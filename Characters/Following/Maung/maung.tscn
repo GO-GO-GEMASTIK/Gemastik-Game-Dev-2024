@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://xcm1p056rmos"]
+
+[ext_resource type="Script" path="res://Characters/Following/Maung/maung.gd" id="1_lfcoq"]
+[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Sprites/Main Characters/Maung/Maung.png" id="2_pc02h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83r7k"]
+size = Vector2(22.3488, 23.1207)
+
+[node name="Maung" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_lfcoq")
+
+[node name="MaungSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 19)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pc02h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.37183, 16)
+scale = Vector2(5.42565, 13.2349)
+shape = SubResource("RectangleShape2D_83r7k")

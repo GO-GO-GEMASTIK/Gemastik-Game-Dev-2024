@@ -1,21 +1,41 @@
 extends Node2D
 
+signal following
+signal r_in
+
+@onready var ucing = $MC
+@onready var camera: Camera2D = ucing.camera
+@onready var otan = $Otan
+@onready var right_limit = GameStateManager.get_room_right_limit("lantai_dasar")
+@onready var guide_player = $CanvasLayer/GuidePlayer
+
 var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
+var outside = load("res://Storyline/16_Bagian4/BelakangSekolah/belakang_sekolah.tscn")
 
 var dialogue_is_running := false
 var door_dialogue := false
 var on_otan := false
 var on_door := false
 
-@onready var guide_player = $CanvasLayer/GuidePlayer
+# ======DEBUGGING ONLY!!!======
+var debug = false 
+# ======DEBUGGING ONLY!!!======
 
 func _ready():
 # PRELOAD TIMELINE TO REDUCE LAG
 	style.prepare()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+	camera.set_limit(SIDE_RIGHT, right_limit)
 	if GameStateManager.get_string_state("GuidePintuKuning"):
 		guide_player.play("show_guide_pintu")
+	
+	if GameStateManager.get_string_state("KeluarKamar") or debug:
+		otan.set_visible(false)
+		ucing.set_global_position(Vector2(3690, 800))
+		following.emit()
+		r_in.emit()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "door_instruction_1":
@@ -66,3 +86,7 @@ func dialogue_stopper():
 	Dialogic.end_timeline()
 	dialogue_is_running = false
 #endregion ===========================
+
+
+func _on_pintu_keluar_go_outside():
+	pass # Replace with function body.

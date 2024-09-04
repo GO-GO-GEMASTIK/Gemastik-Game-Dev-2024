@@ -1,5 +1,11 @@
 extends Area2D
 
+signal l2b
+signal b2r
+signal r2b
+signal b2l
+signal go_outside
+
 @export var ucing: CharacterBody2D
 @export var icon_player: AnimationPlayer
 
@@ -16,23 +22,35 @@ func _on_body_entered(body):
 		$PopSound.play()
 		icon_player.play("fade_in")
 		icon_player.queue("float_loop")
+		
 		if name == "IconNaik":
 			change_scene_upper = true
 		elif name == "IconTurun":
 			change_scene_lower = true
 		elif name == "IconToMain":
 			change_scene_main = true
+			if global_position.x < ucing.global_position.x:
+				l2b.emit()
+			else:
+				r2b.emit()
+		elif name == "PintuKeluar":
+			go_outside.emit()
 
 
 func _on_body_exited(body):
 	if body.name == "MC":
 		icon_player.play("fade_out")
+		
 		if name == "IconNaik":
 			change_scene_upper = false
 		elif name == "IconTurun":
 			change_scene_lower = false
 		elif name == "IconToMain":
 			change_scene_main = false
+			if global_position.x < ucing.global_position.x:
+				b2l.emit()
+			else:
+				b2r.emit()
 
 
 func _input(event):

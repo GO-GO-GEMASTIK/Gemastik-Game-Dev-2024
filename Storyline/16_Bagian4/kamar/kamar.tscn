@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://c0rujlypx1rqp"]
+[gd_scene load_steps=81 format=3 uid="uid://civ0uyremjeve"]
 
 [ext_resource type="Script" path="res://Storyline/16_Bagian4/Kamar/kamar.gd" id="1_0lu7m"]
 [ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Sprites/Background/Kamar/kamar.jpg" id="2_0lktt"]
@@ -7,15 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_7hlar"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="5_4rgqo"]
 [ext_resource type="Script" path="res://Storyline/16_Bagian4/Kamar/scripts/task_area.gd" id="5_ef7pi"]
-[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Sprites/Main Characters/Maung/Maung.png" id="6_bqob5"]
+[ext_resource type="Script" path="res://Storyline/16_Bagian4/Kamar/scripts/pintu_kamar.gd" id="6_6i6w1"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="6_lqdw6"]
+[ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="7_4glif"]
 [ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Sprites/Main Characters/Cula/cula.png" id="7_g3wdm"]
-[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="8_mkmhn"]
 [ext_resource type="Texture2D" uid="uid://ch6f1xjm4ef8u" path="res://Sprites/Animasi/night to day/Timeline 3_0000.png" id="9_iasrb"]
 [ext_resource type="Texture2D" uid="uid://bdvk1hgdsypyd" path="res://Sprites/Animasi/night to day/Timeline 3_0001.png" id="10_5w3yi"]
 [ext_resource type="Texture2D" uid="uid://bdbejftv5atb6" path="res://Sprites/Animasi/night to day/Timeline 3_0002.png" id="11_qm1tc"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="12_7qxud"]
 [ext_resource type="Texture2D" uid="uid://bbpsnvxo66mya" path="res://Sprites/Animasi/night to day/Timeline 3_0003.png" id="12_cr1a3"]
 [ext_resource type="Texture2D" uid="uid://qxurqdoqq2yo" path="res://Sprites/Animasi/day to night/Timeline 2_0000.png" id="12_jorsy"]
 [ext_resource type="Texture2D" uid="uid://c5jp2mfj8yupe" path="res://Sprites/Animasi/day to night/Timeline 2_0001.png" id="13_jnyhu"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="13_kphj4"]
 [ext_resource type="Texture2D" uid="uid://c1ng4we6pb1u5" path="res://Sprites/Animasi/night to day/Timeline 3_0004.png" id="13_v7qb0"]
 [ext_resource type="Texture2D" uid="uid://cjtng7ucniikk" path="res://Sprites/Animasi/night to day/Timeline 3_0005.png" id="14_ebk23"]
 [ext_resource type="Texture2D" uid="uid://oh51p1p2l7b0" path="res://Sprites/Animasi/day to night/Timeline 2_0002.png" id="14_fj3h8"]
@@ -54,22 +57,9 @@
 [ext_resource type="Texture2D" uid="uid://211qe5ljebgf" path="res://Sprites/Animasi/day to night/Timeline 2_0019.png" id="31_u7sno"]
 [ext_resource type="Texture2D" uid="uid://bye6swr8vyyp" path="res://Storyline/16_Bagian4/Kamar/sprites/guide.png" id="52_cnr2l"]
 [ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="53_ib88g"]
-[ext_resource type="Texture2D" uid="uid://bxnqjtap5cx4u" path="res://Sprites/Guide Icon/task/quest_0001.png" id="54_hligq"]
 [ext_resource type="Texture2D" uid="uid://bs33ytfubnq2b" path="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/warning box.png" id="54_j4mnn"]
-[ext_resource type="Texture2D" uid="uid://bg4dbr1lespa3" path="res://Sprites/Guide Icon/task/quest_0002.png" id="55_kwtvv"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="55_r8xa2"]
-[ext_resource type="Texture2D" uid="uid://oypsfdgcb0n8" path="res://Sprites/Guide Icon/task/quest_0003.png" id="56_5op6w"]
-[ext_resource type="Texture2D" uid="uid://bhl30ppc7qh40" path="res://Sprites/Guide Icon/task/quest_0004.png" id="57_std7g"]
-[ext_resource type="Texture2D" uid="uid://cbgpmt0ffgvpa" path="res://Sprites/Guide Icon/task/quest_0005.png" id="58_1keph"]
-[ext_resource type="Texture2D" uid="uid://b8id1sontk83e" path="res://Sprites/Guide Icon/task/quest_0006.png" id="59_sry8s"]
-[ext_resource type="Texture2D" uid="uid://cojpola0st64e" path="res://Sprites/Guide Icon/task/quest_0007.png" id="60_1b32m"]
-[ext_resource type="Texture2D" uid="uid://xywls7hfm4g5" path="res://Sprites/Guide Icon/task/quest_0008.png" id="61_ws3mp"]
-[ext_resource type="Texture2D" uid="uid://d3ys5jqyxaxwe" path="res://Sprites/Guide Icon/task/quest_0009.png" id="62_4lhbk"]
-[ext_resource type="Texture2D" uid="uid://ttdjdextivc6" path="res://Sprites/Guide Icon/task/quest_0010.png" id="63_ap144"]
-[ext_resource type="Texture2D" uid="uid://c1xoih3k1fv6c" path="res://Sprites/Guide Icon/task/quest_0011.png" id="64_nx7d4"]
-[ext_resource type="Texture2D" uid="uid://bmr1wkfmfhi6j" path="res://Sprites/Guide Icon/task/quest_0012.png" id="65_w5ak5"]
-[ext_resource type="Texture2D" uid="uid://c13qur6g5vpvx" path="res://Sprites/Guide Icon/task/quest_0013.png" id="66_a4y5s"]
-[ext_resource type="Texture2D" uid="uid://ct1xu5nhmy2uv" path="res://Sprites/Guide Icon/task/quest_0014.png" id="67_eq5jv"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="62_g1y4f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uh6i6"]
 
@@ -80,6 +70,198 @@ normal = Vector2(-1, 0)
 normal = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53tev"]
+
+[sub_resource type="Animation" id="Animation_064ep"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TaskPlayer/TaskIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%TaskPlayer/TaskIcon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(895, 425)]
+}
+
+[sub_resource type="Animation" id="Animation_53w7u"]
+resource_name = "hide_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TaskPlayer/TaskIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k7nmv"]
+resource_name = "show_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TaskPlayer/TaskIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%TaskPlayer/TaskIcon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(895, 425), Vector2(895, 445)]
+}
+
+[sub_resource type="Animation" id="Animation_eue7n"]
+resource_name = "task_floating"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TaskPlayer/TaskIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(895, 445), Vector2(895, 425), Vector2(895, 445)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqkqo"]
+_data = {
+"RESET": SubResource("Animation_064ep"),
+"hide_task": SubResource("Animation_53w7u"),
+"show_task": SubResource("Animation_k7nmv"),
+"task_floating": SubResource("Animation_eue7n")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6cix"]
+
+[sub_resource type="Animation" id="Animation_pklfw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_crpc0"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -200), Vector2(0, -180)]
+}
+
+[sub_resource type="Animation" id="Animation_bqfi1"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1usdu"]
+resource_name = "float_loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, -200), Vector2(0, -180)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g101d"]
+_data = {
+"RESET": SubResource("Animation_pklfw"),
+"fade_in": SubResource("Animation_crpc0"),
+"fade_out": SubResource("Animation_bqfi1"),
+"float_loop": SubResource("Animation_1usdu")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eu7mp"]
 animations = [{
@@ -304,154 +486,6 @@ _data = {
 "show_guide": SubResource("Animation_s4gr3")
 }
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0uhrn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("55_kwtvv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("56_5op6w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("57_std7g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("58_1keph")
-}, {
-"duration": 1.0,
-"texture": ExtResource("53_ib88g")
-}, {
-"duration": 1.0,
-"texture": ExtResource("59_sry8s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("60_1b32m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("54_hligq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("61_ws3mp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("62_4lhbk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("63_ap144")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_nx7d4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("65_w5ak5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_a4y5s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("67_eq5jv")
-}],
-"loop": true,
-"name": &"task_icon",
-"speed": 1.0
-}]
-
-[sub_resource type="Animation" id="Animation_uq0gp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TaskAnimation/Task:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(902, 470)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TaskAnimation/Task:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_fepja"]
-resource_name = "hide_task"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TaskAnimation/Task:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_rdw64"]
-resource_name = "show_task"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TaskAnimation/Task:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TaskAnimation/Task:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(902, 470), Vector2(902, 490)]
-}
-
-[sub_resource type="Animation" id="Animation_4v5ac"]
-resource_name = "task_floating"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TaskAnimation/Task:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(902, 490), Vector2(902, 470), Vector2(902, 490)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xk1r2"]
-_data = {
-"RESET": SubResource("Animation_uq0gp"),
-"hide_task": SubResource("Animation_fepja"),
-"show_task": SubResource("Animation_rdw64"),
-"task_floating": SubResource("Animation_4v5ac")
-}
-
 [node name="Kamar" type="Node2D"]
 script = ExtResource("1_0lu7m")
 cula_kamera = ExtResource("2_opkfa")
@@ -476,7 +510,7 @@ texture = ExtResource("3_74mgh")
 [node name="Collisions" type="StaticBody2D" parent="Layout"]
 
 [node name="FloorCollision" type="CollisionShape2D" parent="Layout/Collisions"]
-position = Vector2(1571, 1023)
+position = Vector2(1465, 1021)
 shape = SubResource("WorldBoundaryShape2D_uh6i6")
 
 [node name="RightCollision" type="CollisionShape2D" parent="Layout/Collisions"]
@@ -495,31 +529,69 @@ texture = ExtResource("3_74mgh")
 [node name="TaskArea" type="Area2D" parent="Layout"]
 position = Vector2(959, 816)
 scale = Vector2(11.2374, 8.2738)
+collision_mask = 3
 script = ExtResource("5_ef7pi")
 
 [node name="Collision" type="CollisionShape2D" parent="Layout/TaskArea"]
 shape = SubResource("RectangleShape2D_53tev")
 
-[node name="MC" parent="." instance=ExtResource("4_7hlar")]
-position = Vector2(1527, 609)
-script = ExtResource("5_4rgqo")
-SPEED = 400.0
+[node name="TaskPlayer" type="AnimationPlayer" parent="Layout/TaskArea"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_sqkqo")
+}
 
-[node name="Maung" type="Sprite2D" parent="."]
-position = Vector2(1325, 855)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_bqob5")
+[node name="TaskIcon" type="TextureRect" parent="Layout/TaskArea/TaskPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 895.0
+offset_top = 425.0
+offset_right = 1395.0
+offset_bottom = 925.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("53_ib88g")
+
+[node name="PintuKamar" type="Area2D" parent="Layout"]
+position = Vector2(2668, 730)
+collision_mask = 4
+script = ExtResource("6_6i6w1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layout/PintuKamar"]
+scale = Vector2(11.4913, 25.3246)
+shape = SubResource("RectangleShape2D_u6cix")
+
+[node name="Sprite2D" type="Sprite2D" parent="Layout/PintuKamar"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -200)
+scale = Vector2(0.844862, 0.760376)
+texture = ExtResource("6_lqdw6")
+
+[node name="IconPlayer" type="AnimationPlayer" parent="Layout/PintuKamar"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_g101d")
+}
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="Layout/PintuKamar"]
+stream = ExtResource("7_4glif")
+bus = &"SFX"
+
+[node name="MC" parent="." instance=ExtResource("4_7hlar")]
+position = Vector2(1527, 850)
+collision_layer = 6
+script = ExtResource("5_4rgqo")
+
+[node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("12_7qxud")]
+position = Vector2(1325, 850)
+ucing = NodePath("../MC")
+
+[node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_kphj4")]
+position = Vector2(1754, 821)
+ucing = NodePath("../MC")
 
 [node name="Cula" type="Sprite2D" parent="."]
 position = Vector2(1135, 847)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_g3wdm")
-
-[node name="Buba" type="Sprite2D" parent="."]
-position = Vector2(1754, 821)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_mkmhn")
-flip_h = true
 
 [node name="NightAmbience" type="Node2D" parent="."]
 visible = false
@@ -554,24 +626,6 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_eu7mp")
 animation = &"night2day"
 
-[node name="GuideAnimation" type="AnimationPlayer" parent="CanvasLayer"]
-root_node = NodePath("Guide_1")
-libraries = {
-"": SubResource("AnimationLibrary_gcare")
-}
-
-[node name="Guide_1" type="TextureRect" parent="CanvasLayer/GuideAnimation"]
-self_modulate = Color(1, 1, 1, 0)
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 489.5
-offset_top = 50.0
-offset_right = 1430.5
-offset_bottom = 259.001
-grow_horizontal = 2
-texture = ExtResource("52_cnr2l")
-
 [node name="TaskWarning" type="TextureRect" parent="CanvasLayer"]
 unique_name_in_owner = true
 visible = false
@@ -603,32 +657,34 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("55_r8xa2")
 
-[node name="TaskIcon" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(958, 509)
-scale = Vector2(0.225869, 0.225869)
-sprite_frames = SubResource("SpriteFrames_0uhrn")
-animation = &"task_icon"
-frame = 10
-frame_progress = 0.546574
-
-[node name="TaskAnimation" type="AnimationPlayer" parent="."]
+[node name="GuidePlayer" type="AnimationPlayer" parent="CanvasLayer"]
 unique_name_in_owner = true
+root_node = NodePath("Guide_1")
 libraries = {
-"": SubResource("AnimationLibrary_xk1r2")
+"": SubResource("AnimationLibrary_gcare")
 }
 
-[node name="Task" type="TextureRect" parent="TaskAnimation"]
+[node name="Guide_1" type="TextureRect" parent="CanvasLayer/GuidePlayer"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 902.0
-offset_top = 470.0
-offset_right = 1402.0
-offset_bottom = 970.003
-scale = Vector2(0.224376, 0.224376)
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = ExtResource("53_ib88g")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -470.5
+offset_top = 50.0
+offset_right = 470.5
+offset_bottom = 259.001
+grow_horizontal = 2
+texture = ExtResource("52_cnr2l")
 
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("62_g1y4f")]
+
+[connection signal="following" from="." to="Maung" method="_following"]
+[connection signal="following" from="." to="Buba" method="_following"]
+[connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
 [connection signal="body_entered" from="Layout/TaskArea" to="Layout/TaskArea" method="_on_body_entered"]
 [connection signal="body_exited" from="Layout/TaskArea" to="Layout/TaskArea" method="_on_body_exited"]
+[connection signal="body_entered" from="Layout/PintuKamar" to="Layout/PintuKamar" method="_on_body_entered"]
+[connection signal="body_exited" from="Layout/PintuKamar" to="Layout/PintuKamar" method="_on_body_exited"]
+[connection signal="r_in" from="Layout/PintuKamar" to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="Layout/PintuKamar" to="CanvasLayer/DirectionPlayer" method="r_out"]
 [connection signal="pressed" from="CanvasLayer/TaskWarning/Button" to="Layout/TaskArea" method="_on_button_pressed"]

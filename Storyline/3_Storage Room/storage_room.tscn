@@ -342,10 +342,9 @@ shape = SubResource("WorldBoundaryShape2D_hwl7q")
 position = Vector2(135, 505)
 shape = SubResource("WorldBoundaryShape2D_3ncbp")
 
-[node name="Box" type="Area2D" parent="." node_paths=PackedStringArray("ucing")]
+[node name="Box" type="Area2D" parent="."]
 position = Vector2(646, 560)
 script = ExtResource("28_gjxsm")
-ucing = NodePath("../MC")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Box"]
 sprite_frames = SubResource("SpriteFrames_a055b")
@@ -358,6 +357,7 @@ scale = Vector2(2.98735, 51.7618)
 shape = SubResource("RectangleShape2D_6d3xw")
 
 [node name="MC" parent="." instance=ExtResource("27_2hg52")]
+unique_name_in_owner = true
 position = Vector2(2272, 586)
 script = ExtResource("29_vyccd")
 SPEED = 400.0

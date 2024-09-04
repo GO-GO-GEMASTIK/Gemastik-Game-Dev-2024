@@ -2,25 +2,32 @@ extends Node2D
 
 signal next
 signal next_part
+signal following
+signal r_in
 
 @export var cula_kamera := Texture2D
 
 @onready var ucing = $MC
-@onready var camera = ucing.get_node("Camera2D")
-@onready var animations = $CanvasLayer/Control/Animations
-@onready var night_ambience = $NightAmbience
 @onready var cula = $Cula
 @onready var buba = $Buba
 @onready var maung = $Maung
-@onready var guide_animation = $CanvasLayer/GuideAnimation
-@onready var task_animation = $TaskAnimation
+
+@onready var camera: Camera2D = ucing.camera
+@onready var animations = $CanvasLayer/Control/Animations
+@onready var night_ambience = $NightAmbience
+
+@onready var guide_player = $CanvasLayer/GuidePlayer
 
 var dialogue_is_running = false
 
+# !!!CURRENTLY DEBUGGING, DO NOT FORGET TO SET THE STORYLINE TO DEFAULT!!!
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	camera.limit_right = GameStateManager.get_room_right_limit("kamar")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	ucing.look_left()
+	#run_part_3()
 	if not GameStateManager.is_task_completed(5):
 		run_part_1()
 	elif GameStateManager.is_task_completed(5):
@@ -62,17 +69,22 @@ func run_part_2():
 	await next
 	dialog_runner("B4_3_kamar_malam_kedua")
 	await next
-	guide_animation.play("show_guide")
+	guide_player.play("show_guide")
 
 # --task 5 here--
 
 func run_part_3():
 	buba.set_global_position(Vector2(2450, 821))
 	cula.set_visible(false)
-	ucing.set_global_position(Vector2(1080, 609))
+	ucing.set_global_position(Vector2(1080, 855))
 	maung.set_global_position(Vector2(930, 855))
 	await get_tree().create_timer(1.0).timeout
 	dialog_runner("B4_4_orangtua_ucing_maung")
+	await Dialogic.timeline_ended
+	await get_tree().create_timer(1.0).timeout
+	following.emit()
+	r_in.emit()
+	
 #endregion
 
 

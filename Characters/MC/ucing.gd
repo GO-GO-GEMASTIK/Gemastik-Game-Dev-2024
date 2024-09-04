@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
 @export var SPEED := 500.0
-const JUMP_VELOCITY = -400.0
 
 @onready var ucing = $Sprite2D
 @onready var walking_sound = $Walk
-@onready var camera = $Camera2D
+@onready var camera: Camera2D = $Camera2D
 @onready var good_bad_traits_script: Script = preload("res://Utility/GoodBadTraits.gd")
 
+var JUMP_VELOCITY = -450.0
 var movement_enabled = true
 var last_facing_left = false
+var push_force = 80.0
 
 func _ready():
 	if owner.name == "Main":
@@ -59,6 +60,10 @@ func _physics_process(delta):
 		# Play or stop walking sound based on movement and ground state...
 	
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
 	# Set sprite flip based on the last direction faced
 	ucing.flip_h = last_facing_left
@@ -75,6 +80,12 @@ func disable_movement():
 func enable_movement():
 	movement_enabled = true
 
+func enable_camera():
+	camera.set_enabled(true)
+
+func disable_camera():
+	camera.set_enabled(false)
+
 func look_left():
 	last_facing_left = true
 	ucing.flip_h = true
@@ -84,7 +95,10 @@ func look_right():
 	ucing.flip_h = false
 
 
-
 func _on_dialogic_game_handler_signal_event(argument):
 	#print(argument)
 	good_bad_traits_script._change_traits(argument)
+
+
+func change_jump_val(val: int):
+	JUMP_VELOCITY = val
