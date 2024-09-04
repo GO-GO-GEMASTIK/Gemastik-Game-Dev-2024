@@ -43,6 +43,8 @@ func _on_dialogic_signal(argument:String):
 		GameStateManager.set_string_state("GuidePintuKuning", true)
 	if argument == "enable_door":
 		door_dialogue = true
+		
+	
 
 #region DIALOGUE MANAGER
 func _dialogue_start(body, dialogue: String):

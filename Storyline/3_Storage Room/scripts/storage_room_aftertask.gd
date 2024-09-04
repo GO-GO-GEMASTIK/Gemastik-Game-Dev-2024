@@ -1,7 +1,7 @@
 extends Node2D
 
 var dialogue_is_running = false
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var tbc = load("res://Storyline/15_Kelas/classroom_awal.tscn")
 
 @onready var ucing = $MC
 

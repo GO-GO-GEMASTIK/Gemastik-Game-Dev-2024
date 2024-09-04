@@ -1,9 +1,11 @@
 extends Area2D
 
-
+@onready var kerjasama = GameStateManager.get_naughty_nice("Kerjasama")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Start dialog
+	print("Poin kerjasama: ",kerjasama)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.start("dialog_kelas_after")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	

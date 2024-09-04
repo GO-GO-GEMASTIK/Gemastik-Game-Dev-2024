@@ -402,7 +402,7 @@ ucing = NodePath("../MC")
 
 [node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_b88js")]
 z_index = 1
-position = Vector2(2700, 881)
+position = Vector2(2769, 790)
 scale = Vector2(0.5, 0.5)
 player = NodePath("../MC")
 
@@ -607,9 +607,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("61_e5s6k")
@@ -624,9 +624,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("21_vir07")

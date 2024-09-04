@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://blwi3pqepkhul" path="res://Sprites/Animasi/day to night/Timeline 2_0018.png" id="30_havmk"]
 [ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Sprites/Background/Gudang/lighting on.png" id="30_nilr4"]
 [ext_resource type="Texture2D" uid="uid://211qe5ljebgf" path="res://Sprites/Animasi/day to night/Timeline 2_0019.png" id="31_u7sno"]
-[ext_resource type="Texture2D" uid="uid://bye6swr8vyyp" path="res://Storyline/16_Bagian4/Kamar/sprites/guide.png" id="52_cnr2l"]
+[ext_resource type="Texture2D" uid="uid://bye6swr8vyyp" path="res://Storyline/16_Bagian4/kamar/sprites/guide.png" id="52_cnr2l"]
 [ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="53_ib88g"]
 [ext_resource type="Texture2D" uid="uid://bs33ytfubnq2b" path="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/warning box.png" id="54_j4mnn"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="55_r8xa2"]

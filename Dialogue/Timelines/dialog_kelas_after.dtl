@@ -1,6 +1,7 @@
 "Bu Cilla": Ayo, kumpulkan tugas kalian.\
 Kita akan segera berganti mata pelajaran!
-if true:
+set {kerjasama} = GameStateManager.get_naughty_nice("Kerjasama")
+if {kerjasama} == 1:
 	character: Ucing, kamu hebat sekali! \
 	Aku tahu kalau kamu memang teman baik yang mau bekerjasama!
 	Buba: Sudah kubilang kan, Maung.\
@@ -8,6 +9,8 @@ if true:
 	Ucing: Aku tidak bisa selesai tanpa kalian.\
 	Terimakasih kerjasamanya, ayo diskusi lagi lain waktu.
 else:
+	Ucing: Oh.. tugas ini cukup melelahkan bila dikerjakan sendiri.
+	Ucing: Seharusnya aku terima tawaran Buba dan anak harimau itu.
 Cula: Oh tidak. \
 Bu, aku belum selesai!\
 Mengapa tugas ini sulit sekali?

@@ -13,6 +13,12 @@ var tasks := {
 	8: false
 }
 
+var naughty_nice := {
+	"Kejujuran": "None",
+	"Rendah Hati": "None",
+	"Kerjasama": "None"
+}
+
 var string_states := {
 	"Gudang": false,
 	"Kantin": false,
@@ -34,7 +40,19 @@ var right_limit := {
 	"bukit": 9000,
 }
 
-#region Position Update Methods
+# State methods
+func set_naughty_nice(behavior: String, state: String):
+	if behavior in naughty_nice:
+		naughty_nice[behavior] = state
+
+func get_naughty_nice(behavior: String) -> int:
+	if naughty_nice[behavior] == "1":
+		print(naughty_nice[behavior])
+		return int(naughty_nice.get(behavior, 1))
+	else:
+		print(naughty_nice[behavior])
+		return int(naughty_nice.get(behavior,0))
+
 func update_pos_main(newPos: Vector2):
 	newPos.x -= 200
 	ucing_pos_main = newPos

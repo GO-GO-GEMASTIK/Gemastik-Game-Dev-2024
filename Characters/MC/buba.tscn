@@ -4,17 +4,17 @@
 [ext_resource type="Script" path="res://Characters/Otan/Otan.gd" id="1_uqxan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ya0c"]
-size = Vector2(245.517, 554.455)
+size = Vector2(264.828, 501.65)
 
 [node name="Buba" type="Area2D"]
 script = ExtResource("1_uqxan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(695, 571)
+position = Vector2(762, 575)
 scale = Vector2(0.725, 0.7575)
 shape = SubResource("RectangleShape2D_3ya0c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(683, 563)
-scale = Vector2(0.5495, 0.59175)
+position = Vector2(760, 577)
+scale = Vector2(0.452, 0.488)
 texture = ExtResource("1_kq27f")

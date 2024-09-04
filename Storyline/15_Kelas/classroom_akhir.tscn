@@ -17,7 +17,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 normal = Vector2(-0.00358052, -0.999994)
-distance = 75.9657
+distance = 43.4427
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6lnco"]
 normal = Vector2(-0.999966, -0.00829742)
@@ -25,21 +25,27 @@ distance = 3227.38
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2op6"]
 normal = Vector2(0.99997, -0.00779094)
-distance = -2525.19
+distance = -2936.15
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
-size = Vector2(260, 573)
+size = Vector2(218, 453.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6c8"]
-size = Vector2(178, 451)
+size = Vector2(193.5, 405.75)
 
 [node name="Kelas_Akhir" type="Node2D"]
 
 [node name="MapLayout" type="Node" parent="."]
 
+[node name="Kelas2" type="Sprite2D" parent="MapLayout"]
+visible = false
+position = Vector2(1976.98, 598.375)
+scale = Vector2(1.02397, 1.08264)
+texture = ExtResource("1_evwll")
+
 [node name="Kelas" type="Sprite2D" parent="MapLayout"]
-position = Vector2(1972, 595)
-scale = Vector2(1.02137, 1.07639)
+position = Vector2(1976.02, 598.125)
+scale = Vector2(1.01928, 0.990973)
 texture = ExtResource("1_evwll")
 
 [node name="Collisions" type="StaticBody2D" parent="MapLayout"]
@@ -69,12 +75,12 @@ position = Vector2(3161, 585)
 script = ExtResource("4_exoob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/BuCilla"]
-position = Vector2(224, 201)
+position = Vector2(239, 237)
 shape = SubResource("RectangleShape2D_eho2w")
 
 [node name="SpriteBuCilla" type="Sprite2D" parent="MapLayout/BuCilla"]
-position = Vector2(217, 166)
-scale = Vector2(0.772, 0.814)
+position = Vector2(243.5, 190)
+scale = Vector2(0.627, 0.658)
 texture = ExtResource("5_21djg")
 
 [node name="Otan" type="Area2D" parent="MapLayout"]
@@ -82,32 +88,32 @@ position = Vector2(4, 458)
 script = ExtResource("6_b4ucb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Otan"]
-position = Vector2(1053, 401)
+position = Vector2(755, 399)
 shape = SubResource("RectangleShape2D_gl6c8")
 
 [node name="Sprite2D" type="Sprite2D" parent="MapLayout/Otan"]
-position = Vector2(1055, 428)
-scale = Vector2(0.640741, 0.624537)
+position = Vector2(757, 425)
+scale = Vector2(0.577778, 0.55382)
 texture = ExtResource("7_irefg")
 
 [node name="Buba" parent="MapLayout" instance=ExtResource("8_de3tv")]
-position = Vector2(1572, 305)
+position = Vector2(1574, 289)
 script = ExtResource("9_rj5jb")
 
 [node name="FrontAccKelas" type="Sprite2D" parent="MapLayout"]
-position = Vector2(1982.5, 619.5)
-scale = Vector2(1.01484, 1.00463)
+position = Vector2(2014, 637)
+scale = Vector2(0.998306, 0.860648)
 texture = ExtResource("10_jpt1t")
 
 [node name="Cula" parent="MapLayout" instance=ExtResource("11_c567g")]
-position = Vector2(-785, -22)
+position = Vector2(-1493, -80)
 script = ExtResource("12_n05jt")
 
 [node name="Maung" parent="MapLayout" instance=ExtResource("13_jly4w")]
-position = Vector2(1404, 349)
+position = Vector2(1450, 344)
 
 [node name="MC" parent="MapLayout" instance=ExtResource("14_ekvcv")]
-position = Vector2(1524, 683)
+position = Vector2(2793, 624)
 scale = Vector2(1.02137, 1.07639)
 script = ExtResource("15_5e41x")
 SPEED = 400.0

@@ -35,7 +35,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 normal = Vector2(-0.00358052, -0.999994)
-distance = -5.7956
+distance = 75.9657
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6lnco"]
 normal = Vector2(-0.999966, -0.00829742)
@@ -165,12 +165,12 @@ position = Vector2(1053, 401)
 shape = SubResource("RectangleShape2D_gl6c8")
 
 [node name="Sprite2D" type="Sprite2D" parent="MapLayout/Otan"]
-position = Vector2(1046, 443)
-scale = Vector2(0.572222, 0.57338)
+position = Vector2(1055, 428)
+scale = Vector2(0.640741, 0.624537)
 texture = ExtResource("4_qrexg")
 
 [node name="Buba" parent="MapLayout" instance=ExtResource("6_n025k")]
-position = Vector2(1596, 340)
+position = Vector2(1596, 379)
 script = ExtResource("7_55h6y")
 
 [node name="FrontAccKelas" type="Sprite2D" parent="MapLayout"]
@@ -179,7 +179,7 @@ scale = Vector2(1.0069, 1.01435)
 texture = ExtResource("15_oqem1")
 
 [node name="Cula" parent="MapLayout" instance=ExtResource("4_ay8mx")]
-position = Vector2(-746, -33)
+position = Vector2(-785, -22)
 script = ExtResource("5_c0as7")
 
 [node name="Maung" parent="MapLayout" instance=ExtResource("2_evrr6")]

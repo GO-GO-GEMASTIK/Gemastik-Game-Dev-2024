@@ -26,8 +26,8 @@ Hmm, Ucing, kamu mau diskusi dengan kami?
 - Tentu saja! Aku mau sekelompok dengan kalian!
 	Ucing: Ide yang bagus! Ayo bagi tugas!
 	character: Horee! Ucing masuk kelompok kita!
-	[signal arg="Suka kerjasama"]
+	[signal arg="1"]
 - Tidak. Aku hanya mau kemampuanku sendiri, meski ini kerja kelompok.
 	Ucing: Aku ahli di pelajaran ini, tenang saja, kawan.
 	Buba: Baiklah, beritahu kami kalau kamu kesulitan ya!
-	[signal arg="Tidak suka kerjasama"]
+	[signal arg="0"]
