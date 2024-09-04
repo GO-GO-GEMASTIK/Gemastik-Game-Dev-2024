@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://esafcnvhddjk"]
+[gd_scene load_steps=76 format=3 uid="uid://esafcnvhddjk"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_67irq"]
 [ext_resource type="Texture2D" uid="uid://qcijt33hlfx0" path="res://Sprites/Sekolah/Lantai Dasar/Lantai dasar.jpg" id="2_13oy7"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="6_bn0du"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="7_3x4sx"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="8_5m0rm"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="10_pr1wr"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="11_jwh01"]
 [ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="12_7f5h6"]
 [ext_resource type="Texture2D" uid="uid://dxvq7ha07maey" path="res://Sprites/Guide Icon/naik tangga/naik_0002.png" id="13_82l7h"]
@@ -55,18 +54,18 @@
 [ext_resource type="Texture2D" uid="uid://vgknqypeb3yl" path="res://Sprites/Guide Icon/view/view_0012.png" id="54_yt3my"]
 [ext_resource type="Texture2D" uid="uid://c68nsfwlyifey" path="res://Sprites/Guide Icon/view/view_0013.png" id="55_j0djw"]
 [ext_resource type="Texture2D" uid="uid://bgau2wsop1ok4" path="res://Sprites/Guide Icon/view/view_0014.png" id="56_3lwjr"]
+[ext_resource type="Script" path="res://Storyline/17_Bagian_3/scripts/main_room_3.gd" id="56_lsig0"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="57_1glms"]
 [ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="58_ve8co"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
+distance = 12.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gycvm"]
 normal = Vector2(-1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ebfbm"]
 normal = Vector2(1, 0)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw7tb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_buqwo"]
 animations = [{
@@ -395,16 +394,18 @@ script = ExtResource("1_67irq")
 
 [node name="Koridor" type="Sprite2D" parent="MapLayout"]
 z_index = -1
-position = Vector2(5207, 465)
+position = Vector2(4171, 540)
 texture = ExtResource("2_13oy7")
 
 [node name="TanggaAtas" type="Sprite2D" parent="MapLayout"]
-position = Vector2(5853, 508)
+visible = false
+position = Vector2(5637, 464)
 texture = ExtResource("3_6g777")
 
 [node name="TanggaBawah" type="Sprite2D" parent="MapLayout"]
+visible = false
 z_index = 5
-position = Vector2(6240, 925)
+position = Vector2(5745, 874)
 texture = ExtResource("4_trgq2")
 
 [node name="FrontFurnitures" type="Sprite2D" parent="MapLayout"]
@@ -454,10 +455,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -600.0
-offset_top = -644.5
-offset_right = 600.0
-offset_bottom = 644.5
+offset_left = -418.0
+offset_top = -580.0
+offset_right = 782.0
+offset_bottom = 709.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_bn0du")
@@ -467,23 +468,17 @@ position = Vector2(598, -19)
 shape = SubResource("WorldBoundaryShape2D_ebfbm")
 
 [node name="MC" parent="." instance=ExtResource("7_3x4sx")]
-position = Vector2(5674, 658)
+position = Vector2(7396, 570)
 script = ExtResource("8_5m0rm")
 
 [node name="GuideIcon" type="Node" parent="."]
 
-[node name="IconNaik" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing")]
-position = Vector2(5458, 437)
-script = ExtResource("10_pr1wr")
-ucing = NodePath("../../MC")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconNaik"]
-position = Vector2(-151, 422)
-scale = Vector2(18.6257, 9.32412)
-shape = SubResource("RectangleShape2D_mw7tb")
+[node name="IconNaik" type="Area2D" parent="GuideIcon"]
+position = Vector2(4389, 460)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GuideIcon/IconNaik"]
 self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-859, -85)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_buqwo")
 animation = &"icon_naik"
@@ -496,21 +491,16 @@ libraries = {
 }
 
 [node name="PopSound" type="AudioStreamPlayer2D" parent="GuideIcon/IconNaik"]
+position = Vector2(-11, 28)
 stream = ExtResource("41_p12gq")
 bus = &"SFX"
 
-[node name="IconTurun" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing")]
-position = Vector2(6284, 437)
-script = ExtResource("10_pr1wr")
-ucing = NodePath("../../MC")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconTurun"]
-position = Vector2(-151, 422)
-scale = Vector2(18.6257, 9.32412)
-shape = SubResource("RectangleShape2D_mw7tb")
+[node name="IconTurun" type="Area2D" parent="GuideIcon"]
+position = Vector2(4830, 601)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GuideIcon/IconTurun"]
 self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-1295, 158)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_buqwo")
 animation = &"icon_turun"
@@ -522,14 +512,15 @@ libraries = {
 }
 
 [node name="PopSound" type="AudioStreamPlayer2D" parent="GuideIcon/IconTurun"]
+position = Vector2(-12, 5)
 stream = ExtResource("41_p12gq")
 bus = &"SFX"
 
 [node name="AreaPapan" type="Area2D" parent="GuideIcon"]
 position = Vector2(1868, 914)
-script = ExtResource("10_pr1wr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/AreaPapan"]
+position = Vector2(-649, 45)
 scale = Vector2(16.1576, 4.34604)
 shape = SubResource("RectangleShape2D_mm3ow")
 
@@ -551,16 +542,20 @@ stream = ExtResource("41_p12gq")
 bus = &"SFX"
 
 [node name="Pintu1" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(3224, 644)
+position = Vector2(2198, 707)
+script = null
 
 [node name="Pintu2" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(3562, 670)
+position = Vector2(3217, 701)
+script = ExtResource("56_lsig0")
 
 [node name="Pintu3" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(7285, 672)
+position = Vector2(5526, 716)
+script = null
 
 [node name="Pintu4" parent="GuideIcon" instance=ExtResource("57_1glms")]
-position = Vector2(8599, 665)
+position = Vector2(6790, 720)
+script = null
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("58_ve8co")

@@ -85,6 +85,4 @@ func look_right():
 
 
 
-func _on_dialogic_game_handler_signal_event(argument):
-	#print(argument)
-	good_bad_traits_script._change_traits(argument)
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=43 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
@@ -9,51 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://tt7vdjl8o4jx" path="res://Sprites/Sekolah/Lantai Dasar/front.png" id="7_27y8p"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="7_wwuew"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="15_64nkg"]
-[ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="16_bmcjw"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/CanvasLayer.gd" id="15_drt8y"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="17_dy5op"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_lptfk"]
-[ext_resource type="Texture2D" uid="uid://dxvq7ha07maey" path="res://Sprites/Guide Icon/naik tangga/naik_0002.png" id="17_vxb2s"]
-[ext_resource type="Texture2D" uid="uid://b1ap2qpaqtsro" path="res://Sprites/Guide Icon/view/view_0001.png" id="18_6rhgq"]
-[ext_resource type="Texture2D" uid="uid://dn00tjv1dhhbj" path="res://Sprites/Guide Icon/naik tangga/naik_0003.png" id="18_eds0m"]
-[ext_resource type="Texture2D" uid="uid://bsdhgxci718w8" path="res://Sprites/Guide Icon/view/view_0002.png" id="19_8mtxy"]
-[ext_resource type="Texture2D" uid="uid://cx25ulkbva4re" path="res://Sprites/Guide Icon/naik tangga/naik_0004.png" id="19_siao7"]
-[ext_resource type="Texture2D" uid="uid://cqw2bbm4g8q8h" path="res://Sprites/Guide Icon/naik tangga/naik_0005.png" id="20_3u0ai"]
-[ext_resource type="Texture2D" uid="uid://dw7cpbnaivxi7" path="res://Sprites/Guide Icon/view/view_0003.png" id="20_ogvkj"]
-[ext_resource type="Texture2D" uid="uid://dtjd6yc13owei" path="res://Sprites/Guide Icon/view/view_0004.png" id="21_k5f1o"]
-[ext_resource type="Texture2D" uid="uid://b0dm6klf20p3v" path="res://Sprites/Guide Icon/naik tangga/naik_0006.png" id="21_up0e6"]
-[ext_resource type="Texture2D" uid="uid://drhh05qqr5n8p" path="res://Sprites/Guide Icon/view/view_0005.png" id="22_cw2kj"]
-[ext_resource type="Texture2D" uid="uid://djh6f4dnvir0c" path="res://Sprites/Guide Icon/naik tangga/naik_0007.png" id="22_gm5ob"]
-[ext_resource type="Texture2D" uid="uid://1wrknikbioje" path="res://Sprites/Guide Icon/naik tangga/naik_0008.png" id="23_5am6l"]
-[ext_resource type="Texture2D" uid="uid://32tu6kah0qu6" path="res://Sprites/Guide Icon/view/view_0006.png" id="23_ead8e"]
-[ext_resource type="Texture2D" uid="uid://dykh0h5x72o14" path="res://Sprites/Guide Icon/view/view_0007.png" id="24_ejk3h"]
-[ext_resource type="Texture2D" uid="uid://bnmw4mdtruvpm" path="res://Sprites/Guide Icon/naik tangga/naik_0009.png" id="24_j8l88"]
-[ext_resource type="Texture2D" uid="uid://bbfscdjyn36g4" path="res://Sprites/Guide Icon/view/view_0008.png" id="25_1gto7"]
-[ext_resource type="Texture2D" uid="uid://bylouphokir6p" path="res://Sprites/Guide Icon/naik tangga/naik_0010.png" id="25_58a8r"]
-[ext_resource type="Texture2D" uid="uid://c0m2jgpwhn2vi" path="res://Sprites/Guide Icon/view/view_0009.png" id="26_hihi6"]
-[ext_resource type="Texture2D" uid="uid://b056duqnaatre" path="res://Sprites/Guide Icon/naik tangga/naik_0011.png" id="26_kp2vn"]
-[ext_resource type="Texture2D" uid="uid://c5w1sm2mbym6a" path="res://Sprites/Guide Icon/naik tangga/naik_0012.png" id="27_4k1lu"]
-[ext_resource type="Texture2D" uid="uid://br3auwfdihack" path="res://Sprites/Guide Icon/view/view_0010.png" id="27_78rrd"]
-[ext_resource type="Texture2D" uid="uid://b0maksmahradm" path="res://Sprites/Guide Icon/view/view_0011.png" id="28_bv6ep"]
-[ext_resource type="Texture2D" uid="uid://kkylcm7at74w" path="res://Sprites/Guide Icon/naik tangga/naik_0013.png" id="28_qoyq0"]
-[ext_resource type="Texture2D" uid="uid://vgknqypeb3yl" path="res://Sprites/Guide Icon/view/view_0012.png" id="29_8aqxi"]
-[ext_resource type="Texture2D" uid="uid://cgyxdmwbd3m84" path="res://Sprites/Guide Icon/naik tangga/naik_0014.png" id="29_uxhoo"]
-[ext_resource type="Texture2D" uid="uid://c68nsfwlyifey" path="res://Sprites/Guide Icon/view/view_0013.png" id="30_28lxl"]
+[ext_resource type="Texture2D" uid="uid://0p73qcelirwp" path="res://Storyline/2_Main Room/sprites/tutorial_guide/1_walk_tutorial.png" id="21_vir07"]
+[ext_resource type="Texture2D" uid="uid://cqgs103gs732" path="res://Storyline/2_Main Room/sprites/tutorial_guide/2_jump_tutorial.png" id="22_xwshh"]
+[ext_resource type="Texture2D" uid="uid://dl7d3t3olattl" path="res://Storyline/2_Main Room/sprites/tutorial_guide/3_interact_tutorial.png" id="23_g68e5"]
+[ext_resource type="Texture2D" uid="uid://bkbaoqh6row5i" path="res://Storyline/2_Main Room/sprites/tutorial_guide/4_skip_tutorial.png" id="24_qny5w"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/turun tangga/turun_0000.png" id="30_j2shl"]
-[ext_resource type="Texture2D" uid="uid://m4li7ysy55fo" path="res://Sprites/Guide Icon/turun tangga/turun_0001.png" id="31_2vg7o"]
-[ext_resource type="Texture2D" uid="uid://bgau2wsop1ok4" path="res://Sprites/Guide Icon/view/view_0014.png" id="31_pv5bj"]
-[ext_resource type="Texture2D" uid="uid://tacr1j30seha" path="res://Sprites/Guide Icon/turun tangga/turun_0002.png" id="32_gvu1a"]
-[ext_resource type="Texture2D" uid="uid://fj3gkeyx6t54" path="res://Sprites/Guide Icon/turun tangga/turun_0003.png" id="33_esa85"]
-[ext_resource type="Texture2D" uid="uid://qu1f2rdbce11" path="res://Sprites/Guide Icon/turun tangga/turun_0004.png" id="34_td3qu"]
-[ext_resource type="Texture2D" uid="uid://b24e5wgius8ob" path="res://Sprites/Guide Icon/turun tangga/turun_0005.png" id="35_3egb0"]
-[ext_resource type="Texture2D" uid="uid://c7e8rukh7adjb" path="res://Sprites/Guide Icon/turun tangga/turun_0006.png" id="36_53wjq"]
-[ext_resource type="Texture2D" uid="uid://br4g3yr1o3ywb" path="res://Sprites/Guide Icon/turun tangga/turun_0007.png" id="37_u6s8y"]
-[ext_resource type="Texture2D" uid="uid://bhtd0554b1kcf" path="res://Sprites/Guide Icon/turun tangga/turun_0008.png" id="38_ggr1r"]
-[ext_resource type="Texture2D" uid="uid://bvdgo7ih0ertl" path="res://Sprites/Guide Icon/turun tangga/turun_0009.png" id="39_2c4m1"]
-[ext_resource type="Texture2D" uid="uid://d4hj6q2hfqr4m" path="res://Sprites/Guide Icon/turun tangga/turun_0010.png" id="40_hnyao"]
-[ext_resource type="Texture2D" uid="uid://dj8rix648c343" path="res://Sprites/Guide Icon/turun tangga/turun_0011.png" id="41_rvmrk"]
-[ext_resource type="Texture2D" uid="uid://byf3ekhx4kh5j" path="res://Sprites/Guide Icon/turun tangga/turun_0012.png" id="42_np5oh"]
-[ext_resource type="Texture2D" uid="uid://be3i63il8su0n" path="res://Sprites/Guide Icon/turun tangga/turun_0013.png" id="43_q0d2o"]
-[ext_resource type="Texture2D" uid="uid://brbvky5b6ogpw" path="res://Sprites/Guide Icon/turun tangga/turun_0014.png" id="44_8byjk"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
 [ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="57_nv6wi"]
 [ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide Icon/1.png" id="61_e5s6k"]
@@ -72,110 +35,7 @@ normal = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw7tb"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_buqwo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("15_64nkg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_bmcjw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_vxb2s")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_eds0m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_siao7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_3u0ai")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_up0e6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_gm5ob")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_5am6l")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_j8l88")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_58a8r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_kp2vn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_4k1lu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_qoyq0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_uxhoo")
-}],
-"loop": true,
-"name": &"icon_naik",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("30_j2shl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("31_2vg7o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_gvu1a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_esa85")
-}, {
-"duration": 1.0,
-"texture": ExtResource("34_td3qu")
-}, {
-"duration": 1.0,
-"texture": ExtResource("35_3egb0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("36_53wjq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("37_u6s8y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("38_ggr1r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("39_2c4m1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("40_hnyao")
-}, {
-"duration": 1.0,
-"texture": ExtResource("41_rvmrk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("42_np5oh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("43_q0d2o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("44_8byjk")
-}],
-"loop": true,
-"name": &"icon_turun",
-"speed": 15.0
-}]
-
-[sub_resource type="Animation" id="Animation_eo2bc"]
+[sub_resource type="Animation" id="Animation_tkg3s"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -362,34 +222,6 @@ _data = {
 "show_guide_pintu": SubResource("Animation_xymq1")
 }
 
-[sub_resource type="Animation" id="Animation_g3sm5"]
-resource_name = "show_tutorial"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(489.5, 50), Vector2(489.5, 100)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_h8lue"]
 length = 0.001
 tracks/0/type = "value"
@@ -443,6 +275,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g3sm5"]
+resource_name = "show_tutorial"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dvw62"]
@@ -528,7 +388,7 @@ script = ExtResource("4_xucuy")
 
 [node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_b88js")]
 z_index = 1
-position = Vector2(2700, 881)
+position = Vector2(2769, 790)
 scale = Vector2(0.5, 0.5)
 player = NodePath("../MC")
 
@@ -721,9 +581,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("61_e5s6k")
@@ -738,9 +598,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("21_vir07")

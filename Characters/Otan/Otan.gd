@@ -2,8 +2,11 @@ extends Area2D
 
 @export var player: CharacterBody2D
 @onready var otan = $OtanSprite
-@onready var icon_player = $IconPlayer
+@onready var icon_player = $AnimationPlayer
 
+func _ready():
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	  
 func _physics_process(_delta):
 	if player:
 		# Calculate the direction to the player
@@ -32,3 +35,15 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body.name == "MC":
 		icon_player.play("fade_out")
+		
+func _on_dialogic_signal(argument:String):
+	if argument == "1":
+		print("Baik")
+		GameStateManager.set_naughty_nice("Kejujuran","1")
+		GameStateManager.get_naughty_nice("Kejujuran")
+	elif argument == "0":
+		print("Ga baik")
+		GameStateManager.set_naughty_nice("Kejujuran","0")
+		GameStateManager.get_naughty_nice("Kejujuran")
+	else:
+		print("Ndak masuk")

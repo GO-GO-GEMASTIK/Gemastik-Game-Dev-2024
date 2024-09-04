@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cqna4e32krxkr"]
+[gd_scene load_steps=21 format=3 uid="uid://cqna4e32krxkr"]
 
 [ext_resource type="Script" path="res://Storyline/17_Bagian_3/scripts/classroom_bagian_3.gd" id="1_ji1di"]
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_u2quu"]
@@ -32,6 +32,9 @@ size = Vector2(218, 453.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6c8"]
 size = Vector2(193.5, 405.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32fh4"]
+size = Vector2(226, 377)
 
 [node name="Kelas_3" type="Node2D"]
 script = ExtResource("1_ji1di")
@@ -89,11 +92,11 @@ position = Vector2(4, 458)
 script = ExtResource("5_um6vc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Otan"]
-position = Vector2(396, 396)
+position = Vector2(253, 390)
 shape = SubResource("RectangleShape2D_gl6c8")
 
 [node name="Sprite2D" type="Sprite2D" parent="MapLayout/Otan"]
-position = Vector2(398, 415)
+position = Vector2(246, 425)
 scale = Vector2(0.577778, 0.55382)
 texture = ExtResource("6_pmpeb")
 
@@ -107,14 +110,14 @@ scale = Vector2(0.998306, 0.860648)
 texture = ExtResource("9_7wuye")
 
 [node name="Cula" parent="MapLayout" instance=ExtResource("10_yrt0d")]
-position = Vector2(-1487, -90)
+position = Vector2(-1545, -84)
 script = ExtResource("11_l0gv4")
 
 [node name="Maung" parent="MapLayout" instance=ExtResource("12_xr8ft")]
 position = Vector2(120, 350)
 
 [node name="MC" parent="MapLayout" instance=ExtResource("13_ghoh6")]
-position = Vector2(571, 623)
+position = Vector2(3454, 607)
 scale = Vector2(1.02137, 1.07639)
 script = ExtResource("14_jaq7q")
 SPEED = 400.0
@@ -122,3 +125,12 @@ SPEED = 400.0
 [node name="FadeOutTimer" type="Timer" parent="MapLayout"]
 
 [node name="FadeInTimer" type="Timer" parent="MapLayout"]
+
+[node name="Area2D" type="Area2D" parent="MapLayout"]
+position = Vector2(660, 892)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Area2D"]
+position = Vector2(-136, -10)
+shape = SubResource("RectangleShape2D_32fh4")
+
+[connection signal="body_entered" from="MapLayout/Area2D" to="." method="_on_area_2d_body_entered"]
