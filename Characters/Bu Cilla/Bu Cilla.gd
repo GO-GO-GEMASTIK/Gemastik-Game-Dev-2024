@@ -74,3 +74,4 @@ func start_fade_out():
 	fade_speed = 1.0 / fade_duration
 	fading_in = false
 	fading_out = true
+

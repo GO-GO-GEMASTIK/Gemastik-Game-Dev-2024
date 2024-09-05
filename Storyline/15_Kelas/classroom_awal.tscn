@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dp4q43eecf64x"]
+[gd_scene load_steps=41 format=3 uid="uid://dp4q43eecf64x"]
 
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_m3k3c"]
 [ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="2_evrr6"]
@@ -14,9 +14,9 @@
 [ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="5_c0as7"]
 [ext_resource type="PackedScene" uid="uid://xfcepi2ygm4g" path="res://Characters/MC/buba.tscn" id="6_n025k"]
 [ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="7_55h6y"]
-[ext_resource type="Script" path="res://Storyline/15_Kelas/Dialog_Kelas_1.gd" id="10_c1502"]
 [ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="15_oqem1"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_ftjas"]
+[ext_resource type="Script" path="res://Storyline/15_Kelas/scripts/Dialog_Kelas_2.gd" id="17_u6ygt"]
 [ext_resource type="Texture2D" uid="uid://bsdhgxci718w8" path="res://Sprites/Guide Icon/view/view_0002.png" id="18_4l7u6"]
 [ext_resource type="Texture2D" uid="uid://b1ap2qpaqtsro" path="res://Sprites/Guide Icon/view/view_0001.png" id="19_i1ww3"]
 [ext_resource type="Texture2D" uid="uid://dw7cpbnaivxi7" path="res://Sprites/Guide Icon/view/view_0003.png" id="20_w2hbx"]
@@ -53,6 +53,9 @@ size = Vector2(178, 451)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_evosh"]
 radius = 66.0984
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmjrr"]
+size = Vector2(654, 499)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nl4r2"]
 animations = [{
@@ -197,20 +200,28 @@ visible = false
 position = Vector2(1563, 355)
 scale = Vector2(1.02137, 1.07639)
 shape = SubResource("CircleShape2D_evosh")
-script = ExtResource("10_c1502")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapLayout/Talk"]
-position = Vector2(3.9162, -17.6516)
-scale = Vector2(0.539163, 0.496284)
-sprite_frames = SubResource("SpriteFrames_nl4r2")
-autoplay = "default"
-frame_progress = 0.392557
 
 [node name="FadeOutTimer" type="Timer" parent="MapLayout"]
 
 [node name="FadeInTimer" type="Timer" parent="MapLayout"]
 
+[node name="Area2D" type="Area2D" parent="MapLayout"]
+position = Vector2(1580, 597)
+script = ExtResource("17_u6ygt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Area2D"]
+position = Vector2(23, 239.5)
+shape = SubResource("RectangleShape2D_pmjrr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapLayout/Area2D"]
+position = Vector2(-13.0001, -261)
+scale = Vector2(0.550685, 0.534195)
+sprite_frames = SubResource("SpriteFrames_nl4r2")
+autoplay = "default"
+frame_progress = 0.392557
+
 [node name="DialogicGameHandler" type="Node" parent="."]
 script = ExtResource("32_oyv2l")
 
+[connection signal="body_entered" from="MapLayout/Area2D" to="MapLayout/Area2D" method="_on_body_entered"]
 [connection signal="signal_event" from="DialogicGameHandler" to="MapLayout/MC" method="_on_dialogic_game_handler_signal_event"]
