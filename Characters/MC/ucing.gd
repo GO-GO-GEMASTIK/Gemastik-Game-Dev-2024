@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var SPEED := 500.0
+@export var flip_h := false
 
 @onready var ucing = $Sprite2D
 @onready var walking_sound = $Walk
@@ -13,6 +14,7 @@ var last_facing_left = false
 var push_force = 80.0
 
 func _ready():
+	ucing.set_flip_h(flip_h)
 	if owner.name == "Main":
 		camera.set_position_smoothing_enabled(false)
 		global_position = GameStateManager.get_pos_main()
@@ -34,7 +36,7 @@ func _physics_process(delta):
 		ucing.animation = "idle"
 
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and movement_enabled:
 		velocity.y += gravity * delta
 
 	# Handle jump.

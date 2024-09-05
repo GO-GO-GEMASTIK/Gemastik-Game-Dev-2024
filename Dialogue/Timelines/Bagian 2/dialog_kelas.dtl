@@ -1,4 +1,4 @@
-character: Cula..bolehkah aku meminjam satu pulpenmu?
+Maung: Cula..bolehkah aku meminjam satu pulpenmu?
 Cula: Tidak boleh, pulpen-pulpen milikku mahal.
 Cula: Aku tidak bisa meminjamkannya kepada siapapun!
 Cula: Dan kalaupun bisa, aku pun tidak akan meminjamkannya padamu, harimau cengeng!
@@ -23,11 +23,11 @@ Cula: Tidak lucu, Otan.\
 Aku sangat kesal denganmu.
 Buba: Oh...sudahlah.\
 Hmm, Ucing, kamu mau diskusi dengan kami?
+[signal arg="pan_to_ucing"]
 - Tentu saja! Aku mau sekelompok dengan kalian!
 	Ucing: Ide yang bagus! Ayo bagi tugas!
 	character: Horee! Ucing masuk kelompok kita!
-	[signal arg="1"]
+	[signal arg="kerja_sama"]
 - Tidak. Aku hanya mau kemampuanku sendiri, meski ini kerja kelompok.
 	Ucing: Aku ahli di pelajaran ini, tenang saja, kawan.
-	Buba: Baiklah, beritahu kami kalau kamu kesulitan ya!
-	[signal arg="0"]
+	Buba: Baiklah Ucing, kalau kamu membutuhkan bantuan bilang saja!

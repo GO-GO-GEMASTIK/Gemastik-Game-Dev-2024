@@ -274,15 +274,15 @@ ucing = NodePath("../MC")
 visible = false
 position = Vector2(6035, 850)
 ucing = NodePath("../MC")
+SPEED = 400.0
 
 [node name="GuideIcon" type="Node" parent="."]
 
-[node name="IconToMain" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing", "icon_player")]
+[node name="IconToMain" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing")]
 position = Vector2(4703, 511)
 collision_mask = 5
 script = ExtResource("6_f7bmq")
 ucing = NodePath("../../MC")
-icon_player = NodePath("IconPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconToMain"]
 position = Vector2(0, 386)

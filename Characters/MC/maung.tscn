@@ -9,11 +9,9 @@ size = Vector2(141.5, 296.5)
 [node name="Maung" type="Area2D"]
 script = ExtResource("1_d6qx8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(707.75, 564.25)
-shape = SubResource("RectangleShape2D_hd24l")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(718.893, 548.984)
-scale = Vector2(0.509786, 0.541969)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3nuu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hd24l")

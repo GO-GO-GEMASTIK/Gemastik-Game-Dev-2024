@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://h7fm7sycrs7e"]
+
+[ext_resource type="Script" path="res://Characters/Following/Otan/otan.gd" id="1_nw0lf"]
+[ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="2_mm67q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6c8"]
+size = Vector2(200.458, 359.91)
+
+[node name="Otan" type="CharacterBody2D"]
+position = Vector2(981, 826)
+script = ExtResource("1_nw0lf")
+
+[node name="OtanSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mm67q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.75365, 0.907672)
+shape = SubResource("RectangleShape2D_gl6c8")

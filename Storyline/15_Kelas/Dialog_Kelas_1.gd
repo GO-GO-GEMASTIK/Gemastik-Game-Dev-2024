@@ -1,6 +1,7 @@
 extends CollisionShape2D
 
-@onready var ucing = $"../MC"
+@onready var ucing = $"../../MC"
+
 var camera
 var task2 = load("res://Storyline/5_Task 2/math_class.tscn")
 

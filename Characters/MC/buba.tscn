@@ -9,12 +9,10 @@ size = Vector2(264.828, 501.65)
 [node name="Buba" type="Area2D"]
 script = ExtResource("1_uqxan")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kq27f")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(762, 575)
 scale = Vector2(0.725, 0.7575)
 shape = SubResource("RectangleShape2D_3ya0c")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(760, 577)
-scale = Vector2(0.452, 0.488)
-texture = ExtResource("1_kq27f")

@@ -1,0 +1,462 @@
+[gd_scene load_steps=32 format=3 uid="uid://btubg2kdef353"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_2/Kelas/kelas.gd" id="1_uoc45"]
+[ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_vn8jg"]
+[ext_resource type="Texture2D" uid="uid://bhv35hkt1mrk8" path="res://Sprites/Tasks/SubTask-Kelas/2.png" id="2_sb1v5"]
+[ext_resource type="Script" path="res://Characters/Bu Cilla/Bu Cilla.gd" id="4_14x22"]
+[ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_oehn7"]
+[ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Following/Otan/otan.tscn" id="10_jtcf3"]
+[ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_metuj"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="11_0ifjv"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ad43n"]
+[ext_resource type="PackedScene" uid="uid://cd53866vqu6q" path="res://Utility/PapanSkor/papan_skor.tscn" id="15_icqu7"]
+[ext_resource type="Texture2D" uid="uid://dgate3jcgl7mn" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/warning box.png" id="16_v6o7x"]
+[ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="17_isdxt"]
+[ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_ku3c8"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="29_vemmh"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="30_w7piw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
+distance = -5.7956
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ushyn"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_t2op6"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsida"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phsdk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
+size = Vector2(160.124, 437.013)
+
+[sub_resource type="Animation" id="Animation_qb38e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningBangku:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WarningBangku:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Areas/AreaBangku/ViewIcon:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Areas/AreaBangku/ViewIcon:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -340)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Areas/AreaPapan/ViewPapan:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Areas/AreaPapan/ViewPapan:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -340)]
+}
+
+[sub_resource type="Animation" id="Animation_wtub2"]
+resource_name = "float_papan"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPapan/ViewPapan:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(272, -320), Vector2(272, -340), Vector2(272, -320)]
+}
+
+[sub_resource type="Animation" id="Animation_ry6p2"]
+resource_name = "float_view_icon"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaBangku/ViewIcon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -320), Vector2(0, -340), Vector2(0, -320)]
+}
+
+[sub_resource type="Animation" id="Animation_6v0fh"]
+resource_name = "hide_papan"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPapan/ViewPapan:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5ui4h"]
+resource_name = "hide_view_icon"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaBangku/ViewIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a12wq"]
+resource_name = "hide_warning"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningBangku:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WarningBangku:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_atekd"]
+resource_name = "show_papan"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPapan/ViewPapan:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/AreaPapan/ViewPapan:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(272, -340), Vector2(272, -320)]
+}
+
+[sub_resource type="Animation" id="Animation_wr73q"]
+resource_name = "show_view_icon"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaBangku/ViewIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/AreaBangku/ViewIcon:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -340), Vector2(0, -320)]
+}
+
+[sub_resource type="Animation" id="Animation_i7x8i"]
+resource_name = "show_warning"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningBangku:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WarningBangku:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2neo"]
+_data = {
+"RESET": SubResource("Animation_qb38e"),
+"float_papan": SubResource("Animation_wtub2"),
+"float_view_icon": SubResource("Animation_ry6p2"),
+"hide_papan": SubResource("Animation_6v0fh"),
+"hide_view_icon": SubResource("Animation_5ui4h"),
+"hide_warning": SubResource("Animation_a12wq"),
+"show_papan": SubResource("Animation_atekd"),
+"show_view_icon": SubResource("Animation_wr73q"),
+"show_warning": SubResource("Animation_i7x8i")
+}
+
+[node name="Kelas" type="Node2D"]
+script = ExtResource("1_uoc45")
+debug = true
+
+[node name="MapLayout" type="Node2D" parent="."]
+
+[node name="Kelas" type="TextureRect" parent="MapLayout"]
+offset_right = 3840.0
+offset_bottom = 1080.0
+texture = ExtResource("1_vn8jg")
+
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
+scale = Vector2(1.02137, 1.07639)
+
+[node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2899.05, 924.386)
+shape = SubResource("WorldBoundaryShape2D_jgpxr")
+
+[node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(3757.7, 468.232)
+shape = SubResource("WorldBoundaryShape2D_ushyn")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(-1.95815, 435.716)
+shape = SubResource("WorldBoundaryShape2D_t2op6")
+
+[node name="Tugas" type="Sprite2D" parent="MapLayout"]
+visible = false
+position = Vector2(3174, 336)
+texture = ExtResource("2_sb1v5")
+
+[node name="FrontAccKelas" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+texture = ExtResource("10_metuj")
+offset = Vector2(1920, 540)
+
+[node name="FadeOutTimer" type="Timer" parent="MapLayout"]
+
+[node name="FadeInTimer" type="Timer" parent="MapLayout"]
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaBangku" type="Area2D" parent="Areas"]
+position = Vector2(1606, 838)
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaBangku"]
+scale = Vector2(13.0218, 13.4678)
+shape = SubResource("RectangleShape2D_gsida")
+
+[node name="ViewIcon" type="Sprite2D" parent="Areas/AreaBangku"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -340)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_ku3c8")
+
+[node name="AreaPapan" type="Area2D" parent="Areas"]
+position = Vector2(145, 854)
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaPapan"]
+position = Vector2(272, 0)
+scale = Vector2(12.2113, 10.7204)
+shape = SubResource("RectangleShape2D_phsdk")
+
+[node name="ViewPapan" type="Sprite2D" parent="Areas/AreaPapan"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -340)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_ku3c8")
+
+[node name="MC" parent="." instance=ExtResource("14_ad43n")]
+position = Vector2(2994, 844)
+collision_layer = 4
+SPEED = 400.0
+flip_h = true
+
+[node name="BuCilla" type="Area2D" parent="."]
+position = Vector2(3503, 783)
+script = ExtResource("4_14x22")
+
+[node name="SpriteBuCilla" type="Sprite2D" parent="BuCilla"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_oehn7")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BuCilla"]
+position = Vector2(1.78271, 15)
+scale = Vector2(0.864547, 0.878692)
+shape = SubResource("RectangleShape2D_eho2w")
+
+[node name="Otan" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("10_jtcf3")]
+collision_layer = 2
+papan = NodePath("../Areas/AreaPapan")
+
+[node name="Cula" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("11_0ifjv")]
+position = Vector2(836, 848)
+collision_layer = 2
+papan = NodePath("../Areas/AreaPapan")
+
+[node name="Maung" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("29_vemmh")]
+position = Vector2(2387, 831)
+papan = NodePath("../Areas/AreaPapan")
+
+[node name="Buba" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("30_w7piw")]
+position = Vector2(2253, 817)
+papan = NodePath("../Areas/AreaPapan")
+SPEED = 390
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="WarningBangku" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -470.5
+offset_top = 50.0
+offset_right = 470.5
+offset_bottom = 259.001
+grow_horizontal = 2
+texture = ExtResource("2_sb1v5")
+
+[node name="WarningTask" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("16_v6o7x")
+
+[node name="Button" type="Button" parent="CanvasLayer/WarningTask"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 30.0
+offset_right = 136.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("17_isdxt")
+
+[node name="PapanSkor" parent="CanvasLayer" instance=ExtResource("15_icqu7")]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../CanvasLayer")
+libraries = {
+"": SubResource("AnimationLibrary_a2neo")
+}
+
+[connection signal="go_to_papan" from="." to="Otan" method="to_papan"]
+[connection signal="go_to_papan" from="." to="Cula" method="to_papan"]
+[connection signal="go_to_papan" from="." to="Maung" method="to_papan"]
+[connection signal="go_to_papan" from="." to="Buba" method="to_papan"]
+[connection signal="body_entered" from="Areas/AreaBangku" to="." method="_on_area_bangku_body_entered"]
+[connection signal="body_exited" from="Areas/AreaBangku" to="." method="_on_area_bangku_body_exited"]
+[connection signal="body_entered" from="Areas/AreaPapan" to="." method="_on_area_papan_body_entered"]
+[connection signal="body_exited" from="Areas/AreaPapan" to="." method="_on_area_papan_body_exited"]
+[connection signal="pressed" from="CanvasLayer/WarningTask/Button" to="." method="_on_button_pressed"]

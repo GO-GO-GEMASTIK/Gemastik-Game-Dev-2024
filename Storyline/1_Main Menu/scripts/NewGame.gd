@@ -30,4 +30,4 @@ func _input(event):
 			# Check if the mouse click is inside the sprite's bounding box
 			if self.animation == "mouse":
 				# Transition to the next scene when the sprite is clicked
-				get_tree().change_scene_to_file("res://Storyline/2_Main Room/intro_dialogue.tscn")
+				get_tree().change_scene_to_file("res://Storyline/2_Main Room/subscenes/intro_dialogue.tscn")

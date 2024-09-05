@@ -18,7 +18,7 @@ extends Area2D
 
 var collect = [0,0,0,0]
 
-var tbc = load("res://Storyline/15_Kelas/classroom_akhir.tscn")
+var tbc = load("res://Storyline/Bagian_2/Kelas/kelas.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -67,6 +67,7 @@ func _on_input_event(viewport, event, shape_idx):
 				print(collect[0] + collect[1] + collect[2] + collect[3])
 				print("Benar semua!")
 				finish.play()
+				GameStateManager.complete_task(2)
 				TransitionScreen.transition_between()
 				await TransitionScreen.on_transition_finished
 				get_tree().change_scene_to_packed(tbc)

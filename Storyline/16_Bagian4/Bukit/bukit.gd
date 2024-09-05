@@ -9,6 +9,10 @@ signal r_out
 
 var hutan := false
 
+# ======DEBUGGING ONLY!!!======
+@export var debug: bool = false
+# ======DEBUGGING ONLY!!!======
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	following.emit()

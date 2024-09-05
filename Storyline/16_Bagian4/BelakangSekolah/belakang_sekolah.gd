@@ -16,6 +16,10 @@ var scene_bukit = load("res://Storyline/16_Bagian4/Bukit/bukit.tscn")
 var gasped := false
 var bukit := false
 
+# ======DEBUGGING ONLY!!!======
+@export var debug: bool = false
+# ======DEBUGGING ONLY!!!======
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)

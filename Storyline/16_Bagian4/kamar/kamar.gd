@@ -20,7 +20,9 @@ signal r_in
 
 var dialogue_is_running = false
 
-# !!!CURRENTLY DEBUGGING, DO NOT FORGET TO SET THE STORYLINE TO DEFAULT!!!
+# ======DEBUGGING ONLY!!!======
+@export var debug: bool = false
+# ======DEBUGGING ONLY!!!======
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

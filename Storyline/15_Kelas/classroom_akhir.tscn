@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://drranplgl0ijr"]
+[gd_scene load_steps=19 format=3 uid="uid://drranplgl0ijr"]
 
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_evwll"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_0tfsx"]
@@ -13,7 +13,6 @@
 [ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="12_n05jt"]
 [ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="13_jly4w"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ekvcv"]
-[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="15_5e41x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 normal = Vector2(-0.00358052, -0.999994)
@@ -115,7 +114,6 @@ position = Vector2(1450, 344)
 [node name="MC" parent="MapLayout" instance=ExtResource("14_ekvcv")]
 position = Vector2(2793, 624)
 scale = Vector2(1.02137, 1.07639)
-script = ExtResource("15_5e41x")
 SPEED = 400.0
 
 [node name="FadeOutTimer" type="Timer" parent="MapLayout"]

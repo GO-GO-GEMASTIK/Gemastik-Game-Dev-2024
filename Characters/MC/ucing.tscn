@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://lgdo5awdwe0r"]
+[gd_scene load_steps=17 format=3 uid="uid://lgdo5awdwe0r"]
 
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="1_7t8fj"]
 [ext_resource type="Texture2D" uid="uid://qbqforoiit4v" path="res://Sprites/Main Characters/walk_0004.png" id="1_ktc07"]
 [ext_resource type="Texture2D" uid="uid://cvadpqwg1er6a" path="res://Sprites/Main Characters/walk_0000.png" id="2_rgjic"]
 [ext_resource type="Texture2D" uid="uid://dxwhy8ca6633m" path="res://Sprites/Main Characters/walk_0001.png" id="3_0xw7q"]
@@ -72,6 +73,7 @@ size = Vector2(357.054, 521.213)
 
 [node name="Ucing" type="CharacterBody2D"]
 z_index = 5
+script = ExtResource("1_7t8fj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -50)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc0a06xqnxpnn"
-path="res://.godot/imported/guide.jpg-553746df58adc8a38b23b3a333265ce0.ctex"
+path="res://.godot/imported/guide.jpg-791a174e01c61fe6e8f0b74b012fe4a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background/laundry/guide.jpg"
-dest_files=["res://.godot/imported/guide.jpg-553746df58adc8a38b23b3a333265ce0.ctex"]
+source_file="res://Sprites/Background/Laundry/guide.jpg"
+dest_files=["res://.godot/imported/guide.jpg-791a174e01c61fe6e8f0b74b012fe4a5.ctex"]
 
 [params]
 

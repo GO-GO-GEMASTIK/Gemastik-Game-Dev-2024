@@ -19,7 +19,14 @@ var naughty_nice := {
 	"Kerjasama": "None"
 }
 
+var characteristics := {
+	"Jujur": false,
+	"KerjaSama": false,
+	"Menghargai": false,
+}
+
 var string_states := {
+	"TutorialDone": false,
 	"Gudang": false,
 	"Kantin": false,
 	"Laundry": false,
@@ -33,13 +40,13 @@ var right_limit := {
 	"lantai_bawah": 1000,
 	"gudang": 1000,
 	"kamar": 3000,
-	"kelas": 1000,
+	"kelas": 3840,
 	"kantin": 1000,
 	"laundry": 1000,
 	"belakang_sekolah": 11000,
 	"bukit": 9000,
 }
-
+#region Pos and State Methods
 # State methods
 func set_naughty_nice(behavior: String, state: String):
 	if behavior in naughty_nice:
@@ -62,6 +69,7 @@ func get_pos_main() -> Vector2:
 	return ucing_pos_main
 #endregion
 
+
 #region Task-related State Methods
 func complete_task(task_number: int):
 	if task_number in tasks:
@@ -73,6 +81,12 @@ func reset_task(task_number: int):
 
 func is_task_completed(task_number: int) -> bool:
 	return tasks.get(task_number, false)
+
+func any_task_true() -> bool:
+	for key in tasks:
+		if tasks[key] == true:
+			return true
+	return false
 #endregion
 
 
@@ -87,6 +101,28 @@ func get_string_state(room: String) -> bool:
 func add_new_state(room: String):
 	if room not in string_states:
 		string_states[room] = false
+#endregion
+
+
+#region Ucing's Characteristic
+# Setter
+func set_characteristic(key: String, value: bool) -> void:
+	if characteristics.has(key):
+		characteristics[key] = value
+
+# Getter
+func get_characteristic(key: String) -> bool:
+	if characteristics.has(key):
+		return characteristics[key]
+	return false
+
+# Function to count how many values are true
+func count_true() -> int:
+	var count := 0
+	for value in characteristics.values():
+		if value == true:
+			count += 1
+	return count
 #endregion
 
 

@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://cd53866vqu6q"]
+
+[ext_resource type="Texture2D" uid="uid://d20resevfl3yx" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/hasil voting.png" id="1_6tpmn"]
+[ext_resource type="Script" path="res://Utility/PapanSkor/papan_skor.gd" id="2_jkfhk"]
+[ext_resource type="Texture2D" uid="uid://qs72uw8rnatm" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 1.png" id="2_tee0r"]
+[ext_resource type="Texture2D" uid="uid://b4l2wr3i4hiyp" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 4.png" id="3_vnoo4"]
+[ext_resource type="Texture2D" uid="uid://duuc5l1axj866" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 2.png" id="4_qxdpa"]
+[ext_resource type="Texture2D" uid="uid://btwods3meqxkj" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 5.png" id="5_ugwj1"]
+[ext_resource type="Texture2D" uid="uid://761w8wkp6m27" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 3.png" id="6_r8g43"]
+[ext_resource type="Texture2D" uid="uid://bidverbp8rhxq" path="res://Storyline/Bagian_2/Kelas/sprites/PapanSkor/opsi ucing 6.png" id="7_jstu1"]
+
+[node name="PapanScore" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_6tpmn")
+script = ExtResource("2_jkfhk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 163.0
+offset_top = -22.0
+offset_right = 436.0
+offset_bottom = 223.0
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Pembohong" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_tee0r")
+
+[node name="Jujur" type="TextureRect" parent="VBoxContainer/Pembohong"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_vnoo4")
+
+[node name="Egois" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_qxdpa")
+
+[node name="BekerjaSama" type="TextureRect" parent="VBoxContainer/Egois"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_ugwj1")
+
+[node name="Sombong" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_r8g43")
+
+[node name="Menghargai" type="TextureRect" parent="VBoxContainer/Sombong"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_jstu1")

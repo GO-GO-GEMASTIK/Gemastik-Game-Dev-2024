@@ -10,7 +10,6 @@ signal r_in
 @onready var guide_player = $CanvasLayer/GuidePlayer
 
 var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
-var outside = load("res://Storyline/16_Bagian4/BelakangSekolah/belakang_sekolah.tscn")
 
 var dialogue_is_running := false
 var door_dialogue := false
@@ -18,7 +17,7 @@ var on_otan := false
 var on_door := false
 
 # ======DEBUGGING ONLY!!!======
-var debug = false 
+@export var debug: bool = false
 # ======DEBUGGING ONLY!!!======
 
 func _ready():
@@ -43,8 +42,7 @@ func _on_dialogic_signal(argument:String):
 		GameStateManager.set_string_state("GuidePintuKuning", true)
 	if argument == "enable_door":
 		door_dialogue = true
-		
-	
+
 
 #region DIALOGUE MANAGER
 func _dialogue_start(body, dialogue: String):
@@ -90,5 +88,3 @@ func dialogue_stopper():
 #endregion ===========================
 
 
-func _on_pintu_keluar_go_outside():
-	pass # Replace with function body.

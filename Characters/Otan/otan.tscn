@@ -133,7 +133,7 @@ _data = {
 [node name="Otan" type="Area2D"]
 script = ExtResource("1_pyt5c")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="OtanSprite" type="Sprite2D" parent="."]
 position = Vector2(503.25, 179.5)
 scale = Vector2(0.943981, 0.963889)
 texture = ExtResource("2_tqv08")
