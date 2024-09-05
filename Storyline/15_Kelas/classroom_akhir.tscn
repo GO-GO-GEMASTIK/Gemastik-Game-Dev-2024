@@ -1,18 +1,37 @@
-[gd_scene load_steps=19 format=3 uid="uid://drranplgl0ijr"]
+[gd_scene load_steps=46 format=3 uid="uid://drranplgl0ijr"]
 
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_evwll"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_0tfsx"]
+[ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="3_hf4sg"]
 [ext_resource type="Script" path="res://Characters/Bu Cilla/BuCilla_After Kelas.gd" id="4_exoob"]
+[ext_resource type="Texture2D" uid="uid://bsdhgxci718w8" path="res://Sprites/Guide Icon/view/view_0002.png" id="4_rb75v"]
+[ext_resource type="Texture2D" uid="uid://b1ap2qpaqtsro" path="res://Sprites/Guide Icon/view/view_0001.png" id="5_7utg7"]
 [ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_21djg"]
 [ext_resource type="Script" path="res://Characters/Otan/Otan_Alt.gd" id="6_b4ucb"]
+[ext_resource type="Texture2D" uid="uid://dw7cpbnaivxi7" path="res://Sprites/Guide Icon/view/view_0003.png" id="6_dnl3d"]
+[ext_resource type="Texture2D" uid="uid://dtjd6yc13owei" path="res://Sprites/Guide Icon/view/view_0004.png" id="7_duae7"]
 [ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="7_irefg"]
 [ext_resource type="PackedScene" uid="uid://xfcepi2ygm4g" path="res://Characters/MC/buba.tscn" id="8_de3tv"]
+[ext_resource type="Texture2D" uid="uid://drhh05qqr5n8p" path="res://Sprites/Guide Icon/view/view_0005.png" id="8_y2yg3"]
+[ext_resource type="Texture2D" uid="uid://32tu6kah0qu6" path="res://Sprites/Guide Icon/view/view_0006.png" id="9_k4bw0"]
 [ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="9_rj5jb"]
 [ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_jpt1t"]
+[ext_resource type="Texture2D" uid="uid://dykh0h5x72o14" path="res://Sprites/Guide Icon/view/view_0007.png" id="10_uwbol"]
 [ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="11_c567g"]
+[ext_resource type="Texture2D" uid="uid://bbfscdjyn36g4" path="res://Sprites/Guide Icon/view/view_0008.png" id="11_k71kd"]
 [ext_resource type="Script" path="res://Sprites/Main Characters/Cula/cula.gd" id="12_n05jt"]
+[ext_resource type="Texture2D" uid="uid://c0m2jgpwhn2vi" path="res://Sprites/Guide Icon/view/view_0009.png" id="12_t6qbd"]
+[ext_resource type="Texture2D" uid="uid://br3auwfdihack" path="res://Sprites/Guide Icon/view/view_0010.png" id="13_5fwag"]
 [ext_resource type="PackedScene" uid="uid://d4hl5mb03n3sn" path="res://Characters/MC/maung.tscn" id="13_jly4w"]
+[ext_resource type="Texture2D" uid="uid://b0maksmahradm" path="res://Sprites/Guide Icon/view/view_0011.png" id="14_c263g"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ekvcv"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="15_5e41x"]
+[ext_resource type="Texture2D" uid="uid://vgknqypeb3yl" path="res://Sprites/Guide Icon/view/view_0012.png" id="15_j7r35"]
+[ext_resource type="Texture2D" uid="uid://c68nsfwlyifey" path="res://Sprites/Guide Icon/view/view_0013.png" id="16_fxo7r"]
+[ext_resource type="Texture2D" uid="uid://bgau2wsop1ok4" path="res://Sprites/Guide Icon/view/view_0014.png" id="17_quinn"]
+[ext_resource type="Script" path="res://Storyline/15_Kelas/scripts/view_papan.gd" id="30_vowbq"]
+[ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="31_l3c7m"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="32_hifvn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 normal = Vector2(-0.00358052, -0.999994)
@@ -26,11 +45,164 @@ distance = 3227.38
 normal = Vector2(0.99997, -0.00779094)
 distance = -2936.15
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7wk0"]
+size = Vector2(512, 491)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_80o4k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hf4sg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rb75v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7utg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dnl3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_duae7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y2yg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_k4bw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uwbol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k71kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_t6qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_5fwag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c263g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_j7r35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fxo7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_quinn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
 size = Vector2(218, 453.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gl6c8"]
 size = Vector2(193.5, 405.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4ryb"]
+
+[sub_resource type="Animation" id="Animation_tkg3s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -520)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0y1ne"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6lffw"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qdubd"]
+resource_name = "float_loop"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 20), Vector2(0, 0), Vector2(0, 20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ck3iv"]
+_data = {
+"RESET": SubResource("Animation_tkg3s"),
+"fade_in": SubResource("Animation_0y1ne"),
+"fade_out": SubResource("Animation_6lffw"),
+"float_loop": SubResource("Animation_qdubd")
+}
 
 [node name="Kelas_Akhir" type="Node2D"]
 
@@ -68,6 +240,20 @@ visible = false
 position = Vector2(-1050.55, 1086.97)
 scale = Vector2(3.16405, 0.22)
 texture = ExtResource("3_0tfsx")
+
+[node name="Area2D" type="Area2D" parent="MapLayout"]
+visible = false
+position = Vector2(458, 806)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/Area2D"]
+position = Vector2(-24, 1.5)
+shape = SubResource("RectangleShape2D_o7wk0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MapLayout/Area2D"]
+position = Vector2(-23, -388)
+scale = Vector2(0.485342, 0.463098)
+sprite_frames = SubResource("SpriteFrames_80o4k")
+autoplay = "default"
 
 [node name="BuCilla" type="Area2D" parent="MapLayout"]
 position = Vector2(3161, 585)
@@ -119,3 +305,57 @@ SPEED = 400.0
 [node name="FadeOutTimer" type="Timer" parent="MapLayout"]
 
 [node name="FadeInTimer" type="Timer" parent="MapLayout"]
+
+[node name="AreaPapan" type="Area2D" parent="MapLayout"]
+position = Vector2(421, 416)
+script = ExtResource("30_vowbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/AreaPapan"]
+position = Vector2(47.0002, 606)
+scale = Vector2(16.1576, 4.34604)
+shape = SubResource("RectangleShape2D_w4ryb")
+
+[node name="IconPlayer" type="AnimationPlayer" parent="MapLayout/AreaPapan"]
+libraries = {
+"": SubResource("AnimationLibrary_ck3iv")
+}
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="MapLayout/AreaPapan"]
+position = Vector2(6, 0)
+stream = ExtResource("31_l3c7m")
+bus = &"SFX"
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/AreaPapan"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -520)
+scale = Vector2(0.278747, 0.278747)
+texture = ExtResource("3_hf4sg")
+
+[node name="AreaPapan" type="Area2D" parent="MapLayout/AreaPapan"]
+position = Vector2(1269, 433)
+script = ExtResource("32_hifvn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/AreaPapan/AreaPapan"]
+position = Vector2(0, 455)
+scale = Vector2(16.1576, 4.34604)
+shape = SubResource("RectangleShape2D_w4ryb")
+
+[node name="IconPlayer" type="AnimationPlayer" parent="MapLayout/AreaPapan/AreaPapan"]
+libraries = {
+"": SubResource("AnimationLibrary_ck3iv")
+}
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="MapLayout/AreaPapan/AreaPapan"]
+stream = ExtResource("31_l3c7m")
+bus = &"SFX"
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/AreaPapan/AreaPapan"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -520)
+scale = Vector2(0.278747, 0.278747)
+texture = ExtResource("3_hf4sg")
+
+[connection signal="body_entered" from="MapLayout/AreaPapan" to="MapLayout/AreaPapan" method="_on_body_entered"]
+[connection signal="body_exited" from="MapLayout/AreaPapan" to="MapLayout/AreaPapan" method="_on_body_exited"]
+[connection signal="body_entered" from="MapLayout/AreaPapan/AreaPapan" to="MapLayout/AreaPapan/AreaPapan" method="_on_body_entered"]
+[connection signal="body_exited" from="MapLayout/AreaPapan/AreaPapan" to="MapLayout/AreaPapan/AreaPapan" method="_on_body_exited"]

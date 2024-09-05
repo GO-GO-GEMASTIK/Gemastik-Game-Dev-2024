@@ -37,6 +37,7 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"B2_Papan": "res://Dialogue/Timelines/Bagian 2/B2_Papan.dtl",
 "B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
 "B3_monolog_kamar": "res://Dialogue/Timelines/Bagian 3/B3_monolog_kamar.dtl",
 "B4_10_monster_end": "res://Dialogue/Timelines/Bagian 4/B4_10_monster_end.dtl",
@@ -81,8 +82,9 @@ layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/bubble
 layout/default_style="res://Dialogue/speaker_textbox.tres"
 glossary/default_case_sensitive=true
 variables={
-"kerja_sama": false,
-"kerjasama": 0
+"kejujuran": 0,
+"kerjasama": 0,
+"rendah_hati": 0
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
