@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @onready var player= $"../MC"
 @onready var cula = $AnimatedSprite2D

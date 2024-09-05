@@ -1,9 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://btubg2kdef353"]
+[gd_scene load_steps=35 format=3 uid="uid://btubg2kdef353"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_2/Kelas/kelas.gd" id="1_uoc45"]
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_vn8jg"]
 [ext_resource type="Texture2D" uid="uid://bhv35hkt1mrk8" path="res://Sprites/Tasks/SubTask-Kelas/2.png" id="2_sb1v5"]
-[ext_resource type="Script" path="res://Characters/Bu Cilla/Bu Cilla.gd" id="4_14x22"]
 [ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_oehn7"]
 [ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Following/Otan/otan.tscn" id="10_jtcf3"]
 [ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_metuj"]
@@ -28,6 +27,8 @@ normal = Vector2(1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gsida"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phsdk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwiio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
 size = Vector2(160.124, 437.013)
@@ -105,6 +106,30 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -340)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Areas/AreaNgobrol/ViewTalk:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-42, -350)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Areas/AreaNgobrol/ViewTalk:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wtub2"]
@@ -283,16 +308,79 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_h1rq4"]
+resource_name = "show_view_talk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-42, -350), Vector2(-42, -330)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/AreaNgobrol/ViewTalk:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_65s01"]
+resource_name = "hide_view_talk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bv1p2"]
+resource_name = "float_view_talk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-42, -330), Vector2(-42, -350), Vector2(-42, -330)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a2neo"]
 _data = {
 "RESET": SubResource("Animation_qb38e"),
 "float_papan": SubResource("Animation_wtub2"),
 "float_view_icon": SubResource("Animation_ry6p2"),
+"float_view_talk": SubResource("Animation_bv1p2"),
 "hide_papan": SubResource("Animation_6v0fh"),
 "hide_view_icon": SubResource("Animation_5ui4h"),
+"hide_view_talk": SubResource("Animation_65s01"),
 "hide_warning": SubResource("Animation_a12wq"),
 "show_papan": SubResource("Animation_atekd"),
 "show_view_icon": SubResource("Animation_wr73q"),
+"show_view_talk": SubResource("Animation_h1rq4"),
 "show_warning": SubResource("Animation_i7x8i")
 }
 
@@ -367,6 +455,20 @@ position = Vector2(0, -340)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_ku3c8")
 
+[node name="AreaNgobrol" type="Area2D" parent="Areas"]
+position = Vector2(1115, 847)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNgobrol"]
+scale = Vector2(11.8361, 13.3789)
+shape = SubResource("RectangleShape2D_uwiio")
+
+[node name="ViewTalk" type="Sprite2D" parent="Areas/AreaNgobrol"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-42, -350)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_ku3c8")
+
 [node name="MC" parent="." instance=ExtResource("14_ad43n")]
 position = Vector2(2994, 844)
 collision_layer = 4
@@ -375,7 +477,6 @@ flip_h = true
 
 [node name="BuCilla" type="Area2D" parent="."]
 position = Vector2(3503, 783)
-script = ExtResource("4_14x22")
 
 [node name="SpriteBuCilla" type="Sprite2D" parent="BuCilla"]
 scale = Vector2(0.5, 0.5)
@@ -406,6 +507,7 @@ papan = NodePath("../Areas/AreaPapan")
 SPEED = 390
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="WarningBangku" type="TextureRect" parent="CanvasLayer"]
 self_modulate = Color(1, 1, 1, 0)
@@ -459,4 +561,6 @@ libraries = {
 [connection signal="body_exited" from="Areas/AreaBangku" to="." method="_on_area_bangku_body_exited"]
 [connection signal="body_entered" from="Areas/AreaPapan" to="." method="_on_area_papan_body_entered"]
 [connection signal="body_exited" from="Areas/AreaPapan" to="." method="_on_area_papan_body_exited"]
+[connection signal="body_entered" from="Areas/AreaNgobrol" to="." method="_on_area_ngobrol_body_entered"]
+[connection signal="body_exited" from="Areas/AreaNgobrol" to="." method="_on_area_ngobrol_body_exited"]
 [connection signal="pressed" from="CanvasLayer/WarningTask/Button" to="." method="_on_button_pressed"]

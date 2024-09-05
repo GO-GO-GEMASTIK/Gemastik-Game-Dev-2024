@@ -1,7 +1,7 @@
 "Bu Cilla": Ayo, kumpulkan tugas kalian.\
 Kita akan segera berganti mata pelajaran!
-set {kerja_sama} = GameStateManager.get_characteristic("KerjaSama")
-if {kerja_sama} == true:
+set {KerjaSama} = GameStateManager.get_characteristic("KerjaSama")
+if {KerjaSama} == true:
 	character: Ucing, kamu hebat sekali! \
 Aku tahu kalau kamu memang teman baik yang mau bekerjasama!
 	Buba: Sudah kubilang kan, Maung.\

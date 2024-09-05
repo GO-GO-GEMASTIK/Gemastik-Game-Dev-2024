@@ -6,9 +6,19 @@ extends Area2D
 
 var on_meja := false
 var task_completed := GameStateManager.is_task_completed(5)
-var task_5 = load("res://Storyline/16_Bagian4/Task 5/finding_item.tscn")
+var task_5 = preload("res://Storyline/16_Bagian4/Task 5/finding_item.tscn")
+var show_task := false
 
 # !!!CURRENTLY DEBUGGING, DO NOT FORGET TO SET TO DEFAULT!!!
+
+func _ready():
+# PRELOAD TIMELINE TO REDUCE LAG
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument:String):
+	if argument == "task_5":
+		show_task = true
+
 
 func _input(event):
 	if event.is_action_pressed("talk") and on_meja and !task_completed:
@@ -16,15 +26,14 @@ func _input(event):
 
 
 func _on_body_entered(body):
-	if body.name == "MC" and !task_completed:
+	if body.name == "MC" and show_task:
 		guide_player.play("hide_guide")
 		task_player.play("show_task")
 		task_player.queue("task_floating")
 		on_meja = true
 
-
 func _on_body_exited(body):
-	if body.name == "MC" and !task_completed:
+	if body.name == "MC" and show_task:
 		task_player.play("hide_task")
 		guide_player.play("show_guide")
 		on_meja = false

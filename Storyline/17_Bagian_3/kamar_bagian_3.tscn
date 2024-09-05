@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvu5tkwr4rhuy"]
+[gd_scene load_steps=8 format=3 uid="uid://dvu5tkwr4rhuy"]
 
 [ext_resource type="Script" path="res://Storyline/17_Bagian_3/scripts/kamar_bagian_3.gd" id="1_3ouse"]
 [ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Sprites/Background/Kamar/kamar.jpg" id="1_cm438"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="2_cn8kq"]
-[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="3_2oxfi"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="4_42cma"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h363c"]
@@ -57,5 +56,4 @@ texture = ExtResource("4_42cma")
 
 [node name="MC" parent="Layout" instance=ExtResource("2_cn8kq")]
 position = Vector2(1613, 607)
-script = ExtResource("3_2oxfi")
 SPEED = 400.0

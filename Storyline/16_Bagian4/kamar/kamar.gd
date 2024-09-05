@@ -26,14 +26,18 @@ var dialogue_is_running = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+# SETUP
 	camera.limit_right = GameStateManager.get_room_right_limit("kamar")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	ucing.look_left()
-	#run_part_3()
-	if not GameStateManager.is_task_completed(5):
-		run_part_1()
-	elif GameStateManager.is_task_completed(5):
-		run_part_3()
+	
+	if GameStateManager.get_string_state("Bagian3") or debug:
+		run_b3_part_1()
+	else:
+		if not GameStateManager.is_task_completed(5):
+			run_b4_part_1()
+		elif GameStateManager.is_task_completed(5):
+			run_b4_part3()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "cula_switch":
@@ -49,7 +53,23 @@ func _on_dialogic_signal(argument:String):
 
 
 #region ---STORYLINE---
-func run_part_1():
+# === BAGIAN 3 ===
+func run_b3_part_1():
+	maung.set_visible(false)
+	buba.set_visible(false)
+	cula.set_visible(false)
+	dialog_runner("B3_monolog_kamar")
+	await next
+	guide_player.play("show_to_class")
+	GameStateManager.set_string_state("DirectionKelas", true)
+	r_in.emit()
+
+# === BAGIAN 4 ===
+func run_b4_part_1():
+	maung.set_visible(true)
+	buba.set_visible(true)
+	buba.set_flip_h(true)
+	cula.set_visible(true)
 	night_ambience.set_visible(true)
 	await get_tree().create_timer(1.0).timeout
 	dialog_runner("B4_1_kamar_malam")
@@ -61,9 +81,9 @@ func run_part_1():
 	await next
 	dialog_runner("B4_2_kamar_pagi")
 	await next
-	run_part_2()
+	run_b4_part_2()
 # ---
-func run_part_2():
+func run_b4_part_2():
 	play_animation("day2night")
 	await next
 	cula.set_visible(false)
@@ -72,10 +92,8 @@ func run_part_2():
 	dialog_runner("B4_3_kamar_malam_kedua")
 	await next
 	guide_player.play("show_guide")
-
 # --task 5 here--
-
-func run_part_3():
+func run_b4_part3():
 	buba.set_global_position(Vector2(2450, 821))
 	cula.set_visible(false)
 	ucing.set_global_position(Vector2(1080, 855))

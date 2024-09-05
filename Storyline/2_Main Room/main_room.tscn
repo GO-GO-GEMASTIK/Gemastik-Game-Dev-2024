@@ -1,10 +1,9 @@
-[gd_scene load_steps=52 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=50 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
 [ext_resource type="Texture2D" uid="uid://qcijt33hlfx0" path="res://Sprites/Sekolah/Lantai Dasar/Lantai dasar.jpg" id="3_kaox4"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_qissp"]
-[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="4_xucuy"]
 [ext_resource type="Texture2D" uid="uid://tt7vdjl8o4jx" path="res://Sprites/Sekolah/Lantai Dasar/front.png" id="7_27y8p"]
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="7_qxqkd"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="7_wwuew"]
@@ -15,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="17_dy5op"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_lptfk"]
 [ext_resource type="Texture2D" uid="uid://0p73qcelirwp" path="res://Storyline/2_Main Room/sprites/tutorial_guide/1_walk_tutorial.png" id="21_vir07"]
+[ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/cari kelas.png" id="22_bwf6s"]
 [ext_resource type="Texture2D" uid="uid://cqgs103gs732" path="res://Storyline/2_Main Room/sprites/tutorial_guide/2_jump_tutorial.png" id="22_xwshh"]
 [ext_resource type="Texture2D" uid="uid://dl7d3t3olattl" path="res://Storyline/2_Main Room/sprites/tutorial_guide/3_interact_tutorial.png" id="23_g68e5"]
 [ext_resource type="Texture2D" uid="uid://bkbaoqh6row5i" path="res://Storyline/2_Main Room/sprites/tutorial_guide/4_skip_tutorial.png" id="24_qny5w"]
@@ -23,10 +23,6 @@
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
 [ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="57_nv6wi"]
 [ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide Icon/1.png" id="61_e5s6k"]
-[ext_resource type="Texture2D" uid="uid://bq1jhdxnd437j" path="res://Sprites/Guide Icon/pilihan ucing/1/lighting.png" id="62_4vwep"]
-[ext_resource type="Texture2D" uid="uid://jrc2s15c4f8y" path="res://Sprites/Guide Icon/pilihan ucing/1/box on.png" id="63_8yq4y"]
-[ext_resource type="Texture2D" uid="uid://bg0vpeqgfou6m" path="res://Sprites/Guide Icon/pilihan ucing/1/opsi 1.png" id="64_80hsp"]
-[ext_resource type="Texture2D" uid="uid://cfjxnbvvmbnvd" path="res://Sprites/Guide Icon/pilihan ucing/1/opsi 2.png" id="65_hdr0p"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
 
@@ -259,6 +255,58 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GuidePlayer/CariKelas:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GuidePlayer/CariKelas:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bdmug"]
+resource_name = "hide_guide_kelas"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuidePlayer/CariKelas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuidePlayer/CariKelas:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_y0co0"]
 resource_name = "hide_guide_pintu"
@@ -286,6 +334,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5f4le"]
+resource_name = "show_guide_kelas"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuidePlayer/CariKelas:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuidePlayer/CariKelas:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_xymq1"]
@@ -319,7 +395,9 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vwe5b"]
 _data = {
 "RESET": SubResource("Animation_r817y"),
+"hide_guide_kelas": SubResource("Animation_bdmug"),
 "hide_guide_pintu": SubResource("Animation_y0co0"),
+"show_guide_kelas": SubResource("Animation_5f4le"),
 "show_guide_pintu": SubResource("Animation_xymq1")
 }
 
@@ -449,7 +527,6 @@ shape = SubResource("WorldBoundaryShape2D_ebfbm")
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
 position = Vector2(300, 846)
 collision_layer = 4
-script = ExtResource("4_xucuy")
 SPEED = 400.0
 
 [node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("7_qxqkd")]
@@ -465,8 +542,9 @@ ucing = NodePath("../MC")
 
 [node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_b88js")]
 z_index = 1
-position = Vector2(2609, 751)
+position = Vector2(2829, 751)
 scale = Vector2(0.5, 0.5)
+collision_mask = 4
 player = NodePath("../MC")
 
 [node name="GuideIcon" type="Node2D" parent="."]
@@ -552,9 +630,10 @@ texture = ExtResource("17_lptfk")
 position = Vector2(2194, 702)
 collision_mask = 4
 
-[node name="Pintu2" parent="GuideIcon" instance=ExtResource("17_dy5op")]
+[node name="PintuKelas" parent="GuideIcon" node_paths=PackedStringArray("ucing") instance=ExtResource("17_dy5op")]
 position = Vector2(3199, 705)
 collision_mask = 4
+ucing = NodePath("../../MC")
 
 [node name="Pintu3" parent="GuideIcon" instance=ExtResource("17_dy5op")]
 position = Vector2(5515, 716)
@@ -600,82 +679,6 @@ tutor_2 = ExtResource("22_xwshh")
 tutor_3 = ExtResource("23_g68e5")
 tutor_4 = ExtResource("24_qny5w")
 
-[node name="Instructions" type="Control" parent="CanvasLayer"]
-visible = false
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Darkens" type="Sprite2D" parent="CanvasLayer/Instructions"]
-position = Vector2(0, 1)
-scale = Vector2(1.1, 1.1)
-texture = ExtResource("62_4vwep")
-
-[node name="On" type="TextureRect" parent="CanvasLayer/Instructions"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -467.5
-offset_top = -484.0
-offset_right = 467.5
-offset_bottom = -246.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("63_8yq4y")
-
-[node name="Opsi1" type="TextureRect" parent="CanvasLayer/Instructions/On"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -447.5
-offset_top = -99.0
-offset_right = 447.5
-offset_bottom = 99.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("64_80hsp")
-
-[node name="On2" type="TextureRect" parent="CanvasLayer/Instructions"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -467.5
-offset_top = -218.0
-offset_right = 467.5
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("63_8yq4y")
-
-[node name="Opsi2" type="TextureRect" parent="CanvasLayer/Instructions/On2"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -447.5
-offset_top = -218.0
-offset_right = 447.5
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("65_hdr0p")
-
 [node name="GuidePlayer" type="AnimationPlayer" parent="CanvasLayer"]
 libraries = {
 "": SubResource("AnimationLibrary_vwe5b")
@@ -686,12 +689,24 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("61_e5s6k")
+
+[node name="CariKelas" type="TextureRect" parent="CanvasLayer/GuidePlayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 489.5
+offset_top = 50.0
+offset_right = 1430.5
+offset_bottom = 259.0
+grow_horizontal = 2
+texture = ExtResource("22_bwf6s")
 
 [node name="TutorialPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 libraries = {
@@ -703,9 +718,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("21_vir07")
@@ -714,6 +729,7 @@ texture = ExtResource("21_vir07")
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]
+[connection signal="l_in" from="." to="CanvasLayer/DirectionPlayer" method="l_in"]
 [connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
 [connection signal="body_entered" from="Otan" to="." method="_dialogue_start" binds= ["otan"]]
 [connection signal="body_exited" from="Otan" to="." method="_dialogue_stop" binds= ["otan"]]
@@ -729,8 +745,10 @@ texture = ExtResource("21_vir07")
 [connection signal="body_exited" from="GuideIcon/AreaPapan" to="." method="_dialogue_stop" binds= ["papan_tulis"]]
 [connection signal="body_entered" from="GuideIcon/Pintu1" to="." method="_dialogue_start" binds= ["wrong_door"]]
 [connection signal="body_exited" from="GuideIcon/Pintu1" to="." method="_dialogue_stop" binds= ["wrong_door"]]
-[connection signal="body_entered" from="GuideIcon/Pintu2" to="." method="_dialogue_start" binds= ["wrong_door"]]
-[connection signal="body_exited" from="GuideIcon/Pintu2" to="." method="_dialogue_stop" binds= ["wrong_door"]]
+[connection signal="l_in" from="GuideIcon/PintuKelas" to="CanvasLayer/DirectionPlayer" method="l_in"]
+[connection signal="l_out" from="GuideIcon/PintuKelas" to="CanvasLayer/DirectionPlayer" method="l_out"]
+[connection signal="r_in" from="GuideIcon/PintuKelas" to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="GuideIcon/PintuKelas" to="CanvasLayer/DirectionPlayer" method="r_out"]
 [connection signal="body_entered" from="GuideIcon/Pintu3" to="." method="_dialogue_start" binds= ["wrong_door"]]
 [connection signal="body_exited" from="GuideIcon/Pintu3" to="." method="_dialogue_stop" binds= ["wrong_door"]]
 [connection signal="body_entered" from="GuideIcon/PintuKeluar" to="GuideIcon/PintuKeluar" method="_on_body_entered"]

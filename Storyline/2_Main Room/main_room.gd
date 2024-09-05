@@ -2,6 +2,7 @@ extends Node2D
 
 signal following
 signal r_in
+signal l_in
 
 @onready var ucing = $MC
 @onready var camera: Camera2D = ucing.camera
@@ -25,16 +26,24 @@ func _ready():
 	style.prepare()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	
 	camera.set_limit(SIDE_RIGHT, right_limit)
+	
+	if GameStateManager.get_pos_state("TanggaMain"):
+		ucing.set_global_position(Vector2(3700, 800))
+		GameStateManager.set_pos_state("TanggaMain", false)
+	
 	if GameStateManager.get_string_state("GuidePintuKuning"):
 		guide_player.play("show_guide_pintu")
 	
-	if GameStateManager.get_string_state("KeluarKamar") or debug:
+	if GameStateManager.get_string_state("DirectionHutan"):
 		otan.set_visible(false)
-		ucing.set_global_position(Vector2(3690, 800))
 		following.emit()
 		r_in.emit()
+	
+	if GameStateManager.get_string_state("Bagian3"):
+		otan.set_visible(false)
+		guide_player.play("show_guide_kelas")
+		l_in.emit()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "door_instruction_1":
@@ -42,6 +51,8 @@ func _on_dialogic_signal(argument:String):
 		GameStateManager.set_string_state("GuidePintuKuning", true)
 	if argument == "enable_door":
 		door_dialogue = true
+	if argument == "jujur":
+		GameStateManager.set_characteristic("Jujur", true)
 
 
 #region DIALOGUE MANAGER

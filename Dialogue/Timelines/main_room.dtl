@@ -5,6 +5,7 @@ Otan: Hai, apakah kau penghuni baru?
 - Ya
 	Ucing: Ya, aku murid baru sekolah ini.
 	[signal arg="1"]
+	[signal arg="jujur"]
 	Otan: Oh, selamat datang!
 - Tidak
 	Ucing: Tidak, aku cuma berkunjung.

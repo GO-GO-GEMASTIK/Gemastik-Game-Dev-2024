@@ -56,6 +56,7 @@ directories/dtl_directory={
 "dialog_kelas": "res://Dialogue/Timelines/Bagian 2/dialog_kelas.dtl",
 "dialog_kelas_after": "res://Dialogue/Timelines/Bagian 2/dialog_kelas_after.dtl",
 "dialog_kelas_after_2": "res://Dialogue/Timelines/Bagian 2/dialog_kelas_after_2.dtl",
+"dialog_papan": "res://Dialogue/Timelines/Bagian 2/dialog_papan.dtl",
 "dialog_perkenalan": "res://Dialogue/Timelines/Bagian 2/dialog_perkenalan.dtl",
 "dialog_sifat": "res://Dialogue/Timelines/Bagian 2/dialog_sifat.dtl",
 "dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
@@ -82,6 +83,9 @@ layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/bubble
 layout/default_style="res://Dialogue/speaker_textbox.tres"
 glossary/default_case_sensitive=true
 variables={
+"Jujur": false,
+"KerjaSama": false,
+"Menghargai": false,
 "kejujuran": 0,
 "kerjasama": 0,
 "rendah_hati": 0

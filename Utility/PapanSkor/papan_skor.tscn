@@ -27,18 +27,6 @@ offset_bottom = 223.0
 grow_vertical = 2
 theme_override_constants/separation = 10
 
-[node name="Pembohong" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_tee0r")
-
-[node name="Jujur" type="TextureRect" parent="VBoxContainer/Pembohong"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("3_vnoo4")
-
 [node name="Egois" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("4_qxdpa")
@@ -50,6 +38,18 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_ugwj1")
+
+[node name="Pembohong" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_tee0r")
+
+[node name="Jujur" type="TextureRect" parent="VBoxContainer/Pembohong"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_vnoo4")
 
 [node name="Sombong" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2

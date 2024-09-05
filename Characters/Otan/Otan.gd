@@ -27,14 +27,14 @@ func _physics_process(_delta):
 
 func _on_body_entered(body):
 	if body.name == "MC":
-		icon_player.play("fade_in")
-		icon_player.queue("float_loop")
+		icon_player.play("show_chat")
+		icon_player.queue("float_chat")
 		$PopSound.play()
 
 
 func _on_body_exited(body):
 	if body.name == "MC":
-		icon_player.play("fade_out")
+		icon_player.play("hide_chat")
 		
 func _on_dialogic_signal(argument:String):
 	if argument == "1":

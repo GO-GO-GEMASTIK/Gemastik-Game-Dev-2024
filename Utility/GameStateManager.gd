@@ -1,6 +1,6 @@
 extends Node
 
-var ucing_pos_main := Vector2(300.0, 600.0)
+var ucing_pos_main := Vector2(300.0, 845.0)
 
 var tasks := {
 	1: false,
@@ -32,13 +32,29 @@ var string_states := {
 	"Laundry": false,
 	"GuidePintuKuning": false,
 	"KeluarKamar": false,
+	"Bagian1": false,
+	"Bagian2": false,
+	"Bagian3": false,
+	"Bagian4": false,
+	"DirectionHutan": false,
+	"DirectionKelas": false,
+}
+
+var pos_states := {
+	"KeluarKamar": false,
+	"KeluarKelas": false,
+	"KeluarKantin": false,
+	"KeluarLaundry": false,
+	"TanggaAtas": false,
+	"TanggaMain": false,
+	"TanggaBawah": false,
 }
 
 var right_limit := {
 	"lantai_dasar": 8295,
-	"lantai_atas": 1000,
+	"lantai_atas": 8330,
 	"lantai_bawah": 1000,
-	"gudang": 1000,
+	"gudang": 2788,
 	"kamar": 3000,
 	"kelas": 3840,
 	"kantin": 1000,
@@ -46,6 +62,7 @@ var right_limit := {
 	"belakang_sekolah": 11000,
 	"bukit": 9000,
 }
+
 #region Pos and State Methods
 # State methods
 func set_naughty_nice(behavior: String, state: String):
@@ -67,6 +84,16 @@ func update_pos_main(newPos: Vector2):
 
 func get_pos_main() -> Vector2:
 	return ucing_pos_main
+
+# Pos State
+func set_pos_state(key: String, value: bool) -> void:
+	if pos_states.has(key):
+		pos_states[key] = value
+
+func get_pos_state(key: String) -> bool:
+	if pos_states.has(key):
+		return pos_states[key]
+	return false  # Default return if the key doesn't exist
 #endregion
 
 
