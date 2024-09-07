@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var ucing: CharacterBody2D
 @export var papan: Area2D
-@export var SPEED: int = 390.0
+@export var SPEED: int = 390
 
 @onready var maung_sprite = $MaungSprite
 

@@ -8,7 +8,7 @@ signal r_out
 @onready var camera: Camera2D = ucing.camera
 
 var hutan := false
-
+var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
 # ======DEBUGGING ONLY!!!======
 @export var debug: bool = false
 # ======DEBUGGING ONLY!!!======
@@ -19,18 +19,24 @@ func _ready():
 	camera.set_limit(SIDE_RIGHT, GameStateManager.get_room_right_limit("bukit"))
 	camera.set_limit(SIDE_BOTTOM, 2698)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _input(event):
+	if event.is_action_pressed("talk"):
+		if hutan:
+			GameStateManager.set_string_state("TBC", true)
+			TransitionScreen.transition_between()
+			await TransitionScreen.on_transition_finished
+			get_tree().change_scene_to_packed(tbc)
 
 
 func _on_next_area_body_entered(body):
-	hutan = true
-	r_in.emit()
+	if body == ucing:
+		hutan = true
+		r_in.emit()
 
 func _on_next_area_body_exited(body):
-	hutan = false
-	r_out.emit()
+	if body == ucing:
+		hutan = false
+		r_out.emit()
 
 
 func _on_hutan_area_body_entered(body):

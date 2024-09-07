@@ -15,25 +15,37 @@ signal go_outside
 @export var guide_player: AnimationPlayer
 @onready var icon_player = $IconPlayer
 
+@export var direction_kelas: bool = GameStateManager.get_string_state("DirectionKelas")
+@export var direction_hutan: bool = GameStateManager.get_string_state("DirectionHutan")
+@export var direction_laundry: bool = GameStateManager.get_string_state("DirectionLaundry")
+@export var direction_kantin: bool = GameStateManager.get_string_state("DirectionKantin")
+
 var upper_room = load("res://Storyline/2_Main Room/main_room_upper.tscn")
 var lower_room = load("res://Storyline/2_Main Room/main_room_lower.tscn")
 var main_room = load("res://Storyline/2_Main Room/main_room.tscn")
-var outside = preload("res://Storyline/16_Bagian4/BelakangSekolah/belakang_sekolah.tscn")
-var kelas = preload("res://Storyline/Bagian_2/Kelas/kelas.tscn")
+var outside = load("res://Storyline/16_Bagian4/BelakangSekolah/belakang_sekolah.tscn")
+var kelas = load("res://Storyline/Bagian_2/Kelas/kelas.tscn")
+var laundry = load("res://Storyline/Bagian_3/Laundry/laundry.tscn")
+var kantin = load("res://Storyline/Bagian_3/Kantin/kantin.tscn")
 
 var change_scene_upper = false
 var change_scene_lower = false
 var change_scene_main = false
 var change_scene_outside = false
 var change_scene_kelas = false
+var change_scene_laundry = false
+var change_scene_kantin = false
 
-var arrow = false
-var to_hutan = GameStateManager.get_string_state("DirectionHutan")
-var to_kelas = GameStateManager.get_string_state("DirectionKelas")
+# TIMELINE CHECK
+var bagian_2 = GameStateManager.get_string_state("Bagian2")
+var bagian_3 = GameStateManager.get_string_state("Bagian3")
+var bagian_4 = GameStateManager.get_string_state("Bagian4")
+
+var owner_upper = false
 
 func _ready():
-	if to_hutan or to_kelas:
-		arrow = true
+	if owner.name == "UpperRoom":
+		owner_upper = true
 
 func _on_body_entered(body):
 	if body.name == "MC":
@@ -43,87 +55,111 @@ func _on_body_entered(body):
 		
 		if name == "IconNaik":
 			change_scene_upper = true
-			
 		elif name == "IconTurun":
 			change_scene_lower = true
-			
 		elif name == "IconToMain":
 			change_scene_main = true
-			if global_position.x < ucing.global_position.x and arrow:
-				l2b.emit()
-			else:
-				if arrow:
+			if direction_hutan and owner_upper:
+				if global_position.x < ucing.global_position.x:
+					l2b.emit()
+				else:
 					r2b.emit()
+
 		elif name == "PintuKeluar":
 			change_scene_outside = true
-			r_out.emit()
+			if bagian_4 or direction_hutan:
+				r_out.emit()
 		elif name == "PintuKelas":
 			change_scene_kelas = true
-			if to_kelas:
-				if global_position.x < ucing.global_position.x:
-					l_out.emit()
-				else:
-					r_out.emit()
+			if direction_kelas:
+				guide_player.play("hide_guide_kelas")
+		elif name == "PintuLaundry":
+			change_scene_laundry = true
+			if direction_laundry:
+				guide_player.play("hide_laundry")
+		elif name == "PintuKantin":
+			change_scene_kantin = true
+			if direction_kantin:
+				guide_player.play("hide_kantin")
 
 
 func _on_body_exited(body):
 	if body.name == "MC":
+		Dialogic.end_timeline()
 		icon_player.play("fade_out")
 		
 		if name == "IconNaik":
 			change_scene_upper = false
-			
 		elif name == "IconTurun":
 			change_scene_lower = false
-			
 		elif name == "IconToMain":
 			change_scene_main = false
-			if global_position.x < ucing.global_position.x and arrow:
-				b2l.emit()
-			else:
-				if arrow:
+			if direction_hutan and owner_upper:
+				if global_position.x < ucing.global_position.x:
+					b2l.emit()
+				else:
 					b2r.emit()
 			
 		elif name == "PintuKeluar":
 			change_scene_outside = false
-			r_in.emit()
-		
+			if bagian_4 or direction_hutan:
+				r_in.emit()
 		elif name == "PintuKelas":
 			change_scene_kelas = false
-			if to_kelas:
-				if global_position.x < ucing.global_position.x:
-					l_in.emit()
-				else:
-					r_in.emit()
+			if direction_kelas:
+				guide_player.play("show_guide_kelas")
+		elif name == "PintuLaundry":
+			change_scene_laundry = false
+			if direction_laundry:
+				guide_player.play("show_laundry")
+		elif name == "PintuKantin":
+			change_scene_kantin = false
+			if direction_kantin:
+				guide_player.play("show_kantin")
 
 
 func _input(event):
 	if event.is_action_pressed("talk"):
 		if change_scene_upper:
 			GameStateManager.update_pos_main(ucing.global_position)
-			TransitionScreen.transition_between()
-			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(upper_room)
+			change_scene(upper_room)
 		elif change_scene_lower:
-			TransitionScreen.transition_between()
-			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(lower_room)
+			change_scene(lower_room)
 		elif change_scene_main:
-			if GameStateManager.get_string_state("Bagian3"):
+			if direction_kelas and owner_upper:
 				guide_player.play("hide_guide_kelas")
 			GameStateManager.set_pos_state("TanggaMain", true)
-			TransitionScreen.transition_between()
-			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(main_room)
+			change_scene(main_room)
 		elif change_scene_outside:
-			TransitionScreen.transition_loading()
-			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(outside)
+			if direction_hutan:
+				GameStateManager.set_string_state("DirectionHutan", false)
+				change_scene(outside)
+			else:
+				Dialogic.start("unable_door")
+				await Dialogic.timeline_ended
 		elif change_scene_kelas:
-			if to_kelas:
-				TransitionScreen.transition_loading()
-				await TransitionScreen.on_transition_finished
-				get_tree().change_scene_to_packed(kelas)
+			if direction_kelas:
+				GameStateManager.set_string_state("DirectionKelas", false)
+				change_scene(kelas)
 			else:
 				Dialogic.start("wrong_door")
 				await Dialogic.timeline_ended
+		elif change_scene_laundry:
+			if direction_laundry:
+				GameStateManager.set_string_state("DirectionLaundry", false)
+				change_scene(laundry)
+			else:
+				Dialogic.start("wrong_door")
+				await Dialogic.timeline_ended
+		elif change_scene_kantin:
+			if direction_kantin:
+				GameStateManager.set_string_state("DirectionKantin", false)
+				change_scene(kantin)
+			else:
+				Dialogic.start("wrong_door")
+				await Dialogic.timeline_ended
+
+func change_scene(scene: PackedScene):
+	TransitionScreen.transition_loading()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_packed(scene)

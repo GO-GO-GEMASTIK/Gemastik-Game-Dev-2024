@@ -1,7 +1,5 @@
 Ucing: Hei, Halo!
-[wait time="0.5"]
 Otan: Hai, apakah kau penghuni baru?
-[wait time="0.5"]
 - Ya
 	Ucing: Ya, aku murid baru sekolah ini.
 	[signal arg="1"]

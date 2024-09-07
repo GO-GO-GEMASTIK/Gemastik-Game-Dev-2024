@@ -3,6 +3,7 @@ extends Node2D
 signal following
 signal r_in
 signal l_in
+signal next
 
 @onready var ucing = $MC
 @onready var camera: Camera2D = ucing.camera
@@ -10,12 +11,22 @@ signal l_in
 @onready var right_limit = GameStateManager.get_room_right_limit("lantai_dasar")
 @onready var guide_player = $CanvasLayer/GuidePlayer
 
+@export var task_check: bool = GameStateManager.any_task_true()
+@export var direction_kelas: bool = GameStateManager.get_string_state("DirectionKelas")
+@export var direction_hutan: bool = GameStateManager.get_string_state("DirectionHutan")
+@export var direction_laundry: bool = GameStateManager.get_string_state("DirectionLaundry")
+@export var direction_kantin: bool = GameStateManager.get_string_state("DirectionKantin")
+@export var is_bagian_2: bool = GameStateManager.get_string_state("Bagian2")
+@export var is_bagian_3: bool = GameStateManager.get_string_state("Bagian3")
+@export var is_bagian_4: bool = GameStateManager.get_string_state("Bagian4")
+
 var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
 
 var dialogue_is_running := false
 var door_dialogue := false
 var on_otan := false
 var on_door := false
+var talked_to_otan := GameStateManager.get_string_state("Talked2Otan")
 
 # ======DEBUGGING ONLY!!!======
 @export var debug: bool = false
@@ -27,28 +38,46 @@ func _ready():
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	camera.set_limit(SIDE_RIGHT, right_limit)
+	if is_bagian_2 or is_bagian_3 or is_bagian_4 or task_check:
+		otan.set_visible(false)
+		otan.set_monitoring(false)
+	else:
+		otan.set_visible(true)
+		otan.set_monitoring(true)
 	
 	if GameStateManager.get_pos_state("TanggaMain"):
-		ucing.set_global_position(Vector2(3700, 800))
+		ucing.set_global_position(Vector2(3700, 846))
 		GameStateManager.set_pos_state("TanggaMain", false)
+	if GameStateManager.get_pos_state("KeluarKelas"):
+		ucing.set_global_position(Vector2(3200, 846))
+		GameStateManager.set_pos_state("KeluarKelas", false)
+	if GameStateManager.get_pos_state("KeluarLaundry"):
+		ucing.set_global_position(Vector2(5555, 846))
+		GameStateManager.set_pos_state("KeluarLaundry", false)
+	if GameStateManager.get_pos_state("KeluarKantin"):
+		ucing.set_global_position(Vector2(6755, 846))
+		GameStateManager.set_pos_state("KeluarKantin", false)
 	
 	if GameStateManager.get_string_state("GuidePintuKuning"):
 		guide_player.play("show_guide_pintu")
 	
-	if GameStateManager.get_string_state("DirectionHutan"):
-		otan.set_visible(false)
+	if direction_hutan:
 		following.emit()
 		r_in.emit()
-	
-	if GameStateManager.get_string_state("Bagian3"):
-		otan.set_visible(false)
+	elif direction_kelas:
 		guide_player.play("show_guide_kelas")
-		l_in.emit()
+	elif direction_laundry:
+		guide_player.play("show_laundry")
+	elif direction_kantin:
+		guide_player.play("show_kantin")
 
 func _on_dialogic_signal(argument:String):
 	if argument == "door_instruction_1":
+		talked_to_otan = true
+		GameStateManager.set_string_state("Talked2Otan", true)
 		guide_player.play("show_guide_pintu")
 		GameStateManager.set_string_state("GuidePintuKuning", true)
+		GameStateManager.set_string_state("Bagian1", true)
 	if argument == "enable_door":
 		door_dialogue = true
 	if argument == "jujur":
@@ -57,7 +86,7 @@ func _on_dialogic_signal(argument:String):
 
 #region DIALOGUE MANAGER
 func _dialogue_start(body, dialogue: String):
-	if body.name == "MC" and !dialogue_is_running:
+	if body.name == "MC":
 		if dialogue == "papan_tulis":
 			dialogue_starter(dialogue)
 		if dialogue == "otan":
@@ -67,8 +96,7 @@ func _dialogue_start(body, dialogue: String):
 
 func _dialogue_stop(body, dialogue: String):
 	if body.name == "MC":
-		if dialogue_is_running:
-			dialogue_stopper()
+		dialogue_stopper()
 		if dialogue == "otan":
 			on_otan = false
 		elif dialogue == "wrong_door":
@@ -77,7 +105,10 @@ func _dialogue_stop(body, dialogue: String):
 func _input(event):
 	if !dialogue_is_running:
 		if event.is_action_pressed("talk") and on_otan:
-			dialogue_starter("otan")
+			if !talked_to_otan:
+				dialogue_starter("otan")
+			else:
+				dialogue_starter("otan_reminding")
 		if event.is_action_pressed("talk") and on_door:
 			if door_dialogue:
 				dialogue_starter("wrong_door")
@@ -97,5 +128,3 @@ func dialogue_stopper():
 	Dialogic.end_timeline()
 	dialogue_is_running = false
 #endregion ===========================
-
-

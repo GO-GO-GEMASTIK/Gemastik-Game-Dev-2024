@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=59 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/storage_room.gd" id="1_qp5mm"]
 [ext_resource type="Texture2D" uid="uid://l4pl62b5cyt3" path="res://Sprites/Background/Gudang/base.jpg" id="2_yfugn"]
@@ -48,7 +48,6 @@
 [ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/Room background/gudang.mp3" id="44_u1iqs"]
 [ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Sprites/Guide Icon/warnings/warning box.png" id="45_gcn08"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="46_a40nk"]
-[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/Buba_Storage.gd" id="48_66wsg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -350,7 +349,6 @@ position = Vector2(2381, 805)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("44_hlwxj")
 flip_h = true
-script = ExtResource("48_66wsg")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1946, 67)

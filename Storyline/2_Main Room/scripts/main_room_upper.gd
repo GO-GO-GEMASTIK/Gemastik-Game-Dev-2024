@@ -10,8 +10,9 @@ signal l_in
 
 @onready var right_limit = GameStateManager.get_room_right_limit("lantai_atas")
 @onready var on_kamar = GameStateManager.get_pos_state("KeluarKamar")
-@onready var direction_kelas = GameStateManager.get_string_state("DirectionKelas")
-@onready var direction_hutan = GameStateManager.get_string_state("DirectionHutan")
+
+@export var direction_kelas: bool = GameStateManager.get_string_state("DirectionKelas")
+@export var direction_hutan: bool = GameStateManager.get_string_state("DirectionHutan")
 
 var dialogue_is_running := false
 var on_door := false
@@ -24,14 +25,13 @@ func _ready():
 		ucing.set_global_position(Vector2(5810, 830))
 		GameStateManager.set_pos_state("KeluarKamar", false)
 	
-	if direction_hutan or direction_kelas:
-		l_in.emit()
-	if GameStateManager.get_string_state("DirectionHutan"):
-		following.emit()
 	if GameStateManager.get_string_state("GuidePintuKuning"):
 		guide_player.play("show_guide_pintu")
-	if GameStateManager.get_string_state("Bagian3"):
+	elif direction_kelas:
 		guide_player.play("show_guide_kelas")
+	elif direction_hutan:
+		following.emit()
+		l_in.emit()
 
 
 func _input(event):

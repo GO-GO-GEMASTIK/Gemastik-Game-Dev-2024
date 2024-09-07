@@ -27,6 +27,7 @@ var characteristics := {
 
 var string_states := {
 	"TutorialDone": false,
+	"Talked2Otan": false,
 	"Gudang": false,
 	"Kantin": false,
 	"Laundry": false,
@@ -38,6 +39,9 @@ var string_states := {
 	"Bagian4": false,
 	"DirectionHutan": false,
 	"DirectionKelas": false,
+	"DirectionKantin": false,
+	"DirectionLaundry": false,
+	"TBC": false,
 }
 
 var pos_states := {
@@ -53,12 +57,12 @@ var pos_states := {
 var right_limit := {
 	"lantai_dasar": 8295,
 	"lantai_atas": 8330,
-	"lantai_bawah": 1000,
+	"lantai_bawah": 2788,
 	"gudang": 2788,
 	"kamar": 3000,
 	"kelas": 3840,
-	"kantin": 1000,
-	"laundry": 1000,
+	"kantin": 3500,
+	"laundry": 2500,
 	"belakang_sekolah": 11000,
 	"bukit": 9000,
 }

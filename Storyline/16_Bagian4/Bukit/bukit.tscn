@@ -1,11 +1,10 @@
-[gd_scene load_steps=63 format=3 uid="uid://d3wpacxywkmf0"]
+[gd_scene load_steps=62 format=3 uid="uid://d3wpacxywkmf0"]
 
 [ext_resource type="Texture2D" uid="uid://d3il8lruqe1hl" path="res://Storyline/16_Bagian4/Bukit/sprites/Bukit/base.jpg" id="1_1gg6y"]
 [ext_resource type="Script" path="res://Storyline/16_Bagian4/Bukit/bukit.gd" id="1_5eadk"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="2_1a411"]
 [ext_resource type="Texture2D" uid="uid://dpd4so4bukfrh" path="res://Storyline/16_Bagian4/Bukit/sprites/Bukit/front lightinh.png" id="2_8vr77"]
 [ext_resource type="Texture2D" uid="uid://cfy15m8s6xt64" path="res://Storyline/16_Bagian4/Bukit/sprites/Bukit/jalan.png" id="2_snkb7"]
-[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="3_l066f"]
 [ext_resource type="Texture2D" uid="uid://dviu366a5tm06" path="res://Storyline/16_Bagian4/Bukit/sprites/Bukit/front lighting 2.png" id="3_ld31e"]
 [ext_resource type="Texture2D" uid="uid://85rbk1eyn3f1" path="res://Storyline/16_Bagian4/Bukit/sprites/Bukit/lampu jalan.png" id="3_we4xh"]
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="4_ftv3m"]
@@ -300,7 +299,6 @@ shape = SubResource("RectangleShape2D_8xjjr")
 [node name="MC" parent="." instance=ExtResource("2_1a411")]
 position = Vector2(396, 2379)
 collision_layer = 4
-script = ExtResource("3_l066f")
 
 [node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("4_ftv3m")]
 position = Vector2(105, 2383)

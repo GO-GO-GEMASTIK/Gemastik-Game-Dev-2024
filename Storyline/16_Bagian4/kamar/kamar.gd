@@ -18,6 +18,9 @@ signal r_in
 
 @onready var guide_player = $CanvasLayer/GuidePlayer
 
+@export var is_bagian_3: bool = GameStateManager.get_string_state("Bagian3")
+@export var is_bagian_4: bool = GameStateManager.get_string_state("Bagian4")
+
 var dialogue_is_running = false
 
 # ======DEBUGGING ONLY!!!======
@@ -31,12 +34,14 @@ func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	ucing.look_left()
 	
-	if GameStateManager.get_string_state("Bagian3") or debug:
+	if is_bagian_3:
 		run_b3_part_1()
-	else:
+	elif is_bagian_4:
 		if not GameStateManager.is_task_completed(5):
+			ucing.disable_movement()
 			run_b4_part_1()
 		elif GameStateManager.is_task_completed(5):
+			ucing.disable_movement()
 			run_b4_part3()
 
 func _on_dialogic_signal(argument:String):
@@ -62,7 +67,6 @@ func run_b3_part_1():
 	await next
 	guide_player.play("show_to_class")
 	GameStateManager.set_string_state("DirectionKelas", true)
-	r_in.emit()
 
 # === BAGIAN 4 ===
 func run_b4_part_1():
@@ -94,17 +98,23 @@ func run_b4_part_2():
 	guide_player.play("show_guide")
 # --task 5 here--
 func run_b4_part3():
-	buba.set_global_position(Vector2(2450, 821))
+	maung.set_visible(true)
+	buba.set_visible(true)
 	cula.set_visible(false)
-	ucing.set_global_position(Vector2(1080, 855))
-	maung.set_global_position(Vector2(930, 855))
+	buba.set_flip_h(true)
+	buba.set_global_position(Vector2(2450, 805))
+	ucing.set_global_position(Vector2(1080, 850))
+	maung.set_global_position(Vector2(930, 835))
 	await get_tree().create_timer(1.0).timeout
 	dialog_runner("B4_4_orangtua_ucing_maung")
 	await Dialogic.timeline_ended
+	
+	guide_player.play("show_hutan")
+	
 	await get_tree().create_timer(1.0).timeout
+	GameStateManager.set_string_state("DirectionHutan", true)
 	following.emit()
 	r_in.emit()
-	
 #endregion
 
 

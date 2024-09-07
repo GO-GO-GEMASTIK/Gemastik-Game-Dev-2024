@@ -38,7 +38,10 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "B2_Papan": "res://Dialogue/Timelines/Bagian 2/B2_Papan.dtl",
+"B3_after_food": "res://Dialogue/Timelines/Bagian 3/B3_after_food.dtl",
+"B3_after_laundry": "res://Dialogue/Timelines/Bagian 3/B3_after_laundry.dtl",
 "B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
+"B3_mendapat_tugas": "res://Dialogue/Timelines/Bagian 3/B3_mendapat_tugas.dtl",
 "B3_monolog_kamar": "res://Dialogue/Timelines/Bagian 3/B3_monolog_kamar.dtl",
 "B4_10_monster_end": "res://Dialogue/Timelines/Bagian 4/B4_10_monster_end.dtl",
 "B4_1_kamar_malam": "res://Dialogue/Timelines/Bagian 4/B4_1_kamar_malam.dtl",
@@ -70,6 +73,7 @@ directories/dtl_directory={
 "locked_door": "res://Dialogue/Timelines/locked_door.dtl",
 "main_room": "res://Dialogue/Timelines/main_room.dtl",
 "otan": "res://Dialogue/Timelines/main_room.dtl",
+"otan_reminding": "res://Dialogue/Timelines/Bagian 1/otan_reminding.dtl",
 "papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
 "placeholder": "res://Dialogue/Timelines/placeholder.dtl",
 "scary": "res://Dialogue/Timelines/scary.dtl",

@@ -1,20 +1,17 @@
-[gd_scene load_steps=33 format=3 uid="uid://d27chi846yccw"]
+[gd_scene load_steps=30 format=3 uid="uid://d27chi846yccw"]
 
 [ext_resource type="Texture2D" uid="uid://dfnhm5u2rbrw5" path="res://Sprites/Sekolah/Lantai Bawah/base.jpg" id="1_dx853"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room_lower.gd" id="1_kp8er"]
-[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="2_imv5t"]
 [ext_resource type="Texture2D" uid="uid://btc4fequts7" path="res://Sprites/Sekolah/Lantai Bawah/front tiang.png" id="2_u2a7l"]
 [ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/Props/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
 [ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/Props/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
-[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_egu37"]
-[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="6_w8ao2"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="11_8woac"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="12_1rpcb"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/pintu_gudang.gd" id="12_mhhey"]
 [ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="13_e6g53"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="14_vm3bq"]
-[ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide Icon/1.png" id="44_ytet2"]
+[ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide UI/pintu_gudang.png" id="44_ytet2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ynt2h"]
 normal = Vector2(1, 0)
@@ -335,21 +332,16 @@ script = ExtResource("1_kp8er")
 z_index = -1
 
 [node name="LantaiBawah" type="Sprite2D" parent="MapLayout"]
-position = Vector2(1596, 540)
 texture = ExtResource("1_dx853")
+offset = Vector2(1394, 540)
 
 [node name="FrontTiang" type="Sprite2D" parent="MapLayout"]
 z_index = 10
-position = Vector2(1596, 540)
 texture = ExtResource("2_u2a7l")
+offset = Vector2(1394, 540)
 
 [node name="Floor" type="StaticBody2D" parent="MapLayout"]
 position = Vector2(1541, 1004)
-
-[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Floor"]
-visible = false
-scale = Vector2(4.475, 0.627407)
-texture = ExtResource("2_fruwq")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MapLayout/Floor"]
 rotation = -1.57079
@@ -363,7 +355,7 @@ position = Vector2(8, 635)
 shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="RWall" type="StaticBody2D" parent="MapLayout"]
-position = Vector2(-2431, 0)
+position = Vector2(-2620, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RWall"]
 position = Vector2(5409, 630)
@@ -372,7 +364,7 @@ shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="LightAnimation" type="AnimatedSprite2D" parent="MapLayout"]
 z_index = 11
-position = Vector2(2700.5, 583)
+position = Vector2(2690, 623)
 scale = Vector2(1.0758, 1.246)
 sprite_frames = SubResource("SpriteFrames_884v1")
 autoplay = "default"
@@ -380,32 +372,17 @@ frame = 15
 frame_progress = 0.78939
 
 [node name="MC" parent="." instance=ExtResource("2_imv5t")]
-position = Vector2(1514, 591)
-script = ExtResource("6_w8ao2")
+position = Vector2(1479, 833)
 
 [node name="IconGuide" type="Node" parent="."]
 
 [node name="PintuGudang" type="Area2D" parent="IconGuide"]
-position = Vector2(522, 703)
+position = Vector2(323, 683)
 script = ExtResource("12_mhhey")
-
-[node name="BoxWarning" type="TextEdit" parent="IconGuide/PintuGudang"]
-visible = false
-offset_left = 301.0
-offset_top = -240.0
-offset_right = 688.0
-offset_bottom = -43.0
-theme_override_fonts/font = ExtResource("5_egu37")
-theme_override_font_sizes/font_size = 20
-text = "Umm.. suasananya
-sedikit menakutkan.
-Tapi aku akan masuk!
-
-   - ketik 'X' untuk membuka pintu!-"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconGuide/PintuGudang"]
 position = Vector2(0, 34)
-scale = Vector2(3.42323, 5.42717)
+scale = Vector2(3.25277, 4.76658)
 shape = SubResource("RectangleShape2D_n583p")
 
 [node name="Sprite2D" type="Sprite2D" parent="IconGuide/PintuGudang"]
@@ -423,11 +400,10 @@ libraries = {
 stream = ExtResource("14_vm3bq")
 bus = &"SFX"
 
-[node name="IconToMain" type="Area2D" parent="IconGuide" node_paths=PackedStringArray("ucing", "icon_player")]
+[node name="IconToMain" type="Area2D" parent="IconGuide" node_paths=PackedStringArray("ucing")]
 position = Vector2(1990, 473)
 script = ExtResource("11_8woac")
 ucing = NodePath("../../MC")
-icon_player = NodePath("IconPlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconGuide/IconToMain"]
 position = Vector2(-151, 422)

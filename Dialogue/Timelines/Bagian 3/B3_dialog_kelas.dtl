@@ -1,21 +1,21 @@
-Buba:  Ucing! apakah kau sudah dengar?
+Buba: Ucing! apakah kau sudah dengar?
 Buba: Kebun sekolah kita, pakaian-pakaian kita, rusak.
 Buba: Dan hilangnya persediaan makanan kita!
 Ucing: Belum, Buba. Apa yang terjadi?
 Cula: Aku mengambil beberapa gambarnya dengan kamera mahalku. \
-Ini, anak baru. Coba lihat. 
-Cula: Apakah itu ulahmu, Ucing? \
+Ini, anak baru. Coba lihat.
+set {Jujur} = GameStateManager.get_characteristic("Jujur")
+if {Jujur} == false:
+	Cula: Apakah itu ulahmu, Ucing? \
 Semua itu terjadi setelah kau pindah kesini.
-Cula: Sudah kuduga, HAHAHAHA!
-Ucing: Hei, apa-apaan ini? Jangan sembarang menuduhku!\
+	Cula: Sudah kuduga, HAHAHAHA!
+	Ucing: Hei, apa-apaan ini? Jangan sembarang menuduhku!\
 Tentu saja bukan aku!
-if :
 	Cula: Benarkah? \
 Tapi kau mendapat vote sebagai pembohong di sesi voting kemarin.
 	Ucing: Serius, itu bukan aku!
 	Cula: Huuu, pembohong..pembohong..\
 Anda pasti berdusta..
-else:
 Otan: Sebenarnya..., aku melihat siapa pelakunya kemarin malam...!
 Otan: Ada... sosok aneh... yang datang dari hutan!
 Otan: Itu pasti... monster!

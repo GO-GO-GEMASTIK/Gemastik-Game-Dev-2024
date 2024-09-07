@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED := 500.0
+@export var SPEED := 400.0
 @export var flip_h := false
 
 @onready var ucing = $Sprite2D
@@ -15,12 +15,12 @@ var push_force = 80.0
 
 func _ready():
 	ucing.set_flip_h(flip_h)
-	if owner.name == "Main":
-		camera.set_position_smoothing_enabled(false)
-		global_position = GameStateManager.get_pos_main()
-		camera.position = Vector2.ZERO
-		await get_tree().create_timer(0.5).timeout
-		camera.set_position_smoothing_enabled(true)
+	#if owner.name == "Main":
+		#camera.set_position_smoothing_enabled(false)
+		#global_position = GameStateManager.get_pos_main()
+		#camera.position = Vector2.ZERO
+		#await get_tree().create_timer(0.5).timeout
+		#camera.set_position_smoothing_enabled(true)
 		
 	#good_bad_traits_script = good_bad_traits_script.new()
 

@@ -1,16 +1,19 @@
-[gd_scene load_steps=35 format=3 uid="uid://btubg2kdef353"]
+[gd_scene load_steps=45 format=3 uid="uid://btubg2kdef353"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_2/Kelas/kelas.gd" id="1_uoc45"]
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_vn8jg"]
 [ext_resource type="Texture2D" uid="uid://bhv35hkt1mrk8" path="res://Sprites/Tasks/SubTask-Kelas/2.png" id="2_sb1v5"]
 [ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_oehn7"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="6_03jei"]
 [ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Following/Otan/otan.tscn" id="10_jtcf3"]
 [ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_metuj"]
 [ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="11_0ifjv"]
 [ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ad43n"]
+[ext_resource type="Texture2D" uid="uid://t6heshys5ul5" path="res://Storyline/Bagian_2/Kelas/sprites/Guide/pengumuman.png" id="15_5r3pa"]
 [ext_resource type="PackedScene" uid="uid://cd53866vqu6q" path="res://Utility/PapanSkor/papan_skor.tscn" id="15_icqu7"]
 [ext_resource type="Texture2D" uid="uid://dgate3jcgl7mn" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/warning box.png" id="16_v6o7x"]
 [ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="17_isdxt"]
+[ext_resource type="Texture2D" uid="uid://c0jh6yb5e1n36" path="res://Sprites/Guide UI/pintu_laundry.png" id="17_jrd7v"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_ku3c8"]
 [ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="29_vemmh"]
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="30_w7piw"]
@@ -30,8 +33,7 @@ normal = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwiio"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eho2w"]
-size = Vector2(160.124, 437.013)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40uu4"]
 
 [sub_resource type="Animation" id="Animation_qb38e"]
 length = 0.001
@@ -131,6 +133,94 @@ tracks/7/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Pengumuman:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Pengumuman:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PintuLaundry:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PintuLaundry:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("../Areas/AreaPintu/ViewDoor:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -180)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("../Areas/AreaPintu/ViewDoor:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v8cdt"]
+resource_name = "float_door"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPintu/ViewDoor:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -160), Vector2(0, -180), Vector2(0, -160)]
+}
 
 [sub_resource type="Animation" id="Animation_wtub2"]
 resource_name = "float_papan"
@@ -164,6 +254,66 @@ tracks/0/keys = {
 "values": [Vector2(0, -320), Vector2(0, -340), Vector2(0, -320)]
 }
 
+[sub_resource type="Animation" id="Animation_bv1p2"]
+resource_name = "float_view_talk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-42, -330), Vector2(-42, -350), Vector2(-42, -330)]
+}
+
+[sub_resource type="Animation" id="Animation_aw88x"]
+resource_name = "hide_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPintu/ViewDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -160), Vector2(0, -180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/AreaPintu/ViewDoor:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ocg14"]
+resource_name = "hide_laundry"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PintuLaundry:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_6v0fh"]
 resource_name = "hide_papan"
 length = 0.5
@@ -180,6 +330,34 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_r8jwa"]
+resource_name = "hide_pengumuman"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pengumuman:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pengumuman:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_5ui4h"]
 resource_name = "hide_view_icon"
 length = 0.5
@@ -187,6 +365,22 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("../Areas/AreaBangku/ViewIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_65s01"]
+resource_name = "hide_view_talk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -224,6 +418,62 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_x0f0t"]
+resource_name = "show_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Areas/AreaPintu/ViewDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, -160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Areas/AreaPintu/ViewDoor:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6r4ye"]
+resource_name = "show_laundry"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PintuLaundry:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PintuLaundry:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_atekd"]
 resource_name = "show_papan"
 length = 0.5
@@ -250,6 +500,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(272, -340), Vector2(272, -320)]
+}
+
+[sub_resource type="Animation" id="Animation_rxftb"]
+resource_name = "show_pengumuman"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pengumuman:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pengumuman:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_wr73q"]
@@ -280,34 +558,6 @@ tracks/1/keys = {
 "values": [Vector2(0, -340), Vector2(0, -320)]
 }
 
-[sub_resource type="Animation" id="Animation_i7x8i"]
-resource_name = "show_warning"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("WarningBangku:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WarningBangku:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_h1rq4"]
 resource_name = "show_view_talk"
 length = 0.5
@@ -336,49 +586,52 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_65s01"]
-resource_name = "hide_view_talk"
+[sub_resource type="Animation" id="Animation_i7x8i"]
+resource_name = "show_warning"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:self_modulate")
+tracks/0/path = NodePath("WarningBangku:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
 }
-
-[sub_resource type="Animation" id="Animation_bv1p2"]
-resource_name = "float_view_talk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Areas/AreaNgobrol/ViewTalk:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WarningBangku:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-42, -330), Vector2(-42, -350), Vector2(-42, -330)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a2neo"]
 _data = {
 "RESET": SubResource("Animation_qb38e"),
+"float_door": SubResource("Animation_v8cdt"),
 "float_papan": SubResource("Animation_wtub2"),
 "float_view_icon": SubResource("Animation_ry6p2"),
 "float_view_talk": SubResource("Animation_bv1p2"),
+"hide_door": SubResource("Animation_aw88x"),
+"hide_laundry": SubResource("Animation_ocg14"),
 "hide_papan": SubResource("Animation_6v0fh"),
+"hide_pengumuman": SubResource("Animation_r8jwa"),
 "hide_view_icon": SubResource("Animation_5ui4h"),
 "hide_view_talk": SubResource("Animation_65s01"),
 "hide_warning": SubResource("Animation_a12wq"),
+"show_door": SubResource("Animation_x0f0t"),
+"show_laundry": SubResource("Animation_6r4ye"),
 "show_papan": SubResource("Animation_atekd"),
+"show_pengumuman": SubResource("Animation_rxftb"),
 "show_view_icon": SubResource("Animation_wr73q"),
 "show_view_talk": SubResource("Animation_h1rq4"),
 "show_warning": SubResource("Animation_i7x8i")
@@ -386,7 +639,6 @@ _data = {
 
 [node name="Kelas" type="Node2D"]
 script = ExtResource("1_uoc45")
-debug = true
 
 [node name="MapLayout" type="Node2D" parent="."]
 
@@ -469,24 +721,30 @@ position = Vector2(-42, -350)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_ku3c8")
 
+[node name="AreaPintu" type="Area2D" parent="Areas"]
+position = Vector2(3499, 717)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaPintu"]
+scale = Vector2(14.2046, 25.7281)
+shape = SubResource("RectangleShape2D_40uu4")
+
+[node name="ViewDoor" type="Sprite2D" parent="Areas/AreaPintu"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -180)
+scale = Vector2(0.844862, 0.760376)
+texture = ExtResource("6_03jei")
+
 [node name="MC" parent="." instance=ExtResource("14_ad43n")]
 position = Vector2(2994, 844)
 collision_layer = 4
-SPEED = 400.0
 flip_h = true
 
-[node name="BuCilla" type="Area2D" parent="."]
+[node name="BuCilla" type="Sprite2D" parent="."]
 position = Vector2(3503, 783)
-
-[node name="SpriteBuCilla" type="Sprite2D" parent="BuCilla"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_oehn7")
 flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BuCilla"]
-position = Vector2(1.78271, 15)
-scale = Vector2(0.864547, 0.878692)
-shape = SubResource("RectangleShape2D_eho2w")
 
 [node name="Otan" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("10_jtcf3")]
 collision_layer = 2
@@ -514,9 +772,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.001
 grow_horizontal = 2
 texture = ExtResource("2_sb1v5")
@@ -546,6 +804,30 @@ icon = ExtResource("17_isdxt")
 [node name="PapanSkor" parent="CanvasLayer" instance=ExtResource("15_icqu7")]
 visible = false
 
+[node name="Pengumuman" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 489.5
+offset_top = 50.0
+offset_right = 1430.5
+offset_bottom = 259.001
+grow_horizontal = 2
+texture = ExtResource("15_5r3pa")
+
+[node name="PintuLaundry" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 489.5
+offset_top = 50.0
+offset_right = 1430.5
+offset_bottom = 259.0
+grow_horizontal = 2
+texture = ExtResource("17_jrd7v")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 root_node = NodePath("../CanvasLayer")
@@ -563,4 +845,6 @@ libraries = {
 [connection signal="body_exited" from="Areas/AreaPapan" to="." method="_on_area_papan_body_exited"]
 [connection signal="body_entered" from="Areas/AreaNgobrol" to="." method="_on_area_ngobrol_body_entered"]
 [connection signal="body_exited" from="Areas/AreaNgobrol" to="." method="_on_area_ngobrol_body_exited"]
+[connection signal="body_entered" from="Areas/AreaPintu" to="." method="_on_area_pintu_body_entered"]
+[connection signal="body_exited" from="Areas/AreaPintu" to="." method="_on_area_pintu_body_exited"]
 [connection signal="pressed" from="CanvasLayer/WarningTask/Button" to="." method="_on_button_pressed"]

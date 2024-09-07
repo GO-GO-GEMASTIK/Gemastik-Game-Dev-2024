@@ -7,7 +7,8 @@ extends AnimatedSprite2D
 
 var group := "dragable"
 
-var tbc = load("res://Storyline/16_Bagian4/kamar/kamar.tscn")
+var kamar = load("res://Storyline/16_Bagian4/kamar/kamar.tscn")
+var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,7 +30,10 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			await get_tree().create_timer(3.0).timeout
 			TransitionScreen.transition_between()
 			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(tbc)
+			if GameStateManager.get_string_state("TBC"):
+				get_tree().change_scene_to_packed(tbc)
+			else:
+				get_tree().change_scene_to_packed(kamar)
 
 
 func _on_area_2d_mouse_entered():

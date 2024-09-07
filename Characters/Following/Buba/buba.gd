@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var ucing: CharacterBody2D
 @export var papan: Area2D
-@export var SPEED: int = 390.0
+@export var SPEED: int = 390
 
 @onready var buba_sprite = $BubaSprite
 @onready var collision_shape_2d = $CollisionShape2D
@@ -36,7 +36,7 @@ func _physics_process(delta):
 			buba_sprite.set_flip_h(true)
 			
 		# Check if the NPC is close to the main character
-		if global_position.distance_to(ucing.global_position) < 200:
+		if global_position.distance_to(ucing.global_position) < 400:
 			if is_on_floor():
 				velocity.x = 0  # Stop the NPC
 				called = false

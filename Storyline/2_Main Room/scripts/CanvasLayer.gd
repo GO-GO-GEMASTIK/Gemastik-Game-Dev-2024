@@ -18,8 +18,8 @@ var passed_2 = false
 var passed_3 = false
 var passed_4 = false
 
-var task_check = GameStateManager.any_task_true()
-var tutorial_done = GameStateManager.get_string_state("TutorialDone")
+@onready var task_check = GameStateManager.any_task_true()
+@onready var tutorial_done = GameStateManager.get_string_state("TutorialDone")
 
 # ======DEBUGGING ONLY!!!======
 @export var debug: bool = false

@@ -32,12 +32,13 @@ func _ready():
 			await Dialogic.timeline_ended
 			
 			dialogue_is_running = false
+			GameStateManager.set_string_state("Bagian1", false)
 			GameStateManager.set_string_state("Bagian2", true)
 			TransitionScreen.transition_between()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_packed(kelas)
 			
-	elif !dialogue_is_running:
+	else:
 		dialogue_is_running = true
 		ucing.disable_movement()
 		Dialogic.start("gudang")

@@ -12,7 +12,6 @@ var rest_nodes = []
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
 	var ball_index = get_index() - 2
-	print(ball_index)
 	if ball_index < rest_nodes.size():
 		rest_point = rest_nodes[ball_index].global_position
 	else:
@@ -38,7 +37,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
 			selected = false
 			box_boneka.animation = "default"
-			var shortest_dist = 100
+			var shortest_dist = 200
 			for child in rest_nodes:
 				var distance = global_position.distance_to(child.global_position)
 				if distance < shortest_dist:

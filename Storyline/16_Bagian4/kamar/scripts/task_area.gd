@@ -40,6 +40,7 @@ func _on_body_exited(body):
 
 
 func _on_button_pressed():
+	await get_tree().create_timer(1.0).timeout
 	TransitionScreen.transition_between()
 	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_packed(task_5)

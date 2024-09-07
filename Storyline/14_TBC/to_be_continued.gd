@@ -1,6 +1,6 @@
 extends Control
 
-var task1 = load("res://Storyline/4_Task 1_Testing/box_drag_drop.tscn")
+var task1 = load("res://Storyline/4_Task 1/box_drag_drop.tscn")
 var task2 = load("res://Storyline/5_Task 2/math_class.tscn")
 var task3 = load("res://Storyline/6_Task 3/laundry_drag_drop.tscn")
 var task4 = load("res://Storyline/7_Task 4/food_making.tscn")

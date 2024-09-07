@@ -15,6 +15,7 @@ var highest_z_index: int = 5
 @export var finish_sound: AudioStreamPlayer2D
 
 var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var kantin = load("res://Storyline/Bagian_3/Kantin/kantin.tscn")
 
 # DUPLICATION CHECK
 func _process(_delta):
@@ -86,9 +87,13 @@ func _on_plate_ebi_input_event(_viewport, _event, _shape_idx):
 
 func _task_done():
 	finish_sound.play()
+	GameStateManager.complete_task(4)
 	TransitionScreen.transition_between()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_packed(tbc)
+	if GameStateManager.get_string_state("TBC"):
+		get_tree().change_scene_to_packed(tbc)
+	else:
+		get_tree().change_scene_to_packed(kantin)
 
 
 func get_new_highest_z_index():
