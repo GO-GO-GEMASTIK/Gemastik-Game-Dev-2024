@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var ucing: CharacterBody2D
 @export var papan: Area2D
-@export var SPEED: int = 390
+@export var SPEED: int = 385
 
 @onready var buba_sprite = $BubaSprite
 @onready var collision_shape_2d = $CollisionShape2D
@@ -92,6 +92,9 @@ func jump_stop():
 
 func change_jump_val(val: int):
 	JUMP_VELOCITY = val
+
+func change_speed_val(val: int):
+	SPEED = val
 
 # Coroutine to introduce delay before continuing
 func start_waiting():

@@ -77,14 +77,11 @@ script = ExtResource("1_7t8fj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -50)
-rotation = 1.31249
-scale = Vector2(3, -1.649)
 limit_left = 0
 limit_top = 0
 limit_bottom = 1080
 limit_smoothed = true
 position_smoothing_enabled = true
-drag_vertical_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

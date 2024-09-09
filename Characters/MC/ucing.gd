@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED := 400.0
+@export var SPEED := 450.0
 @export var flip_h := false
 
 @onready var ucing = $Sprite2D
@@ -104,3 +104,6 @@ func _on_dialogic_game_handler_signal_event(argument):
 
 func change_jump_val(val: int):
 	JUMP_VELOCITY = val
+
+func change_speed_val(val: int):
+	SPEED = val

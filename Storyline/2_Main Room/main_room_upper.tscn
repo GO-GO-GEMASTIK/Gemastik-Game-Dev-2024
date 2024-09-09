@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="7_t8o3l"]
 [ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="8_gwn3g"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="12_jd02c"]
-[ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/cari kelas.png" id="12_ms82n"]
+[ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="12_ms82n"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/turun tangga/turun_0000.png" id="22_ag37u"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="37_uxaqc"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="38_qxwyd"]

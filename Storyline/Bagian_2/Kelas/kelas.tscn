@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://btubg2kdef353"]
+[gd_scene load_steps=46 format=3 uid="uid://btubg2kdef353"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_2/Kelas/kelas.gd" id="1_uoc45"]
 [ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_vn8jg"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="17_isdxt"]
 [ext_resource type="Texture2D" uid="uid://c0jh6yb5e1n36" path="res://Sprites/Guide UI/pintu_laundry.png" id="17_jrd7v"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_ku3c8"]
+[ext_resource type="Texture2D" uid="uid://bx1kyx33ry8p8" path="res://Storyline/Bagian_2/Kelas/sprites/list tugas.png" id="18_opqsp"]
 [ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="29_vemmh"]
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="30_w7piw"]
 
@@ -772,9 +773,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.001
 grow_horizontal = 2
 texture = ExtResource("2_sb1v5")
@@ -809,9 +810,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.001
 grow_horizontal = 2
 texture = ExtResource("15_5r3pa")
@@ -821,12 +822,19 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("17_jrd7v")
+
+[node name="ListPekerjaan" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("18_opqsp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

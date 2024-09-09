@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0g13s1av6h87"]
+
+[ext_resource type="Texture2D" uid="uid://bhjdb1jwpj68r" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-a.png" id="1_5lmba"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/hutan.gd" id="1_80gln"]
+[ext_resource type="Texture2D" uid="uid://b6dltvnck8g6h" path="res://Storyline/Bagian_4/Hutan/sprites/front_crop/front_a.png" id="2_137qt"]
+[ext_resource type="Texture2D" uid="uid://v2oebwo3ghkr" path="res://Storyline/Bagian_4/Hutan/sprites/frontlight_a.png" id="3_b53ya"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_ng7tf"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="6_2le7a"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="7_w81dt"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d4mxq"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2swcj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2p10"]
+
+[node name="Hutan" type="Node2D"]
+script = ExtResource("1_80gln")
+
+[node name="BackLayout" type="Node2D" parent="."]
+
+[node name="HutanA" type="TextureRect" parent="BackLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_5lmba")
+
+[node name="FrontLayout" type="Node2D" parent="."]
+z_index = 10
+
+[node name="Front" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_137qt")
+
+[node name="Lightning" type="TextureRect" parent="FrontLayout"]
+texture = ExtResource("3_b53ya")
+
+[node name="CollisionLayout" type="Node2D" parent="."]
+
+[node name="Grounding" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionLayout/Grounding"]
+polygon = PackedVector2Array(2, 1118, 675, 1143, 1785, 1597, 2428, 1610, 3491, 2007, 9988, 2005, 9990, 2286, 4, 2285)
+
+[node name="Walls" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="LWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(0, 496)
+shape = SubResource("WorldBoundaryShape2D_d4mxq")
+
+[node name="RWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(10000, 1040)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_2swcj")
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaCamera" type="Area2D" parent="Areas"]
+position = Vector2(4978, 1845)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaCamera"]
+scale = Vector2(16.7461, 14.1885)
+shape = SubResource("RectangleShape2D_y2p10")
+
+[node name="MC" parent="." instance=ExtResource("4_ng7tf")]
+position = Vector2(354, 966)
+collision_layer = 6
+
+[node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("6_2le7a")]
+position = Vector2(105, 919)
+ucing = NodePath("../MC")
+SPEED = 385
+
+[node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("7_w81dt")]
+position = Vector2(183, 949)
+ucing = NodePath("../MC")
+
+[connection signal="following" from="." to="Buba" method="_following"]
+[connection signal="following" from="." to="Maung" method="_following"]
+[connection signal="body_entered" from="Areas/AreaCamera" to="." method="_on_area_camera_body_entered"]
+[connection signal="body_exited" from="Areas/AreaCamera" to="." method="_on_area_camera_body_exited"]

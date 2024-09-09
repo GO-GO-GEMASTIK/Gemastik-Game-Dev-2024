@@ -1,0 +1,634 @@
+[gd_scene load_steps=100 format=3 uid="uid://dgp0bg1mxt671"]
+
+[ext_resource type="Texture2D" uid="uid://c3qf3o7l130ly" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/base.png" id="1_3gura"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/belakang_sekolah.gd" id="1_ccjp5"]
+[ext_resource type="Texture2D" uid="uid://brr3ebyb8k0rd" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0000.png" id="2_0behj"]
+[ext_resource type="Texture2D" uid="uid://ddya0f7m6lh37" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0001.png" id="3_0ddop"]
+[ext_resource type="Texture2D" uid="uid://m1wios6bu4ei" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0002.png" id="4_42bo4"]
+[ext_resource type="Texture2D" uid="uid://cbtpnq47sxmce" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0003.png" id="5_25gky"]
+[ext_resource type="Texture2D" uid="uid://fsmg0xpfv4b4" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0004.png" id="6_vo41p"]
+[ext_resource type="Texture2D" uid="uid://hatkcysjax6f" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0005.png" id="7_tc26s"]
+[ext_resource type="Texture2D" uid="uid://bjmdqfl215ol5" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0006.png" id="8_cqff7"]
+[ext_resource type="Texture2D" uid="uid://dnjbkjojvro1h" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0007.png" id="9_c8g4k"]
+[ext_resource type="Texture2D" uid="uid://dh3i4xb8muelv" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0008.png" id="10_0bpxf"]
+[ext_resource type="Texture2D" uid="uid://d15baq3sitsu0" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0009.png" id="11_o3eq5"]
+[ext_resource type="Texture2D" uid="uid://dmshspaw3v118" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0010.png" id="12_hg3ki"]
+[ext_resource type="Texture2D" uid="uid://bl3jhoy5xer80" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0011.png" id="13_8mk8d"]
+[ext_resource type="Texture2D" uid="uid://bnr2yuen0pcx1" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0012.png" id="14_ekhmp"]
+[ext_resource type="Texture2D" uid="uid://crfwe1gb6rm4" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0013.png" id="15_51165"]
+[ext_resource type="Texture2D" uid="uid://ribbfqfgah8k" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0014.png" id="16_04nmq"]
+[ext_resource type="Texture2D" uid="uid://ekxlxit8v7kc" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0015.png" id="17_vf42t"]
+[ext_resource type="Texture2D" uid="uid://dnjs01di0ft4o" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0016.png" id="18_7q7s6"]
+[ext_resource type="Texture2D" uid="uid://3ro4ikxoobh2" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0017.png" id="19_dte4k"]
+[ext_resource type="Texture2D" uid="uid://dswxoxljkwt8c" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0018.png" id="20_ieumi"]
+[ext_resource type="Texture2D" uid="uid://diftiupoj3cn6" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0019.png" id="21_mgc2o"]
+[ext_resource type="Texture2D" uid="uid://cv6y68k2upbix" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0020.png" id="22_715ot"]
+[ext_resource type="Texture2D" uid="uid://dxpnwawgs76ie" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0021.png" id="23_18dv3"]
+[ext_resource type="Texture2D" uid="uid://b58atqb3e7hhn" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi kabut/Timeline 1_0022.png" id="24_25cnq"]
+[ext_resource type="Texture2D" uid="uid://dnjew7sn1ppa7" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/jalan.png" id="25_q5jcw"]
+[ext_resource type="Texture2D" uid="uid://g7s6eoye8k6v" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/front acc.png" id="25_w00wy"]
+[ext_resource type="Texture2D" uid="uid://tfwxgeh8a6q7" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/lampu jalan.png" id="27_uc7ri"]
+[ext_resource type="Texture2D" uid="uid://cnhgyyl27ws5y" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/front lighting.png" id="28_weit3"]
+[ext_resource type="Texture2D" uid="uid://dowes1csxucab" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/front lighting 2.png" id="29_v0qu8"]
+[ext_resource type="Texture2D" uid="uid://8m0ae6it24nk" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0000.png" id="30_5psjw"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="30_43ktj"]
+[ext_resource type="Texture2D" uid="uid://77ppguh6ppvj" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0001.png" id="31_fl55k"]
+[ext_resource type="Texture2D" uid="uid://j4n61tdht4f8" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0002.png" id="32_2k7r5"]
+[ext_resource type="Texture2D" uid="uid://ylogw2ouc5ii" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0003.png" id="33_ihgt3"]
+[ext_resource type="Texture2D" uid="uid://dsgo07budt8ox" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0004.png" id="34_s7js6"]
+[ext_resource type="Texture2D" uid="uid://cdihilr8c6vf1" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0005.png" id="35_umppt"]
+[ext_resource type="Texture2D" uid="uid://dk642c0m3vv3h" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0006.png" id="36_d4bae"]
+[ext_resource type="Texture2D" uid="uid://dvj8l502kjnwi" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0007.png" id="37_b2kn3"]
+[ext_resource type="Texture2D" uid="uid://cln44jqr2xnis" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0008.png" id="38_n6oxw"]
+[ext_resource type="Texture2D" uid="uid://deffvreginad2" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0009.png" id="39_j1qsn"]
+[ext_resource type="Texture2D" uid="uid://bq3qlpsetkko4" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0010.png" id="40_jcptu"]
+[ext_resource type="Texture2D" uid="uid://b2buln8lfvd1e" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0011.png" id="41_l05in"]
+[ext_resource type="Texture2D" uid="uid://wltuypfjn7ar" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0012.png" id="42_vb4h5"]
+[ext_resource type="Texture2D" uid="uid://01crrw25yaou" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0013.png" id="43_yt1xd"]
+[ext_resource type="Texture2D" uid="uid://dxm04v6rnoi4w" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0014.png" id="44_goeow"]
+[ext_resource type="Texture2D" uid="uid://dfycj35suq5j2" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0015.png" id="45_t30dv"]
+[ext_resource type="Texture2D" uid="uid://c2k62vpdfugxm" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0016.png" id="46_alcvh"]
+[ext_resource type="Texture2D" uid="uid://c14erctf1ffgy" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0017.png" id="47_avk4w"]
+[ext_resource type="Texture2D" uid="uid://bponu5kigah78" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0018.png" id="48_7mwu7"]
+[ext_resource type="Texture2D" uid="uid://b4sjy4t2h0prt" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0019.png" id="49_445mk"]
+[ext_resource type="Texture2D" uid="uid://urqrge3ibqqq" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0020.png" id="50_4hk8r"]
+[ext_resource type="Texture2D" uid="uid://dhbhg5jxk8btp" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0021.png" id="51_u3fbv"]
+[ext_resource type="Texture2D" uid="uid://0hmegf0b0hxu" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0022.png" id="52_ajyf8"]
+[ext_resource type="Texture2D" uid="uid://3nshybqgq224" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0000.png" id="53_6a33r"]
+[ext_resource type="Texture2D" uid="uid://c5taalvtugevn" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/Front lighting baru.png" id="53_rjdtm"]
+[ext_resource type="Texture2D" uid="uid://drbbt80r643jg" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0001.png" id="54_7b5ng"]
+[ext_resource type="Texture2D" uid="uid://xxud73ck8avy" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0002.png" id="55_unt4w"]
+[ext_resource type="Texture2D" uid="uid://jw5dbv0k6hl" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0003.png" id="56_vqdre"]
+[ext_resource type="Texture2D" uid="uid://cv6kqmyq8i25d" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0004.png" id="57_shqhw"]
+[ext_resource type="Texture2D" uid="uid://b8qipvaiom3lx" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0005.png" id="58_m0q2u"]
+[ext_resource type="Texture2D" uid="uid://cvr7j8t26ycpm" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0006.png" id="59_yfgku"]
+[ext_resource type="Texture2D" uid="uid://qycug1ybsunr" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0007.png" id="60_s2o6k"]
+[ext_resource type="Texture2D" uid="uid://ce61revyqgj4l" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0008.png" id="61_dly2w"]
+[ext_resource type="Texture2D" uid="uid://dgivcun0u0frc" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0009.png" id="62_plx3s"]
+[ext_resource type="Texture2D" uid="uid://h787xnnvdm3o" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0010.png" id="63_6iuxv"]
+[ext_resource type="Texture2D" uid="uid://1dh7fi7yu58p" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0011.png" id="64_asyur"]
+[ext_resource type="Texture2D" uid="uid://jct0a1j14kbe" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0012.png" id="65_4e81h"]
+[ext_resource type="Texture2D" uid="uid://clpveu5yxcyy7" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0013.png" id="66_vu6xf"]
+[ext_resource type="Texture2D" uid="uid://4q32v1gxgkhq" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0014.png" id="67_uc13b"]
+[ext_resource type="Texture2D" uid="uid://d23opdwqsewi3" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0015.png" id="68_jfj2n"]
+[ext_resource type="Texture2D" uid="uid://dq7fkt0oekghy" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0016.png" id="69_cqu21"]
+[ext_resource type="Texture2D" uid="uid://b6phe8sg6iaa4" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0017.png" id="70_an30k"]
+[ext_resource type="Texture2D" uid="uid://bm2a4uubwp2lg" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0018.png" id="71_dxtre"]
+[ext_resource type="Texture2D" uid="uid://02ylyr0lygnp" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0019.png" id="72_h0ila"]
+[ext_resource type="Texture2D" uid="uid://dxq8jilnr0t3e" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0020.png" id="73_yt65w"]
+[ext_resource type="Texture2D" uid="uid://csas5sdstu0r2" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0021.png" id="74_c8k4i"]
+[ext_resource type="Texture2D" uid="uid://dowynwnd6woda" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0022.png" id="75_sswtc"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="79_8tc2h"]
+[ext_resource type="Texture2D" uid="uid://bsh5r0sw2cxe7" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/box besar.png" id="79_nn8jd"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="80_5wclv"]
+[ext_resource type="Texture2D" uid="uid://b7cxwf8dm34oq" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/box kecil.png" id="80_xdnu4"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/scripts/small_box.gd" id="83_n654r"]
+[ext_resource type="PackedScene" uid="uid://hm4svpjokxbu" path="res://Utility/IconPlayer/task_player.tscn" id="84_mv6cg"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="84_ujesd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_781kr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0behj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0ddop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_42bo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_25gky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vo41p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tc26s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cqff7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c8g4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0bpxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o3eq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hg3ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8mk8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ekhmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_51165")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_04nmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_vf42t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7q7s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dte4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ieumi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mgc2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_715ot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_18dv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_25cnq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idx87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_5psjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fl55k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2k7r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ihgt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_s7js6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_umppt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_d4bae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_b2kn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_n6oxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_j1qsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_jcptu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_l05in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_vb4h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yt1xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_goeow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_t30dv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_alcvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_avk4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_7mwu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_445mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_4hk8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_u3fbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ajyf8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgo4f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_6a33r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_7b5ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_unt4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_vqdre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_shqhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_m0q2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_yfgku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_s2o6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_dly2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_plx3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6iuxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_asyur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_4e81h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_vu6xf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_uc13b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_jfj2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_cqu21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_an30k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_dxtre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_h0ila")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_yt65w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_c8k4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_sswtc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jfs07"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nskvw"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kblbp"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryqiu"]
+size = Vector2(20.5684, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sonp"]
+size = Vector2(19.9562, 20.5915)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjh0i"]
+size = Vector2(22.7373, 28.6045)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewlr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d8em"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_due4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ye4o0"]
+size = Vector2(21.7986, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsa1l"]
+
+[node name="BelakangSekolah" type="Node2D"]
+script = ExtResource("1_ccjp5")
+
+[node name="BackLayout" type="Node2D" parent="."]
+
+[node name="BelakangSekolah" type="TextureRect" parent="BackLayout"]
+offset_right = 11000.0
+offset_bottom = 1600.0
+texture = ExtResource("1_3gura")
+
+[node name="AnimatedFog" type="AnimatedSprite2D" parent="BackLayout"]
+position = Vector2(7601, 1163)
+scale = Vector2(4.883, 4.883)
+sprite_frames = SubResource("SpriteFrames_781kr")
+autoplay = "default"
+
+[node name="AnimatedStars" type="AnimatedSprite2D" parent="BackLayout"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_idx87")
+autoplay = "default"
+frame_progress = 0.740598
+offset = Vector2(5500, 800)
+
+[node name="Darken" type="TextureRect" parent="BackLayout"]
+offset_right = 11000.0
+offset_bottom = 1600.0
+texture = ExtResource("28_weit3")
+
+[node name="Jalan" type="TextureRect" parent="BackLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("25_q5jcw")
+
+[node name="FrontLayout" type="Node2D" parent="."]
+z_index = 10
+
+[node name="FrontProps" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("25_w00wy")
+
+[node name="StreetLights" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("27_uc7ri")
+
+[node name="Lightning" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("29_v0qu8")
+
+[node name="Darken" type="TextureRect" parent="FrontLayout"]
+offset_right = 11000.0
+offset_bottom = 1600.0
+texture = ExtResource("53_rjdtm")
+
+[node name="AnimatedLights" type="AnimatedSprite2D" parent="FrontLayout"]
+texture_filter = 2
+position = Vector2(5996, 966)
+scale = Vector2(4.883, 4.883)
+sprite_frames = SubResource("SpriteFrames_wgo4f")
+autoplay = "default"
+frame = 10
+frame_progress = 0.334047
+
+[node name="CollisionLayout" type="Node2D" parent="."]
+
+[node name="Ground" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(1022, 1523)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Ground"]
+shape = SubResource("WorldBoundaryShape2D_jfs07")
+
+[node name="Left" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(0, 1006)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Left"]
+shape = SubResource("WorldBoundaryShape2D_nskvw")
+
+[node name="Right" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(10998, 1006)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Right"]
+shape = SubResource("WorldBoundaryShape2D_kblbp")
+
+[node name="Stairs" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(247, 1322)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Stairs"]
+position = Vector2(-2, 36)
+scale = Vector2(24.2025, 17.5615)
+shape = SubResource("RectangleShape2D_ryqiu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionLayout/Stairs"]
+position = Vector2(318, 79)
+scale = Vector2(6.86879, 13.1921)
+shape = SubResource("RectangleShape2D_ryqiu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CollisionLayout/Stairs"]
+position = Vector2(461, 122)
+scale = Vector2(6.97075, 8.93943)
+shape = SubResource("RectangleShape2D_ryqiu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CollisionLayout/Stairs"]
+position = Vector2(605, 164)
+scale = Vector2(6.98647, 4.69833)
+shape = SubResource("RectangleShape2D_ryqiu")
+
+[node name="Wall" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(3683, 1214)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Wall"]
+scale = Vector2(9.52083, 30.1095)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="Bridge" type="StaticBody2D" parent="CollisionLayout"]
+position = Vector2(8783, 1303)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+scale = Vector2(68.4071, 11.791)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(-758, 70)
+scale = Vector2(7.49175, 9.63595)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(754, 70)
+scale = Vector2(7.15558, 9.63595)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(899, 155)
+scale = Vector2(7.35702, 9.63595)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(-905, 155)
+scale = Vector2(7.22322, 9.77168)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(-1050, 208)
+scale = Vector2(7.29472, 6.45413)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CollisionLayout/Bridge"]
+position = Vector2(1046, 208)
+scale = Vector2(7.36024, 6.47034)
+shape = SubResource("RectangleShape2D_1sonp")
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="JumpArea" type="Area2D" parent="Areas"]
+position = Vector2(3102, 1219)
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/JumpArea"]
+position = Vector2(241.823, -127.417)
+scale = Vector2(48.6709, 29.6165)
+shape = SubResource("RectangleShape2D_xjh0i")
+
+[node name="BridgeArea" type="Area2D" parent="Areas"]
+position = Vector2(7842, 1206)
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea"]
+position = Vector2(-0.394531, 0)
+scale = Vector2(22.4649, 25.7623)
+shape = SubResource("RectangleShape2D_xjh0i")
+
+[node name="NextArea" type="Area2D" parent="Areas"]
+position = Vector2(10830, 1354)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/NextArea"]
+scale = Vector2(14.9282, 17.3201)
+shape = SubResource("RectangleShape2D_7ewlr")
+
+[node name="PanCamera" type="Area2D" parent="Areas"]
+position = Vector2(1824, 1419)
+scale = Vector2(0.189335, 1.02989)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/PanCamera"]
+scale = Vector2(8.63642, 9.36379)
+shape = SubResource("RectangleShape2D_6d8em")
+
+[node name="WallArea" type="Area2D" parent="Areas"]
+position = Vector2(4114, 1446)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/WallArea"]
+scale = Vector2(32.4771, 5.78433)
+shape = SubResource("RectangleShape2D_due4q")
+
+[node name="MC" parent="." instance=ExtResource("30_43ktj")]
+position = Vector2(404, 1010)
+collision_layer = 4
+
+[node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("79_8tc2h")]
+position = Vector2(105, 979)
+ucing = NodePath("../MC")
+
+[node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("80_5wclv")]
+position = Vector2(183, 1009)
+ucing = NodePath("../MC")
+
+[node name="SmallBox" type="RigidBody2D" parent="."]
+z_index = 15
+position = Vector2(2033, 1419)
+collision_layer = 8
+script = ExtResource("83_n654r")
+
+[node name="TaskPlayer" parent="SmallBox" instance=ExtResource("84_mv6cg")]
+position = Vector2(12, -306)
+
+[node name="Sprite2D" type="Sprite2D" parent="SmallBox"]
+scale = Vector2(0.706807, 0.706807)
+texture = ExtResource("80_xdnu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBox"]
+rotation = 1.57079
+scale = Vector2(8.43108, 12.2953)
+shape = SubResource("RectangleShape2D_ye4o0")
+
+[node name="PushArea" type="Area2D" parent="SmallBox"]
+position = Vector2(-151, 0)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBox/PushArea"]
+scale = Vector2(2.30847, 4.2758)
+shape = SubResource("RectangleShape2D_xsa1l")
+
+[node name="Camera2D" type="Camera2D" parent="SmallBox"]
+limit_bottom = 1600
+position_smoothing_enabled = true
+
+[node name="SmallBox2" type="RigidBody2D" parent="."]
+position = Vector2(3366, 1085)
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="SmallBox2"]
+scale = Vector2(0.568921, 0.568921)
+texture = ExtResource("80_xdnu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBox2"]
+scale = Vector2(9.21657, 7.34022)
+shape = SubResource("RectangleShape2D_ye4o0")
+
+[node name="BigBox" type="RigidBody2D" parent="."]
+position = Vector2(3336, 1343)
+
+[node name="Sprite2D" type="Sprite2D" parent="BigBox"]
+texture = ExtResource("79_nn8jd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BigBox"]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(22.1138, 17.4693)
+shape = SubResource("RectangleShape2D_ye4o0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("84_ujesd")]
+
+[connection signal="following" from="." to="Buba" method="_following"]
+[connection signal="following" from="." to="Maung" method="_following"]
+[connection signal="jump_off" from="." to="Buba" method="jump_stop"]
+[connection signal="jump_off" from="." to="Maung" method="jump_stop"]
+[connection signal="jump_on" from="." to="Buba" method="jump"]
+[connection signal="jump_on" from="." to="Maung" method="jump"]
+[connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="." to="CanvasLayer/DirectionPlayer" method="r_out"]
+[connection signal="body_entered" from="Areas/JumpArea" to="." method="_on_jump_area"]
+[connection signal="body_exited" from="Areas/JumpArea" to="." method="_on_jump_area_exited"]
+[connection signal="body_entered" from="Areas/BridgeArea" to="." method="_on_bridge_area_body_entered"]
+[connection signal="body_exited" from="Areas/BridgeArea" to="." method="_on_bridge_area_body_exited"]
+[connection signal="body_entered" from="Areas/NextArea" to="." method="_on_next_area_body_entered"]
+[connection signal="body_exited" from="Areas/NextArea" to="." method="_on_next_area_body_exited"]
+[connection signal="body_entered" from="Areas/PanCamera" to="." method="_on_pan_camera_body_entered"]
+[connection signal="body_entered" from="Areas/WallArea" to="SmallBox" method="_on_wall_area_body_entered"]
+[connection signal="disable_ucing_camera" from="SmallBox" to="MC" method="disable_camera"]
+[connection signal="enable_ucing_camera" from="SmallBox" to="MC" method="enable_camera"]
+[connection signal="move_friends" from="SmallBox" to="." method="_on_small_box_move_friends"]
+[connection signal="body_entered" from="SmallBox/PushArea" to="SmallBox" method="_on_push_area_body_entered"]
+[connection signal="body_exited" from="SmallBox/PushArea" to="SmallBox" method="_on_push_area_body_exited"]

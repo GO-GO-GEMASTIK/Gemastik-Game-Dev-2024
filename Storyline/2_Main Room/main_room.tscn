@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="17_dy5op"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_lptfk"]
 [ext_resource type="Texture2D" uid="uid://0p73qcelirwp" path="res://Storyline/2_Main Room/sprites/tutorial_guide/1_walk_tutorial.png" id="21_vir07"]
-[ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/16_Bagian4/Kamar/sprites/Task Guide/cari kelas.png" id="22_bwf6s"]
+[ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="22_bwf6s"]
 [ext_resource type="Texture2D" uid="uid://cqgs103gs732" path="res://Storyline/2_Main Room/sprites/tutorial_guide/2_jump_tutorial.png" id="22_xwshh"]
 [ext_resource type="Texture2D" uid="uid://dl7d3t3olattl" path="res://Storyline/2_Main Room/sprites/tutorial_guide/3_interact_tutorial.png" id="23_g68e5"]
 [ext_resource type="Texture2D" uid="uid://pllfaxgnc6wa" path="res://Sprites/Guide UI/pintu_kantin.png" id="23_uwng7"]
@@ -582,6 +582,62 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_8ygt3"]
+resource_name = "hide_kantin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuidePlayer/PintuKantin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuidePlayer/PintuKantin:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c00q2"]
+resource_name = "hide_laundry"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GuidePlayer/CariLaundry:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GuidePlayer/CariLaundry:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_5f4le"]
 resource_name = "show_guide_kelas"
 length = 0.5
@@ -638,62 +694,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_c00q2"]
-resource_name = "hide_laundry"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GuidePlayer/CariLaundry:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GuidePlayer/CariLaundry:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_tic8u"]
-resource_name = "show_laundry"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GuidePlayer/CariLaundry:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("GuidePlayer/CariLaundry:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_t7eth"]
 resource_name = "show_kantin"
 length = 0.5
@@ -722,32 +722,32 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_8ygt3"]
-resource_name = "hide_kantin"
+[sub_resource type="Animation" id="Animation_tic8u"]
+resource_name = "show_laundry"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("GuidePlayer/PintuKantin:position")
+tracks/0/path = NodePath("GuidePlayer/CariLaundry:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("GuidePlayer/PintuKantin:self_modulate")
+tracks/1/path = NodePath("GuidePlayer/CariLaundry:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vwe5b"]

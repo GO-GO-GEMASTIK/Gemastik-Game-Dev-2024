@@ -19,6 +19,7 @@ var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
 @onready var animation = %AnimationPlayer
 @onready var warning_task = %WarningTask
 @onready var papan_skor = $CanvasLayer/PapanSkor
+@onready var list_pekerjaan = %ListPekerjaan
 
 @onready var is_kelas: bool = GameStateManager.get_string_state("Kelas")
 @onready var task_2_completed: bool = GameStateManager.is_task_completed(2)
@@ -186,11 +187,13 @@ func b3_part_2():
 	
 func b3_part_3():
 	ucing.disable_movement()
+	list_pekerjaan.set_visible(true)
 	
 	Dialogic.start("B3_mendapat_tugas")
 	#Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
 	
+	list_pekerjaan.set_visible(false)
 	animation.queue("show_laundry")
 	GameStateManager.set_string_state("DirectionLaundry", true)
 	ucing.enable_movement()
@@ -218,6 +221,7 @@ func _on_area_papan_body_entered(body):
 		elif pengumuman:
 			view_task = true
 			animation.queue("hide_pengumuman")
+	
 func _on_area_papan_body_exited(body):
 	if body == ucing and papan:
 		animation.play("hide_papan")

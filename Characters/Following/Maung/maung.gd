@@ -94,6 +94,9 @@ func jump_stop():
 func change_jump_val(val: int):
 	JUMP_VELOCITY = val
 
+func change_speed_val(val: int):
+	SPEED = val
+
 # Coroutine to introduce delay before continuing
 func start_waiting():
 	waiting = true
