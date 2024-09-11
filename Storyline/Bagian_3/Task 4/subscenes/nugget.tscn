@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6c2vmm7en2wk"]
+
+[ext_resource type="Texture2D" uid="uid://8lkfcp4mx3wh" path="res://Sprites/Tasks/Task 4/Items/nugget.png" id="1_dho36"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/scripts/on_plate_drag.gd" id="2_hgplx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wto3g"]
+
+[node name="Nugget" type="Sprite2D"]
+texture = ExtResource("1_dho36")
+script = ExtResource("2_hgplx")
+
+[node name="Nugget" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nugget"]
+position = Vector2(-6, -19)
+rotation = -0.261799
+scale = Vector2(14.5702, 5.22274)
+shape = SubResource("CircleShape2D_wto3g")
+
+[connection signal="area_entered" from="Nugget" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Nugget" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Nugget" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Nugget" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Nugget" to="." method="_on_mouse_exited"]

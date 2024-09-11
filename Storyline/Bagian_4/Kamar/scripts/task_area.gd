@@ -6,7 +6,7 @@ extends Area2D
 
 var on_meja := false
 var task_completed := GameStateManager.is_task_completed(5)
-var task_5 = preload("res://Storyline/16_Bagian4/Task 5/finding_item.tscn")
+var task_5 = load("res://Storyline/Bagian_4/Task 5/finding_item.tscn")
 var show_task := false
 
 # !!!CURRENTLY DEBUGGING, DO NOT FORGET TO SET TO DEFAULT!!!

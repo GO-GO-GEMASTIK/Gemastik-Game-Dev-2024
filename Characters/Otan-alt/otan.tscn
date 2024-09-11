@@ -1,0 +1,136 @@
+[gd_scene load_steps=11 format=3 uid="uid://dnyv5ckw26ug8"]
+
+[ext_resource type="Script" path="res://Characters/Otan-alt/Otan.gd" id="1_pyt5c"]
+[ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Characters/Otan/Otan.png" id="2_tqv08"]
+[ext_resource type="Texture2D" uid="uid://n0ll744r5ydv" path="res://Sprites/Guide Icon/chat/chat.png" id="4_ydyib"]
+[ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="19_44dwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4s1hg"]
+size = Vector2(929, 5.75)
+
+[sub_resource type="Animation" id="Animation_x420k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IconChat:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-400, -200)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IconChat:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jttgn"]
+resource_name = "float_chat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IconChat:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-400, -180), Vector2(-400, -200), Vector2(-400, -180)]
+}
+
+[sub_resource type="Animation" id="Animation_i5nnk"]
+resource_name = "hide_chat"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IconChat:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_n0tai"]
+resource_name = "show_chat"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IconChat:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-400, -200), Vector2(-400, -180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IconChat:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_em5c1"]
+_data = {
+"RESET": SubResource("Animation_x420k"),
+"float_chat": SubResource("Animation_jttgn"),
+"hide_chat": SubResource("Animation_i5nnk"),
+"show_chat": SubResource("Animation_n0tai")
+}
+
+[node name="Otan" type="Area2D"]
+script = ExtResource("1_pyt5c")
+
+[node name="OtanSprite" type="Sprite2D" parent="."]
+position = Vector2(-4.25027, 179.5)
+scale = Vector2(0.943981, 0.963889)
+texture = ExtResource("2_tqv08")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-229.5, 151)
+scale = Vector2(1.01495, 33.3428)
+shape = SubResource("RectangleShape2D_4s1hg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_em5c1")
+}
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_44dwe")
+bus = &"SFX"
+
+[node name="IconChat" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-400, -200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ydyib")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

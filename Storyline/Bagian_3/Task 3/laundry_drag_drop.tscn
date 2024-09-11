@@ -1,0 +1,336 @@
+[gd_scene load_steps=36 format=3 uid="uid://h77xo65cf3pd"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 3/laundry_drag_drop.gd" id="1_a60vq"]
+[ext_resource type="Texture2D" uid="uid://cfhakvfsejlwx" path="res://Sprites/Tasks/Task 3/base.jpg" id="1_wlkuy"]
+[ext_resource type="Texture2D" uid="uid://df6xo6oegxpdp" path="res://Sprites/Tasks/Task 3/Boxes/box 1 off.png" id="3_wadf8"]
+[ext_resource type="Texture2D" uid="uid://bo0yp54kne22f" path="res://Sprites/Tasks/Task 3/Boxes/box 1 on.png" id="4_yv4vp"]
+[ext_resource type="Texture2D" uid="uid://boxhshpdvu8yx" path="res://Sprites/Tasks/Task 3/Boxes/box 2 off.png" id="5_a6ehi"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 3/BoxBajuPutih.gd" id="5_hdsrn"]
+[ext_resource type="Texture2D" uid="uid://ba28kbx31ha2o" path="res://Sprites/Tasks/Task 3/Boxes/box 2 on.png" id="6_gxi8s"]
+[ext_resource type="Texture2D" uid="uid://cgi0u25megqiv" path="res://Sprites/Tasks/Task 3/Boxes/box 3 off.png" id="7_tcmkt"]
+[ext_resource type="Texture2D" uid="uid://daj4ymweh2esj" path="res://Sprites/Tasks/Task 3/Boxes/box 3 on.png" id="8_o8qtb"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 3/scripts/baju_putih.gd" id="10_sf8eg"]
+[ext_resource type="Texture2D" uid="uid://c3igqe62yhioj" path="res://Sprites/Tasks/Task 3/Items/a_item_1.png" id="10_tpq80"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 3/scripts/baju_berwarna.gd" id="11_46g8s"]
+[ext_resource type="Texture2D" uid="uid://mky3tdmlu8pi" path="res://Sprites/Tasks/Task 3/Items/a_item_2.png" id="12_yrv2o"]
+[ext_resource type="Texture2D" uid="uid://cbse243cbncpc" path="res://Sprites/Tasks/Task 3/Items/a_item_3.png" id="13_4nd3h"]
+[ext_resource type="Texture2D" uid="uid://qyrx8j4uk4by" path="res://Sprites/Tasks/Task 3/Items/b_item_1.png" id="13_fujrt"]
+[ext_resource type="Texture2D" uid="uid://cd6fecw4428fi" path="res://Sprites/Tasks/Task 3/Items/b_item_2.png" id="15_mntc7"]
+[ext_resource type="Texture2D" uid="uid://xg0g3hdusx16" path="res://Sprites/Tasks/Task 3/Items/b_item_3.png" id="16_p0f4x"]
+[ext_resource type="Texture2D" uid="uid://7xpsgcyvowp6" path="res://Sprites/Tasks/Task 3/Items/c_item_1.png" id="17_2rcst"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 3/scripts/kaos_kaki.gd" id="18_1sh4h"]
+[ext_resource type="Texture2D" uid="uid://b12e8h6awcei2" path="res://Sprites/Tasks/Task 3/Items/c_item_2.png" id="19_wrxog"]
+[ext_resource type="Texture2D" uid="uid://tivqgu3qtmdg" path="res://Sprites/Tasks/Task 3/Items/c_item_3.png" id="20_3q147"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="21_8nuvf"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="22_6jfs5"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="23_k5qv4"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="23_sprcl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw8ym"]
+atlas = ExtResource("3_wadf8")
+region = Rect2(0, 0, 465, 476)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvcm3"]
+atlas = ExtResource("4_yv4vp")
+region = Rect2(0, 0, 539, 553)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cab8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw8ym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvcm3")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h7a4"]
+size = Vector2(416.5, 359)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0odc"]
+atlas = ExtResource("5_a6ehi")
+region = Rect2(0, 0, 465, 476)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pr4j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0odc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gxi8s")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le8y4"]
+size = Vector2(412, 356)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_em1lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tcmkt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_o8qtb")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02f2g"]
+size = Vector2(414, 358)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_le5pt"]
+radius = 102.329
+
+[node name="LaundryDragDrop" type="Node2D"]
+script = ExtResource("1_a60vq")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 2500.0
+offset_bottom = 1380.0
+scale = Vector2(0.77, 0.78)
+texture = ExtResource("1_wlkuy")
+
+[node name="BoxBajuPutih" type="AnimatedSprite2D" parent="." groups=["box_baju_putih", "zone"]]
+unique_name_in_owner = true
+position = Vector2(450, 350)
+scale = Vector2(0.77, 0.77)
+sprite_frames = SubResource("SpriteFrames_0cab8")
+script = ExtResource("5_hdsrn")
+
+[node name="BoxBola" type="Area2D" parent="BoxBajuPutih"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBajuPutih/BoxBola"]
+visible = false
+shape = SubResource("RectangleShape2D_5h7a4")
+
+[node name="BoxBajuBerwarna" type="AnimatedSprite2D" parent="." groups=["box_baju_berwarna", "zone"]]
+unique_name_in_owner = true
+position = Vector2(950, 350)
+scale = Vector2(0.77, 0.77)
+sprite_frames = SubResource("SpriteFrames_3pr4j")
+
+[node name="BoxBoneka" type="Area2D" parent="BoxBajuBerwarna"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBajuBerwarna/BoxBoneka"]
+visible = false
+shape = SubResource("RectangleShape2D_le8y4")
+
+[node name="BoxKaosKaki" type="AnimatedSprite2D" parent="." groups=["box_kaos_kaki", "zone"]]
+unique_name_in_owner = true
+position = Vector2(1450, 350)
+scale = Vector2(0.77, 0.77)
+sprite_frames = SubResource("SpriteFrames_em1lh")
+
+[node name="BoxBuku" type="Area2D" parent="BoxKaosKaki"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxKaosKaki/BoxBuku"]
+visible = false
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_02f2g")
+
+[node name="DropZones" type="Node2D" parent="."]
+
+[node name="DropZone" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(694, 893)
+
+[node name="DropZone2" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(369, 981)
+
+[node name="DropZone3" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(893, 1005)
+
+[node name="DropZone4" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(486, 822)
+
+[node name="DropZone5" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1456, 877)
+
+[node name="DropZone6" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1262, 806)
+
+[node name="DropZone7" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1328, 979)
+
+[node name="DropZone8" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(1093, 903)
+
+[node name="DropZone9" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
+position = Vector2(883, 808)
+
+[node name="BajuPutih1" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_tpq80")
+script = ExtResource("10_sf8eg")
+
+[node name="Area2D" type="Area2D" parent="BajuPutih1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuPutih1/Area2D"]
+position = Vector2(-14.2857, 15.5844)
+rotation = -0.523598
+scale = Vector2(1.16864, 1.95446)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="BajuPutih2" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_yrv2o")
+script = ExtResource("10_sf8eg")
+
+[node name="Area2D" type="Area2D" parent="BajuPutih2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuPutih2/Area2D"]
+position = Vector2(-14.2857, 15.5844)
+rotation = 0.261799
+scale = Vector2(1.57028, 2.04298)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="BajuPutih3" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_4nd3h")
+script = ExtResource("10_sf8eg")
+
+[node name="Area2D" type="Area2D" parent="BajuPutih3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuPutih3/Area2D"]
+position = Vector2(-14.2857, 15.5844)
+rotation = -0.523598
+scale = Vector2(1.96952, 1.87131)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="BajuBerwarna1" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_fujrt")
+script = ExtResource("11_46g8s")
+
+[node name="Area2D" type="Area2D" parent="BajuBerwarna1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuBerwarna1/Area2D"]
+position = Vector2(12.9869, 10.3897)
+rotation = -0.523598
+scale = Vector2(1.74162, 1.48737)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="BajuBerwarna2" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("15_mntc7")
+script = ExtResource("11_46g8s")
+
+[node name="Area2D" type="Area2D" parent="BajuBerwarna2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuBerwarna2/Area2D"]
+position = Vector2(12.9869, 10.3897)
+rotation = -0.523598
+scale = Vector2(1.74162, 1.48737)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="BajuBerwarna3" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("16_p0f4x")
+script = ExtResource("11_46g8s")
+
+[node name="Area2D" type="Area2D" parent="BajuBerwarna3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BajuBerwarna3/Area2D"]
+position = Vector2(12.9869, 10.3897)
+rotation = -1.57079
+scale = Vector2(2.02287, 1.48259)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="KaosKaki1" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_2rcst")
+script = ExtResource("18_1sh4h")
+
+[node name="Area2D" type="Area2D" parent="KaosKaki1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KaosKaki1/Area2D"]
+position = Vector2(12.9869, 10.3897)
+rotation = -1.83259
+scale = Vector2(1.65903, 1.41392)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="KaosKaki2" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("19_wrxog")
+script = ExtResource("18_1sh4h")
+
+[node name="Area2D" type="Area2D" parent="KaosKaki2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KaosKaki2/Area2D"]
+position = Vector2(12.9869, 10.3897)
+rotation = -1.309
+scale = Vector2(2.04604, 1.49977)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="KaosKaki3" type="Sprite2D" parent="." groups=["item"]]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("20_3q147")
+script = ExtResource("18_1sh4h")
+
+[node name="Area2D" type="Area2D" parent="KaosKaki3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KaosKaki3/Area2D"]
+position = Vector2(-9.09085, 7.79213)
+rotation = -0.785397
+scale = Vector2(-2.06922, 1.14318)
+shape = SubResource("CircleShape2D_le5pt")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Backsound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("21_8nuvf")
+autoplay = true
+bus = &"Music"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("22_6jfs5")
+bus = &"SFX"
+
+[node name="Finish" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("23_sprcl")
+bus = &"SFX"
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("23_k5qv4")
+bus = &"SFX"
+
+[connection signal="input_event" from="BajuPutih1/Area2D" to="BajuPutih1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="BajuPutih2/Area2D" to="BajuPutih2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="BajuPutih3/Area2D" to="BajuPutih3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="BajuBerwarna1/Area2D" to="BajuBerwarna1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="BajuBerwarna2/Area2D" to="BajuBerwarna2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="BajuBerwarna3/Area2D" to="BajuBerwarna3" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="KaosKaki1/Area2D" to="KaosKaki1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="KaosKaki2/Area2D" to="KaosKaki2" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="KaosKaki3/Area2D" to="KaosKaki3" method="_on_area_2d_input_event"]

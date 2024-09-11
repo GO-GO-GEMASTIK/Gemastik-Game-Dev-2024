@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://dgp0bg1mxt671"]
+[gd_scene load_steps=105 format=3 uid="uid://dgp0bg1mxt671"]
 
 [ext_resource type="Texture2D" uid="uid://c3qf3o7l130ly" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/base.png" id="1_3gura"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/belakang_sekolah.gd" id="1_ccjp5"]
@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cnhgyyl27ws5y" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/front lighting.png" id="28_weit3"]
 [ext_resource type="Texture2D" uid="uid://dowes1csxucab" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/front lighting 2.png" id="29_v0qu8"]
 [ext_resource type="Texture2D" uid="uid://8m0ae6it24nk" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0000.png" id="30_5psjw"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="30_43ktj"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="30_43ktj"]
 [ext_resource type="Texture2D" uid="uid://77ppguh6ppvj" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0001.png" id="31_fl55k"]
 [ext_resource type="Texture2D" uid="uid://j4n61tdht4f8" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0002.png" id="32_2k7r5"]
 [ext_resource type="Texture2D" uid="uid://ylogw2ouc5ii" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi bintang/Timeline 1_0003.png" id="33_ihgt3"]
@@ -78,13 +78,14 @@
 [ext_resource type="Texture2D" uid="uid://dxq8jilnr0t3e" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0020.png" id="73_yt65w"]
 [ext_resource type="Texture2D" uid="uid://csas5sdstu0r2" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0021.png" id="74_c8k4i"]
 [ext_resource type="Texture2D" uid="uid://dowynwnd6woda" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/animasi lighting/Timeline 1_0022.png" id="75_sswtc"]
-[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="79_8tc2h"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="79_8tc2h"]
 [ext_resource type="Texture2D" uid="uid://bsh5r0sw2cxe7" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/box besar.png" id="79_nn8jd"]
-[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="80_5wclv"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="80_5wclv"]
 [ext_resource type="Texture2D" uid="uid://b7cxwf8dm34oq" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/box kecil.png" id="80_xdnu4"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/scripts/small_box.gd" id="83_n654r"]
 [ext_resource type="PackedScene" uid="uid://hm4svpjokxbu" path="res://Utility/IconPlayer/task_player.tscn" id="84_mv6cg"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="84_ujesd"]
+[ext_resource type="Texture2D" uid="uid://dwluvexnat6nw" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/guide_lari.png" id="86_5hnbl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_781kr"]
 animations = [{
@@ -345,6 +346,96 @@ size = Vector2(21.7986, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsa1l"]
 
+[sub_resource type="Animation" id="Animation_847pk"]
+resource_name = "show_lari"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/GuideLari:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/GuideLari:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aw8vk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/GuideLari:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/GuideLari:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u8f2w"]
+resource_name = "hide_lari"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/GuideLari:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/GuideLari:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lwglp"]
+_data = {
+"RESET": SubResource("Animation_aw8vk"),
+"hide_lari": SubResource("Animation_u8f2w"),
+"show_lari": SubResource("Animation_847pk")
+}
+
 [node name="BelakangSekolah" type="Node2D"]
 script = ExtResource("1_ccjp5")
 
@@ -581,6 +672,7 @@ scale = Vector2(2.30847, 4.2758)
 shape = SubResource("RectangleShape2D_xsa1l")
 
 [node name="Camera2D" type="Camera2D" parent="SmallBox"]
+zoom = Vector2(0.9, 0.9)
 limit_bottom = 1600
 position_smoothing_enabled = true
 
@@ -611,6 +703,23 @@ shape = SubResource("RectangleShape2D_ye4o0")
 
 [node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("84_ujesd")]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_lwglp")
+}
+
+[node name="GuideLari" type="TextureRect" parent="CanvasLayer/AnimationPlayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -470.5
+offset_top = 50.0
+offset_right = 470.5
+offset_bottom = 259.0
+grow_horizontal = 2
+texture = ExtResource("86_5hnbl")
+
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]
 [connection signal="jump_off" from="." to="Buba" method="jump_stop"]
@@ -630,5 +739,6 @@ shape = SubResource("RectangleShape2D_ye4o0")
 [connection signal="disable_ucing_camera" from="SmallBox" to="MC" method="disable_camera"]
 [connection signal="enable_ucing_camera" from="SmallBox" to="MC" method="enable_camera"]
 [connection signal="move_friends" from="SmallBox" to="." method="_on_small_box_move_friends"]
+[connection signal="show_lari" from="SmallBox" to="." method="show_lari"]
 [connection signal="body_entered" from="SmallBox/PushArea" to="SmallBox" method="_on_push_area_body_entered"]
 [connection signal="body_exited" from="SmallBox/PushArea" to="SmallBox" method="_on_push_area_body_exited"]

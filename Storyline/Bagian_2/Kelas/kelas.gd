@@ -3,17 +3,18 @@ extends Node2D
 signal go_to_papan
 
 #Loading & Preloading
-var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
-@onready var task_2 = load("res://Storyline/5_Task 2/math_class.tscn")
-@onready var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
-@onready var kamar = load("res://Storyline/16_Bagian4/Kamar/kamar.tscn")
-@onready var main = load("res://Storyline/2_Main Room/main_room.tscn")
+var task_2 = load("res://Storyline/Bagian_2/Task 2/math_class.tscn")
+var tbc = load("res://Storyline/TBC/to_be_continued.tscn")
+var kamar = load("res://Storyline/Bagian_4/Kamar/kamar.tscn")
+var main = load("res://Storyline/Bagian_1/Main Room/main_room.tscn")
 
 #OnReady
 @onready var ucing = $MC
 @onready var camera = ucing.camera
 @onready var maung = $Maung
 @onready var buba = $Buba
+@onready var cula = $Cula
+@onready var otan = $Otan
 @onready var bu_cilla = $BuCilla
 
 @onready var animation = %AnimationPlayer
@@ -49,7 +50,6 @@ func _ready():
 # === SETUP ===
 	camera.set_limit(SIDE_RIGHT, right_limit)
 # PRELOAD TIMELINE TO REDUCE LAG
-	style.prepare()
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 # Storyline
@@ -103,6 +103,9 @@ func _input(event):
 # === BAGIAN 2 ===
 func part_1():
 	ucing.disable_movement()
+	buba.duduk()
+	cula.duduk()
+	maung.duduk()
 	
 	Dialogic.start("dialog_perkenalan")
 	#Dialogic.start("placeholder")
@@ -112,9 +115,11 @@ func part_1():
 	animation.play("show_warning")
 
 func part_2():
+	ucing.duduk()
+
 	ucing.disable_movement()
 	ucing.look_right()
-	ucing.set_global_position(Vector2(1500, 800))
+	ucing.set_global_position(Vector2(1493, 757))
 	await get_tree().create_timer(1).timeout
 	#camera.set_position(Vector2(1300, 0))
 	
@@ -125,9 +130,14 @@ func part_2():
 	warning_task.set_visible(true)
 # === TASK2 HERE ===
 func part_3():
+	ucing.duduk()
+	buba.duduk()
+	cula.duduk()
+	maung.duduk()
+	
 	ucing.disable_movement()
 	ucing.look_right()
-	ucing.set_global_position(Vector2(1500, 800))
+	ucing.set_global_position(Vector2(1493, 757))
 	await get_tree().create_timer(1).timeout
 	
 	Dialogic.start("dialog_sifat")
@@ -137,9 +147,12 @@ func part_3():
 	TransitionScreen.transition_loading()
 	await TransitionScreen.on_transition_finished
 	
+	await get_tree().create_timer(1.0).timeout
 	Dialogic.start("dialog_kelas_after_2")
 	#Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
+	
+	ucing.berdiri()
 	ucing.enable_movement()
 	papan = true
 	
@@ -150,6 +163,7 @@ func part_4():
 	papan_skor.recheck_and_update_visibility()
 	papan_skor.set_visible(true)
 	
+	await get_tree().create_timer(1.0).timeout
 	Dialogic.start("dialog_papan")
 	#Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
@@ -166,8 +180,10 @@ func part_4():
 # === BAGIAN 3 ===
 func b3_part_1():
 	bu_cilla.set_visible(false)
-	maung.set_global_position(Vector2(1200, 830))
-	buba.set_global_position(Vector2(1350, 817))
+	maung.set_global_position(Vector2(1200, 832))
+	buba.set_global_position(Vector2(1350, 803))
+	cula.set_global_position(Vector2(741, 841))
+	otan.set_global_position(Vector2(903, 840))
 	maung.set_flip_h(true)
 	buba.set_flip_h(true)
 

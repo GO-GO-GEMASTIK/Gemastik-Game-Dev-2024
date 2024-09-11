@@ -1,15 +1,116 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwfjrorflpiad"]
+[gd_scene load_steps=18 format=3 uid="uid://dwfjrorflpiad"]
 
-[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/hutan_c.gd" id="1_6j44y"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan_c.gd" id="1_6j44y"]
 [ext_resource type="Texture2D" uid="uid://c41e87mll3stk" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-c.png" id="2_xvm6c"]
 [ext_resource type="Texture2D" uid="uid://dfp8bfadyonil" path="res://Storyline/Bagian_4/Hutan/sprites/front_crop/front_c.png" id="3_8g1nm"]
 [ext_resource type="Texture2D" uid="uid://cfjfxduhljjjw" path="res://Storyline/Bagian_4/Hutan/sprites/frontlight_c.png" id="4_5bb7r"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="29_kkqt1"]
+[ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="5_35cf8"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="6_oskyy"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="7_keajy"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="8_eytjj"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="29_kkqt1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7telr"]
 normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p731n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ad0b3"]
+
+[sub_resource type="Animation" id="Animation_iv2vl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_88qvd"]
+resource_name = "float_view"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -220), Vector2(0, -250), Vector2(0, -220)]
+}
+
+[sub_resource type="Animation" id="Animation_fagft"]
+resource_name = "hide_view"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ibs3b"]
+resource_name = "show_view"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -250), Vector2(0, -220)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1vxfd"]
+_data = {
+"RESET": SubResource("Animation_iv2vl"),
+"float_view": SubResource("Animation_88qvd"),
+"hide_view": SubResource("Animation_fagft"),
+"show_view": SubResource("Animation_ibs3b")
+}
 
 [node name="Hutan" type="Node2D"]
 script = ExtResource("1_6j44y")
@@ -50,6 +151,50 @@ position = Vector2(11000, 695)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_p731n")
 
-[node name="MC" parent="." instance=ExtResource("29_kkqt1")]
-position = Vector2(186, 3427)
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaGoa" type="Area2D" parent="Areas"]
+position = Vector2(10271, 1139)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaGoa"]
+scale = Vector2(23.1541, 30.7548)
+shape = SubResource("RectangleShape2D_ad0b3")
+
+[node name="ViewIcon" type="Sprite2D" parent="Areas/AreaGoa"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -250)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_35cf8")
+
+[node name="Chara" type="Node2D" parent="."]
+position = Vector2(105, 2540)
+
+[node name="MC" parent="Chara" instance=ExtResource("29_kkqt1")]
+position = Vector2(435, 975)
 collision_layer = 6
+
+[node name="Buba" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("6_oskyy")]
+z_index = 1
+position = Vector2(105, 919)
+ucing = NodePath("../MC")
+SPEED = 385
+
+[node name="Maung" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("7_keajy")]
+position = Vector2(235, 949)
+ucing = NodePath("../MC")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("8_eytjj")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Areas/AreaGoa/ViewIcon")
+libraries = {
+"": SubResource("AnimationLibrary_1vxfd")
+}
+
+[connection signal="following" from="." to="Chara/Buba" method="_following"]
+[connection signal="following" from="." to="Chara/Maung" method="_following"]
+[connection signal="body_entered" from="Areas/AreaGoa" to="." method="_on_area_goa_body_entered"]
+[connection signal="body_exited" from="Areas/AreaGoa" to="." method="_on_area_goa_body_exited"]

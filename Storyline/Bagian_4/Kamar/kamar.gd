@@ -64,6 +64,7 @@ func run_b3_part_1():
 	maung.set_visible(false)
 	buba.set_visible(false)
 	cula.set_visible(false)
+	await get_tree().create_timer(1.0).timeout
 	dialog_runner("B3_monolog_kamar")
 	await next
 	guide_player.play("show_to_class")

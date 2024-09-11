@@ -1,14 +1,14 @@
 [gd_scene load_steps=46 format=3 uid="uid://btubg2kdef353"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_2/Kelas/kelas.gd" id="1_uoc45"]
-[ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Sprites/Background/Kelas/Kelass.jpg" id="1_vn8jg"]
-[ext_resource type="Texture2D" uid="uid://bhv35hkt1mrk8" path="res://Sprites/Tasks/SubTask-Kelas/2.png" id="2_sb1v5"]
-[ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Sprites/Main Characters/Bu Cilla/Bu Cilla.png" id="5_oehn7"]
-[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="6_03jei"]
-[ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Following/Otan/otan.tscn" id="10_jtcf3"]
-[ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Sprites/Background/Kelas/front acc kelas.png" id="10_metuj"]
-[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Sprites/Main Characters/Cula/cula.tscn" id="11_0ifjv"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="14_ad43n"]
+[ext_resource type="Texture2D" uid="uid://bkfxqfpmnhw61" path="res://Storyline/Bagian_2/Kelas/sprites/Kelas/Kelass.jpg" id="1_vn8jg"]
+[ext_resource type="Texture2D" uid="uid://bhv35hkt1mrk8" path="res://Storyline/Bagian_2/Kelas/sprites/2.png" id="2_sb1v5"]
+[ext_resource type="Texture2D" uid="uid://n46nj10lllvl" path="res://Characters/Bu Cilla/Bu Cilla.png" id="5_oehn7"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="6_03jei"]
+[ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Otan/otan.tscn" id="10_jtcf3"]
+[ext_resource type="Texture2D" uid="uid://c6lkdgu2d2okt" path="res://Storyline/Bagian_2/Kelas/sprites/Kelas/front acc kelas.png" id="10_metuj"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Characters/Cula/cula.tscn" id="11_0ifjv"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="14_ad43n"]
 [ext_resource type="Texture2D" uid="uid://t6heshys5ul5" path="res://Storyline/Bagian_2/Kelas/sprites/Guide/pengumuman.png" id="15_5r3pa"]
 [ext_resource type="PackedScene" uid="uid://cd53866vqu6q" path="res://Utility/PapanSkor/papan_skor.tscn" id="15_icqu7"]
 [ext_resource type="Texture2D" uid="uid://dgate3jcgl7mn" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/warning box.png" id="16_v6o7x"]
@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c0jh6yb5e1n36" path="res://Sprites/Guide UI/pintu_laundry.png" id="17_jrd7v"]
 [ext_resource type="Texture2D" uid="uid://bdw0ba2btligj" path="res://Sprites/Guide Icon/view/view_0000.png" id="17_ku3c8"]
 [ext_resource type="Texture2D" uid="uid://bx1kyx33ry8p8" path="res://Storyline/Bagian_2/Kelas/sprites/list tugas.png" id="18_opqsp"]
-[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="29_vemmh"]
-[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="30_w7piw"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="29_vemmh"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="30_w7piw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgpxr"]
 distance = -5.7956
@@ -748,20 +748,22 @@ texture = ExtResource("5_oehn7")
 flip_h = true
 
 [node name="Otan" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("10_jtcf3")]
+position = Vector2(903, 840)
 collision_layer = 2
 papan = NodePath("../Areas/AreaPapan")
 
 [node name="Cula" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("11_0ifjv")]
-position = Vector2(836, 848)
+position = Vector2(825, 766)
 collision_layer = 2
 papan = NodePath("../Areas/AreaPapan")
 
 [node name="Maung" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("29_vemmh")]
-position = Vector2(2387, 831)
+z_index = 1
+position = Vector2(2256, 748)
 papan = NodePath("../Areas/AreaPapan")
 
 [node name="Buba" parent="." node_paths=PackedStringArray("papan") instance=ExtResource("30_w7piw")]
-position = Vector2(2253, 817)
+position = Vector2(2196, 751)
 papan = NodePath("../Areas/AreaPapan")
 SPEED = 390
 

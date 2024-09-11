@@ -1,0 +1,132 @@
+[gd_scene load_steps=29 format=3 uid="uid://wmk0nqgr21fk"]
+
+[ext_resource type="Script" path="res://Characters/Cula/cula.gd" id="1_80a8q"]
+[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Characters/Cula/cula.png" id="2_oqo3a"]
+[ext_resource type="Texture2D" uid="uid://fufhl03qdm22" path="res://Characters/Cula/duduk/Timeline 1_0000.png" id="3_fv477"]
+[ext_resource type="Texture2D" uid="uid://clvlespaof3iq" path="res://Characters/Cula/duduk/Timeline 1_0001.png" id="4_1ttoj"]
+[ext_resource type="Texture2D" uid="uid://61x402jl5cnb" path="res://Characters/Cula/duduk/Timeline 1_0002.png" id="5_5tind"]
+[ext_resource type="Texture2D" uid="uid://dcy0iuwqfmtmb" path="res://Characters/Cula/duduk/Timeline 1_0003.png" id="6_voryd"]
+[ext_resource type="Texture2D" uid="uid://cm5lcesokuy6h" path="res://Characters/Cula/duduk/Timeline 1_0004.png" id="7_qfnhb"]
+[ext_resource type="Texture2D" uid="uid://j7b2uq1ga2d" path="res://Characters/Cula/duduk/Timeline 1_0005.png" id="8_ii0ay"]
+[ext_resource type="Texture2D" uid="uid://bc8dviw4fg0bg" path="res://Characters/Cula/duduk/Timeline 1_0006.png" id="9_rhmhq"]
+[ext_resource type="Texture2D" uid="uid://dl3ae5gkt13wx" path="res://Characters/Cula/duduk/Timeline 1_0007.png" id="10_uudlt"]
+[ext_resource type="Texture2D" uid="uid://w0x085wne4w6" path="res://Characters/Cula/duduk/Timeline 1_0008.png" id="11_es4ln"]
+[ext_resource type="Texture2D" uid="uid://d2akd74gnhp2h" path="res://Characters/Cula/duduk/Timeline 1_0009.png" id="12_kwq7c"]
+[ext_resource type="Texture2D" uid="uid://cdge1xwudw1nf" path="res://Characters/Cula/duduk/Timeline 1_0010.png" id="13_mt3xh"]
+[ext_resource type="Texture2D" uid="uid://bdvy66gthmdb8" path="res://Characters/Cula/duduk/Timeline 1_0011.png" id="14_41js7"]
+[ext_resource type="Texture2D" uid="uid://dxkcfhvnk1q0e" path="res://Characters/Cula/duduk/Timeline 1_0012.png" id="15_injda"]
+[ext_resource type="Texture2D" uid="uid://bbxt5iu3s5qr5" path="res://Characters/Cula/duduk/Timeline 1_0013.png" id="16_muc31"]
+[ext_resource type="Texture2D" uid="uid://bnmuhb52rg3tk" path="res://Characters/Cula/duduk/Timeline 1_0014.png" id="17_8y5hn"]
+[ext_resource type="Texture2D" uid="uid://djxeq13yu0733" path="res://Characters/Cula/duduk/Timeline 1_0015.png" id="18_u4q1r"]
+[ext_resource type="Texture2D" uid="uid://q712jpa600oy" path="res://Characters/Cula/duduk/Timeline 1_0016.png" id="19_vvvnu"]
+[ext_resource type="Texture2D" uid="uid://hyh21mx4n1yr" path="res://Characters/Cula/duduk/Timeline 1_0017.png" id="20_sjuvj"]
+[ext_resource type="Texture2D" uid="uid://dqahpr1pv15rs" path="res://Characters/Cula/duduk/Timeline 1_0018.png" id="21_8qi1r"]
+[ext_resource type="Texture2D" uid="uid://bh75ju0ekmt46" path="res://Characters/Cula/duduk/Timeline 1_0019.png" id="22_tln6n"]
+[ext_resource type="Texture2D" uid="uid://15rmmiibow11" path="res://Characters/Cula/duduk/Timeline 1_0020.png" id="23_hc8cf"]
+[ext_resource type="Texture2D" uid="uid://dgl8l0uoh7s48" path="res://Characters/Cula/duduk/Timeline 1_0021.png" id="24_andoj"]
+[ext_resource type="Texture2D" uid="uid://bd2uw7b535rmg" path="res://Characters/Cula/duduk/Timeline 1_0022.png" id="25_rcxaf"]
+[ext_resource type="Texture2D" uid="uid://bjxqvpu3ddd58" path="res://Characters/Cula/duduk/Timeline 1_0023.png" id="26_vc6ye"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqpgf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oqo3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fv477")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1ttoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5tind")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_voryd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qfnhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ii0ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rhmhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uudlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_es4ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kwq7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mt3xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_41js7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_injda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_muc31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_8y5hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u4q1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_vvvnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sjuvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8qi1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tln6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_hc8cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_andoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rcxaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_vc6ye")
+}],
+"loop": true,
+"name": &"duduk",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwhoi"]
+size = Vector2(147, 378)
+
+[node name="Cula" type="CharacterBody2D"]
+script = ExtResource("1_80a8q")
+
+[node name="CulaSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_pqpgf")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(1.01243, 0.903182)
+shape = SubResource("RectangleShape2D_gwhoi")

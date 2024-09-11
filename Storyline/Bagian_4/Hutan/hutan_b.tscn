@@ -1,11 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://c0bvq1um8vbc5"]
+[gd_scene load_steps=37 format=3 uid="uid://c0bvq1um8vbc5"]
 
-[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/hutan_b.gd" id="1_p10f7"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan_b.gd" id="1_p10f7"]
 [ext_resource type="Texture2D" uid="uid://m6r6dg25kra4" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-b.png" id="2_prdo6"]
 [ext_resource type="Texture2D" uid="uid://b3hwfjhek3qnq" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0000.png" id="3_krnrm"]
 [ext_resource type="Texture2D" uid="uid://dphr1e7sr31es" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0001.png" id="4_3p3c6"]
 [ext_resource type="Texture2D" uid="uid://d3jcjugxxj76s" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0002.png" id="5_gupah"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_hyxrx"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="5_hyxrx"]
 [ext_resource type="Texture2D" uid="uid://pml6fmaue88t" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0003.png" id="6_vvc1e"]
 [ext_resource type="Texture2D" uid="uid://d1te3w3063ypj" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0004.png" id="7_say7t"]
 [ext_resource type="Texture2D" uid="uid://cxp0r3huvs7ei" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0005.png" id="8_rgfgg"]
@@ -29,6 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://d1tlk2ngyypme" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0023.png" id="26_ivd1y"]
 [ext_resource type="Texture2D" uid="uid://cucbkcgctie0l" path="res://Storyline/Bagian_4/Hutan/sprites/front_crop/front_b.png" id="27_lwv6k"]
 [ext_resource type="Texture2D" uid="uid://ogiwcfqb7agx" path="res://Storyline/Bagian_4/Hutan/sprites/front light.png" id="28_hwcgr"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="30_0ween"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="31_pbp5c"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="32_iwcjw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0a0b"]
 animations = [{
@@ -115,6 +118,8 @@ normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xfkj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3upmi"]
+
 [node name="Hutan" type="Node2D"]
 script = ExtResource("1_p10f7")
 
@@ -128,8 +133,8 @@ texture = ExtResource("2_prdo6")
 [node name="AnimasiBintang" type="AnimatedSprite2D" parent="BackLayout"]
 sprite_frames = SubResource("SpriteFrames_g0a0b")
 autoplay = "default"
-frame = 1
-frame_progress = 0.296834
+frame = 7
+frame_progress = 0.224402
 offset = Vector2(5000, 1836)
 
 [node name="FrontLayout" type="Node2D" parent="."]
@@ -161,7 +166,40 @@ position = Vector2(10000, 2912)
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_1xfkj")
 
-[node name="MC" parent="." instance=ExtResource("5_hyxrx")]
-position = Vector2(141, 1767)
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaNext" type="Area2D" parent="Areas"]
+position = Vector2(9747, 3336)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNext"]
+scale = Vector2(18.1386, 26.6004)
+shape = SubResource("RectangleShape2D_3upmi")
+
+[node name="Chara" type="Node2D" parent="."]
+position = Vector2(0, 766)
+
+[node name="MC" parent="Chara" instance=ExtResource("5_hyxrx")]
+position = Vector2(435, 975)
 collision_layer = 6
-SPEED = 1000.0
+
+[node name="Buba" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("30_0ween")]
+z_index = 1
+position = Vector2(105, 919)
+ucing = NodePath("../MC")
+SPEED = 385
+
+[node name="Maung" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("31_pbp5c")]
+position = Vector2(235, 949)
+ucing = NodePath("../MC")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("32_iwcjw")]
+
+[connection signal="following" from="." to="Chara/Buba" method="_following"]
+[connection signal="following" from="." to="Chara/Maung" method="_following"]
+[connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="." to="CanvasLayer/DirectionPlayer" method="r_out"]
+[connection signal="body_entered" from="Areas/AreaNext" to="." method="_on_area_next_body_entered"]
+[connection signal="body_exited" from="Areas/AreaNext" to="." method="_on_area_next_body_exited"]

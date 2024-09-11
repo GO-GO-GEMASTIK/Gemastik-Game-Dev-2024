@@ -11,33 +11,32 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://Storyline/1_Main Menu/main_menu.tscn"
+run/main_scene="res://Storyline/Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://Sprites/Main Characters/sketch.png"
+config/icon="res://Characters/Ucing/ucing.png"
 
 [autoload]
 
-ZIndexManager="*res://Utility/ZIndexManager.gd"
-TransitionScreen="*res://Utility/transition_screen.tscn"
-GameStateManager="*res://Utility/GameStateManager.gd"
+ZIndexManager="*res://Utility/IndexManager/ZIndexManager.gd"
+TransitionScreen="*res://Utility/Transition/transition_screen.tscn"
+GameStateManager="*res://Utility/GameStateManager/GameStateManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"Bu Cilla": "res://Sprites/Main Characters/Bu Cilla/Bu Cilla.dch",
-"Buba": "res://Dialogue/Characters/Buba.dch",
+"Bu Cilla": "res://Characters/Bu Cilla/Bu Cilla.dch",
+"Buba": "res://Characters/Buba/Buba.dch",
 "Cula": "res://Characters/Cula/Cula.dch",
-"Maung": "res://Dialogue/Characters/Maung.dch",
-"Monster": "res://Dialogue/Characters/Monster.dch",
-"Otan": "res://Dialogue/Characters/Otan.dch",
-"Ucing": "res://Dialogue/Characters/Ucing.dch",
-"character": "res://Characters/Maung/character.dch",
+"Maung": "res://Characters/Maung/Maung.dch",
+"Monster": "res://Characters/Torachan/Monster.dch",
+"Otan": "res://Characters/Otan/Otan.dch",
+"Ucing": "res://Characters/Ucing/Ucing.dch",
+"papan": "res://Dialogue/papan.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"B2_Papan": "res://Dialogue/Timelines/Bagian 2/B2_Papan.dtl",
 "B3_after_food": "res://Dialogue/Timelines/Bagian 3/B3_after_food.dtl",
 "B3_after_laundry": "res://Dialogue/Timelines/Bagian 3/B3_after_laundry.dtl",
 "B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
@@ -50,14 +49,14 @@ directories/dtl_directory={
 "B4_4_orangtua_ucing_maung": "res://Dialogue/Timelines/Bagian 4/B4_4_orangtua_ucing_maung.dtl",
 "B4_5_hutan_ketemu_kamera": "res://Dialogue/Timelines/Bagian 4/B4_5_hutan_ketemu_kamera.dtl",
 "B4_6_hutan_after_kamera": "res://Dialogue/Timelines/Bagian 4/B4_6_hutan_after_kamera.dtl",
-"B4_7_senter_rusak": "res://Dialogue/Timelines/Bagian 4/B4_7_senter_rusak.dtl",
+"B4_7_dalam_goa": "res://Dialogue/Timelines/Bagian 4/B4_7_dalam_goa.dtl",
 "B4_8_senter_fixed": "res://Dialogue/Timelines/Bagian 4/B4_8_senter_fixed.dtl",
 "B4_9_after_gembok": "res://Dialogue/Timelines/Bagian 4/B4_9_after_gembok.dtl",
+"B4_kawasan_hutan": "res://Dialogue/Timelines/Bagian 4/B4_kawasan_hutan.dtl",
 "B4_melihat_tembok": "res://Dialogue/Timelines/Bagian 4/B4_melihat_tembok.dtl",
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "dialog_kelas": "res://Dialogue/Timelines/Bagian 2/dialog_kelas.dtl",
-"dialog_kelas_after": "res://Dialogue/Timelines/Bagian 2/dialog_kelas_after.dtl",
 "dialog_kelas_after_2": "res://Dialogue/Timelines/Bagian 2/dialog_kelas_after_2.dtl",
 "dialog_papan": "res://Dialogue/Timelines/Bagian 2/dialog_papan.dtl",
 "dialog_perkenalan": "res://Dialogue/Timelines/Bagian 2/dialog_perkenalan.dtl",
@@ -80,12 +79,13 @@ directories/dtl_directory={
 "senter_nyala": "res://Dialogue/Timelines/senter_nyala.dtl",
 "susun_kotak": "res://Dialogue/Timelines/susun_kotak.dtl",
 "terjebak": "res://Dialogue/Timelines/terjebak.dtl",
+"testing": "res://Dialogue/Timelines/testing.dtl",
 "unable_door": "res://Dialogue/Timelines/unable_door.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
-layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/bubble_textbox.tres", "res://Dialogue/custom_textbox.tres"]
+layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/vn_style.tres"]
 layout/default_style="res://Dialogue/speaker_textbox.tres"
-glossary/default_case_sensitive=true
+glossary/default_case_sensitive=false
 variables={
 "Jujur": false,
 "KerjaSama": false,
@@ -111,6 +111,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/glossary_files=["res://Dialogue/Glossary/glossary_ucing.tres"]
 
 [display]
 

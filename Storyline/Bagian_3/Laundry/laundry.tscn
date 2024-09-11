@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Storyline/Bagian_3/Laundry/laundry.gd" id="1_2lbf6"]
 [ext_resource type="Texture2D" uid="uid://bb2nhd68arwwx" path="res://Storyline/Bagian_3/Laundry/sprites/base.jpg" id="1_ke2ra"]
 [ext_resource type="Texture2D" uid="uid://bu0woclvsl7sq" path="res://Storyline/Bagian_3/Laundry/sprites/baju only.png" id="2_06pda"]
-[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="4_fpgbr"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_ng4od"]
-[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="5_mufae"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="4_fpgbr"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="4_ng4od"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="5_mufae"]
 [ext_resource type="Texture2D" uid="uid://b3s377k66plnd" path="res://Storyline/Bagian_3/Laundry/sprites/warning box.png" id="6_msn7e"]
 [ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="7_4n3xt"]
 [ext_resource type="Texture2D" uid="uid://pllfaxgnc6wa" path="res://Sprites/Guide UI/pintu_kantin.png" id="9_qdimd"]
@@ -382,9 +382,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("9_qdimd")

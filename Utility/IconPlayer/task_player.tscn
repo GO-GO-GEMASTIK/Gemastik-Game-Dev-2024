@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://hm4svpjokxbu"]
 
-[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="1_3niht"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="1_3niht"]
 [ext_resource type="Script" path="res://Utility/IconPlayer/task_player.gd" id="2_8w5yq"]
 
 [sub_resource type="Animation" id="Animation_owdn4"]

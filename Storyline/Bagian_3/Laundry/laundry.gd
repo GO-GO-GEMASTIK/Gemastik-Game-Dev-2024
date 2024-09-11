@@ -10,8 +10,8 @@ extends Node2D
 @onready var guide_task = %GuideTask
 
 var right_limit = GameStateManager.get_room_right_limit("laundry")
-var laundry_task = load("res://Storyline/6_Task 3/laundry_drag_drop.tscn")
-var main_room = load("res://Storyline/2_Main Room/main_room.tscn")
+var laundry_task = load("res://Storyline/Bagian_3/Task 3/laundry_drag_drop.tscn")
+var main_room = load("res://Storyline/Bagian_1/Main Room/main_room.tscn")
 
 var door := true
 var task_3 := false

@@ -7,7 +7,7 @@ signal r_out
 @onready var guide_player = %GuidePlayer
 
 var door = false
-var upstairs = load("res://Storyline/2_Main Room/main_room_upper.tscn")
+var upstairs = load("res://Storyline/Bagian_1/Main Room/main_room_upper.tscn")
 var direction_kelas = false
 var direction_hutan = false
 

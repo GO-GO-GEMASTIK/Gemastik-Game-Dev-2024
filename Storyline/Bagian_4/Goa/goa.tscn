@@ -1,0 +1,425 @@
+[gd_scene load_steps=56 format=3 uid="uid://c5n1h2xewm4js"]
+
+[ext_resource type="Texture2D" uid="uid://d3g6aw33hf4o1" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/base-guide.jpg" id="1_4dk1b"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Goa/goa.gd" id="1_o2nxv"]
+[ext_resource type="Texture2D" uid="uid://bx8ossfikeol6" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/layer 1 ( di belakang ).png" id="2_o5077"]
+[ext_resource type="Texture2D" uid="uid://dc1ptgqnjolt0" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/layer 2.png" id="3_lns13"]
+[ext_resource type="Texture2D" uid="uid://bw0wcilwtse2h" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/di belakang jalan.png" id="4_52qhw"]
+[ext_resource type="Texture2D" uid="uid://b1ai8c45s3qas" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/jalan.png" id="5_myd0g"]
+[ext_resource type="Texture2D" uid="uid://cg0r6twxujivs" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/front acc.png" id="6_4p76k"]
+[ext_resource type="Texture2D" uid="uid://d21tnv8rjpgk7" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/front light.png" id="7_cb6r4"]
+[ext_resource type="Texture2D" uid="uid://d0pss3firxr6d" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/gelap.jpg" id="8_bo2ok"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="9_fijt1"]
+[ext_resource type="Texture2D" uid="uid://cskt83jbngwdd" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/light - diatas front light.png" id="10_32jys"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="10_d1fyv"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="11_cdv3o"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="12_7a4go"]
+[ext_resource type="Texture2D" uid="uid://cskc7e0vdmily" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0000.png" id="13_r0238"]
+[ext_resource type="PackedScene" uid="uid://h7fm7sycrs7e" path="res://Characters/Otan/otan.tscn" id="14_1dtja"]
+[ext_resource type="Texture2D" uid="uid://b81vi4sd60ckw" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0001.png" id="14_3ccr0"]
+[ext_resource type="Texture2D" uid="uid://tlbgbs7o52gv" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/kandang.png" id="15_bbfqv"]
+[ext_resource type="Texture2D" uid="uid://br5edrbamc32u" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0002.png" id="15_pjl7t"]
+[ext_resource type="Texture2D" uid="uid://ceiryhhxdkqgn" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0003.png" id="16_hblh1"]
+[ext_resource type="PackedScene" uid="uid://wmk0nqgr21fk" path="res://Characters/Cula/cula.tscn" id="16_pgnka"]
+[ext_resource type="Texture2D" uid="uid://bvlt0kf7nfkjg" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0004.png" id="17_4eoo3"]
+[ext_resource type="PackedScene" uid="uid://dqrsil6h5pwcg" path="res://Characters/Torachan/torachan.tscn" id="18_72rpj"]
+[ext_resource type="Texture2D" uid="uid://c45b4j1vhivfn" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0005.png" id="18_djmp6"]
+[ext_resource type="Texture2D" uid="uid://c7wc5eauk4vyw" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0006.png" id="19_oooon"]
+[ext_resource type="Texture2D" uid="uid://bpnxq6at07xwy" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0007.png" id="20_s6bmg"]
+[ext_resource type="Texture2D" uid="uid://dnr7w2j5wn04g" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0008.png" id="21_ve3rn"]
+[ext_resource type="Texture2D" uid="uid://7g6vev0v5o1s" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0009.png" id="22_dbef2"]
+[ext_resource type="Texture2D" uid="uid://3jh2ce8sad50" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0010.png" id="23_ks8lm"]
+[ext_resource type="Texture2D" uid="uid://c7sijn6j6asov" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0011.png" id="24_37o6t"]
+[ext_resource type="Texture2D" uid="uid://30sqo438g3hx" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0012.png" id="25_fxwjh"]
+[ext_resource type="Texture2D" uid="uid://5gs34vqpc8bt" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0013.png" id="26_5c086"]
+[ext_resource type="Texture2D" uid="uid://c76ah320lbbun" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0014.png" id="27_2qmxv"]
+[ext_resource type="Texture2D" uid="uid://dns7ixj7i0yf2" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0015.png" id="28_7fluh"]
+[ext_resource type="Texture2D" uid="uid://bxq1vxpcbk7kj" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0016.png" id="29_64h4f"]
+[ext_resource type="Texture2D" uid="uid://cypsadm84uj8t" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0017.png" id="30_m0mb5"]
+[ext_resource type="Texture2D" uid="uid://bilm8280umg2n" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0018.png" id="31_61qh2"]
+[ext_resource type="Texture2D" uid="uid://bsvelul71i0hw" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0019.png" id="32_bfw40"]
+[ext_resource type="Texture2D" uid="uid://bvq1rpte50h0" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0020.png" id="33_dhpux"]
+[ext_resource type="Texture2D" uid="uid://rsikcuc4oanx" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0021.png" id="34_3hbe4"]
+[ext_resource type="Texture2D" uid="uid://dvo64sivqw7fa" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0022.png" id="35_pf6nk"]
+[ext_resource type="Texture2D" uid="uid://3tpqck4qh0ou" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/animasi mata kelelawar/Timeline 1_0023.png" id="36_baysd"]
+[ext_resource type="Texture2D" uid="uid://cqlpseb3y5ynh" path="res://Storyline/Bagian_4/Goa/sprites/task_8.png" id="38_a1wm0"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="39_56cta"]
+[ext_resource type="Texture2D" uid="uid://bn5ae0d5k61a8" path="res://Storyline/Bagian_4/Goa/sprites/solidblack.png" id="44_v0pt1"]
+[ext_resource type="Texture2D" uid="uid://d24qyl4sk714f" path="res://Storyline/Bagian_4/Goa/sprites/task_7.png" id="46_bfw18"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2vrdm"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qq22n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7r02"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g55p6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_r0238")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3ccr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pjl7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hblh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4eoo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_djmp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_oooon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_s6bmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ve3rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_dbef2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ks8lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_37o6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fxwjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5c086")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2qmxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_7fluh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_64h4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_m0mb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_61qh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_bfw40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dhpux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3hbe4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_pf6nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_baysd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_0juaj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaKandang/TaskIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/AreaKandang/TaskIcon:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y5imn"]
+resource_name = "float_task"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaKandang/TaskIcon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -220), Vector2(0, -250), Vector2(0, -220)]
+}
+
+[sub_resource type="Animation" id="Animation_864m1"]
+resource_name = "hide_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaKandang/TaskIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_b4a50"]
+resource_name = "show_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaKandang/TaskIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -250), Vector2(0, -220)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/AreaKandang/TaskIcon:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_adr3f"]
+_data = {
+"RESET": SubResource("Animation_0juaj"),
+"float_task": SubResource("Animation_y5imn"),
+"hide_task": SubResource("Animation_864m1"),
+"show_task": SubResource("Animation_b4a50")
+}
+
+[node name="Goa" type="Node2D"]
+script = ExtResource("1_o2nxv")
+
+[node name="BackLayout" type="Node2D" parent="."]
+
+[node name="Goa" type="TextureRect" parent="BackLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4dk1b")
+
+[node name="Layer1" type="TextureRect" parent="BackLayout"]
+offset_right = 13000.0
+offset_bottom = 1080.0
+texture = ExtResource("2_o5077")
+
+[node name="Layer2" type="TextureRect" parent="BackLayout"]
+offset_right = 13000.0
+offset_bottom = 1080.0
+texture = ExtResource("3_lns13")
+
+[node name="Layer3" type="TextureRect" parent="BackLayout"]
+offset_right = 13000.0
+offset_bottom = 1080.0
+texture = ExtResource("4_52qhw")
+
+[node name="FrontLayout" type="Node2D" parent="."]
+z_index = 10
+
+[node name="Jalan" type="TextureRect" parent="FrontLayout"]
+offset_right = 13000.0
+offset_bottom = 1080.0
+texture = ExtResource("5_myd0g")
+
+[node name="Front" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_4p76k")
+
+[node name="Shadow" type="TextureRect" parent="FrontLayout"]
+texture = ExtResource("7_cb6r4")
+
+[node name="Darken" type="TextureRect" parent="FrontLayout"]
+visible = false
+offset_right = 13000.0
+offset_bottom = 1080.0
+texture = ExtResource("8_bo2ok")
+
+[node name="Solidblack" type="Sprite2D" parent="FrontLayout"]
+z_index = 10
+position = Vector2(6445.5, 1269)
+scale = Vector2(6.62939, 0.201172)
+texture = ExtResource("44_v0pt1")
+
+[node name="CollisionLayout" type="Node2D" parent="."]
+
+[node name="Grounding" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionLayout/Grounding"]
+polygon = PackedVector2Array(2, 1002, 311, 987, 811, 986, 1166, 1010, 1367, 986, 1590, 918, 2141, 983, 2685, 1020, 3102, 1017, 3378, 938, 3627, 893, 3957, 971, 4161, 1008, 4368, 987, 4481, 976, 4608, 1015, 4860, 1005, 5070, 988, 5359, 1003, 5646, 998, 5726, 979, 5968, 1003, 6242, 991, 6446, 979, 6603, 913, 6867, 939, 7092, 949, 7318, 949, 7612, 967, 7855, 969, 8172, 984, 8498, 975, 8754, 1005, 9012, 999, 9234, 1020, 9520, 995, 9841, 995, 10161, 1000, 10330, 982, 10507, 1005, 10696, 978, 10822, 973, 10913, 947, 11212, 885, 11598, 886, 11933, 877, 12036, 893, 12458, 859, 12759, 848, 12981, 850, 12981, 1075, 6, 1068)
+
+[node name="Walls" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="LWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(50, 494)
+shape = SubResource("WorldBoundaryShape2D_2vrdm")
+
+[node name="RWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(12950, 581)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_qq22n")
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaKandang" type="Area2D" parent="Areas"]
+position = Vector2(12002, 687)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaKandang"]
+scale = Vector2(8.15083, 13.0971)
+shape = SubResource("RectangleShape2D_p7r02")
+
+[node name="TaskIcon" type="Sprite2D" parent="Areas/AreaKandang"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -250)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_d1fyv")
+
+[node name="Chara" type="Node2D" parent="."]
+position = Vector2(642, 806)
+
+[node name="MC" parent="Chara" instance=ExtResource("9_fijt1")]
+position = Vector2(202, 35)
+collision_layer = 6
+
+[node name="Senter" type="TextureRect" parent="Chara/MC"]
+offset_left = -766.0
+offset_top = -647.0
+offset_right = 884.0
+offset_bottom = 265.0
+texture = ExtResource("10_32jys")
+metadata/_edit_use_anchors_ = true
+
+[node name="Maung" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("12_7a4go")]
+position = Vector2(2, 1)
+ucing = NodePath("../MC")
+
+[node name="Buba" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("11_cdv3o")]
+position = Vector2(-128, -29)
+ucing = NodePath("../MC")
+
+[node name="OtanCula" type="Node2D" parent="."]
+position = Vector2(12290, 642)
+
+[node name="Cula" parent="OtanCula" instance=ExtResource("16_pgnka")]
+position = Vector2(175, 0)
+collision_layer = 2
+
+[node name="Otan" parent="OtanCula" instance=ExtResource("14_1dtja")]
+position = Vector2(28, 0)
+collision_layer = 2
+
+[node name="Torachan" parent="." instance=ExtResource("18_72rpj")]
+visible = false
+position = Vector2(9942, 651)
+collision_layer = 2
+
+[node name="Kandang" type="Sprite2D" parent="."]
+texture = ExtResource("15_bbfqv")
+offset = Vector2(6500, 540)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="AnimasiKelelawar" type="AnimatedSprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(-34, 0)
+sprite_frames = SubResource("SpriteFrames_g55p6")
+frame = 1
+frame_progress = 0.902765
+offset = Vector2(1000, 540)
+
+[node name="GuideTask8" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("38_a1wm0")
+
+[node name="Button" type="Button" parent="CanvasLayer/GuideTask8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("39_56cta")
+
+[node name="GuideTask7" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("46_bfw18")
+
+[node name="Button" type="Button" parent="CanvasLayer/GuideTask7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("39_56cta")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_adr3f")
+}
+
+[connection signal="following" from="." to="Chara/Maung" method="_following"]
+[connection signal="following" from="." to="Chara/Buba" method="_following"]
+[connection signal="body_entered" from="Areas/AreaKandang" to="." method="_on_area_kandang_body_entered"]
+[connection signal="body_exited" from="Areas/AreaKandang" to="." method="_on_area_kandang_body_exited"]
+[connection signal="pressed" from="CanvasLayer/GuideTask8/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GuideTask7/Button" to="." method="_on_button_lock_pressed"]

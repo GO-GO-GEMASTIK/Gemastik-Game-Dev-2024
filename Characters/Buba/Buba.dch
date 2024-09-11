@@ -1,0 +1,30 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "speaker_textbox"
+},
+"default_portrait": "KepalaBuba",
+"description": "",
+"display_name": "Buba",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"KepalaBuba": {
+"export_overrides": {
+"image": "\"res://Characters/Buba/Buba.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 200),
+"scale": 2.0,
+"scene": ""
+}
+},
+"scale": 1.0
+}

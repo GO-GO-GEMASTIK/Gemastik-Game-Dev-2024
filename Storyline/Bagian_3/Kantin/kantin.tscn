@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://tdrijru7ir0d" path="res://Storyline/Bagian_3/Kantin/sprites/base.jpg" id="1_3kfik"]
 [ext_resource type="Script" path="res://Storyline/Bagian_3/Kantin/kantin.gd" id="1_ed60l"]
 [ext_resource type="Texture2D" uid="uid://c7tsqd73afk4b" path="res://Storyline/Bagian_3/Kantin/sprites/front.png" id="2_sovjs"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_pi4u2"]
-[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="4_g08mq"]
-[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="4_nccc6"]
-[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Sprites/Main Characters/Maung/Maung.png" id="7_1a2o2"]
-[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Sprites/Main Characters/Buba/Buba.png" id="8_e22k2"]
-[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Sprites/Main Characters/Cula/cula.png" id="9_hdokw"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="3_pi4u2"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="4_g08mq"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="4_nccc6"]
+[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Characters/Maung/Maung.png" id="7_1a2o2"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Characters/Buba/Buba.png" id="8_e22k2"]
+[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Characters/Cula/cula.png" id="9_hdokw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pxfh3"]
 
@@ -269,7 +269,6 @@ texture = ExtResource("4_nccc6")
 [node name="MC" parent="." instance=ExtResource("3_pi4u2")]
 position = Vector2(3143, 850)
 collision_layer = 4
-SPEED = 800.0
 flip_h = true
 
 [node name="MaungSprite" type="Sprite2D" parent="."]

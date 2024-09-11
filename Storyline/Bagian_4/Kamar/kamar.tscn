@@ -1,62 +1,62 @@
 [gd_scene load_steps=85 format=3 uid="uid://civ0uyremjeve"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Kamar/kamar.gd" id="1_0lu7m"]
-[ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Sprites/Background/Kamar/kamar.jpg" id="2_0lktt"]
-[ext_resource type="Texture2D" uid="uid://duv53birah5bn" path="res://Sprites/Main Characters/Cula/cula_camera.png" id="2_opkfa"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_7hlar"]
+[ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Storyline/Bagian_4/Kamar/sprites/Kamar/kamar.jpg" id="2_0lktt"]
+[ext_resource type="Texture2D" uid="uid://duv53birah5bn" path="res://Characters/Cula/cula_camera.png" id="2_opkfa"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="4_7hlar"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Kamar/scripts/task_area.gd" id="5_ef7pi"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Kamar/scripts/pintu_kamar.gd" id="6_6i6w1"]
-[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="6_lqdw6"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="6_lqdw6"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="7_4glif"]
-[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Sprites/Main Characters/Cula/cula.png" id="7_g3wdm"]
-[ext_resource type="Texture2D" uid="uid://ch6f1xjm4ef8u" path="res://Sprites/Animasi/night to day/Timeline 3_0000.png" id="9_iasrb"]
-[ext_resource type="Texture2D" uid="uid://bdvk1hgdsypyd" path="res://Sprites/Animasi/night to day/Timeline 3_0001.png" id="10_5w3yi"]
-[ext_resource type="Texture2D" uid="uid://bdbejftv5atb6" path="res://Sprites/Animasi/night to day/Timeline 3_0002.png" id="11_qm1tc"]
-[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="12_7qxud"]
-[ext_resource type="Texture2D" uid="uid://bbpsnvxo66mya" path="res://Sprites/Animasi/night to day/Timeline 3_0003.png" id="12_cr1a3"]
-[ext_resource type="Texture2D" uid="uid://qxurqdoqq2yo" path="res://Sprites/Animasi/day to night/Timeline 2_0000.png" id="12_jorsy"]
-[ext_resource type="Texture2D" uid="uid://c5jp2mfj8yupe" path="res://Sprites/Animasi/day to night/Timeline 2_0001.png" id="13_jnyhu"]
-[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="13_kphj4"]
-[ext_resource type="Texture2D" uid="uid://c1ng4we6pb1u5" path="res://Sprites/Animasi/night to day/Timeline 3_0004.png" id="13_v7qb0"]
-[ext_resource type="Texture2D" uid="uid://cjtng7ucniikk" path="res://Sprites/Animasi/night to day/Timeline 3_0005.png" id="14_ebk23"]
-[ext_resource type="Texture2D" uid="uid://oh51p1p2l7b0" path="res://Sprites/Animasi/day to night/Timeline 2_0002.png" id="14_fj3h8"]
-[ext_resource type="Texture2D" uid="uid://dgnj3px6ictnb" path="res://Sprites/Animasi/night to day/Timeline 3_0006.png" id="15_ch376"]
-[ext_resource type="Texture2D" uid="uid://b7g4mi7q3q6ma" path="res://Sprites/Animasi/day to night/Timeline 2_0003.png" id="15_eon2r"]
-[ext_resource type="Texture2D" uid="uid://bj7gtsvc0pxmo" path="res://Sprites/Animasi/day to night/Timeline 2_0004.png" id="16_0lxx2"]
-[ext_resource type="Texture2D" uid="uid://d3aqm3brcqqyu" path="res://Sprites/Animasi/night to day/Timeline 3_0007.png" id="16_68n3t"]
-[ext_resource type="Texture2D" uid="uid://dnrpr7qirsh6f" path="res://Sprites/Animasi/day to night/Timeline 2_0005.png" id="17_3ms3e"]
-[ext_resource type="Texture2D" uid="uid://dldasas6ixqe6" path="res://Sprites/Animasi/night to day/Timeline 3_0008.png" id="17_jjrfa"]
-[ext_resource type="Texture2D" uid="uid://u1jnnqibrroj" path="res://Sprites/Animasi/day to night/Timeline 2_0006.png" id="18_808de"]
-[ext_resource type="Texture2D" uid="uid://davy5geiaix5k" path="res://Sprites/Animasi/night to day/Timeline 3_0009.png" id="18_fii3e"]
-[ext_resource type="Texture2D" uid="uid://cm4kc4fh3hby3" path="res://Sprites/Animasi/day to night/Timeline 2_0007.png" id="19_5wnwv"]
-[ext_resource type="Texture2D" uid="uid://s52mr65ns7rk" path="res://Sprites/Animasi/night to day/Timeline 3_0010.png" id="19_gb0s0"]
-[ext_resource type="Texture2D" uid="uid://bjdaosvtpfnxa" path="res://Sprites/Animasi/day to night/Timeline 2_0008.png" id="20_icddi"]
-[ext_resource type="Texture2D" uid="uid://de61rk0lbfay2" path="res://Sprites/Animasi/night to day/Timeline 3_0011.png" id="20_xjk7r"]
-[ext_resource type="Texture2D" uid="uid://cqg54e2dfpoyv" path="res://Sprites/Animasi/day to night/Timeline 2_0009.png" id="21_aqype"]
-[ext_resource type="Texture2D" uid="uid://b501sgerow3n5" path="res://Sprites/Animasi/night to day/Timeline 3_0012.png" id="21_v2fcs"]
-[ext_resource type="Texture2D" uid="uid://ciqyt67iyqxxi" path="res://Sprites/Animasi/day to night/Timeline 2_0010.png" id="22_0u684"]
-[ext_resource type="Texture2D" uid="uid://bvxlr7stpvmn4" path="res://Sprites/Animasi/night to day/Timeline 3_0013.png" id="22_ojaaa"]
-[ext_resource type="Texture2D" uid="uid://6wnxkrhx6h2y" path="res://Sprites/Animasi/day to night/Timeline 2_0011.png" id="23_k4ps1"]
-[ext_resource type="Texture2D" uid="uid://c3sld5qhvuplv" path="res://Sprites/Animasi/night to day/Timeline 3_0014.png" id="23_tn0dq"]
-[ext_resource type="Texture2D" uid="uid://cgoouo2mkr6ox" path="res://Sprites/Animasi/night to day/Timeline 3_0015.png" id="24_abxpl"]
-[ext_resource type="Texture2D" uid="uid://cv21lkcvr5eox" path="res://Sprites/Animasi/day to night/Timeline 2_0012.png" id="24_mfudp"]
-[ext_resource type="Texture2D" uid="uid://bxs83nsfowsyt" path="res://Sprites/Animasi/day to night/Timeline 2_0013.png" id="25_1olky"]
-[ext_resource type="Texture2D" uid="uid://c1dpj6de41tl4" path="res://Sprites/Animasi/night to day/Timeline 3_0016.png" id="25_pik77"]
-[ext_resource type="Texture2D" uid="uid://cxc5vw6n5ri0t" path="res://Sprites/Animasi/night to day/Timeline 3_0017.png" id="26_nrxd2"]
-[ext_resource type="Texture2D" uid="uid://crp1e1lhrb7vf" path="res://Sprites/Animasi/day to night/Timeline 2_0014.png" id="26_wmgwj"]
-[ext_resource type="Texture2D" uid="uid://c806jkr0ohuvc" path="res://Sprites/Animasi/night to day/Timeline 3_0018.png" id="27_81gpd"]
-[ext_resource type="Texture2D" uid="uid://yvp8ouej16xv" path="res://Sprites/Animasi/day to night/Timeline 2_0015.png" id="27_kgu6b"]
-[ext_resource type="Texture2D" uid="uid://bnwu4npwy8bxs" path="res://Sprites/Animasi/day to night/Timeline 2_0016.png" id="28_6mrk2"]
-[ext_resource type="Texture2D" uid="uid://dm13gw4v8jwfs" path="res://Sprites/Animasi/night to day/Timeline 3_0019.png" id="28_lok7a"]
-[ext_resource type="Texture2D" uid="uid://dr7v4idcxo37h" path="res://Sprites/Animasi/day to night/Timeline 2_0017.png" id="29_uw38i"]
-[ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Sprites/Background/Gudang/front lighting.png" id="29_ygo44"]
-[ext_resource type="Texture2D" uid="uid://blwi3pqepkhul" path="res://Sprites/Animasi/day to night/Timeline 2_0018.png" id="30_havmk"]
-[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Sprites/Background/Gudang/lighting on.png" id="30_nilr4"]
-[ext_resource type="Texture2D" uid="uid://211qe5ljebgf" path="res://Sprites/Animasi/day to night/Timeline 2_0019.png" id="31_u7sno"]
+[ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Characters/Cula/cula.png" id="7_g3wdm"]
+[ext_resource type="Texture2D" uid="uid://ch6f1xjm4ef8u" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0000.png" id="9_iasrb"]
+[ext_resource type="Texture2D" uid="uid://bdvk1hgdsypyd" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0001.png" id="10_5w3yi"]
+[ext_resource type="Texture2D" uid="uid://bdbejftv5atb6" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0002.png" id="11_qm1tc"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="12_7qxud"]
+[ext_resource type="Texture2D" uid="uid://bbpsnvxo66mya" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0003.png" id="12_cr1a3"]
+[ext_resource type="Texture2D" uid="uid://qxurqdoqq2yo" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0000.png" id="12_jorsy"]
+[ext_resource type="Texture2D" uid="uid://c5jp2mfj8yupe" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0001.png" id="13_jnyhu"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="13_kphj4"]
+[ext_resource type="Texture2D" uid="uid://c1ng4we6pb1u5" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0004.png" id="13_v7qb0"]
+[ext_resource type="Texture2D" uid="uid://cjtng7ucniikk" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0005.png" id="14_ebk23"]
+[ext_resource type="Texture2D" uid="uid://oh51p1p2l7b0" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0002.png" id="14_fj3h8"]
+[ext_resource type="Texture2D" uid="uid://dgnj3px6ictnb" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0006.png" id="15_ch376"]
+[ext_resource type="Texture2D" uid="uid://b7g4mi7q3q6ma" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0003.png" id="15_eon2r"]
+[ext_resource type="Texture2D" uid="uid://bj7gtsvc0pxmo" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0004.png" id="16_0lxx2"]
+[ext_resource type="Texture2D" uid="uid://d3aqm3brcqqyu" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0007.png" id="16_68n3t"]
+[ext_resource type="Texture2D" uid="uid://dnrpr7qirsh6f" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0005.png" id="17_3ms3e"]
+[ext_resource type="Texture2D" uid="uid://dldasas6ixqe6" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0008.png" id="17_jjrfa"]
+[ext_resource type="Texture2D" uid="uid://u1jnnqibrroj" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0006.png" id="18_808de"]
+[ext_resource type="Texture2D" uid="uid://davy5geiaix5k" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0009.png" id="18_fii3e"]
+[ext_resource type="Texture2D" uid="uid://cm4kc4fh3hby3" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0007.png" id="19_5wnwv"]
+[ext_resource type="Texture2D" uid="uid://s52mr65ns7rk" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0010.png" id="19_gb0s0"]
+[ext_resource type="Texture2D" uid="uid://bjdaosvtpfnxa" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0008.png" id="20_icddi"]
+[ext_resource type="Texture2D" uid="uid://de61rk0lbfay2" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0011.png" id="20_xjk7r"]
+[ext_resource type="Texture2D" uid="uid://cqg54e2dfpoyv" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0009.png" id="21_aqype"]
+[ext_resource type="Texture2D" uid="uid://b501sgerow3n5" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0012.png" id="21_v2fcs"]
+[ext_resource type="Texture2D" uid="uid://ciqyt67iyqxxi" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0010.png" id="22_0u684"]
+[ext_resource type="Texture2D" uid="uid://bvxlr7stpvmn4" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0013.png" id="22_ojaaa"]
+[ext_resource type="Texture2D" uid="uid://6wnxkrhx6h2y" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0011.png" id="23_k4ps1"]
+[ext_resource type="Texture2D" uid="uid://c3sld5qhvuplv" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0014.png" id="23_tn0dq"]
+[ext_resource type="Texture2D" uid="uid://cgoouo2mkr6ox" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0015.png" id="24_abxpl"]
+[ext_resource type="Texture2D" uid="uid://cv21lkcvr5eox" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0012.png" id="24_mfudp"]
+[ext_resource type="Texture2D" uid="uid://bxs83nsfowsyt" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0013.png" id="25_1olky"]
+[ext_resource type="Texture2D" uid="uid://c1dpj6de41tl4" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0016.png" id="25_pik77"]
+[ext_resource type="Texture2D" uid="uid://cxc5vw6n5ri0t" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0017.png" id="26_nrxd2"]
+[ext_resource type="Texture2D" uid="uid://crp1e1lhrb7vf" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0014.png" id="26_wmgwj"]
+[ext_resource type="Texture2D" uid="uid://c806jkr0ohuvc" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0018.png" id="27_81gpd"]
+[ext_resource type="Texture2D" uid="uid://yvp8ouej16xv" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0015.png" id="27_kgu6b"]
+[ext_resource type="Texture2D" uid="uid://bnwu4npwy8bxs" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0016.png" id="28_6mrk2"]
+[ext_resource type="Texture2D" uid="uid://dm13gw4v8jwfs" path="res://Sprites/Animasi/Night 2 Day/Timeline 3_0019.png" id="28_lok7a"]
+[ext_resource type="Texture2D" uid="uid://dr7v4idcxo37h" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0017.png" id="29_uw38i"]
+[ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/front lighting.png" id="29_ygo44"]
+[ext_resource type="Texture2D" uid="uid://blwi3pqepkhul" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0018.png" id="30_havmk"]
+[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/lighting on.png" id="30_nilr4"]
+[ext_resource type="Texture2D" uid="uid://211qe5ljebgf" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0019.png" id="31_u7sno"]
 [ext_resource type="Texture2D" uid="uid://bye6swr8vyyp" path="res://Storyline/Bagian_4/Kamar/sprites/guide.png" id="52_cnr2l"]
-[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="53_ib88g"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="53_ib88g"]
 [ext_resource type="Texture2D" uid="uid://bs33ytfubnq2b" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/warning box.png" id="54_j4mnn"]
-[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Sprites/Guide Icon/warnings/button ok.png" id="55_r8xa2"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="55_r8xa2"]
 [ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="58_egdx4"]
 [ext_resource type="Texture2D" uid="uid://0gdh65cy2xy0" path="res://Storyline/Bagian_4/Kamar/sprites/ke_hutan.png" id="60_tw7nk"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="62_g1y4f"]
@@ -815,9 +815,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("58_egdx4")
@@ -827,9 +827,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.002
 grow_horizontal = 2
 texture = ExtResource("52_cnr2l")
@@ -848,9 +848,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("60_tw7nk")

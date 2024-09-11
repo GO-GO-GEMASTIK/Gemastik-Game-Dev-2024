@@ -7,8 +7,8 @@ extends AnimatedSprite2D
 
 var group := "dragable"
 
-var kamar = load("res://Storyline/16_Bagian4/kamar/kamar.tscn")
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var kamar = load("res://Storyline/Bagian_4/Kamar/kamar.tscn")
+var tbc = load("res://Storyline/TBC/to_be_continued.tscn")
 
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

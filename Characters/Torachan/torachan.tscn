@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqrsil6h5pwcg"]
+
+[ext_resource type="Texture2D" uid="uid://b4voitjqibgdm" path="res://Characters/Torachan/monster.png" id="1_1s40n"]
+[ext_resource type="Script" path="res://Characters/Torachan/torachan.gd" id="1_jr0op"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3bar"]
+
+[node name="Torachan" type="CharacterBody2D"]
+script = ExtResource("1_jr0op")
+
+[node name="TorachanSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_1s40n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, 22)
+scale = Vector2(18.925, 31.0459)
+shape = SubResource("RectangleShape2D_g3bar")

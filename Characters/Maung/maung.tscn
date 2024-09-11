@@ -1,0 +1,134 @@
+[gd_scene load_steps=29 format=3 uid="uid://xcm1p056rmos"]
+
+[ext_resource type="Script" path="res://Characters/Maung/maung.gd" id="1_lfcoq"]
+[ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Characters/Maung/Maung.png" id="2_pc02h"]
+[ext_resource type="Texture2D" uid="uid://0ggjhka8dn86" path="res://Characters/Maung/duduk/Timeline 1_0000.png" id="3_cb41n"]
+[ext_resource type="Texture2D" uid="uid://dkybjeo78303n" path="res://Characters/Maung/duduk/Timeline 1_0001.png" id="4_eqrin"]
+[ext_resource type="Texture2D" uid="uid://bpnmkygjqhhyd" path="res://Characters/Maung/duduk/Timeline 1_0002.png" id="5_ul3kr"]
+[ext_resource type="Texture2D" uid="uid://y3s1t83rs5o4" path="res://Characters/Maung/duduk/Timeline 1_0003.png" id="6_i4omv"]
+[ext_resource type="Texture2D" uid="uid://c70yaavvg4ltm" path="res://Characters/Maung/duduk/Timeline 1_0004.png" id="7_e5le4"]
+[ext_resource type="Texture2D" uid="uid://dnsx2f7apghk6" path="res://Characters/Maung/duduk/Timeline 1_0005.png" id="8_pmqo3"]
+[ext_resource type="Texture2D" uid="uid://q7xn3tiim46t" path="res://Characters/Maung/duduk/Timeline 1_0006.png" id="9_gv25a"]
+[ext_resource type="Texture2D" uid="uid://drhud7pfp48xm" path="res://Characters/Maung/duduk/Timeline 1_0007.png" id="10_giv3n"]
+[ext_resource type="Texture2D" uid="uid://4g0s67y3ar6w" path="res://Characters/Maung/duduk/Timeline 1_0008.png" id="11_p6jk0"]
+[ext_resource type="Texture2D" uid="uid://6fs8kcas8rkf" path="res://Characters/Maung/duduk/Timeline 1_0009.png" id="12_rma0p"]
+[ext_resource type="Texture2D" uid="uid://c47v6np8rhrh8" path="res://Characters/Maung/duduk/Timeline 1_0010.png" id="13_6747w"]
+[ext_resource type="Texture2D" uid="uid://bd2cqw37ybksd" path="res://Characters/Maung/duduk/Timeline 1_0011.png" id="14_gfm7l"]
+[ext_resource type="Texture2D" uid="uid://bhykuownynnom" path="res://Characters/Maung/duduk/Timeline 1_0012.png" id="15_3gn68"]
+[ext_resource type="Texture2D" uid="uid://ctaklr87ultd4" path="res://Characters/Maung/duduk/Timeline 1_0013.png" id="16_htik3"]
+[ext_resource type="Texture2D" uid="uid://b764yab7573jd" path="res://Characters/Maung/duduk/Timeline 1_0014.png" id="17_yeiep"]
+[ext_resource type="Texture2D" uid="uid://b0lg5xwkgwb4" path="res://Characters/Maung/duduk/Timeline 1_0015.png" id="18_tebyn"]
+[ext_resource type="Texture2D" uid="uid://tqig7461fgu8" path="res://Characters/Maung/duduk/Timeline 1_0016.png" id="19_aydp2"]
+[ext_resource type="Texture2D" uid="uid://vqje2x6cr188" path="res://Characters/Maung/duduk/Timeline 1_0017.png" id="20_8282c"]
+[ext_resource type="Texture2D" uid="uid://cs2l7118dw4x6" path="res://Characters/Maung/duduk/Timeline 1_0018.png" id="21_gvp8v"]
+[ext_resource type="Texture2D" uid="uid://ci0oqc5kn3txa" path="res://Characters/Maung/duduk/Timeline 1_0019.png" id="22_ixpy3"]
+[ext_resource type="Texture2D" uid="uid://df6hxj0r52o8b" path="res://Characters/Maung/duduk/Timeline 1_0020.png" id="23_03344"]
+[ext_resource type="Texture2D" uid="uid://vi1a2anyn7qp" path="res://Characters/Maung/duduk/Timeline 1_0021.png" id="24_aoy5u"]
+[ext_resource type="Texture2D" uid="uid://ca5ehhsy3ndn1" path="res://Characters/Maung/duduk/Timeline 1_0022.png" id="25_lwsrq"]
+[ext_resource type="Texture2D" uid="uid://bqnoh1u31w0ck" path="res://Characters/Maung/duduk/Timeline 1_0023.png" id="26_y3tmq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6vpn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pc02h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_cb41n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eqrin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ul3kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i4omv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e5le4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pmqo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gv25a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_giv3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p6jk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rma0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6747w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_gfm7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3gn68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_htik3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yeiep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tebyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_aydp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8282c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gvp8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ixpy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_03344")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_aoy5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_lwsrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_y3tmq")
+}],
+"loop": true,
+"name": &"duduk",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83r7k"]
+size = Vector2(22.3488, 23.1207)
+
+[node name="Maung" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_lfcoq")
+
+[node name="MaungSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 16)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_l6vpn")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.37183, 16)
+scale = Vector2(5.42565, 13.2349)
+shape = SubResource("RectangleShape2D_83r7k")

@@ -1,7 +1,11 @@
 Maung: Wow Ucing! Kamu keren!
 - Terima kasih Maung, ayo kita lanjutkan perjalanan kita
+	[signal arg="menghargai"]
 - Ayo kita lanjutkan perjalanan kita
 Maung: AHH, aku mendengar suara otan dan cula!! sepertinya kita sudah dekat!
+[signal arg="pan_camera"]
 Cula: Toloongg!
 Otan: Maung Ucing? kalian disini? Tolong kami!!!
 Cula: Tolong bukakan gembok kandang ini!!
+[signal arg="pan_normal"]
+Ucing: Ayo teman-teman, kita kesana!

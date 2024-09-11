@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=3 uid="uid://cx03uq1xgj6af"]
+
+[ext_resource type="Texture2D" uid="uid://ojjvugxcfafv" path="res://Sprites/Tasks/Task 8/base background.jpg" id="1_yguhj"]
+[ext_resource type="Texture2D" uid="uid://cmelxxvni1s1n" path="res://Sprites/Tasks/Task 8/Level 1/base bg.jpg" id="2_d7asb"]
+[ext_resource type="Texture2D" uid="uid://ntylrrrur41b" path="res://Sprites/Tasks/Task 8/Level 1/1 kata done.png" id="2_mjy82"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="2_p2m8o"]
+[ext_resource type="Texture2D" uid="uid://om7fnrl0gjsc" path="res://Sprites/Tasks/Task 8/Level 1/2 kata done.png" id="3_67hb5"]
+[ext_resource type="Texture2D" uid="uid://onaargun80b4" path="res://Sprites/Tasks/Task 8/Level 1/0 kata done.png" id="4_jqntx"]
+[ext_resource type="Texture2D" uid="uid://ejnpjc1qq0tu" path="res://Sprites/Tasks/Task 8/Level 1/3 kata done.png" id="4_mv0uc"]
+[ext_resource type="Texture2D" uid="uid://caaei5il6i0iy" path="res://Sprites/Tasks/Task 8/Level 1/4.png" id="5_kg4oe"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Task 8/scripts/typing_game_1.gd" id="8_8gwxo"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="10_lrptq"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="11_3kp8v"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="12_qar6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypie0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mjy82")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_67hb5")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mv0uc")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kg4oe")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jqntx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SenterGame" type="Node2D"]
+
+[node name="BaseBackground" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = -6.0
+offset_right = 1923.0
+offset_bottom = 1074.0
+texture = ExtResource("1_yguhj")
+
+[node name="Nyala" type="Sprite2D" parent="BaseBackground"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(1, 1.00278)
+texture = ExtResource("2_d7asb")
+
+[node name="Typing_1" type="AnimatedSprite2D" parent="."]
+position = Vector2(959, 851)
+sprite_frames = SubResource("SpriteFrames_ypie0")
+autoplay = "default"
+script = ExtResource("8_8gwxo")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_p2m8o")
+autoplay = true
+bus = &"Music"
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_lrptq")
+bus = &"SFX"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_3kp8v")
+bus = &"SFX"
+
+[node name="Finish" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("12_qar6h")
+bus = &"SFX"

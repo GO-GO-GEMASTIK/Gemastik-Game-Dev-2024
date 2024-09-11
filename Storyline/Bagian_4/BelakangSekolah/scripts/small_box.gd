@@ -4,12 +4,14 @@ signal enable_ucing_camera
 signal disable_ucing_camera
 signal move_friends
 signal jump_maung
+signal show_lari
 
 @onready var box_camera: Camera2D = $Camera2D
 @onready var task_icon = $TaskPlayer
 
 var pushable := false
 var interactable := false
+var walled := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -42,7 +44,8 @@ func _on_push_area_body_exited(body):
 
 
 func _on_wall_area_body_entered(body):
-	if body.name == "MC":
-		print("MC JATOH")
+	if body.name == "MC" and !walled:
+		show_lari.emit()
 		enable_ucing_camera.emit()
 		box_camera.set_enabled(false)
+		walled = true

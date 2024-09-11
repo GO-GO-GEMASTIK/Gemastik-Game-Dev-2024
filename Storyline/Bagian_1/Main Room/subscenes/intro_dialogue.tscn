@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgaisr12ewerl"]
+
+[ext_resource type="VideoStream" path="res://Sprites/Pembuka_Cerita.ogv" id="2_nlvdb"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/Room background/Hutan.mp3" id="3_6fcqs"]
+[ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/IntroDialogue.gd" id="3_6p770"]
+[ext_resource type="PackedScene" uid="uid://rir5f88uh8k0" path="res://Storyline/Bagian_1/Main Room/main_room.tscn" id="3_nhvr0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 1274.0
+offset_bottom = 713.0
+scale = Vector2(1.5, 1.5)
+stream = ExtResource("2_nlvdb")
+autoplay = true
+script = ExtResource("3_6p770")
+main = ExtResource("3_nhvr0")
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6fcqs")
+volume_db = -20.9
+autoplay = true
+bus = &"Music"
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

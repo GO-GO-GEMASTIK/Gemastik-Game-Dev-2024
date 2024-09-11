@@ -9,9 +9,9 @@ extends Node2D
 @onready var animation = $AnimationPlayer
 
 var right_limit = GameStateManager.get_room_right_limit("kantin")
-var food_task = load("res://Storyline/7_Task 4/food_making.tscn")
-var main_room = load("res://Storyline/2_Main Room/main_room.tscn")
-var kamar = load("res://Storyline/16_Bagian4/Kamar/kamar.tscn")
+var food_task = load("res://Storyline/Bagian_3/Task 4/food_making.tscn")
+var main_room = load("res://Storyline/Bagian_1/Main Room/main_room.tscn")
+var kamar = load("res://Storyline/Bagian_4/Kamar/kamar.tscn")
 
 var door := true
 var task_4 := false

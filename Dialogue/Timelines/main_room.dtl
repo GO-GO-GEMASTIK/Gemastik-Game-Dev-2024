@@ -1,7 +1,7 @@
 Ucing: Hei, Halo!
 Otan: Hai, apakah kau penghuni baru?
 - Ya
-	Ucing: Ya, aku murid baru sekolah ini.
+	Ucing: Ya, aku murid baru sekolah ini. Namaku Ucing!
 	[signal arg="1"]
 	[signal arg="jujur"]
 	Otan: Oh, selamat datang!

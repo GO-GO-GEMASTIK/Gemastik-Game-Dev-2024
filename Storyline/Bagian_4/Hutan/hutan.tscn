@@ -1,12 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0g13s1av6h87"]
+[gd_scene load_steps=15 format=3 uid="uid://d0g13s1av6h87"]
 
 [ext_resource type="Texture2D" uid="uid://bhjdb1jwpj68r" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-a.png" id="1_5lmba"]
-[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/hutan.gd" id="1_80gln"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan.gd" id="1_80gln"]
 [ext_resource type="Texture2D" uid="uid://b6dltvnck8g6h" path="res://Storyline/Bagian_4/Hutan/sprites/front_crop/front_a.png" id="2_137qt"]
 [ext_resource type="Texture2D" uid="uid://v2oebwo3ghkr" path="res://Storyline/Bagian_4/Hutan/sprites/frontlight_a.png" id="3_b53ya"]
-[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="4_ng7tf"]
-[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Following/Buba/buba.tscn" id="6_2le7a"]
-[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Following/Maung/maung.tscn" id="7_w81dt"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="4_ng7tf"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="6_2le7a"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="7_w81dt"]
+[ext_resource type="Texture2D" uid="uid://ny52d47kqovv" path="res://Storyline/Bagian_4/Hutan/sprites/task_guide/warning box.png" id="8_w3lab"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="9_x4meq"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="10_8ymeu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d4mxq"]
 normal = Vector2(1, 0)
@@ -14,6 +17,8 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2swcj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2p10"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v864i"]
 
 [node name="Hutan" type="Node2D"]
 script = ExtResource("1_80gln")
@@ -64,20 +69,61 @@ collision_mask = 4
 scale = Vector2(16.7461, 14.1885)
 shape = SubResource("RectangleShape2D_y2p10")
 
-[node name="MC" parent="." instance=ExtResource("4_ng7tf")]
-position = Vector2(354, 966)
+[node name="AreaNext" type="Area2D" parent="Areas"]
+position = Vector2(9801, 1702)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNext"]
+scale = Vector2(18.1386, 26.6004)
+shape = SubResource("RectangleShape2D_v864i")
+
+[node name="Chara" type="Node2D" parent="."]
+
+[node name="MC" parent="Chara" instance=ExtResource("4_ng7tf")]
+position = Vector2(435, 975)
 collision_layer = 6
 
-[node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("6_2le7a")]
+[node name="Buba" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("6_2le7a")]
+z_index = 1
 position = Vector2(105, 919)
 ucing = NodePath("../MC")
 SPEED = 385
 
-[node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("7_w81dt")]
-position = Vector2(183, 949)
+[node name="Maung" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("7_w81dt")]
+position = Vector2(235, 949)
 ucing = NodePath("../MC")
 
-[connection signal="following" from="." to="Buba" method="_following"]
-[connection signal="following" from="." to="Maung" method="_following"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GuideTask" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_w3lab")
+
+[node name="Button" type="Button" parent="CanvasLayer/GuideTask"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("9_x4meq")
+
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("10_8ymeu")]
+
+[connection signal="following" from="." to="Chara/Buba" method="_following"]
+[connection signal="following" from="." to="Chara/Maung" method="_following"]
+[connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="." to="CanvasLayer/DirectionPlayer" method="r_out"]
 [connection signal="body_entered" from="Areas/AreaCamera" to="." method="_on_area_camera_body_entered"]
 [connection signal="body_exited" from="Areas/AreaCamera" to="." method="_on_area_camera_body_exited"]
+[connection signal="body_entered" from="Areas/AreaNext" to="." method="_on_area_next_body_entered"]
+[connection signal="body_exited" from="Areas/AreaNext" to="." method="_on_area_next_body_exited"]
+[connection signal="pressed" from="CanvasLayer/GuideTask/Button" to="." method="_on_button_pressed"]

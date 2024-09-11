@@ -1,0 +1,293 @@
+[gd_scene load_steps=24 format=3 uid="uid://cmgrrskx335r3"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Task 6/puzzle.gd" id="1_o8hm1"]
+[ext_resource type="Texture2D" uid="uid://co1sx14a85hc5" path="res://Sprites/Tasks/Task 6/base.jpg" id="1_uj4m4"]
+[ext_resource type="Texture2D" uid="uid://dix8qakuddoga" path="res://Sprites/Tasks/Task 6/item 2 on.png" id="2_q0j4k"]
+[ext_resource type="Texture2D" uid="uid://cgqkxeftqtdvk" path="res://Sprites/Tasks/Task 6/warning awal.png" id="3_26pqh"]
+[ext_resource type="Texture2D" uid="uid://cg64xxkfgt663" path="res://Sprites/Tasks/Task 6/item 1 on.png" id="3_oquxf"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Task 6/scripts/piece_hint.gd" id="4_8hnp0"]
+[ext_resource type="Texture2D" uid="uid://d2gtco4h5pchn" path="res://Sprites/Tasks/Task 6/item 3 on.png" id="4_f1tfr"]
+[ext_resource type="Texture2D" uid="uid://gowuo86pvrek" path="res://Sprites/Tasks/Task 6/item 4 on.png" id="5_x3dmx"]
+[ext_resource type="Texture2D" uid="uid://bvl8jf6xdi188" path="res://Sprites/Tasks/Task 6/item 5 on.png" id="6_0fvbo"]
+[ext_resource type="Texture2D" uid="uid://yrtrn74pw8we" path="res://Sprites/Tasks/Task 6/item 2.png" id="7_jn8tu"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Task 6/scripts/puzzle_piece.gd" id="8_kl810"]
+[ext_resource type="Texture2D" uid="uid://cexj5q4willfu" path="res://Sprites/Tasks/Task 6/item 1.png" id="9_glbwk"]
+[ext_resource type="Texture2D" uid="uid://k4s3m3ul4o2" path="res://Sprites/Tasks/Task 6/item 3.png" id="10_re6cn"]
+[ext_resource type="Texture2D" uid="uid://b68ijvjuwiq0y" path="res://Sprites/Tasks/Task 6/item 4.png" id="11_qk2sj"]
+[ext_resource type="Texture2D" uid="uid://cs2u8a002t605" path="res://Sprites/Tasks/Task 6/item 5.png" id="12_tcgam"]
+[ext_resource type="Texture2D" uid="uid://oxp7jg76wm4x" path="res://Sprites/Tasks/Task 6/pic.jpg" id="16_xhtnf"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="17_mjuw4"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="18_3g647"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="19_bgy3x"]
+
+[sub_resource type="Animation" id="Animation_06q7f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f2wru"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0frxl"]
+_data = {
+"RESET": SubResource("Animation_06q7f"),
+"fade_out": SubResource("Animation_f2wru")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r8ewb"]
+
+[node name="Puzzle" type="Node2D"]
+script = ExtResource("1_o8hm1")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_uj4m4")
+
+[node name="WarningScreen" type="TextureRect" parent="."]
+z_index = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_26pqh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WarningScreen"]
+libraries = {
+"": SubResource("AnimationLibrary_0frxl")
+}
+
+[node name="PieceHints" type="Node2D" parent="."]
+
+[node name="PieceHint1" type="Area2D" parent="PieceHints" groups=["Piece1"]]
+position = Vector2(334, 694)
+script = ExtResource("4_8hnp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PieceHints/PieceHint1"]
+visible = false
+texture = ExtResource("2_q0j4k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PieceHints/PieceHint1"]
+polygon = PackedVector2Array(-104.5, -163.7, -104.5, -162.5, -101.5, -160.5, -101.5, -158.6, -95.5, -152.4, -95.5, -150.2, -93.8, -146, -93, -146, -90, -142, -81.5, -142, -81.5, -139.7, -83.7, -136, -80.4, -136, -66.5, -132.8, -66.5, -131.7, -61.5, -130, -58.5, -130, -54.1, -139, -50.5, -139, -38.5, -138, -38.5, -133, -40.7, -133, -41.5, -133.4, -41.5, -130, -38.5, -127.4, -38.5, -123, -36.3, -123, -21.3, -116, -17.5, -116, -17.5, -114.6, -16.3, -114, -12.5, -114, -12.5, -112.6, -2.3, -108, -1.2, -108, -0.199997, -111, 4.10001, -111, 5.10001, -109, 6.5, -109, 6.5, -109.8, 15.5, -112.3, 15.5, -111, 17.5, -111, 17.5, -109.5, 20.5, -107.5, 20.5, -105.7, 19.4, -104, 22.5, -102.2, 22.5, -104, 24, -104, 27, -108, 30.5, -108, 30.5, -106.6, 32.5, -105.6, 32.5, -99.9, 31.7, -94, 44.8, -87, 44.3, -92, 45.5, -92, 45.5, -98, 46.8, -98, 47.8, -101, 52.3, -101, 58.5, -103.5, 58.5, -101, 59.3, -98, 61.9, -98, 67.5, -92.4, 67.5, -89.2, 68.1, -88, 69.7, -88, 76.5, -84.6, 76.5, -82, 83.1, -82, 84.3, -83.2, 85.5, -82.7, 85.5, -81.6, 87.5, -80.6, 87.5, -69, 81.8, -69, 97.7, -59, 99.2, -59, 104.5, -62.5, 104.5, -65.6, 107.3, -67, 108.8, -67, 113.8, -64, 117.5, -64, 117.5, -62.4, 117.9, -62, 120, -62, 122, -65, 125.5, -65, 125.5, -63.4, 126.7, -62.2, 126.2, -61, 125, -61, 121.5, -56.6, 121.5, -55.4, 122.7, -54.2, 122.2, -53, 121.2, -53, 120.2, -50, 118.9, -50, 117.5, -48.6, 117.5, -47.4, 117.9, -47, 120.1, -47, 121.1, -45, 122.8, -45, 148.8, -27, 150.4, -27, 159.5, -28.1, 159.5, -26.8, 163.5, -25.8, 163.5, -24.4, 163.9, -24, 171.5, -25.2, 171.5, -23.4, 177.7, -17.2, 177.2, -16, 176.1, -16, 173.1, -11, 170.7, -11, 169.5, -10.4, 169.9, -10, 195.9, 13, 196.5, 13, 196.5, 8, 197.9, 8, 200.9, 2, 204.3, 2, 206.3, 12, 207.1, 12, 210.3, 8.8, 211.5, 9.3, 211.5, 14, 210.9, 14, 208.5, 16.4, 208.5, 20, 206.5, 20, 206.5, 30, 205, 30, 202, 34, 200.5, 34, 200.5, 36, 195.7, 36, 194.7, 32, 190.5, 29.5, 190.5, 27.3, 189, 25, 188.5, 25.4, 164.5, 48.4, 165.1, 50, 167.5, 50, 167.5, 52.7, 172.5, 61.7, 172.5, 64, 174.5, 65.6, 174.5, 70.3, 170.5, 69.3, 170.5, 73.8, 172.5, 77.8, 172.5, 87.2, 171.1, 90, 168.1, 90, 162.1, 85, 161.1, 87, 159.4, 87, 151.5, 85.9, 151.5, 84.6, 142.5, 79.6, 142.5, 78.4, 142.1, 78, 139.3, 78, 138.4, 77.5, 107.5, 111.4, 107.5, 112.6, 109.5, 114.6, 109.5, 117, 111.5, 117, 111.5, 118, 112.9, 118, 113.9, 116, 120.5, 116, 120.5, 117.2, 124.5, 118.2, 124.5, 119.5, 127.5, 121.5, 127.5, 128.1, 125.3, 137, 124.2, 137, 123.2, 140, 122, 140, 118, 145, 112.1, 145, 109.1, 150, 104.7, 150, 98.5, 152.5, 98.5, 150.5, 91.5, 145.5, 91.5, 142.4, 89.5, 140.4, 89.5, 135.8, 91.7, 131.4, 77.5, 147.4, 77.5, 150, 75.9, 150, 73.5, 152.4, 73.5, 155, 71.9, 155, 69.5, 157.4, 69.5, 158, 79.5, 158, 79.5, 159.4, 83.5, 161.4, 83.5, 164, -211.5, 164, -211.5, -164, -206.8, -164, -203.5, -163.3, -202.6, -164, -198.5, -164, -198.5, -163.4, -193.1, -158, -189.5, -158, -189.5, -157.1, -183.5, -159.5, -183.5, -158, -177.5, -158, -177.5, -156.6, -176.3, -156, -171.9, -156, -170.7, -157.2, -169.5, -156.7, -169.5, -155.8, -159.5, -153.8, -159.5, -152.2, -158.9, -151, -151.5, -151, -151.5, -149.7, -149.5, -149, -147.9, -149, -146.7, -150.2, -145.5, -149.7, -145.5, -148.7, -143.5, -148, -142.9, -148, -141.7, -149.2, -140.5, -148.7, -140.5, -147.7, -138.5, -147, -137.9, -147, -136.7, -148.2, -135.5, -147.7, -135.5, -146.7, -133.5, -146, -132.9, -146, -131.7, -147.2, -130.5, -146.7, -130.5, -145.8, -113.3, -142, -112.6, -142, -113.4, -148, -114.1, -148, -116.1, -152, -107.5, -152, -107.5, -157, -108.7, -163, -106.9, -163, -105.9, -164, -105.2, -164)
+
+[node name="PieceHint2" type="Area2D" parent="PieceHints" groups=["Piece2"]]
+position = Vector2(703, 698)
+script = ExtResource("4_8hnp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PieceHints/PieceHint2"]
+visible = false
+texture = ExtResource("3_oquxf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PieceHints/PieceHint2"]
+polygon = PackedVector2Array(19, -156, 20, -156, 20, -149, 21.3, -149, 28.3, -144, 28.9, -144, 33, -145.7, 33, -146.4, 34.6, -148, 40.7, -148, 43.7, -150, 49.8, -150, 53, -151.6, 53, -149, 53.9, -131, 55.2, -131, 88, -114.6, 88, -120, 87.4, -120, 85, -124.8, 85, -128.3, 87.5, -132, 89.7, -132, 92.7, -134, 108.8, -134, 116, -135.2, 116, -133.4, 121.4, -128, 123.3, -128, 135, -119.5, 135, -111, 133.8, -111, 131.8, -102, 130.4, -102, 127.4, -99, 124.3, -99, 130.3, -95, 133.3, -95, 139.3, -91, 142.3, -91, 148.3, -87, 151.2, -87, 174.2, -76, 172.7, -84, 174.2, -84, 175.2, -88, 176.7, -88, 179, -89.5, 179, -92, 184.8, -92, 190, -94.6, 190, -93, 192, -93, 192, -91.5, 200, -86.6, 200, -83, 201.2, -76, 199.7, -76, 198.7, -73, 197, -73, 197, -70, 194.3, -70, 192.5, -68.9, 211.2, -60, 212.6, -60, 217, -64.4, 217, -68, 218.7, -68, 221, -69.5, 221, -71.4, 222.6, -73, 231, -73, 231, -76.6, 237, -79.6, 237, -77.5, 242, -73.5, 242, -71, 242.8, -67, 243.5, -67, 247, -62.3, 247, -45, 248.2, -45, 273.2, -33, 277, -33, 277, -31.6, 280.2, -30, 284, -30, 284, -28.6, 287.2, -27, 288, -27, 288, -33, 289.3, -33, 290.3, -36, 292.6, -36, 295.6, -30, 298, -30, 298, 158, -286.3, 158, -288.5, 155, -290.3, 155, -293.3, 153, -294, 153, -298, 154.4, -298, 152.4, -298, 150, -296.7, 147, -295.4, 147, -293, 144.6, -293, 142, -291.4, 142, -289, 139.6, -289, 137, -287.4, 137, -285, 134.6, -285, 132, -283.4, 132, -280, 128.6, -280, 126.6, -278.4, 125, -276, 125, -276, 133, -275.3, 133, -273.3, 138, -272.5, 138, -268.5, 143, -264, 143, -259, 141.3, -257.6, 138, -252.6, 138, -251.6, 136, -250, 136, -245, 130.6, -245, 127.8, -241.5, 119, -242, 117, -244.5, 114, -246.3, 114, -250.3, 111, -251.6, 111, -255.8, 115.2, -257, 114.7, -257, 113.5, -261, 110.5, -261, 108.2, -262.6, 105, -260.6, 105, -258.6, 101, -257.4, 101, -252, 95.6, -252, 93, -250.4, 93, -245, 87.6, -245, 85, -243.5, 85, -229.5, 69, -226.7, 69, -212.7, 79, -207, 79, -207, 77, -204, 77, -204, 78.4, -197.9, 81.5, -196, 79.6, -196, 76, -196.8, 76, -199.2, 63, -195, 63, -195, 62, -195.7, 62, -199.8, 49, -200.6, 49, -204.6, 41, -202.4, 41, -180.4, 18, -177.2, 18, -176.2, 22, -171, 25.5, -171, 27.6, -169.6, 29, -169, 29, -169, 27.4, -165, 25.4, -165, 24.6, -162, 21.6, -162, 21, -163.2, 13, -161.7, 13, -159.7, 8, -157.4, 8, -157, 7.60001, -157, 2, -156, 2, -156, -1.8, -157.6, -5, -155.4, -5, -118.4, -40, -116.3, -40, -111.3, -25, -110.6, -25, -106, -20.4, -106, -30, -104.9, -30, -103.9, -38, -101.6, -38, -90.6, -29, -88.6, -29, -86.6, -27, -85.4, -27, -88, -29.6, -88, -37.7, -90, -40.7, -90, -44.8, -90.8, -48, -91.5, -48, -94, -51.7, -94, -54.8, -87.5, -56.7, -89, -57.4, -89, -62, -90.4, -66, -88.4, -66, -81.4, -73, -79, -73, -70, -72.1, -70, -73.6, -61.2, -78, -58, -78, -58, -86, -52, -86, -52, -84.4, -51.6, -84, -38, -84, -38, -81.3, -37, -80, -37, -84, -36.1, -94, -36.8, -94, -37.8, -99, -38.5, -99, -42, -103.7, -42, -108, -40.4, -108, -26.4, -122, -22.3, -122, -19, -124.5, -19, -127.4, -15.4, -131, -13, -131, -13, -135.3, -10.5, -139, -7.39999, -139, -7, -139.4, -7, -141.4, -1, -148.5, -1, -149.6, -2.20001, -150.8, -1.70001, -152, -0.600006, -152, 2.39999, -158, 4.20001, -158, 9, -155.6, 15, -157.7, 19, -158)
+
+[node name="PieceHint3" type="Area2D" parent="PieceHints" groups=["Piece3"]]
+position = Vector2(415, 520)
+script = ExtResource("4_8hnp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PieceHints/PieceHint3"]
+visible = false
+texture = ExtResource("4_f1tfr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PieceHints/PieceHint3"]
+polygon = PackedVector2Array(33, -181.5, 35.1, -181.5, 40.1, -185.5, 42.9, -185.5, 48.5, -186.4, 52.7, -186.5, 59.5, -184.2, 59.5, -183, 64.5, -179, 64.5, -176, 67.5, -174, 67.5, -171.5, 68.9, -167.5, 67.3, -167.5, 66.3, -163.5, 64, -163.5, 62, -160.5, 59.9, -160.5, 57.9, -158.5, 54.9, -158.5, 53.9, -160.5, 52.5, -160.5, 49.5, -158, 49.5, -153.1, 60.9, -142.5, 63.5, -142.5, 63.5, -140.9, 65.9, -138.5, 68.5, -138.5, 68.5, -136.9, 70.9, -134.5, 73.5, -134.5, 73.5, -132.9, 76.9, -129.5, 79.5, -129.5, 79.5, -127.9, 81.9, -125.5, 83.9, -125.5, 90.9, -118.5, 93, -118.5, 95, -115.5, 97, -115.5, 99, -112.5, 100.5, -112.5, 102.5, -114.9, 102.5, -120.6, 103.7, -125.5, 104.7, -125.5, 105.7, -129.5, 107, -129.5, 110, -133.5, 113.4, -133.5, 114.4, -125.5, 115.2, -125.5, 117.5, -118.7, 117.5, -114.7, 118.9, -117.5, 121.1, -117.5, 129.1, -125.5, 131.1, -125.5, 133.1, -127.5, 137.5, -127.5, 137.5, -125.1, 135.5, -123.1, 135.5, -117.7, 137.1, -114.5, 135.4, -114.5, 134.4, -102.5, 133.1, -102.5, 130.5, -97.3, 130.5, -95.4, 138.5, -94.4, 138.5, -91.9, 136.5, -90.9, 136.5, -83.5, 138, -83.5, 140, -80.5, 142, -80.5, 144, -77.5, 145.9, -77.5, 152.9, -70.5, 155, -70.5, 157, -67.5, 159, -67.5, 161, -64.5, 163, -64.5, 165, -61.5, 166.9, -61.5, 175, -54.5, 177.2, -54.5, 184.2, -58.5, 187.3, -58.5, 193.5, -61, 193.5, -59, 198.8, -55.5, 202.5, -55.5, 202.5, -54, 209.7, -49.5, 212.7, -49.5, 215.5, -48.1, 215.5, -45.4, 198.5, -47.6, 198.5, -48.8, 194.3, -50.5, 192.9, -50.5, 197.5, -45.9, 197.5, -40.7, 199.1, -37.5, 201, -37.5, 203, -34.5, 205.1, -34.5, 206.1, -32.5, 207.8, -32.5, 223.8, -20.5, 226.5, -20.5, 226.5, -18.9, 226.9, -18.5, 228.5, -18.5, 228.5, -19.3, 226.9, -22.5, 228.6, -22.5, 229.6, -30.5, 231, -30.5, 235, -36.5, 248.5, -36.5, 248.5, -30.3, 253.5, -29.3, 253.5, -26.9, 257.5, -22.9, 257.5, -18.1, 259.5, -17.1, 259.5, -15.5, 261.7, -15.5, 267.5, -13.2, 267.5, -7.7, 268.1, -6.5, 270.7, -6.5, 271.5, -6.10001, 279.5, -7.7, 279.5, -6, 282.5, -4, 282.5, 1.5, 283.8, 6.5, 282.3, 6.5, 281.3, 10.5, 274.6, 10.5, 275.1, 11.5, 276.9, 11.5, 281.9, 15.5, 283.7, 15.5, 286.5, 16.9, 286.5, 18.1, 286.9, 18.5, 288.7, 18.5, 291.5, 19.9, 291.5, 23.5, 290.1, 23.5, 287.5, 28.7, 287.5, 29.3, 289.1, 32.5, 287.1, 32.5, 283.1, 39.5, 282, 39.5, 280, 42.5, 277.9, 42.5, 277.5, 42.9, 277.5, 48.5, 275.9, 48.5, 271.9, 52.5, 270.5, 52.5, 270.5, 55.2, 267.5, 56.2, 267.5, 56.9, 264.9, 59.5, 261.3, 59.5, 260.5, 59.1, 260.5, 59.9, 248.9, 71.5, 247.5, 71.5, 247.5, 73.2, 253.5, 82.2, 253.5, 100.5, 251.9, 100.5, 250.7, 101.7, 249.5, 101.2, 249.5, 100.1, 247.5, 99.1, 247.5, 97.1, 246.9, 95.5, 242.7, 95.5, 235.5, 96.7, 235.5, 95.4, 230.5, 94.7, 230.5, 102.5, 225.9, 102.5, 223.9, 104.5, 222.3, 104.5, 221.3, 104, 218, 108.5, 208.5, 108.5, 208.5, 107.5, 206.5, 107.5, 199.9, 114.5, 198.5, 114.5, 199.3, 118.5, 200.1, 118.5, 202.1, 122.5, 199.7, 122.5, 195.6, 124.6, 196.3, 127.5, 197, 127.5, 199.5, 131.2, 199.5, 133.9, 200.4, 146.5, 201.1, 146.5, 202.5, 149.3, 202.5, 150.9, 200.9, 152.5, 199.2, 152.5, 191.2, 146.5, 188.5, 146.5, 188.5, 144.9, 187.1, 143.5, 184.5, 143.5, 184.5, 147.6, 181.2, 159.6, 179.5, 159.4, 179.5, 158.5, 177.5, 158.5, 177.5, 156.9, 173.5, 152.9, 173.5, 149.9, 171.5, 147.9, 171.5, 143.5, 170.9, 143.5, 169.6, 140.8, 165.9, 144.5, 164.5, 144.5, 131.5, 174.9, 133.5, 175.9, 133.5, 181.5, 132.3, 181.5, 131.3, 186.5, 123.5, 186.5, 123.5, 178.5, 122.9, 178.5, 122.5, 177.7, 120.5, 179, 120.5, 181.6, 119.3, 186.5, 114.5, 186.5, 88.5, 164, 88.5, 160.5, 90.5, 160.5, 95.5, 155.1, 95.5, 154.5, 93.5, 154.5, 93.5, 152.9, 91.1, 150.5, 83.2, 150.5, 76.2, 146.5, 75.6, 146.5, 67.5, 147.7, 67.5, 146, 60.2, 140.5, 57.5, 140.5, 57.5, 138.9, 57.1, 138.5, 54.5, 138.5, 54.5, 136.9, 54.1, 136.5, 51.5, 136.5, 51.5, 134.9, 51.1, 134.5, 49.1, 134.5, 46.1, 131.5, 43.5, 131.5, 43.5, 129.9, 43.1, 129.5, 41.1, 129.5, 38.1, 126.5, 35.5, 126.5, 35.5, 124.2, 40.5, 117.2, 40.5, 114.3, 41.7, 111.8, 40.9, 112.5, 36.5, 112.5, 36.5, 111.2, 26.5, 107.8, 26.5, 110, 20.9, 114.5, 16.3, 114.5, 13.5, 113.1, 13.5, 112.1, 1.5, 106.1, 1.5, 103.7, 5.5, 102.7, 5.5, 99.9, 7.5, 98.9, 5.79999, 93.5, 2.5, 92.1, -4.5, 93.7, -4.5, 92.1, -6.5, 91.1, -6.5, 87.9, -6.89999, 87.5, -12.5, 87.5, -12.5, 84.8, -19, 76.5, -20.9, 76.5, -22.5, 74.9, -22.5, 72.5, -29.5, 72.5, -29.5, 73.1, -31.5, 74.1, -31.5, 75.9, -33.5, 77.9, -33.5, 85.5, -35.1, 85.5, -36.3, 86.7, -37.5, 86.2, -37.5, 85.2, -49.5, 80.2, -49.5, 71.3, -48.9, 69.5, -50.2, 66.5, -52.2, 66.5, -54.5, 68, -54.5, 71.5, -59.5, 71.5, -59.5, 70.5, -62.5, 70.5, -62.5, 65, -64.8, 63.5, -70.1, 63.5, -72.1, 65.5, -74.9, 65.5, -76.9, 63.5, -78.5, 63.5, -78.5, 64.3, -84.5, 65.8, -84.5, 64.2, -121.5, 50.2, -121.5, 44.9, -124.5, 41.9, -124.5, 39.1, -122.9, 37.5, -120.7, 37.5, -118.7, 36.5, -132.5, 36.5, -136.9, 44.5, -139.8, 44.5, -142.8, 42.5, -146.6, 42.5, -166.5, 37.3, -166.5, 35.3, -165.1, 32.5, -166.1, 33.5, -170.5, 33.5, -170.5, 32, -176.5, 27, -176.5, 23.9, -179.5, 20.9, -179.5, 19.5, -183.5, 15.9, -183.5, 13.8, -186, 10.5, -184.3, 21.5, -193.5, 21.5, -193.5, 23.1, -190.5, 26.1, -190.5, 31.5, -197.5, 31.5, -197.5, 30.3, -206.7, 28.5, -208.1, 28.5, -209.3, 29.7, -210.5, 29.2, -210.5, 28.5, -215.5, 28.5, -215.5, 27.2, -217.5, 26.5, -218.1, 26.5, -219.3, 27.7, -220.5, 27.2, -220.5, 26.2, -222.5, 25.5, -223.1, 25.5, -224.3, 26.7, -225.5, 26.2, -225.5, 25.3, -233.7, 23.5, -235.3, 24.7, -236.5, 24.2, -236.5, 23.3, -243.5, 21.3, -243.5, 19.9, -243.9, 19.5, -256.5, 19.5, -256.5, 18.3, -263.7, 16.5, -265.3, 16.5, -272.5, 17.7, -272.5, 16.5, -275.5, 16.5, -275.5, 15, -278.5, 13, -278.5, 10.9, -279.9, 9.5, -280.8, 9.5, -281.8, 12.5, -284.1, 12.5, -285.1, 10.5, -291.5, 10.5, -291.5, 4.5, -289.8, 4.5, -285.8, 1.5, -282.7, 1.5, -275.7, -2, -277.5, -2.89999, -277.5, -5.60001, -276.6, -12.5, -278.5, -12.5, -278.5, -18.5, -277.2, -18.5, -275.2, -23.5, -271.1, -23.5, -264, -16.4, -257.5, -18.3, -257.5, -20.5, -258.7, -26.5, -256.9, -26.5, -254.9, -28.5, -251.7, -28.5, -246.5, -29.8, -246.5, -28.3, -239.5, -26.8, -239.5, -27.5, -237.5, -27.5, -237.5, -29.5, -230.5, -29.5, -230.5, -27.9, -229, -26.4, -206.5, -37.1, -206.5, -38.5, -207.6, -47.5, -199.5, -47.5, -199.5, -48.2, -201.5, -51.2, -201.5, -52.9, -202.5, -54.1, -202.5, -56.5, -200.5, -79.5, -198.1, -79.5, -184.5, -65.9, -184.5, -63.9, -182.3, -70.5, -180.9, -70.5, -180.5, -70.9, -180.5, -73.7, -179.2, -77.5, -178.5, -77.5, -178.5, -79.5, -176.9, -79.5, -175.7, -80.7, -174.5, -80.2, -174.5, -79.1, -172.5, -78.1, -172.5, -75.8, -169.5, -70.8, -169.5, -60.5, -168.5, -60.5, -168.5, -59.3, -164.5, -60.3, -164.5, -61.1, -115.5, -89.1, -123.5, -90.6, -123.5, -91.7, -127.5, -92.7, -127.5, -95, -130.5, -97, -130.5, -101.7, -128.5, -105.7, -128.5, -108.3, -130.1, -111.5, -127.2, -111.5, -124.2, -120.5, -117.5, -120.5, -117.5, -121.1, -112.7, -123.5, -107.9, -123.5, -106.9, -121.5, -102.5, -122.9, -102.5, -121, -98.5, -118, -98.5, -114.1, -96.5, -113.1, -96.5, -110.5, -95.5, -110.5, -95.5, -104.3, -97.4, -100.6, -94.5, -101.3, -94.5, -102.1, -84.5, -107.1, -84.5, -108, -79.8, -111.5, -77.7, -111.5, -74.5, -113.1, -74.5, -113.9, -72.9, -115.5, -70.7, -115.5, -69.5, -116.1, -69.5, -117, -64.8, -120.5, -63.5, -120.5, -65.5, -121.9, -65.5, -124.6, -64.3, -129.5, -56.5, -129.5, -56.5, -130.9, -58.5, -131.9, -58.5, -133.9, -60, -136.5, -61.9, -136.5, -65.5, -140.1, -65.5, -145.5, -63.4, -145.5, -54.5, -144.4, -54.5, -143.4, -47.5, -142.4, -47.5, -141.2, -45.5, -140.5, -39.5, -140.5, -39.5, -138.9, -38.1, -137.5, -36.5, -137.5, -36.5, -138.1, -25.5, -144.1, -25.5, -144.9, -23.9, -146.5, -21.7, -146.5, -20.5, -147.1, -20.5, -148, -15.8, -151.5, -13.7, -151.5, -12.5, -152.1, -12.5, -155.1, -13.7, -156.3, -13.2, -157.5, -12.1, -157.5, -9.5, -162.7, -9.5, -168.5, -7.10001, -168.5, -4.10001, -165.5, -0.5, -165.5, -0.5, -166.7, 0.899994, -169.5, 5.5, -169.5, 5.5, -170.1, 7.5, -171.1, 7.5, -174.5, 12.5, -174.5, 12.5, -183.5, 22.5, -183.5, 22.5, -182.3, 26.5, -181.3, 26.5, -179.7, 28.1, -176.5, 29, -176.5)
+
+[node name="PieceHint4" type="Area2D" parent="PieceHints" groups=["Piece4"]]
+position = Vector2(731, 463)
+script = ExtResource("4_8hnp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PieceHints/PieceHint4"]
+visible = false
+texture = ExtResource("5_x3dmx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PieceHints/PieceHint4"]
+polygon = PackedVector2Array(270, 207.5, 268.4, 207.5, 263.5, 199.5, 262.9, 199.5, 261.9, 207.5, 258, 207.5, 253, 206.3, 253, 205.2, 244, 202.2, 244, 201.1, 240.8, 199.5, 237, 199.5, 237, 198.1, 233.8, 196.5, 230, 196.5, 230, 195.1, 228.8, 194.5, 225, 194.5, 225, 193.1, 221.8, 191.5, 218, 191.5, 218, 173.5, 217, 173.5, 217, 171.5, 214, 168.9, 214, 163.7, 213.4, 162.5, 212.5, 162.5, 206.5, 155.6, 202.6, 163.5, 195.8, 163.5, 195, 163.1, 195, 164, 190, 168, 190, 171.9, 188.4, 173.5, 186.6, 173.5, 185.6, 175.5, 182, 175.5, 182, 174.5, 179, 174.5, 179, 173.2, 164, 167.2, 164, 164.8, 167, 163.8, 167, 163.1, 171, 159.1, 171, 157.4, 171.8, 153.5, 171.2, 153.5, 170.2, 148.5, 161.7, 142.5, 159.2, 142.5, 154, 143.4, 154, 144, 148, 148, 148, 151.1, 146, 152.1, 146, 154.3, 147.6, 157.5, 145.2, 157.5, 142, 159.1, 142, 157.1, 97, 138.2, 97, 136.9, 95.8, 135.7, 96.3, 134.5, 98.7, 134.5, 102, 132, 102, 130.1, 104, 128.1, 104, 123.4, 104.9, 116.5, 104, 116.5, 104, 114.5, 102.6, 114.5, 97.6, 109.5, 95.6, 109.5, 92.6, 106.5, 90, 106.5, 90, 104.9, 85.6, 100.5, 83, 100.5, 77.2, 102.5, 70.9, 102.5, 67, 101.7, 67, 102.3, 62, 103.3, 62, 104, 59, 106, 59, 111.1, 62, 114.1, 62, 117.5, 61, 117.5, 61, 120.5, 57, 120.5, 57, 119.1, 24, 104.1, 24, 85.5, 25.3, 85.5, 27.1, 80.2, 22.5, 85.5, 17.4, 85.5, 15.4, 87.5, 9, 87.5, 9, 88.1, 3.29999, 91.5, -2, 91.5, -2, 90.1, -9, 87.2, -9, 80.5, -9.79999, 76.5, -10.8, 76.5, -15, 78.2, -15, 78.9, -16.6, 80.5, -21, 80.5, -21, 79.3, -25, 78.3, -25, 77.1, -41, 68.1, -41, 65.7, -36, 64.7, -36, 64.1, -33, 61.1, -33, 59.7, -34.8, 52.5, -35.4, 52.5, -38.4, 49.5, -39.4, 49.5, -40.4, 51.5, -48, 51.5, -48, 49.9, -50, 47.9, -50, 43.5, -53.3, 43.5, -59, 40.1, -59, 35.9, -62, 32.9, -62, 30.7, -62.6, 29.5, -63.6, 29.5, -64.6, 27.5, -68, 27.5, -68, 21.5, -80, 21.5, -85, 27.9, -85, 32.6, -86.2, 37.5, -87.6, 37.5, -88.8, 38.7, -90, 38.2, -90, 37.1, -99, 32.1, -99, 30.9, -99.4, 30.5, -102, 30.5, -102, 28.9, -102.4, 28.5, -105, 28.5, -105, 26.9, -105.4, 26.5, -108, 26.5, -108, 24.9, -108.4, 24.5, -111, 24.5, -111, 23, -115.4, 19.5, -118, 19.5, -118, 17.8, -119.8, 11.5, -120.4, 11.5, -125, 6.89999, -125, 4.8, -120, 3.10001, -120, 4.8, -106, 9.5, -102.2, 9.5, -123, -0.899994, -123, -2.10001, -123.4, -2.5, -125.8, -2.5, -135.8, 2.5, -142, 2.5, -142, 1, -157.3, -10.5, -160, -10.5, -160, -12.1, -161.4, -13.5, -164, -13.5, -164, -15.1, -165.4, -16.5, -168, -16.5, -168, -18.1, -169.4, -19.5, -172, -19.5, -172, -21.1, -173.4, -22.5, -176, -22.5, -176, -24.1, -178.4, -26.5, -181, -26.5, -181, -30.6, -179.8, -36.5, -179.1, -36.5, -186, -37.7, -186, -43.5, -185, -43.5, -185, -46.5, -183.4, -46.5, -183, -46.9, -183, -49.1, -184.2, -50.3, -183.7, -51.5, -182.7, -51.5, -181, -55.6, -181, -64.1, -182.2, -65.3, -181.7, -66.5, -181, -66.5, -181, -69.5, -179.6, -69.5, -178.6, -71.5, -179.7, -71.5, -188.7, -64.5, -190, -64.5, -195.6, -58.5, -199, -58.5, -199, -60.3, -202, -66.3, -202, -71.2, -203.4, -76.2, -206, -74.9, -206, -74.1, -209, -71.1, -209, -69.2, -211, -66.2, -211, -61.4, -212.2, -55.5, -213.8, -55.5, -217, -53.9, -217, -56.1, -219.4, -58.5, -222, -58.5, -222, -60.1, -224.4, -62.5, -227, -62.5, -227, -64.1, -229.4, -66.5, -232, -66.5, -232, -68.1, -234.4, -70.5, -237, -70.5, -237, -72.1, -238.4, -73.5, -241, -73.5, -241, -75.1, -243.4, -77.5, -246, -77.5, -246, -79.1, -248.4, -81.5, -251, -81.5, -251, -83.1, -253.4, -85.5, -256, -85.5, -256, -87.1, -258.4, -89.5, -260.5, -89.5, -262.5, -92.5, -265, -92.5, -265, -94, -269, -97, -269, -100.1, -267, -101.1, -267, -103.7, -265.6, -106.5, -264.2, -106.5, -261, -108.1, -261, -105.9, -259.6, -104.5, -258, -104.5, -258, -105.3, -254, -106.3, -254, -106.9, -249, -111.9, -249, -115.5, -256.5, -125.5, -258.3, -125.5, -262.3, -128.5, -270, -128.5, -270, -133.7, -259, -140.1, -259, -145.2, -266, -158.2, -266, -162.6, -264.8, -168.5, -263.1, -168.5, -267.5, -179.5, -264.2, -179.5, -257, -180.7, -257, -179.4, -251, -178.3, -251, -177.3, -244, -175.3, -244, -174.1, -243.3, -173.7, -244.2, -178.5, -239, -178.5, -239, -177.1, -232, -173.1, -232, -171.9, -230.6, -170.5, -228.8, -170.5, -226, -169.1, -226, -168, -223, -166, -223, -164.5, -220, -164.5, -220, -165.1, -183, -188, -183, -190.3, -184.6, -193.5, -182.4, -193.5, -181, -194.9, -181, -202.5, -179.4, -202.5, -179, -202.9, -179, -205.5, -180, -205.5, -180, -207.5, 270, -207.5)
+
+[node name="PieceHint5" type="Area2D" parent="PieceHints" groups=["Piece5"]]
+position = Vector2(338, 389)
+script = ExtResource("4_8hnp0")
+
+[node name="Sprite2D" type="Sprite2D" parent="PieceHints/PieceHint5"]
+visible = false
+texture = ExtResource("6_0fvbo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PieceHints/PieceHint5"]
+polygon = PackedVector2Array(214.5, -123, 213.3, -123, 212.3, -119, 210.9, -119, 210.5, -118.6, 210.5, -113.6, 208.9, -112, 206.8, -112, 197.8, -105, 195.9, -105, 192.9, -102, 191.5, -102, 189.9, -100, 187.9, -100, 184.9, -97, 183.5, -97, 181.9, -95, 179.9, -95, 176.9, -92, 174.7, -92, 173.5, -91.4, 173.5, -90.6, 171.9, -89, 168.9, -89, 165.9, -94, 164.2, -94, 151.3, -103.9, 150.3, -100, 144.5, -100, 144.5, -101, 141.5, -101, 141.5, -102.4, 133.3, -106, 130.7, -106, 127.5, -105.2, 127.5, -103.3, 131.5, -96.3, 131.5, -94, 128.5, -94, 128.5, -86, 129.3, -86, 130.4, -80, 131.1, -80, 134.5, -73.2, 134.5, -65, 131.8, -65, 109.8, -50, 107.4, -50, 98.5, -51.1, 98.5, -52.4, 97.3, -53, 94.7, -53, 91.5, -52.2, 91.5, -44, 86.5, -44, 85.3, -39, 83.5, -39, 83.5, -38, 79.2, -38, 78.2, -35, 71.1, -35, 69.3, -36.8, 68.3, -31, 67.5, -31, 67.5, -29, 65.9, -29, 65.5, -28.6, 65.5, -22, 64.1, -22, 63.1, -20, 60.9, -20, 56.9, -16, 54.9, -16, 48.9, -11, 46.9, -11, 43.9, -8, 42.5, -8, 40.9, -6, 39.1, -6, 36.1, -9, 33.3, -9, 26.3, -12, 22.4, -12, 11.3, -13.7, 21.5, -4.39999, 21.5, 3, 13.5, 3, 13.5, 6.39999, 15.5, 7.39999, 15.5, 9.39999, 13.9, 11, 12.1, 11, 11.1, 13, 8.7, 13, -18.2, 30, -20.6, 30, -19.6, 22, -26.1, 10, -31.5, 10, -31.5, 8.39999, -31.9, 8, -35.5, 8, -40.2, 12, -41.6, 12, -45.5, 11.2, -47.8, 18, -49.1, 18, -51.5, 20.4, -51.5, 31, -50.9, 31, -47.9, 36, -46.3, 36, -37.3, 40.5, -37.7, 42, -39.9, 42, -40.9, 44, -43.2, 44, -90.2, 72, -93.4, 72, -94.4, 58, -95.3, 58, -96.3, 54, -96.9, 54, -100, 50.9, -101.7, 59, -102.5, 59, -102.5, 61, -104, 61, -105.5, 63.3, -105.5, 67, -107.9, 67, -111.5, 63.4, -111.5, 62, -120.9, 52, -122.7, 52, -123.5, 51.6, -123.5, 73, -122.6, 73, -121.4, 83, -129.6, 83, -128.5, 84.7, -128.5, 92.4, -130.1, 94, -131.9, 94, -132.9, 96, -135.2, 96, -151.2, 105, -153.1, 105, -155.1, 101, -158, 101, -161, 105, -165, 105, -167, 102, -175.5, 102, -175.5, 103, -177.5, 103, -180.5, 105.5, -180.5, 109, -179.1, 113, -183.1, 113, -185.1, 115, -188, 115, -193, 108, -197.5, 108, -197.5, 109.4, -200.5, 112.4, -200.5, 113.6, -197.5, 116.6, -197.5, 118.1, -198.6, 128, -199.9, 128, -200.9, 130, -203.2, 130, -207.2, 133, -210.3, 133, -212.3, 134, -214.5, 134, -214.5, -134, 214.5, -134)
+
+[node name="PuzzlePieces" type="Node2D" parent="."]
+position = Vector2(1940, -4)
+
+[node name="PuzzlePiece1" type="Sprite2D" parent="PuzzlePieces" node_paths=PackedStringArray("rest_zone", "drop_area")]
+texture = ExtResource("7_jn8tu")
+script = ExtResource("8_kl810")
+rest_zone = NodePath("../../DropZones/DropZone1")
+drop_area = NodePath("../../PieceHints/PieceHint1")
+group_name = "Piece1"
+
+[node name="DragArea" type="Area2D" parent="PuzzlePieces/PuzzlePiece1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePieces/PuzzlePiece1/DragArea"]
+position = Vector2(-54, 8)
+scale = Vector2(11.2239, 10.1387)
+shape = SubResource("CircleShape2D_r8ewb")
+
+[node name="PuzzlePiece2" type="Sprite2D" parent="PuzzlePieces" node_paths=PackedStringArray("rest_zone", "drop_area")]
+texture = ExtResource("9_glbwk")
+script = ExtResource("8_kl810")
+rest_zone = NodePath("../../DropZones/DropZone2")
+drop_area = NodePath("../../PieceHints/PieceHint2")
+group_name = "Piece2"
+
+[node name="DragArea" type="Area2D" parent="PuzzlePieces/PuzzlePiece2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePieces/PuzzlePiece2/DragArea"]
+position = Vector2(60, 21)
+scale = Vector2(14.3709, 10.5095)
+shape = SubResource("CircleShape2D_r8ewb")
+
+[node name="PuzzlePiece3" type="Sprite2D" parent="PuzzlePieces" node_paths=PackedStringArray("rest_zone", "drop_area")]
+texture = ExtResource("10_re6cn")
+script = ExtResource("8_kl810")
+rest_zone = NodePath("../../DropZones/DropZone3")
+drop_area = NodePath("../../PieceHints/PieceHint3")
+group_name = "Piece3"
+
+[node name="DragArea" type="Area2D" parent="PuzzlePieces/PuzzlePiece3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePieces/PuzzlePiece3/DragArea"]
+position = Vector2(15, -21)
+scale = Vector2(13.0957, 8.62284)
+shape = SubResource("CircleShape2D_r8ewb")
+
+[node name="PuzzlePiece4" type="Sprite2D" parent="PuzzlePieces" node_paths=PackedStringArray("rest_zone", "drop_area")]
+texture = ExtResource("11_qk2sj")
+script = ExtResource("8_kl810")
+rest_zone = NodePath("../../DropZones/DropZone4")
+drop_area = NodePath("../../PieceHints/PieceHint4")
+group_name = "Piece4"
+
+[node name="DragArea" type="Area2D" parent="PuzzlePieces/PuzzlePiece4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePieces/PuzzlePiece4/DragArea"]
+position = Vector2(60, -61)
+rotation = 0.261799
+scale = Vector2(18.9042, 12.6655)
+shape = SubResource("CircleShape2D_r8ewb")
+
+[node name="PuzzlePiece5" type="Sprite2D" parent="PuzzlePieces" node_paths=PackedStringArray("rest_zone", "drop_area")]
+texture = ExtResource("12_tcgam")
+script = ExtResource("8_kl810")
+rest_zone = NodePath("../../DropZones/DropZone5")
+drop_area = NodePath("../../PieceHints/PieceHint5")
+group_name = "Piece5"
+
+[node name="DragArea" type="Area2D" parent="PuzzlePieces/PuzzlePiece5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzlePieces/PuzzlePiece5/DragArea"]
+position = Vector2(-77, -35)
+rotation = -0.523598
+scale = Vector2(14.174, 7.4674)
+shape = SubResource("CircleShape2D_r8ewb")
+
+[node name="DropZones" type="Node" parent="."]
+
+[node name="DropZone1" type="Node2D" parent="DropZones"]
+position = Vector2(1658, 233)
+
+[node name="DropZone2" type="Node2D" parent="DropZones"]
+position = Vector2(1364, 332)
+
+[node name="DropZone3" type="Node2D" parent="DropZones"]
+position = Vector2(1590, 713)
+
+[node name="DropZone4" type="Node2D" parent="DropZones"]
+position = Vector2(1745, 563)
+
+[node name="DropZone5" type="Node2D" parent="DropZones"]
+position = Vector2(1469, 595)
+
+[node name="FinishedPuzzle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(560, 557)
+scale = Vector2(0.465395, 0.465395)
+texture = ExtResource("16_xhtnf")
+
+[node name="Finish" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(560, 557)
+scale = Vector2(0.465395, 0.465395)
+stream = ExtResource("17_mjuw4")
+bus = &"SFX"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(560, 557)
+scale = Vector2(0.465395, 0.465395)
+stream = ExtResource("18_3g647")
+bus = &"SFX"
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(560, 557)
+scale = Vector2(0.465395, 0.465395)
+stream = ExtResource("19_bgy3x")
+autoplay = true
+bus = &"Music"
+
+[connection signal="mouse_entered" from="PieceHints/PieceHint1" to="PieceHints/PieceHint1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PieceHints/PieceHint1" to="PieceHints/PieceHint1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PieceHints/PieceHint2" to="PieceHints/PieceHint2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PieceHints/PieceHint2" to="PieceHints/PieceHint2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PieceHints/PieceHint3" to="PieceHints/PieceHint3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PieceHints/PieceHint3" to="PieceHints/PieceHint3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PieceHints/PieceHint4" to="PieceHints/PieceHint4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PieceHints/PieceHint4" to="PieceHints/PieceHint4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PieceHints/PieceHint5" to="PieceHints/PieceHint5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PieceHints/PieceHint5" to="PieceHints/PieceHint5" method="_on_mouse_exited"]
+[connection signal="plus_one" from="PuzzlePieces/PuzzlePiece1" to="." method="_on_plus_one"]
+[connection signal="area_entered" from="PuzzlePieces/PuzzlePiece1/DragArea" to="PuzzlePieces/PuzzlePiece1" method="_on_drag_area_area_entered"]
+[connection signal="area_exited" from="PuzzlePieces/PuzzlePiece1/DragArea" to="PuzzlePieces/PuzzlePiece1" method="_on_drag_area_area_exited"]
+[connection signal="input_event" from="PuzzlePieces/PuzzlePiece1/DragArea" to="PuzzlePieces/PuzzlePiece1" method="_on_drag_area_input_event"]
+[connection signal="mouse_entered" from="PuzzlePieces/PuzzlePiece1/DragArea" to="PuzzlePieces/PuzzlePiece1" method="_on_drag_area_mouse_entered"]
+[connection signal="mouse_exited" from="PuzzlePieces/PuzzlePiece1/DragArea" to="PuzzlePieces/PuzzlePiece1" method="_on_drag_area_mouse_exited"]
+[connection signal="plus_one" from="PuzzlePieces/PuzzlePiece2" to="." method="_on_plus_one"]
+[connection signal="area_entered" from="PuzzlePieces/PuzzlePiece2/DragArea" to="PuzzlePieces/PuzzlePiece2" method="_on_drag_area_area_entered"]
+[connection signal="area_exited" from="PuzzlePieces/PuzzlePiece2/DragArea" to="PuzzlePieces/PuzzlePiece2" method="_on_drag_area_area_exited"]
+[connection signal="input_event" from="PuzzlePieces/PuzzlePiece2/DragArea" to="PuzzlePieces/PuzzlePiece2" method="_on_drag_area_input_event"]
+[connection signal="mouse_entered" from="PuzzlePieces/PuzzlePiece2/DragArea" to="PuzzlePieces/PuzzlePiece2" method="_on_drag_area_mouse_entered"]
+[connection signal="mouse_exited" from="PuzzlePieces/PuzzlePiece2/DragArea" to="PuzzlePieces/PuzzlePiece2" method="_on_drag_area_mouse_exited"]
+[connection signal="plus_one" from="PuzzlePieces/PuzzlePiece3" to="." method="_on_plus_one"]
+[connection signal="area_entered" from="PuzzlePieces/PuzzlePiece3/DragArea" to="PuzzlePieces/PuzzlePiece3" method="_on_drag_area_area_entered"]
+[connection signal="area_exited" from="PuzzlePieces/PuzzlePiece3/DragArea" to="PuzzlePieces/PuzzlePiece3" method="_on_drag_area_area_exited"]
+[connection signal="input_event" from="PuzzlePieces/PuzzlePiece3/DragArea" to="PuzzlePieces/PuzzlePiece3" method="_on_drag_area_input_event"]
+[connection signal="mouse_entered" from="PuzzlePieces/PuzzlePiece3/DragArea" to="PuzzlePieces/PuzzlePiece3" method="_on_drag_area_mouse_entered"]
+[connection signal="mouse_exited" from="PuzzlePieces/PuzzlePiece3/DragArea" to="PuzzlePieces/PuzzlePiece3" method="_on_drag_area_mouse_exited"]
+[connection signal="plus_one" from="PuzzlePieces/PuzzlePiece4" to="." method="_on_plus_one"]
+[connection signal="area_entered" from="PuzzlePieces/PuzzlePiece4/DragArea" to="PuzzlePieces/PuzzlePiece4" method="_on_drag_area_area_entered"]
+[connection signal="area_exited" from="PuzzlePieces/PuzzlePiece4/DragArea" to="PuzzlePieces/PuzzlePiece4" method="_on_drag_area_area_exited"]
+[connection signal="input_event" from="PuzzlePieces/PuzzlePiece4/DragArea" to="PuzzlePieces/PuzzlePiece4" method="_on_drag_area_input_event"]
+[connection signal="mouse_entered" from="PuzzlePieces/PuzzlePiece4/DragArea" to="PuzzlePieces/PuzzlePiece4" method="_on_drag_area_mouse_entered"]
+[connection signal="mouse_exited" from="PuzzlePieces/PuzzlePiece4/DragArea" to="PuzzlePieces/PuzzlePiece4" method="_on_drag_area_mouse_exited"]
+[connection signal="plus_one" from="PuzzlePieces/PuzzlePiece5" to="." method="_on_plus_one"]
+[connection signal="area_entered" from="PuzzlePieces/PuzzlePiece5/DragArea" to="PuzzlePieces/PuzzlePiece5" method="_on_drag_area_area_entered"]
+[connection signal="area_exited" from="PuzzlePieces/PuzzlePiece5/DragArea" to="PuzzlePieces/PuzzlePiece5" method="_on_drag_area_area_exited"]
+[connection signal="input_event" from="PuzzlePieces/PuzzlePiece5/DragArea" to="PuzzlePieces/PuzzlePiece5" method="_on_drag_area_input_event"]
+[connection signal="mouse_entered" from="PuzzlePieces/PuzzlePiece5/DragArea" to="PuzzlePieces/PuzzlePiece5" method="_on_drag_area_mouse_entered"]
+[connection signal="mouse_exited" from="PuzzlePieces/PuzzlePiece5/DragArea" to="PuzzlePieces/PuzzlePiece5" method="_on_drag_area_mouse_exited"]

@@ -38,7 +38,14 @@ func _physics_process(delta):
 
 
 func to_papan():
+	berdiri()
 	is_papan = true
 
 func set_flip_h(value: bool):
 	cula_sprite.set_flip_h(value)
+
+func duduk():
+	cula_sprite.set_animation("duduk")
+	
+func berdiri():
+	cula_sprite.set_animation("default")
