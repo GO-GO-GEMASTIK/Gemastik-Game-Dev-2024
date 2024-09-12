@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfxrhn4v0j7we"]
+[gd_scene load_steps=30 format=3 uid="uid://dfxrhn4v0j7we"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/main_room_upper.gd" id="1_dka7d"]
 [ext_resource type="Texture2D" uid="uid://02rnt6nv8sex" path="res://Sprites/Sekolah/Lantai Atas/done.jpg" id="2_b5aof"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="8_gwn3g"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="12_jd02c"]
 [ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="12_ms82n"]
+[ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/BG Noise/asrama.mp3" id="14_2qjmt"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/tangga_turun/turun.png" id="22_ag37u"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="37_uxaqc"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/Bagian_1/Main Room/subscenes/pintu.tscn" id="38_qxwyd"]
@@ -418,6 +419,11 @@ texture = ExtResource("12_ms82n")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-136, -1619)
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2qjmt")
+autoplay = true
+bus = &"SFX"
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

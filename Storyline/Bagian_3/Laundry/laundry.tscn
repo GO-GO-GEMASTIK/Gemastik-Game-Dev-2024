@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cyse53tnxmq8f"]
+[gd_scene load_steps=28 format=3 uid="uid://cyse53tnxmq8f"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_3/Laundry/laundry.gd" id="1_2lbf6"]
 [ext_resource type="Texture2D" uid="uid://bb2nhd68arwwx" path="res://Storyline/Bagian_3/Laundry/sprites/base.jpg" id="1_ke2ra"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://b3s377k66plnd" path="res://Storyline/Bagian_3/Laundry/sprites/warning box.png" id="6_msn7e"]
 [ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="7_4n3xt"]
 [ext_resource type="Texture2D" uid="uid://pllfaxgnc6wa" path="res://Sprites/Guide UI/pintu_kantin.png" id="9_qdimd"]
+[ext_resource type="AudioStream" uid="uid://bfdutyo0a50b3" path="res://Sounds/BG Noise/laundry-ambience.mp3" id="10_pulen"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="11_bd4be"]
+[ext_resource type="AudioStream" uid="uid://d4bfa1fv01yx0" path="res://Sounds/SFX/open_door.mp3" id="12_u4wio"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sao2q"]
 
@@ -382,9 +385,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("9_qdimd")
@@ -393,6 +396,25 @@ texture = ExtResource("9_qdimd")
 libraries = {
 "": SubResource("AnimationLibrary_leacs")
 }
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="LaundryAmbience" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(1374, 800)
+stream = ExtResource("10_pulen")
+volume_db = -12.0
+autoplay = true
+bus = &"BG Noise"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("11_bd4be")
+bus = &"SFX"
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("12_u4wio")
+bus = &"OpenDoor"
 
 [connection signal="body_entered" from="Areas/AreaBaju" to="." method="_on_area_baju_body_entered"]
 [connection signal="body_exited" from="Areas/AreaBaju" to="." method="_on_area_baju_body_exited"]

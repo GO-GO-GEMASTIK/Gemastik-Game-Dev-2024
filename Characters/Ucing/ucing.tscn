@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bgh6msei5sm35" path="res://Characters/Ucing/duduk/Timeline 1_0010.png" id="12_815s4"]
 [ext_resource type="Texture2D" uid="uid://byy35sl4h2uv5" path="res://Sprites/Animasi/Ucing Jalan/walk_0011.png" id="12_l41lm"]
 [ext_resource type="Texture2D" uid="uid://c12y1fqr0cq7w" path="res://Characters/Ucing/duduk/Timeline 1_0011.png" id="13_73duc"]
-[ext_resource type="AudioStream" uid="uid://b00qqwia51bq1" path="res://Sounds/walk/footstep.mp3" id="13_ts65y"]
+[ext_resource type="AudioStream" uid="uid://b00qqwia51bq1" path="res://Sounds/SFX/walk/footstep.mp3" id="13_ts65y"]
 [ext_resource type="Texture2D" uid="uid://bofo1q7vflbuo" path="res://Characters/Ucing/duduk/Timeline 1_0012.png" id="14_uvqde"]
 [ext_resource type="Texture2D" uid="uid://bg6lery6eyp5a" path="res://Characters/Ucing/duduk/Timeline 1_0013.png" id="15_qau2l"]
 [ext_resource type="Texture2D" uid="uid://bilbylbbe6mcv" path="res://Characters/Ucing/duduk/Timeline 1_0014.png" id="16_uqrqb"]
@@ -189,7 +189,6 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_38lki")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.550212
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.49995, -1.00001)
@@ -199,5 +198,9 @@ shape = SubResource("RectangleShape2D_ieknj")
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(52, 204)
 stream = ExtResource("13_ts65y")
-volume_db = -8.387
-bus = &"SFX"
+volume_db = -20.0
+pitch_scale = 0.9
+bus = &"Walking"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chc2gh27gxb1m"
+path="res://.godot/imported/asrama.mp3-07404205a2eb7d126b1e4b0d1741d246.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BG Noise/asrama.mp3"
+dest_files=["res://.godot/imported/asrama.mp3-07404205a2eb7d126b1e4b0d1741d246.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

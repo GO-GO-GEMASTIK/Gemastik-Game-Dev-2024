@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dydi28b6emnr2"]
+[gd_scene load_steps=26 format=3 uid="uid://dydi28b6emnr2"]
 
 [ext_resource type="Texture2D" uid="uid://tdrijru7ir0d" path="res://Storyline/Bagian_3/Kantin/sprites/base.jpg" id="1_3kfik"]
 [ext_resource type="Script" path="res://Storyline/Bagian_3/Kantin/kantin.gd" id="1_ed60l"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bxo0rx26jenmo" path="res://Characters/Maung/Maung.png" id="7_1a2o2"]
 [ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Characters/Buba/Buba.png" id="8_e22k2"]
 [ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Characters/Cula/cula.png" id="9_hdokw"]
+[ext_resource type="AudioStream" uid="uid://dlf1hb0f16ypq" path="res://Sounds/BG Noise/canteen-ambience.mp3" id="10_o2f35"]
+[ext_resource type="AudioStream" uid="uid://chx4xitr2ekdx" path="res://Sounds/BG Noise/roomtone-whitenoise.mp3" id="11_dckhs"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="12_elied"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pxfh3"]
 
@@ -206,6 +209,7 @@ _data = {
 
 [node name="Kantin" type="Node2D"]
 script = ExtResource("1_ed60l")
+is_bagian_3 = true
 
 [node name="MapLayout" type="Node2D" parent="."]
 
@@ -295,6 +299,26 @@ texture = ExtResource("9_hdokw")
 libraries = {
 "": SubResource("AnimationLibrary_qkmb1")
 }
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="KantinAmbience" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(2069, 837)
+stream = ExtResource("10_o2f35")
+volume_db = 5.0
+autoplay = true
+bus = &"SFX"
+
+[node name="WhiteNoise" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("11_dckhs")
+volume_db = 5.0
+autoplay = true
+bus = &"BG Noise"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("12_elied")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Areas/AreaMakan" to="." method="_on_area_makan_body_entered"]
 [connection signal="body_exited" from="Areas/AreaMakan" to="." method="_on_area_makan_body_exited"]

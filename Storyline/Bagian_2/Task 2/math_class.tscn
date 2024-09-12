@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bqqsgfob6qsjh" path="res://Sprites/Tasks/Task 2/base light.png" id="2_ictew"]
 [ext_resource type="Texture2D" uid="uid://elbv5dbv0ulh" path="res://Sprites/Tasks/Task 2/guide 3.jpg" id="2_v4abn"]
 [ext_resource type="Texture2D" uid="uid://u4h4e2v6c47u" path="res://Sprites/Tasks/Task 2/1.png" id="6_i6rlp"]
+[ext_resource type="FontFile" uid="uid://ylhyer5507re" path="res://Dialogue/Storytime.ttf" id="6_iqcd8"]
 [ext_resource type="Texture2D" uid="uid://17cfvc7gctbe" path="res://Sprites/Tasks/Task 2/1 on.png" id="7_qq86c"]
-[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="8_2d2vg"]
 [ext_resource type="Texture2D" uid="uid://typn4kx7u0jv" path="res://Sprites/Tasks/Task 2/1 answer bg.png" id="8_j5q0p"]
 [ext_resource type="Texture2D" uid="uid://o632sw8x5osg" path="res://Sprites/Tasks/Task 2/2.png" id="8_qcsgi"]
 [ext_resource type="Texture2D" uid="uid://btpq6ygsbw2t4" path="res://Sprites/Tasks/Task 2/2 on.png" id="9_at3d0"]
@@ -133,12 +133,12 @@ autoplay = "default"
 script = ExtResource("13_eor1r")
 
 [node name="Answer1" type="LineEdit" parent="Question_1"]
-offset_left = 1186.0
+offset_left = 1182.0
 offset_top = 95.0
 offset_right = 1286.0
 offset_bottom = 187.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 script = ExtResource("10_xyys4")
@@ -164,11 +164,11 @@ autoplay = "default"
 script = ExtResource("13_eor1r")
 
 [node name="Answer2" type="LineEdit" parent="Question_2"]
-offset_left = 1187.0
+offset_left = 1183.0
 offset_top = 345.0
 offset_right = 1287.0
 offset_bottom = 437.0
-theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 script = ExtResource("13_u6bdw")
@@ -194,11 +194,11 @@ autoplay = "default"
 script = ExtResource("13_eor1r")
 
 [node name="Answer3" type="LineEdit" parent="Question_3"]
-offset_left = 1188.0
+offset_left = 1184.0
 offset_top = 623.0
 offset_right = 1288.0
 offset_bottom = 715.0
-theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 script = ExtResource("16_gbw3s")
@@ -224,11 +224,11 @@ autoplay = "default"
 script = ExtResource("13_eor1r")
 
 [node name="Answer4" type="LineEdit" parent="Question_4"]
-offset_left = 1190.0
+offset_left = 1186.0
 offset_top = 884.0
 offset_right = 1290.0
 offset_bottom = 976.0
-theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
 alignment = 1
 script = ExtResource("19_xi4d2")
@@ -318,8 +318,9 @@ script = ExtResource("15_puprp")
 
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_waqk4")
+volume_db = -8.509
 autoplay = true
-bus = &"Music"
+bus = &"SFX"
 
 [node name="Finish_Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_llqdg")

@@ -8,6 +8,8 @@ extends Node2D
 @onready var area_baju = %AreaBaju
 @onready var animation = $AnimationPlayer
 @onready var guide_task = %GuideTask
+@onready var pop = %Pop
+@onready var open_door = %OpenDoor
 
 var right_limit = GameStateManager.get_room_right_limit("laundry")
 var laundry_task = load("res://Storyline/Bagian_3/Task 3/laundry_drag_drop.tscn")
@@ -20,6 +22,7 @@ var to_main := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera.set_limit(SIDE_RIGHT, right_limit)
+	camera.reset_smoothing()
 	if is_bagian_3:
 		door = false
 		if !GameStateManager.is_task_completed(3):
@@ -50,6 +53,7 @@ func _input(event):
 			task_3 = false
 			guide_task.set_visible(true)
 		if to_main:
+			open_door.play()
 			animation.play("hide_door")
 			animation.queue("hide_kantin")
 			GameStateManager.set_pos_state("KeluarLaundry", true)
@@ -60,10 +64,10 @@ func _input(event):
 
 func _on_area_baju_body_entered(body):
 	if body == ucing:
+		pop.play()
 		animation.play("show_task")
 		animation.queue("float_task")
 		task_3 = true
-
 func _on_area_baju_body_exited(body):
 	if body == ucing:
 		animation.play("hide_task")
@@ -71,10 +75,10 @@ func _on_area_baju_body_exited(body):
 
 func _on_area_pintu_body_entered(body):
 	if body == ucing and door:
+		pop.play()
 		animation.play("show_door")
 		animation.queue("float_door")
 		to_main = true
-
 func _on_area_pintu_body_exited(body):
 	if body == ucing and door:
 		animation.play("hide_door")

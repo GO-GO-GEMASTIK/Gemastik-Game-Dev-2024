@@ -14,11 +14,19 @@ var waiting = false
 var called = false
 var jumping = false
 var is_papan = false
+var is_duduk = false
 
 # ---MOVEMENT AND FOLLOWING MECHANISM---
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	if (velocity.x > 1 || velocity.x < -1):
+		if !is_duduk:
+			maung_sprite.animation = "walk"
+	else:
+		if !is_duduk:
+			maung_sprite.animation = "default"
 		
 	# Handle Jump
 	if is_on_floor() and jumping:
@@ -105,7 +113,9 @@ func start_waiting():
 	waiting = false
 
 func duduk():
+	is_duduk = true
 	maung_sprite.set_animation("duduk")
 	
 func berdiri():
+	is_duduk = false
 	maung_sprite.set_animation("default")

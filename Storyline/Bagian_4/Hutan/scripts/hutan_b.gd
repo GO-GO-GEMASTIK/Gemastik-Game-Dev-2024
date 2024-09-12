@@ -9,6 +9,7 @@ signal r_out
 @onready var buba = $Chara/Buba
 @onready var maung = $Chara/Maung
 @onready var chara = $Chara
+@onready var pop = %Pop
 
 var hutan_c = load("res://Storyline/Bagian_4/Hutan/hutan_c.tscn")
 
@@ -53,6 +54,7 @@ func _process(delta):
 
 func _on_area_next_body_entered(body):
 	if body == ucing:
+		pop.play()
 		r_in.emit()
 		next_scene = true
 

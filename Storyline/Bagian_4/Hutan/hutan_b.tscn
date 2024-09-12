@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c0bvq1um8vbc5"]
+[gd_scene load_steps=48 format=3 uid="uid://c0bvq1um8vbc5"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan_b.gd" id="1_p10f7"]
 [ext_resource type="Texture2D" uid="uid://m6r6dg25kra4" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-b.png" id="2_prdo6"]
@@ -32,6 +32,15 @@
 [ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="30_0ween"]
 [ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="31_pbp5c"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="32_iwcjw"]
+[ext_resource type="Texture2D" uid="uid://4wqjb0eu2ii2" path="res://Storyline/Bagian_4/Hutan/sprites/daun/1.png" id="33_ht2gj"]
+[ext_resource type="Texture2D" uid="uid://nvf04t42g4g3" path="res://Storyline/Bagian_4/Hutan/sprites/daun/2.png" id="34_kjagm"]
+[ext_resource type="Texture2D" uid="uid://cd8ptrickfkka" path="res://Storyline/Bagian_4/Hutan/sprites/daun/3.png" id="35_moqcb"]
+[ext_resource type="Texture2D" uid="uid://cbkbtp2rxdhoc" path="res://Storyline/Bagian_4/Hutan/sprites/daun/4.png" id="36_w0vbn"]
+[ext_resource type="Texture2D" uid="uid://dqt87qu7v0ud0" path="res://Storyline/Bagian_4/Hutan/sprites/daun/5.png" id="37_cf0ac"]
+[ext_resource type="Texture2D" uid="uid://bb3sevvy1t3mv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/6.png" id="38_whciw"]
+[ext_resource type="Texture2D" uid="uid://twmnts31o5wv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/7.png" id="39_xidnq"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/BG Noise/Hutan.mp3" id="40_ejy5r"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="41_pxpff"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0a0b"]
 animations = [{
@@ -120,6 +129,16 @@ normal = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3upmi"]
 
+[sub_resource type="Curve" id="Curve_iww2o"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -83.0769), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_qa2j6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.692308), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [node name="Hutan" type="Node2D"]
 script = ExtResource("1_p10f7")
 
@@ -196,6 +215,251 @@ ucing = NodePath("../MC")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("32_iwcjw")]
+
+[node name="Leaves" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(735, 0)
+
+[node name="Daun1" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("33_ht2gj")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun2" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("34_kjagm")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun3" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("35_moqcb")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun4" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("36_w0vbn")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun5" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("37_cf0ac")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun6" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("38_whciw")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun7" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("39_xidnq")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Leaves2" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(8390, 2100)
+
+[node name="Daun1" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("33_ht2gj")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun2" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("34_kjagm")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun3" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("35_moqcb")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun4" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("36_w0vbn")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun5" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("37_cf0ac")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun6" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("38_whciw")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun7" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("39_xidnq")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="HutanAmbience" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("40_ejy5r")
+volume_db = -10.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("41_pxpff")
+bus = &"SFX"
 
 [connection signal="following" from="." to="Chara/Buba" method="_following"]
 [connection signal="following" from="." to="Chara/Maung" method="_following"]

@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var ucing = $Sprite2D
 @onready var walking_sound = $Walk
 @onready var camera: Camera2D = $Camera2D
+@onready var timer = $Timer
 
 var JUMP_VELOCITY = -450.0
 var movement_enabled = true
@@ -13,6 +14,7 @@ var last_facing_left = false
 var push_force = 80.0
 
 var is_duduk = false
+var walked = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -25,8 +27,13 @@ func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1):
 		if !is_duduk:
 			ucing.animation = "walk"
+			if timer.time_left <= 0:
+				walking_sound.pitch_scale = randf_range(0.8, 1.2)
+				walking_sound.play()
+				timer.start(0.2)
 	else:
 		if !is_duduk:
+			walking_sound.stop()
 			ucing.animation = "idle"
 
 	# Add the gravity.
@@ -64,6 +71,12 @@ func _physics_process(delta):
 	# Set sprite flip based on the last direction faced
 	ucing.flip_h = last_facing_left
 #endregion =============================================
+
+func walking():
+	walked = true
+	if walked:
+		walking_sound.play()
+		walked = false
 
 
 #region MOVEMENT & CAMERA

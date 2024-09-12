@@ -3,6 +3,7 @@ extends Area2D
 @onready var task_warning = %TaskWarning
 @onready var task_player = %TaskPlayer
 @onready var guide_player = %GuidePlayer
+@onready var pop = %Pop
 
 var on_meja := false
 var task_completed := GameStateManager.is_task_completed(5)
@@ -27,6 +28,7 @@ func _input(event):
 
 func _on_body_entered(body):
 	if body.name == "MC" and show_task:
+		pop.play()
 		guide_player.play("hide_guide")
 		task_player.play("show_task")
 		task_player.queue("task_floating")

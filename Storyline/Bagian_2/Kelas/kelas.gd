@@ -27,6 +27,9 @@ var main = load("res://Storyline/Bagian_1/Main Room/main_room.tscn")
 @export var is_bagian_2: bool = GameStateManager.get_string_state("Bagian2")
 @export var is_bagian_3: bool = GameStateManager.get_string_state("Bagian3")
 
+@onready var sound_pop = $Sound/Pop
+@onready var sound_duduk = $Sound/Duduk
+@onready var open_door = %OpenDoor
 
 #Variables
 var right_limit: int = GameStateManager.get_room_right_limit("kelas")
@@ -73,6 +76,8 @@ func _input(event):
 	if event.is_action_pressed("talk"):
 		if duduk:
 			animation.play("hide_view_icon")
+			sound_duduk.play()
+			await get_tree().create_timer(0.5).timeout
 			part_2()
 			duduk = false
 		if view_score:
@@ -90,6 +95,7 @@ func _input(event):
 			view_task = false
 			papan = false
 		if to_main:
+			open_door.play()
 			animation.play("hide_door")
 			animation.queue("hide_laundry")
 			GameStateManager.set_pos_state("KeluarKelas", true)
@@ -218,6 +224,7 @@ func b3_part_3():
 #region SIGNAL MANAGEMENT
 func _on_area_bangku_body_entered(body):
 	if body == ucing and !task_2_completed and is_bagian_2:
+		sound_pop.play()
 		duduk = true
 		animation.play("hide_warning")
 		animation.queue("show_view_icon")
@@ -230,6 +237,7 @@ func _on_area_bangku_body_exited(body):
 	
 func _on_area_papan_body_entered(body):
 	if body == ucing and papan:
+		sound_pop.play()
 		animation.play("show_papan")
 		animation.queue("float_papan")
 		if is_bagian_2:
@@ -237,7 +245,6 @@ func _on_area_papan_body_entered(body):
 		elif pengumuman:
 			view_task = true
 			animation.queue("hide_pengumuman")
-	
 func _on_area_papan_body_exited(body):
 	if body == ucing and papan:
 		animation.play("hide_papan")
@@ -249,6 +256,7 @@ func _on_area_papan_body_exited(body):
 
 func _on_area_ngobrol_body_entered(body):
 	if body == ucing and is_bagian_3 and !talked:
+		sound_pop.play()
 		ngobrol = true
 		animation.play("show_view_talk")
 		animation.queue("float_view_talk")
@@ -259,6 +267,7 @@ func _on_area_ngobrol_body_exited(body):
 
 func _on_area_pintu_body_entered(body):
 	if body == ucing and GameStateManager.get_string_state("DirectionLaundry"):
+		sound_pop.play()
 		animation.play("show_door")
 		animation.queue("float_door")
 		to_main = true

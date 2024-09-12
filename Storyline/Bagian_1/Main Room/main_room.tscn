@@ -23,7 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="27_s03vw"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/tangga_turun/turun.png" id="30_j2shl"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
-[ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="57_nv6wi"]
+[ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/BG Noise/asrama.mp3" id="57_nv6wi"]
 [ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide UI/pintu_gudang.png" id="61_e5s6k"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
@@ -1072,11 +1072,6 @@ libraries = {
 stream = ExtResource("54_mfs8a")
 bus = &"SFX"
 
-[node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("57_nv6wi")
-autoplay = true
-bus = &"Music"
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("15_drt8y")
 tutor_1 = ExtResource("21_vir07")
@@ -1155,6 +1150,11 @@ grow_horizontal = 2
 texture = ExtResource("21_vir07")
 
 [node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("27_s03vw")]
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_nv6wi")
+autoplay = true
+bus = &"SFX"
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

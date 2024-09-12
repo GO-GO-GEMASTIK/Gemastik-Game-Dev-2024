@@ -12,6 +12,7 @@ signal jump_off
 @onready var camera: Camera2D = ucing.camera
 @onready var small_box = $SmallBox
 @onready var animation = $CanvasLayer/AnimationPlayer
+@onready var pop = %Pop
 
 var scene_bukit = load("res://Storyline/Bagian_4/Bukit/bukit.tscn")
 var gasped := false
@@ -90,6 +91,7 @@ func _on_jump_area_exited(body):
 
 func _on_next_area_body_entered(body):
 	if body.name == "MC":
+		pop.play()
 		r_in.emit()
 		bukit = true
 

@@ -10,6 +10,7 @@ signal r_out
 @onready var maung = $Chara/Maung
 @onready var chara = $Chara
 @onready var guide_task = $CanvasLayer/GuideTask
+@onready var pop = %Pop
 
 var task_6 = load("res://Storyline/Bagian_4/Task 6/puzzle.tscn")
 var hutan_b = load("res://Storyline/Bagian_4/Hutan/hutan_b.tscn")
@@ -88,6 +89,7 @@ func _on_button_pressed():
 
 func _on_area_next_body_entered(body):
 	if body == ucing:
+		pop.play()
 		r_in.emit()
 		next_scene = true
 

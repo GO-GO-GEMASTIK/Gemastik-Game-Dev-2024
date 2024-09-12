@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgaisr12ewerl"]
 
 [ext_resource type="VideoStream" path="res://Sprites/Pembuka_Cerita.ogv" id="2_nlvdb"]
-[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/Room background/Hutan.mp3" id="3_6fcqs"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/BG Noise/Hutan.mp3" id="3_6fcqs"]
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/IntroDialogue.gd" id="3_6p770"]
 [ext_resource type="PackedScene" uid="uid://rir5f88uh8k0" path="res://Storyline/Bagian_1/Main Room/main_room.tscn" id="3_nhvr0"]
 

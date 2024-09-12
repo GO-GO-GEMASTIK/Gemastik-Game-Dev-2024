@@ -8,6 +8,7 @@ signal r_out
 @onready var camera: Camera2D = ucing.camera
 @onready var buba = $Buba
 @onready var maung = $Maung
+@onready var pop = %Pop
 
 var hutan := false
 var kawasan_hutan_dialog := false
@@ -62,6 +63,7 @@ func _input(event):
 
 func _on_next_area_body_entered(body):
 	if body == ucing:
+		pop.play()
 		hutan = true
 		r_in.emit()
 

@@ -45,7 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0012.png" id="41_amnve"]
 [ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box_idle.png" id="42_kf0wf"]
 [ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Characters/Buba/Buba.png" id="44_hlwxj"]
-[ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/Room background/gudang.mp3" id="44_u1iqs"]
+[ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/BG Noise/gudang.mp3" id="44_u1iqs"]
 [ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/warning box.png" id="45_gcn08"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="46_a40nk"]
 

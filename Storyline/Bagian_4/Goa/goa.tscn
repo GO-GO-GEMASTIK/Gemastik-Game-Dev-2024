@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c5n1h2xewm4js"]
+[gd_scene load_steps=58 format=3 uid="uid://c5n1h2xewm4js"]
 
 [ext_resource type="Texture2D" uid="uid://d3g6aw33hf4o1" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/base-guide.jpg" id="1_4dk1b"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Goa/goa.gd" id="1_o2nxv"]
@@ -46,6 +46,8 @@
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="39_56cta"]
 [ext_resource type="Texture2D" uid="uid://bn5ae0d5k61a8" path="res://Storyline/Bagian_4/Goa/sprites/solidblack.png" id="44_v0pt1"]
 [ext_resource type="Texture2D" uid="uid://d24qyl4sk714f" path="res://Storyline/Bagian_4/Goa/sprites/task_7.png" id="46_bfw18"]
+[ext_resource type="AudioStream" uid="uid://uqir66yprkp7" path="res://Sounds/BG Noise/goa-ambience.mp3" id="47_f4vtv"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="48_flets"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2vrdm"]
 normal = Vector2(1, 0)
@@ -416,6 +418,18 @@ icon = ExtResource("39_56cta")
 libraries = {
 "": SubResource("AnimationLibrary_adr3f")
 }
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="GoaAmbience" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("47_f4vtv")
+autoplay = true
+bus = &"BG Noise"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("48_flets")
+bus = &"SFX"
 
 [connection signal="following" from="." to="Chara/Maung" method="_following"]
 [connection signal="following" from="." to="Chara/Buba" method="_following"]

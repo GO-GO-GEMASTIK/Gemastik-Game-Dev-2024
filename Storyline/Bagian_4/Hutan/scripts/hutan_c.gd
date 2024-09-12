@@ -10,6 +10,7 @@ signal r_out
 @onready var maung = $Chara/Maung
 @onready var chara = $Chara
 @onready var animation = $AnimationPlayer
+@onready var pop = %Pop
 
 var goa = load("res://Storyline/Bagian_4/Goa/goa.tscn")
 
@@ -54,6 +55,7 @@ func _process(delta):
 
 func _on_area_goa_body_entered(body):
 	if body == ucing:
+		pop.play()
 		on_goa = true
 		animation.play("show_view")
 		animation.queue("float_view")

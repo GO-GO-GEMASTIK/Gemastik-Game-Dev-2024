@@ -34,6 +34,7 @@ func _ready():
 	camera.limit_right = GameStateManager.get_room_right_limit("kamar")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	ucing.look_left()
+	camera.reset_smoothing()
 	
 	if is_bagian_3:
 		run_b3_part_1()

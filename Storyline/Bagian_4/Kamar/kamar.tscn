@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://civ0uyremjeve"]
+[gd_scene load_steps=89 format=3 uid="uid://civ0uyremjeve"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Kamar/kamar.gd" id="1_0lu7m"]
 [ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Storyline/Bagian_4/Kamar/sprites/Kamar/kamar.jpg" id="2_0lktt"]
@@ -59,7 +59,11 @@
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="55_r8xa2"]
 [ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="58_egdx4"]
 [ext_resource type="Texture2D" uid="uid://0gdh65cy2xy0" path="res://Storyline/Bagian_4/Kamar/sprites/ke_hutan.png" id="60_tw7nk"]
+[ext_resource type="AudioStream" uid="uid://ltbfm5e4qefw" path="res://Sounds/BG Noise/bird_chirps.mp3" id="61_e1yva"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="62_g1y4f"]
+[ext_resource type="AudioStream" uid="uid://chx4xitr2ekdx" path="res://Sounds/BG Noise/roomtone-whitenoise.mp3" id="62_ljf5p"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="63_ewqxi"]
+[ext_resource type="AudioStream" uid="uid://d4bfa1fv01yx0" path="res://Sounds/SFX/open_door.mp3" id="64_tq1ft"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uh6i6"]
 
@@ -725,7 +729,7 @@ stream = ExtResource("7_4glif")
 bus = &"SFX"
 
 [node name="MC" parent="." instance=ExtResource("4_7hlar")]
-position = Vector2(1527, 850)
+position = Vector2(1527, 851)
 collision_layer = 6
 
 [node name="Maung" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("12_7qxud")]
@@ -742,7 +746,7 @@ SPEED = 390
 
 [node name="Cula" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1135, 847)
+position = Vector2(1135, 815)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_g3wdm")
 
@@ -815,9 +819,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("58_egdx4")
@@ -827,9 +831,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.002
 grow_horizontal = 2
 texture = ExtResource("52_cnr2l")
@@ -848,12 +852,36 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("60_tw7nk")
+
+[node name="Sound" type="Node2D" parent="."]
+
+[node name="BirdChirps" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("61_e1yva")
+volume_db = 14.182
+autoplay = true
+bus = &"SFX"
+
+[node name="WhiteNoise" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("62_ljf5p")
+volume_db = 14.182
+autoplay = true
+bus = &"SFX"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sound"]
+unique_name_in_owner = true
+stream = ExtResource("63_ewqxi")
+bus = &"SFX"
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="Sound"]
+unique_name_in_owner = true
+stream = ExtResource("64_tq1ft")
+bus = &"OpenDoor"
 
 [connection signal="following" from="." to="Maung" method="_following"]
 [connection signal="following" from="." to="Buba" method="_following"]

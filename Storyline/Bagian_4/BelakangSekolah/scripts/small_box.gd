@@ -8,6 +8,7 @@ signal show_lari
 
 @onready var box_camera: Camera2D = $Camera2D
 @onready var task_icon = $TaskPlayer
+@onready var pop = %Pop
 
 var pushable := false
 var interactable := false
@@ -35,6 +36,7 @@ func _input(event):
 		jump_maung.emit()
 
 func _on_push_area_body_entered(body):
+	pop.play()
 	task_icon.show_icon()
 	pushable = true
 

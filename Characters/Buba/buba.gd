@@ -15,10 +15,18 @@ var waiting = false
 var called = false
 var jumping = false
 var is_papan = false
+var is_duduk = false
 
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	
+	if (velocity.x > 1 || velocity.x < -1):
+		if !is_duduk:
+			buba_sprite.animation = "walk"
+	else:
+		if !is_duduk:
+			buba_sprite.animation = "default"
 	
 		# Handle Jump
 	if is_on_floor() and jumping:
@@ -105,7 +113,9 @@ func start_waiting():
 	
 
 func duduk():
+	is_duduk = true
 	buba_sprite.set_animation("duduk")
 	
 func berdiri():
+	is_duduk = false
 	buba_sprite.set_animation("default")

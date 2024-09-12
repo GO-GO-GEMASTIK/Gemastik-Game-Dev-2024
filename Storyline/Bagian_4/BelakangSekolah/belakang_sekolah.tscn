@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=3 uid="uid://dgp0bg1mxt671"]
+[gd_scene load_steps=108 format=3 uid="uid://dgp0bg1mxt671"]
 
 [ext_resource type="Texture2D" uid="uid://c3qf3o7l130ly" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/base.png" id="1_3gura"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/belakang_sekolah.gd" id="1_ccjp5"]
@@ -86,6 +86,8 @@
 [ext_resource type="PackedScene" uid="uid://hm4svpjokxbu" path="res://Utility/IconPlayer/task_player.tscn" id="84_mv6cg"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="84_ujesd"]
 [ext_resource type="Texture2D" uid="uid://dwluvexnat6nw" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/guide_lari.png" id="86_5hnbl"]
+[ext_resource type="AudioStream" uid="uid://degaii2x7dghi" path="res://Sounds/BG Noise/Halaman belakang asrama.mp3" id="87_tym11"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="88_g6vr2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_781kr"]
 animations = [{
@@ -333,7 +335,10 @@ size = Vector2(20.5684, 20)
 size = Vector2(19.9562, 20.5915)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjh0i"]
-size = Vector2(22.7373, 28.6045)
+size = Vector2(16.5705, 28.6045)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f10pb"]
+size = Vector2(23.2714, 25.8517)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ewlr"]
 
@@ -345,34 +350,6 @@ size = Vector2(22.7373, 28.6045)
 size = Vector2(21.7986, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsa1l"]
-
-[sub_resource type="Animation" id="Animation_847pk"]
-resource_name = "show_lari"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationPlayer/GuideLari:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationPlayer/GuideLari:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_aw8vk"]
 length = 0.001
@@ -427,6 +404,34 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_847pk"]
+resource_name = "show_lari"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/GuideLari:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/GuideLari:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lwglp"]
@@ -595,7 +600,7 @@ position = Vector2(3102, 1219)
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/JumpArea"]
-position = Vector2(241.823, -127.417)
+position = Vector2(91.7502, -127.417)
 scale = Vector2(48.6709, 29.6165)
 shape = SubResource("RectangleShape2D_xjh0i")
 
@@ -606,7 +611,7 @@ collision_mask = 6
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/BridgeArea"]
 position = Vector2(-0.394531, 0)
 scale = Vector2(22.4649, 25.7623)
-shape = SubResource("RectangleShape2D_xjh0i")
+shape = SubResource("RectangleShape2D_f10pb")
 
 [node name="NextArea" type="Area2D" parent="Areas"]
 position = Vector2(10830, 1354)
@@ -719,6 +724,18 @@ offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("86_5hnbl")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="BelakangAsrama" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("87_tym11")
+autoplay = true
+bus = &"SFX"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("88_g6vr2")
+bus = &"SFX"
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

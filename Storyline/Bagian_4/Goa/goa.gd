@@ -17,6 +17,7 @@ signal following
 @onready var guide_task_7 = $CanvasLayer/GuideTask7
 @onready var darken = $FrontLayout/Darken
 @onready var animation = $AnimationPlayer
+@onready var pop = %Pop
 
 var task_8 = load("res://Storyline/Bagian_4/Task 8/senter_game_1.tscn")
 var task_7 = load("res://Storyline/Bagian_4/Task 7/lock_pick_1.tscn")
@@ -159,6 +160,7 @@ func _on_button_pressed():
 
 func _on_area_kandang_body_entered(body):
 	if body == ucing and !GameStateManager.is_task_completed(7):
+		pop.play()
 		on_lock = true
 		animation.play("show_task")
 		animation.queue("float_task")

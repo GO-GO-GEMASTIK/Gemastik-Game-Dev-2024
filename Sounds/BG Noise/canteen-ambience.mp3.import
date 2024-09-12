@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlf1hb0f16ypq"
+path="res://.godot/imported/canteen-ambience.mp3-ef013af4346d227015e9366519774caa.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BG Noise/canteen-ambience.mp3"
+dest_files=["res://.godot/imported/canteen-ambience.mp3-ef013af4346d227015e9366519774caa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

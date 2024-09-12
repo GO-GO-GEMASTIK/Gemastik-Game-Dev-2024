@@ -39,7 +39,7 @@ func _ready():
 func _input(event):
 	if !dialogue_is_running:
 		if event.is_action_pressed("talk") and on_door:
-			dialogue_starter("locked_door")
+			dialogue_starter("unable_door")
 
 
 #region PINTU IN/OUT

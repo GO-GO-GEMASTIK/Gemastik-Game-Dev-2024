@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0g13s1av6h87"]
+[gd_scene load_steps=26 format=3 uid="uid://d0g13s1av6h87"]
 
 [ext_resource type="Texture2D" uid="uid://bhjdb1jwpj68r" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-a.png" id="1_5lmba"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan.gd" id="1_80gln"]
@@ -10,6 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://ny52d47kqovv" path="res://Storyline/Bagian_4/Hutan/sprites/task_guide/warning box.png" id="8_w3lab"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="9_x4meq"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="10_8ymeu"]
+[ext_resource type="Texture2D" uid="uid://4wqjb0eu2ii2" path="res://Storyline/Bagian_4/Hutan/sprites/daun/1.png" id="11_hdojy"]
+[ext_resource type="Texture2D" uid="uid://nvf04t42g4g3" path="res://Storyline/Bagian_4/Hutan/sprites/daun/2.png" id="12_wh7kn"]
+[ext_resource type="Texture2D" uid="uid://cd8ptrickfkka" path="res://Storyline/Bagian_4/Hutan/sprites/daun/3.png" id="13_q4omv"]
+[ext_resource type="Texture2D" uid="uid://cbkbtp2rxdhoc" path="res://Storyline/Bagian_4/Hutan/sprites/daun/4.png" id="14_0wm65"]
+[ext_resource type="Texture2D" uid="uid://dqt87qu7v0ud0" path="res://Storyline/Bagian_4/Hutan/sprites/daun/5.png" id="15_rbv4m"]
+[ext_resource type="Texture2D" uid="uid://bb3sevvy1t3mv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/6.png" id="16_1crn4"]
+[ext_resource type="Texture2D" uid="uid://twmnts31o5wv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/7.png" id="17_4bvy7"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/BG Noise/Hutan.mp3" id="18_jngg1"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="19_u7le5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d4mxq"]
 normal = Vector2(1, 0)
@@ -19,6 +28,16 @@ normal = Vector2(1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2p10"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v864i"]
+
+[sub_resource type="Curve" id="Curve_023ho"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -83.0769), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_o1rjb"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.692308), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Hutan" type="Node2D"]
 script = ExtResource("1_80gln")
@@ -117,6 +136,135 @@ grow_vertical = 2
 icon = ExtResource("9_x4meq")
 
 [node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("10_8ymeu")]
+
+[node name="Leaves" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(5000, 0)
+
+[node name="Daun1" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("11_hdojy")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun2" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("12_wh7kn")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun3" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("13_q4omv")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun4" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("14_0wm65")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun5" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("15_rbv4m")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun6" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("16_1crn4")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Daun7" type="CPUParticles2D" parent="Leaves"]
+amount = 15
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("17_4bvy7")
+emission_shape = 3
+emission_rect_extents = Vector2(5000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_023ho")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_o1rjb")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="HutanAmbience" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("18_jngg1")
+volume_db = -10.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("19_u7le5")
+bus = &"SFX"
 
 [connection signal="following" from="." to="Chara/Buba" method="_following"]
 [connection signal="following" from="." to="Chara/Maung" method="_following"]
