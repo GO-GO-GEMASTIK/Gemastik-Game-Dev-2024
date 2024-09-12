@@ -316,11 +316,11 @@ position = Vector2(2253, 999)
 shape = SubResource("WorldBoundaryShape2D_qon2x")
 
 [node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
-position = Vector2(3610, 546)
+position = Vector2(2788, 546)
 shape = SubResource("WorldBoundaryShape2D_hwl7q")
 
 [node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
-position = Vector2(135, 505)
+position = Vector2(7, 505)
 shape = SubResource("WorldBoundaryShape2D_3ncbp")
 
 [node name="Box" type="Area2D" parent="."]
