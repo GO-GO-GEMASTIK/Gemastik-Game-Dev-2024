@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://dgp0bg1mxt671"]
+[gd_scene load_steps=109 format=3 uid="uid://dgp0bg1mxt671"]
 
 [ext_resource type="Texture2D" uid="uid://c3qf3o7l130ly" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/Belakang Asrama/base.png" id="1_3gura"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/BelakangSekolah/belakang_sekolah.gd" id="1_ccjp5"]
@@ -87,7 +87,8 @@
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="84_ujesd"]
 [ext_resource type="Texture2D" uid="uid://dwluvexnat6nw" path="res://Storyline/Bagian_4/BelakangSekolah/sprites/guide_lari.png" id="86_5hnbl"]
 [ext_resource type="AudioStream" uid="uid://degaii2x7dghi" path="res://Sounds/BG Noise/Halaman belakang asrama.mp3" id="87_tym11"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="88_g6vr2"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="88_g6vr2"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="89_abljr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_781kr"]
 animations = [{
@@ -639,7 +640,7 @@ scale = Vector2(32.4771, 5.78433)
 shape = SubResource("RectangleShape2D_due4q")
 
 [node name="MC" parent="." instance=ExtResource("30_43ktj")]
-position = Vector2(404, 1010)
+position = Vector2(404, 1024)
 collision_layer = 4
 
 [node name="Buba" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("79_8tc2h")]
@@ -660,16 +661,19 @@ script = ExtResource("83_n654r")
 position = Vector2(12, -306)
 
 [node name="Sprite2D" type="Sprite2D" parent="SmallBox"]
+position = Vector2(127.286, 0)
 scale = Vector2(0.706807, 0.706807)
 texture = ExtResource("80_xdnu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBox"]
+position = Vector2(127.286, 5.78828e-11)
 rotation = 1.57079
 scale = Vector2(8.43108, 12.2953)
 shape = SubResource("RectangleShape2D_ye4o0")
 
 [node name="PushArea" type="Area2D" parent="SmallBox"]
 position = Vector2(-151, 0)
+scale = Vector2(0.401943, 1.14699)
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SmallBox/PushArea"]
@@ -736,6 +740,9 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("88_g6vr2")
 bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("89_abljr")]
+ucing = NodePath("../MC")
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

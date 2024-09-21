@@ -109,21 +109,22 @@ func _input(event):
 # === BAGIAN 2 ===
 func part_1():
 	ucing.disable_movement()
+	ucing.look_left()
 	buba.duduk()
 	cula.duduk()
 	maung.duduk()
+	otan.duduk()
 	
-	Dialogic.start("dialog_perkenalan")
-	#Dialogic.start("placeholder")
+	#Dialogic.start("dialog_perkenalan")
+	Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
 	
 	ucing.enable_movement()
 	animation.play("show_warning")
 
 func part_2():
-	ucing.duduk()
-
 	ucing.disable_movement()
+	ucing.duduk()
 	ucing.look_right()
 	ucing.set_global_position(Vector2(1493, 757))
 	await get_tree().create_timer(1).timeout
@@ -140,6 +141,7 @@ func part_3():
 	buba.duduk()
 	cula.duduk()
 	maung.duduk()
+	otan.duduk()
 	
 	ucing.disable_movement()
 	ucing.look_right()
@@ -189,7 +191,7 @@ func b3_part_1():
 	maung.set_global_position(Vector2(1200, 832))
 	buba.set_global_position(Vector2(1350, 803))
 	cula.set_global_position(Vector2(741, 841))
-	otan.set_global_position(Vector2(903, 840))
+	otan.set_global_position(Vector2(903, 757))
 	maung.set_flip_h(true)
 	buba.set_flip_h(true)
 
@@ -224,6 +226,7 @@ func b3_part_3():
 #region SIGNAL MANAGEMENT
 func _on_area_bangku_body_entered(body):
 	if body == ucing and !task_2_completed and is_bagian_2:
+		ucing.disable_jump()
 		sound_pop.play()
 		duduk = true
 		animation.play("hide_warning")
@@ -231,9 +234,10 @@ func _on_area_bangku_body_entered(body):
 		animation.queue("float_view_icon")
 func _on_area_bangku_body_exited(body):
 	if body == ucing and !task_2_completed and is_bagian_2:
+		ucing.enable_jump()
 		duduk = false
-		animation.play("show_warning")
-		animation.queue("hide_view_icon")
+		animation.play("hide_view_icon")
+		animation.queue("show_warning")
 	
 func _on_area_papan_body_entered(body):
 	if body == ucing and papan:

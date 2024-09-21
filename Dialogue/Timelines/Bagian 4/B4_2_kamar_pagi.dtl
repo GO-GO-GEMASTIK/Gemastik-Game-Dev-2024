@@ -1,11 +1,11 @@
 [wait time="1.0"]
-Maung: Sepertinya Otan benar benar menghilang! kasurnya masih rapih, ia tidak pulang semalam!
+Maung (Bingung): Sepertinya Otan benar benar menghilang! kasurnya masih rapih, ia tidak pulang semalam!
 Ucing: Benarkah?
-Buba: Ya, sepertinya bu Chilla dan kepala asrama juga sedang mengusutnya.
+Buba (BingungKaget): Ya, sepertinya bu Chilla dan kepala asrama juga sedang mengusutnya.
 Buba: Perkataan otan kali ini mengenai monster sepertinya benar adanya!
-Cula: Kita tidak mempercayainya karena ulahnya sendiri, itu bukan salah kita!
-Maung: Bagaimana ini? Bagaimana jika satu persatu dari kita ditangkap oleh monster itu?
-Cula: Maung kenapa kamu pengecut sekali? Bukankah kamu harimau? Seharusnya kamu berani seperti aku!!!
+Cula (Marah): Kita tidak mempercayainya karena ulahnya sendiri, itu bukan salah kita!
+Maung (Sedih): Bagaimana ini? Bagaimana jika satu persatu dari kita ditangkap oleh monster itu?
+Cula (Marah): Maung kenapa kamu pengecut sekali? Bukankah kamu harimau? Seharusnya kamu berani seperti aku!!!
 Buba: Apa kamu benar tidak takut dengan monster itu Cula?
 [signal arg="cula_switch"]
 Cula (CulaKamera): Lihatlah! Sekarang aku membawa kamera kemana mana aku akan menangkap gambar si monster langsung!

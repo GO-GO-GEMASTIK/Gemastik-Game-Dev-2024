@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlsphhpluxam4"
+path="res://.godot/imported/kardus jatoh.mp3-cc3201ae7ee27bfc622e9436fb19a9e6.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SFX/kardus/kardus jatoh.mp3"
+dest_files=["res://.godot/imported/kardus jatoh.mp3-cc3201ae7ee27bfc622e9436fb19a9e6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

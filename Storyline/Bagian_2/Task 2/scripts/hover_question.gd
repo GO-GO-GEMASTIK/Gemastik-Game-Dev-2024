@@ -16,14 +16,15 @@ func _process(delta):
 	# Define the threshold distance for changing animation
 	var threshold_distance = 300
 	
-	# Check if the mouse is near the sprite
-	if distance_to_mouse < threshold_distance:
-		# Change animation when the mouse is near
-		# Replace "animation_name" with the name of the animation you want to play
-		self.animation = "hover"
-	else:
-		# Change back to default animation when the mouse moves away
-		self.animation = "default"
+
 
 func _input(event):
 	pass
+
+
+func _on_question_1_mouse_entered():
+	self.animation = "hover"
+
+func _on_question_1_mouse_exited():
+	self.animation = "default"
+

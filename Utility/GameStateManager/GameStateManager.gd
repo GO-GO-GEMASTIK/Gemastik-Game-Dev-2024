@@ -2,6 +2,7 @@ extends Node
 
 var ucing_pos_main := Vector2(300.0, 845.0)
 
+
 var tasks := {
 	1: false,
 	2: false,
@@ -13,17 +14,24 @@ var tasks := {
 	8: false
 }
 
-var naughty_nice := {
-	"Kejujuran": "None",
-	"Rendah Hati": "None",
-	"Kerjasama": "None"
-}
+func get_tasks() -> Dictionary:
+	return tasks
+
+func set_tasks(new_tasks: Dictionary) -> void:
+	tasks = new_tasks
+
 
 var characteristics := {
 	"Jujur": false,
 	"KerjaSama": false,
 	"Menghargai": false,
 }
+func get_characteristics() -> Dictionary:
+	return characteristics
+
+func set_characteristics(new_characteristics: Dictionary) -> void:
+	characteristics = new_characteristics
+
 
 var string_states := {
 	"TutorialDone": false,
@@ -44,6 +52,13 @@ var string_states := {
 	"DirectionLaundry": false,
 	"TBC": false,
 }
+
+func get_string_states() -> Dictionary:
+	return string_states
+
+func set_string_states(new_string_states: Dictionary) -> void:
+	string_states = new_string_states
+
 
 var pos_states := {
 	"KeluarKamar": false,
@@ -70,20 +85,8 @@ var right_limit := {
 
 #region Pos and State Methods
 # State methods
-func set_naughty_nice(behavior: String, state: String):
-	if behavior in naughty_nice:
-		naughty_nice[behavior] = state
-
-func get_naughty_nice(behavior: String) -> int:
-	if naughty_nice[behavior] == "1":
-		print(naughty_nice[behavior])
-		return int(naughty_nice.get(behavior, 1))
-	else:
-		print(naughty_nice[behavior])
-		return int(naughty_nice.get(behavior,0))
-
 func update_pos_main(newPos: Vector2):
-	newPos.x -= 200
+	#newPos.x -= 200
 	ucing_pos_main = newPos
 	return ucing_pos_main
 
@@ -163,3 +166,59 @@ func get_room_right_limit(room: String):
 	if room in right_limit:
 		return right_limit[room]
 #endregion
+
+
+func reset_game_state():
+	# Reset ucing_pos_main
+	ucing_pos_main = Vector2(300.0, 845.0)
+	
+	# Reset tasks
+	tasks = {
+		1: false,
+		2: false,
+		3: false,
+		4: false,
+		5: false,
+		6: false,
+		7: false,
+		8: false,
+	}
+	
+	# Reset characteristics
+	characteristics = {
+		"Jujur": false,
+		"KerjaSama": false,
+		"Menghargai": false,
+	}
+	
+	# Reset string_states
+	string_states = {
+		"TutorialDone": false,
+		"Talked2Otan": false,
+		"InteractedCamera": false,
+		"Gudang": false,
+		"Kantin": false,
+		"Laundry": false,
+		"GuidePintuKuning": false,
+		"KeluarKamar": false,
+		"Bagian1": false,
+		"Bagian2": false,
+		"Bagian3": false,
+		"Bagian4": false,
+		"DirectionHutan": false,
+		"DirectionKelas": false,
+		"DirectionKantin": false,
+		"DirectionLaundry": false,
+		"TBC": false,
+	}
+	
+	# Reset pos_states
+	pos_states = {
+		"KeluarKamar": false,
+		"KeluarKelas": false,
+		"KeluarKantin": false,
+		"KeluarLaundry": false,
+		"TanggaAtas": false,
+		"TanggaMain": false,
+		"TanggaBawah": false,
+	}

@@ -100,7 +100,7 @@ func _on_area_next_body_exited(body):
 
 
 func _input(event):
-	if event.is_action_pressed("talk"):
+	if event.is_action_pressed("talk") and next_scene:
 		r_out.emit()
 		TransitionScreen.transition_loading()
 		await TransitionScreen.on_transition_finished

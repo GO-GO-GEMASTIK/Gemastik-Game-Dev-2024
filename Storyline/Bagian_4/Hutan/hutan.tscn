@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d0g13s1av6h87"]
+[gd_scene load_steps=27 format=3 uid="uid://d0g13s1av6h87"]
 
 [ext_resource type="Texture2D" uid="uid://bhjdb1jwpj68r" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-a.png" id="1_5lmba"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan.gd" id="1_80gln"]
@@ -18,7 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://bb3sevvy1t3mv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/6.png" id="16_1crn4"]
 [ext_resource type="Texture2D" uid="uid://twmnts31o5wv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/7.png" id="17_4bvy7"]
 [ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/BG Noise/Hutan.mp3" id="18_jngg1"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="19_u7le5"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="19_u7le5"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="20_dvv56"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d4mxq"]
 normal = Vector2(1, 0)
@@ -265,6 +266,9 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("19_u7le5")
 bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("20_dvv56")]
+ucing = NodePath("../Chara/MC")
 
 [connection signal="following" from="." to="Chara/Buba" method="_following"]
 [connection signal="following" from="." to="Chara/Maung" method="_following"]

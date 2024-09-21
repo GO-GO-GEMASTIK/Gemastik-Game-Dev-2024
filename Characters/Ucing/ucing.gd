@@ -15,6 +15,7 @@ var push_force = 80.0
 
 var is_duduk = false
 var walked = false
+var can_jump = true
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -41,7 +42,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and movement_enabled:
+	if Input.is_action_just_pressed("jump") and is_on_floor() and movement_enabled and can_jump:
 		velocity.y = JUMP_VELOCITY
 		if walking_sound.playing:
 			walking_sound.stop()
@@ -83,6 +84,7 @@ func walking():
 func disable_movement():
 	movement_enabled = false
 	velocity.x = move_toward(velocity.x, 0, SPEED)
+	velocity.y = 0
 	if !is_duduk:
 		ucing.animation = "idle"
 	if walking_sound.playing:
@@ -90,6 +92,12 @@ func disable_movement():
 
 func enable_movement():
 	movement_enabled = true
+
+func disable_jump():
+	can_jump = false
+
+func enable_jump():
+	can_jump = true
 
 func enable_camera():
 	camera.set_enabled(true)

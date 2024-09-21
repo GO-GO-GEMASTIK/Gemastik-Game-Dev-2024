@@ -15,9 +15,45 @@
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
+"FlatOtan": {
+"export_overrides": {
+"image": "\"res://Characters/Otan/ekspresi/flat.png\""
+},
+"mirror": false,
+"offset": Vector2(10, 145),
+"scale": 2.0,
+"scene": ""
+},
 "KepalaOtan": {
 "export_overrides": {
 "image": "\"res://Characters/Otan/Otan.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 140),
+"scale": 2.0,
+"scene": ""
+},
+"LaughOtan": {
+"export_overrides": {
+"image": "\"res://Characters/Otan/ekspresi/laugh-mode jail.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 200),
+"scale": 2.0,
+"scene": ""
+},
+"MarahOtan": {
+"export_overrides": {
+"image": "\"res://Characters/Otan/ekspresi/marah.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 200),
+"scale": 2.0,
+"scene": ""
+},
+"SedihOtan": {
+"export_overrides": {
+"image": "\"res://Characters/Otan/ekspresi/sedih.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 200),

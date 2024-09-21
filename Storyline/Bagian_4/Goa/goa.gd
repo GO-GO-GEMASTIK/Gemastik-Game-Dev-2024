@@ -18,9 +18,14 @@ signal following
 @onready var darken = $FrontLayout/Darken
 @onready var animation = $AnimationPlayer
 @onready var pop = %Pop
+@onready var torawr = $Sounds/Torawr
+@onready var maung_1 = $Sounds/Maung
+@onready var maung_2 = $Sounds/Maung2
+@onready var maung_3 = $Sounds/Maung3
 
 var task_8 = load("res://Storyline/Bagian_4/Task 8/senter_game_1.tscn")
 var task_7 = load("res://Storyline/Bagian_4/Task 7/lock_pick_1.tscn")
+var closing = load("res://Storyline/Closing/closing_animation.tscn")
 
 @export var random_strength: float = 40.0
 @export var shake_fade: float = 3.0
@@ -66,9 +71,16 @@ func _on_dialogic_signal(argument:String):
 		GameStateManager.set_characteristic("Menghargai", true)
 	if argument == "rawr":
 		rawr = true
+		torawr.play()
 	if argument == "rawr_maung":
 		shake_fade = 1.0
 		rawr = true
+	if argument == "maung1":
+		maung_1.play()
+	if argument == "maung2":
+		maung_2.play()
+	if argument == "maung3":
+		maung_3.play()
 	if argument == "pan_normal":
 		camera.set_position(Vector2.ZERO)
 	if argument == "pan_to_monster":
@@ -110,13 +122,14 @@ func after_lock():
 	ucing.set_position(Vector2(210, 30))
 	maung.set_position(Vector2(-191, 1))
 	buba.set_position(Vector2(26, -29))
+	camera.reset_smoothing()
 	
 	ucing.look_right()
 	maung.set_flip_h(false)
 	buba.set_flip_h(false)
 	torachan.set_visible(true)
 	
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	Dialogic.start("B4_9_after_gembok")
 	await Dialogic.timeline_ended
@@ -147,7 +160,9 @@ func monster_locked():
 	#Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
 	
-	ucing.enable_movement()
+	TransitionScreen.transition_between()
+	await TransitionScreen.on_transition_finished
+	get_tree().change_scene_to_packed(closing)
 
 #endregion
 

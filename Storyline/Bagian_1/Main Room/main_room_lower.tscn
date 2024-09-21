@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d27chi846yccw"]
+[gd_scene load_steps=31 format=3 uid="uid://d27chi846yccw"]
 
 [ext_resource type="Texture2D" uid="uid://dfnhm5u2rbrw5" path="res://Sprites/Sekolah/Lantai Bawah/base.jpg" id="1_dx853"]
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/main_room_lower.gd" id="1_kp8er"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/tangga_naik/naik.png" id="12_1rpcb"]
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/pintu_gudang.gd" id="12_mhhey"]
 [ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="13_e6g53"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="13_gnh4c"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="14_vm3bq"]
 [ext_resource type="Texture2D" uid="uid://dng0f5jxgw7au" path="res://Sprites/Guide UI/pintu_gudang.png" id="44_ytet2"]
 
@@ -400,10 +401,11 @@ libraries = {
 stream = ExtResource("14_vm3bq")
 bus = &"SFX"
 
-[node name="IconToMain" type="Area2D" parent="IconGuide" node_paths=PackedStringArray("ucing")]
+[node name="IconToMain" type="Area2D" parent="IconGuide" node_paths=PackedStringArray("ucing", "guide_player")]
 position = Vector2(1990, 473)
 script = ExtResource("11_8woac")
 ucing = NodePath("../../MC")
+guide_player = NodePath("../../CanvasLayer/GuidePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconGuide/IconToMain"]
 position = Vector2(-151, 422)
@@ -444,6 +446,9 @@ offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("44_ytet2")
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_gnh4c")]
+ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="IconGuide/PintuGudang" to="IconGuide/PintuGudang" method="_on_body_entered"]
 [connection signal="body_exited" from="IconGuide/PintuGudang" to="IconGuide/PintuGudang" method="_on_body_exited"]

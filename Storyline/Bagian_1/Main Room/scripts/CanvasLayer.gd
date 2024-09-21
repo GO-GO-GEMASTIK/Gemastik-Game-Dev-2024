@@ -57,6 +57,6 @@ func _input(event):
 
 func hide_show_tutor(tutor):
 	tutorial_player.play("hide_tutorial")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.1).timeout
 	tutorial.set_texture(tutor)
 	tutorial_player.play("show_tutorial")

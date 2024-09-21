@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=69 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan-alt/otan.tscn" id="2_b88js"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://pllfaxgnc6wa" path="res://Sprites/Guide UI/pintu_kantin.png" id="23_uwng7"]
 [ext_resource type="Texture2D" uid="uid://c0jh6yb5e1n36" path="res://Sprites/Guide UI/pintu_laundry.png" id="23_vp2ja"]
 [ext_resource type="Texture2D" uid="uid://bkbaoqh6row5i" path="res://Storyline/Bagian_1/Main Room/sprites/tutorial_guide/4_skip_tutorial.png" id="24_qny5w"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="26_l7trp"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="27_s03vw"]
 [ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/tangga_turun/turun.png" id="30_j2shl"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
@@ -792,7 +793,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_dwrgm"]
 resource_name = "hide_tutorial"
-length = 0.5
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -800,7 +801,7 @@ tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(489.5, 100), Vector2(489.5, 50)]
@@ -812,7 +813,7 @@ tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
@@ -820,7 +821,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_g3sm5"]
 resource_name = "show_tutorial"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -828,7 +829,7 @@ tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(489.5, 50), Vector2(489.5, 100)]
@@ -840,7 +841,7 @@ tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -902,7 +903,7 @@ ucing = NodePath("../MC")
 
 [node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_b88js")]
 z_index = 1
-position = Vector2(2829, 751)
+position = Vector2(2829, 769)
 scale = Vector2(0.5, 0.5)
 collision_mask = 4
 player = NodePath("../MC")
@@ -1155,6 +1156,9 @@ texture = ExtResource("21_vir07")
 stream = ExtResource("57_nv6wi")
 autoplay = true
 bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("26_l7trp")]
+ucing = NodePath("../MC")
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

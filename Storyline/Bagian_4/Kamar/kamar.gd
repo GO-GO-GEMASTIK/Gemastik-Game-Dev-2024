@@ -17,6 +17,9 @@ signal r_in
 @onready var night_ambience = $NightAmbience
 
 @onready var guide_player = $CanvasLayer/GuidePlayer
+@onready var sedih = $Sound/Sedih
+@onready var cricket = $Sound/Cricket
+@onready var bird_chirps = $Sound/BirdChirps
 
 @export var is_bagian_3: bool = GameStateManager.get_string_state("Bagian3")
 @export var is_bagian_4: bool = GameStateManager.get_string_state("Bagian4")
@@ -62,6 +65,7 @@ func _on_dialogic_signal(argument:String):
 #region ---STORYLINE---
 # === BAGIAN 3 ===
 func run_b3_part_1():
+	bird_chirps.play()
 	maung.set_visible(false)
 	buba.set_visible(false)
 	cula.set_visible(false)
@@ -73,6 +77,7 @@ func run_b3_part_1():
 
 # === BAGIAN 4 ===
 func run_b4_part_1():
+	cricket.play()
 	maung.set_visible(true)
 	buba.set_visible(true)
 	buba.set_flip_h(true)
@@ -81,18 +86,23 @@ func run_b4_part_1():
 	await get_tree().create_timer(1.0).timeout
 	dialog_runner("B4_1_kamar_malam")
 	await next
+	cricket.stop()
 	play_animation("night2day")
 	await next
 	night_ambience.set_visible(false)
 	await get_tree().create_timer(1.0).timeout
 	await next
+	bird_chirps.play()
 	dialog_runner("B4_2_kamar_pagi")
 	await next
+	bird_chirps.stop()
 	run_b4_part_2()
 # ---
 func run_b4_part_2():
 	play_animation("day2night")
 	await next
+	night_ambience.set_visible(true)
+	cricket.play()
 	cula.set_visible(false)
 	buba.set_visible(false)
 	await next
@@ -101,6 +111,7 @@ func run_b4_part_2():
 	guide_player.play("show_guide")
 # --task 5 here--
 func run_b4_part3():
+	night_ambience.set_visible(true)
 	maung.set_visible(true)
 	buba.set_visible(true)
 	cula.set_visible(false)
@@ -109,6 +120,7 @@ func run_b4_part3():
 	ucing.set_global_position(Vector2(1080, 850))
 	maung.set_global_position(Vector2(930, 835))
 	await get_tree().create_timer(1.0).timeout
+	sedih.play()
 	dialog_runner("B4_4_orangtua_ucing_maung")
 	await Dialogic.timeline_ended
 	

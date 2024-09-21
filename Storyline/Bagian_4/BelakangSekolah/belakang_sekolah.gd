@@ -118,6 +118,7 @@ func _on_pan_camera_body_entered(body):
 func _on_small_box_move_friends():
 	buba.set_global_position(Vector2(1373,1316))
 	maung.set_global_position(Vector2(1476,1346))
+	ucing.set_global_position(Vector2(1948, 1363))
 
 
 func _on_bridge_area_body_entered(body):

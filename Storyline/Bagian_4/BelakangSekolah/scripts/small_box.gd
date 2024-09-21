@@ -10,7 +10,6 @@ signal show_lari
 @onready var task_icon = $TaskPlayer
 @onready var pop = %Pop
 
-var pushable := false
 var interactable := false
 var walled := false
 
@@ -38,11 +37,9 @@ func _input(event):
 func _on_push_area_body_entered(body):
 	pop.play()
 	task_icon.show_icon()
-	pushable = true
 
 func _on_push_area_body_exited(body):
 	task_icon.hide_icon()
-	pushable = false
 
 
 func _on_wall_area_body_entered(body):

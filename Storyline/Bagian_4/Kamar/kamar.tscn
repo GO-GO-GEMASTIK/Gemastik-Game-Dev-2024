@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://civ0uyremjeve"]
+[gd_scene load_steps=91 format=3 uid="uid://civ0uyremjeve"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Kamar/kamar.gd" id="1_0lu7m"]
 [ext_resource type="Texture2D" uid="uid://5m81x6vfqgd0" path="res://Storyline/Bagian_4/Kamar/sprites/Kamar/kamar.jpg" id="2_0lktt"]
@@ -51,7 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://dr7v4idcxo37h" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0017.png" id="29_uw38i"]
 [ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/front lighting.png" id="29_ygo44"]
 [ext_resource type="Texture2D" uid="uid://blwi3pqepkhul" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0018.png" id="30_havmk"]
-[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/lighting on.png" id="30_nilr4"]
 [ext_resource type="Texture2D" uid="uid://211qe5ljebgf" path="res://Sprites/Animasi/Day 2 Night/Timeline 2_0019.png" id="31_u7sno"]
 [ext_resource type="Texture2D" uid="uid://bye6swr8vyyp" path="res://Storyline/Bagian_4/Kamar/sprites/guide.png" id="52_cnr2l"]
 [ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="53_ib88g"]
@@ -60,10 +59,13 @@
 [ext_resource type="Texture2D" uid="uid://c118eld3ok4ba" path="res://Storyline/Bagian_4/Kamar/sprites/Task Guide/cari kelas.png" id="58_egdx4"]
 [ext_resource type="Texture2D" uid="uid://0gdh65cy2xy0" path="res://Storyline/Bagian_4/Kamar/sprites/ke_hutan.png" id="60_tw7nk"]
 [ext_resource type="AudioStream" uid="uid://ltbfm5e4qefw" path="res://Sounds/BG Noise/bird_chirps.mp3" id="61_e1yva"]
+[ext_resource type="AudioStream" uid="uid://c1kx147j0a7t7" path="res://Sounds/BG Noise/Kamar/cricket-sound.mp3" id="62_0m1qn"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="62_g1y4f"]
 [ext_resource type="AudioStream" uid="uid://chx4xitr2ekdx" path="res://Sounds/BG Noise/roomtone-whitenoise.mp3" id="62_ljf5p"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="63_ewqxi"]
-[ext_resource type="AudioStream" uid="uid://d4bfa1fv01yx0" path="res://Sounds/SFX/open_door.mp3" id="64_tq1ft"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="63_ewqxi"]
+[ext_resource type="AudioStream" uid="uid://d4bfa1fv01yx0" path="res://Sounds/SFX/pintu/open_door.mp3" id="64_tq1ft"]
+[ext_resource type="AudioStream" uid="uid://ursi5nf2yqy5" path="res://Sounds/Music/sedih/misteri sad.mp3" id="65_kr4m4"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="66_p40i7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uh6i6"]
 
@@ -751,20 +753,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_g3wdm")
 
 [node name="NightAmbience" type="Node2D" parent="."]
-visible = false
 z_index = 10
 
 [node name="Shadow" type="TextureRect" parent="NightAmbience"]
-offset_right = 2788.0
+offset_right = 3000.0
 offset_bottom = 1080.0
 texture = ExtResource("29_ygo44")
-
-[node name="Lightning" type="TextureRect" parent="NightAmbience/Shadow"]
-visible = false
-layout_mode = 0
-offset_right = 2788.0
-offset_bottom = 1080.0
-texture = ExtResource("30_nilr4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -819,9 +813,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("58_egdx4")
@@ -831,9 +825,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.002
 grow_horizontal = 2
 texture = ExtResource("52_cnr2l")
@@ -852,9 +846,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 489.5
+offset_left = -470.5
 offset_top = 50.0
-offset_right = 1430.5
+offset_right = 470.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("60_tw7nk")
@@ -863,8 +857,12 @@ texture = ExtResource("60_tw7nk")
 
 [node name="BirdChirps" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("61_e1yva")
-volume_db = 14.182
-autoplay = true
+volume_db = 24.0
+bus = &"SFX"
+
+[node name="Cricket" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("62_0m1qn")
+volume_db = -6.0
 bus = &"SFX"
 
 [node name="WhiteNoise" type="AudioStreamPlayer" parent="Sound"]
@@ -882,6 +880,14 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("64_tq1ft")
 bus = &"OpenDoor"
+
+[node name="Sedih" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("65_kr4m4")
+volume_db = -20.612
+bus = &"BGM"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("66_p40i7")]
+ucing = NodePath("../MC")
 
 [connection signal="following" from="." to="Maung" method="_following"]
 [connection signal="following" from="." to="Buba" method="_following"]

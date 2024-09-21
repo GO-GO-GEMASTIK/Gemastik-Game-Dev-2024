@@ -1,14 +1,18 @@
 [signal arg="pan_to_monster"]
 [signal arg="rawr"]
-Monster: GRARWRRRWRWR, apa yang kalian semua lakukan disini!!!!
+Monster (Marah): GRARWRRRWRWR, apa yang kalian semua lakukan disini!!!!
 [signal arg="pan_to_maung"]
 [signal arg="rawr_maung"]
-Maung: RAWRRRRRRRR!!!!!
-Maung: Pergilah dan lepaskan teman kami!!!
+[signal arg="maung1"]
+Maung (Marah): RAWRRRRRRRR!!!!!
+Maung (Marah): Pergilah dan lepaskan teman kami!!!
 [signal arg="rawr_maung"]
-Maung: RAWWWRRRRR
+[signal arg="maung2"]
+Maung (Marah): RAWWWRRRRR
 [signal arg="pan_to_monster"]
-Monster: Aaaa, tidak, jangan keluarkan auman itu! Ampuni aku
+Monster (Sedih): Aaaa, tidak, jangan keluarkan auman itu! Ampuni aku
 [signal arg="pan_to_maung"]
 [signal arg="rawr_maung"]
-Maung: LEPASKAN TEMAN KAMI! RAWRRRR!!!
+[signal arg="maung3"]
+Maung (Marah): LEPASKAN TEMAN KAMI! RAWRRRR!!!
+[wait time="4.0"]

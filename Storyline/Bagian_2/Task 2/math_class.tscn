@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://smfc8hv6l2ov"]
+[gd_scene load_steps=36 format=3 uid="uid://smfc8hv6l2ov"]
 
 [ext_resource type="Texture2D" uid="uid://dc13e8nef1r1b" path="res://Sprites/Tasks/Task 2/base bg.jpg" id="1_t7ycm"]
 [ext_resource type="Texture2D" uid="uid://bqqsgfob6qsjh" path="res://Sprites/Tasks/Task 2/base light.png" id="2_ictew"]
@@ -47,8 +47,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opl4c"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0kri"]
-size = Vector2(97.5, 88.5)
+size = Vector2(652.5, 182.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qo5qc"]
 animations = [{
@@ -68,6 +70,8 @@ animations = [{
 "name": &"hover",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_75dq5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i52k6"]
 animations = [{
@@ -132,14 +136,24 @@ sprite_frames = SubResource("SpriteFrames_n3288")
 autoplay = "default"
 script = ExtResource("13_eor1r")
 
+[node name="ColorRect" type="ColorRect" parent="Question_1"]
+offset_left = 1205.0
+offset_top = 108.0
+offset_right = 1269.0
+offset_bottom = 172.0
+color = Color(0.752941, 0.607843, 0.52549, 1)
+
 [node name="Answer1" type="LineEdit" parent="Question_1"]
 offset_left = 1182.0
 offset_top = 95.0
 offset_right = 1286.0
 offset_bottom = 187.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_opl4c")
+placeholder_text = "?"
 alignment = 1
 script = ExtResource("10_xyys4")
 
@@ -151,7 +165,7 @@ texture = ExtResource("8_j5q0p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Question_1"]
 visible = false
-position = Vector2(1235.75, 140.75)
+position = Vector2(991.5, 140.75)
 shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="Question_2" type="Area2D" parent="."]
@@ -163,26 +177,37 @@ sprite_frames = SubResource("SpriteFrames_qo5qc")
 autoplay = "default"
 script = ExtResource("13_eor1r")
 
+[node name="ColorRect" type="ColorRect" parent="Question_2"]
+offset_left = 1205.0
+offset_top = 361.0
+offset_right = 1269.0
+offset_bottom = 425.0
+color = Color(0.752941, 0.607843, 0.52549, 1)
+
 [node name="Answer2" type="LineEdit" parent="Question_2"]
 offset_left = 1183.0
 offset_top = 345.0
 offset_right = 1287.0
 offset_bottom = 437.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_75dq5")
+placeholder_text = "?"
 alignment = 1
 script = ExtResource("13_u6bdw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_2"]
-visible = false
-position = Vector2(1237, 387)
-shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="2AnswerBg" type="Sprite2D" parent="Question_2"]
 visible = false
 position = Vector2(1236, 391.5)
 scale = Vector2(1.21951, 1.07778)
 texture = ExtResource("12_mtkru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_2"]
+visible = false
+position = Vector2(991.5, 388)
+shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="Question_3" type="Area2D" parent="."]
 
@@ -193,26 +218,37 @@ sprite_frames = SubResource("SpriteFrames_i52k6")
 autoplay = "default"
 script = ExtResource("13_eor1r")
 
+[node name="ColorRect" type="ColorRect" parent="Question_3"]
+offset_left = 1205.0
+offset_top = 636.0
+offset_right = 1269.0
+offset_bottom = 700.0
+color = Color(0.752941, 0.607843, 0.52549, 1)
+
 [node name="Answer3" type="LineEdit" parent="Question_3"]
 offset_left = 1184.0
 offset_top = 623.0
 offset_right = 1288.0
 offset_bottom = 715.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_75dq5")
+placeholder_text = "?"
 alignment = 1
 script = ExtResource("16_gbw3s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_3"]
-visible = false
-position = Vector2(1235, 671)
-shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="3AnswerBg" type="Sprite2D" parent="Question_3"]
 visible = false
 position = Vector2(1238.25, 668)
 scale = Vector2(1.17059, 1.08889)
 texture = ExtResource("16_lqkes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_3"]
+visible = false
+position = Vector2(991.5, 666)
+shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="Question_4" type="Area2D" parent="."]
 
@@ -223,26 +259,37 @@ sprite_frames = SubResource("SpriteFrames_5p2t5")
 autoplay = "default"
 script = ExtResource("13_eor1r")
 
+[node name="ColorRect" type="ColorRect" parent="Question_4"]
+offset_left = 1208.0
+offset_top = 898.0
+offset_right = 1272.0
+offset_bottom = 962.0
+color = Color(0.752941, 0.607843, 0.52549, 1)
+
 [node name="Answer4" type="LineEdit" parent="Question_4"]
 offset_left = 1186.0
 offset_top = 884.0
 offset_right = 1290.0
 offset_bottom = 976.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_iqcd8")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_75dq5")
+placeholder_text = "?"
 alignment = 1
 script = ExtResource("19_xi4d2")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_4"]
-visible = false
-position = Vector2(1243, 934)
-shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="4AnswerBg" type="Sprite2D" parent="Question_4"]
 visible = false
 position = Vector2(1240, 929)
 scale = Vector2(1.13333, 1.04444)
 texture = ExtResource("20_tinfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_4"]
+visible = false
+position = Vector2(986.75, 927)
+shape = SubResource("RectangleShape2D_q0kri")
 
 [node name="Guide3" type="Sprite2D" parent="."]
 visible = false
@@ -326,15 +373,23 @@ bus = &"SFX"
 stream = ExtResource("27_llqdg")
 bus = &"SFX"
 
+[connection signal="mouse_entered" from="Question_1" to="Question_1/AnimatedSprite2D" method="_on_question_1_mouse_entered"]
+[connection signal="mouse_exited" from="Question_1" to="Question_1/AnimatedSprite2D" method="_on_question_1_mouse_exited"]
 [connection signal="gui_input" from="Question_1/Answer1" to="Question_1/Answer1" method="_on_gui_input"]
 [connection signal="mouse_entered" from="Question_1/Answer1" to="Question_1/Answer1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Question_1/Answer1" to="Question_1/Answer1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Question_2" to="Question_2/AnimatedSprite2D" method="_on_question_1_mouse_entered"]
+[connection signal="mouse_exited" from="Question_2" to="Question_2/AnimatedSprite2D" method="_on_question_1_mouse_exited"]
 [connection signal="gui_input" from="Question_2/Answer2" to="Question_2/Answer2" method="_on_gui_input"]
 [connection signal="mouse_entered" from="Question_2/Answer2" to="Question_2/Answer2" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Question_2/Answer2" to="Question_2/Answer2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Question_3" to="Question_3/AnimatedSprite2D" method="_on_question_1_mouse_entered"]
+[connection signal="mouse_exited" from="Question_3" to="Question_3/AnimatedSprite2D" method="_on_question_1_mouse_exited"]
 [connection signal="gui_input" from="Question_3/Answer3" to="Question_3/Answer3" method="_on_gui_input"]
 [connection signal="mouse_entered" from="Question_3/Answer3" to="Question_3/Answer3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Question_3/Answer3" to="Question_3/Answer3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Question_4" to="Question_4/AnimatedSprite2D" method="_on_question_1_mouse_entered"]
+[connection signal="mouse_exited" from="Question_4" to="Question_4/AnimatedSprite2D" method="_on_question_1_mouse_exited"]
 [connection signal="gui_input" from="Question_4/Answer4" to="Question_4/Answer4" method="_on_gui_input"]
 [connection signal="mouse_entered" from="Question_4/Answer4" to="Question_4/Answer4" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Question_4/Answer4" to="Question_4/Answer4" method="_on_mouse_exited"]

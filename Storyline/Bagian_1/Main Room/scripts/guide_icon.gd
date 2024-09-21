@@ -126,6 +126,7 @@ func _input(event):
 				guide_player.play("hide_guide_pintu")
 			change_scene(upper_room)
 		elif change_scene_lower:
+			GameStateManager.update_pos_main(ucing.global_position)
 			if GameStateManager.get_string_state("GuidePintuKuning"):
 				guide_player.play("hide_guide_pintu")
 			change_scene(lower_room)
@@ -145,6 +146,7 @@ func _input(event):
 				await Dialogic.timeline_ended
 		elif change_scene_kelas:
 			if direction_kelas:
+				GameStateManager.update_pos_main(ucing.global_position)
 				GameStateManager.set_string_state("DirectionKelas", false)
 				change_scene(kelas)
 			else:
@@ -152,6 +154,7 @@ func _input(event):
 				await Dialogic.timeline_ended
 		elif change_scene_laundry:
 			if direction_laundry:
+				GameStateManager.update_pos_main(ucing.global_position)
 				GameStateManager.set_string_state("DirectionLaundry", false)
 				change_scene(laundry)
 			else:
@@ -159,6 +162,7 @@ func _input(event):
 				await Dialogic.timeline_ended
 		elif change_scene_kantin:
 			if direction_kantin:
+				GameStateManager.update_pos_main(ucing.global_position)
 				GameStateManager.set_string_state("DirectionKantin", false)
 				change_scene(kantin)
 			else:

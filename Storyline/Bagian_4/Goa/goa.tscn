@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://c5n1h2xewm4js"]
+[gd_scene load_steps=63 format=3 uid="uid://c5n1h2xewm4js"]
 
 [ext_resource type="Texture2D" uid="uid://d3g6aw33hf4o1" path="res://Storyline/Bagian_4/Goa/sprites/Gua monster/base-guide.jpg" id="1_4dk1b"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Goa/goa.gd" id="1_o2nxv"]
@@ -47,7 +47,12 @@
 [ext_resource type="Texture2D" uid="uid://bn5ae0d5k61a8" path="res://Storyline/Bagian_4/Goa/sprites/solidblack.png" id="44_v0pt1"]
 [ext_resource type="Texture2D" uid="uid://d24qyl4sk714f" path="res://Storyline/Bagian_4/Goa/sprites/task_7.png" id="46_bfw18"]
 [ext_resource type="AudioStream" uid="uid://uqir66yprkp7" path="res://Sounds/BG Noise/goa-ambience.mp3" id="47_f4vtv"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="48_flets"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="48_flets"]
+[ext_resource type="AudioStream" uid="uid://k4d05oduesc8" path="res://Sounds/Character/Rawr/torawr.mp3" id="49_aw704"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="49_vmpkp"]
+[ext_resource type="AudioStream" uid="uid://stn6bh1klhyw" path="res://Sounds/Character/Rawr/maung1.mp3" id="50_j83ds"]
+[ext_resource type="AudioStream" uid="uid://b3bmg03ldi5cn" path="res://Sounds/Character/Rawr/maung2.mp3" id="51_dstdt"]
+[ext_resource type="AudioStream" uid="uid://prpi82moq5ax" path="res://Sounds/Character/Rawr/maung3.mp3" id="52_jiqve"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2vrdm"]
 normal = Vector2(1, 0)
@@ -349,7 +354,7 @@ position = Vector2(175, 0)
 collision_layer = 2
 
 [node name="Otan" parent="OtanCula" instance=ExtResource("14_1dtja")]
-position = Vector2(28, 0)
+position = Vector2(28, -79)
 collision_layer = 2
 
 [node name="Torachan" parent="." instance=ExtResource("18_72rpj")]
@@ -430,6 +435,28 @@ bus = &"BG Noise"
 unique_name_in_owner = true
 stream = ExtResource("48_flets")
 bus = &"SFX"
+
+[node name="Torawr" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(9974, 641)
+stream = ExtResource("49_aw704")
+volume_db = -5.0
+pitch_scale = 0.9
+
+[node name="Maung" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(9974, 641)
+stream = ExtResource("50_j83ds")
+
+[node name="Maung2" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(9974, 641)
+stream = ExtResource("51_dstdt")
+
+[node name="Maung3" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(9974, 641)
+stream = ExtResource("52_jiqve")
+volume_db = 3.962
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_vmpkp")]
+ucing = NodePath("../Chara/MC")
 
 [connection signal="following" from="." to="Chara/Maung" method="_following"]
 [connection signal="following" from="." to="Chara/Buba" method="_following"]

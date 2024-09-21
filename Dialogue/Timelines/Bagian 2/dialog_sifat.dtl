@@ -9,14 +9,14 @@ Ucing anak yang ramah dan cerdas!
 	Ucing: Aku tidak bisa selesai tanpa kalian.\
 Terimakasih kerjasamanya, ayo diskusi lagi lain waktu.
 else:
-	Ucing: Oh.. tugas ini cukup melelahkan bila dikerjakan sendiri.
-	Ucing: Seharusnya aku terima tawaran Buba dan anak harimau itu.
-Cula: Oh tidak. \
+	Ucing (SedihTakut): Oh.. tugas ini cukup melelahkan bila dikerjakan sendiri.
+	Ucing: Seharusnya aku terima tawaran Buba tadi.
+Cula (Panik): Oh tidak. \
 Bu, aku belum selesai!\
 Mengapa tugas ini sulit sekali?
-Otan: Aku juga, tak ada yang mau sekelompok denganku, huhu.. aku tidak bisa mengerjakannya.
+Otan (SedihOtan): Aku juga, tak ada yang mau sekelompok denganku, huhu.. aku tidak bisa mengerjakannya.
 Buba: Otan, kalau kamu mau diajak berkelompok dengan kami, cobalah jadi anak yang tidak usil.
-Buba: Kamu selalu mengusili siapapun. Teman-teman jadi takut bekerja denganmu karena takut dikerjai!
+Buba (Marah): Kamu selalu mengusili teman-teman. Mereka jadi malas bekerja denganmu!
 Maung: Aku tidak merasa kesulitan karena aku bekerja sama dengan Buba dan Ucing!
 "Bu Cilla": Ya sudah, kumpulkan saja ya nak.\
 Lain kali kalau ada tugas kelompok, bergabunglah.\

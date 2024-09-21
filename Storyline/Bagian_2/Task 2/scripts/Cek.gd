@@ -64,13 +64,16 @@ func _on_input_event(viewport, event, shape_idx):
 					salah4.visible = false
 					answer_fix4.visible = true
 					collect[3] = 1
-			else:
-				finish.play()
-				GameStateManager.complete_task(2)
-				TransitionScreen.transition_between()
-				await TransitionScreen.on_transition_finished
-				if GameStateManager.get_string_state("TBC"):
-					get_tree().change_scene_to_packed(tbc)
-				else:
-					get_tree().change_scene_to_packed(kelas)
+				if collect[0] + collect[1] + collect[2] + collect[3] == 4:
+					finish.play()
+					GameStateManager.complete_task(2)
+					await get_tree().create_timer(1.0).timeout
+					TransitionScreen.transition_between()
+					await TransitionScreen.on_transition_finished
+					if GameStateManager.get_string_state("TBC"):
+						get_tree().change_scene_to_packed(tbc)
+					else:
+						get_tree().change_scene_to_packed(kelas)
+
+
 

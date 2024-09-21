@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=60 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Storage Room/storage_room.gd" id="1_qp5mm"]
 [ext_resource type="Texture2D" uid="uid://l4pl62b5cyt3" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/base.jpg" id="2_yfugn"]
@@ -48,6 +48,7 @@
 [ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/BG Noise/gudang.mp3" id="44_u1iqs"]
 [ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/warning box.png" id="45_gcn08"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="46_a40nk"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="49_homvg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -405,6 +406,9 @@ offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("46_a40nk")
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_homvg")]
+ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
 [connection signal="start_task" from="Box" to="." method="_on_box_start_task"]

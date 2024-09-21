@@ -47,17 +47,18 @@ func _ready():
 		otan.set_visible(true)
 		otan.set_monitoring(true)
 	
+	ucing.set_global_position(GameStateManager.get_pos_main())
 	if GameStateManager.get_pos_state("TanggaMain"):
-		ucing.set_global_position(Vector2(3700, 846))
+		#ucing.set_global_position(Vector2(3700, 846))
 		GameStateManager.set_pos_state("TanggaMain", false)
 	if GameStateManager.get_pos_state("KeluarKelas"):
-		ucing.set_global_position(Vector2(3200, 846))
+		#ucing.set_global_position(Vector2(3200, 846))
 		GameStateManager.set_pos_state("KeluarKelas", false)
 	if GameStateManager.get_pos_state("KeluarLaundry"):
-		ucing.set_global_position(Vector2(5555, 846))
+		#ucing.set_global_position(Vector2(5555, 846))
 		GameStateManager.set_pos_state("KeluarLaundry", false)
 	if GameStateManager.get_pos_state("KeluarKantin"):
-		ucing.set_global_position(Vector2(6755, 846))
+		#ucing.set_global_position(Vector2(6755, 846))
 		GameStateManager.set_pos_state("KeluarKantin", false)
 	
 	if GameStateManager.get_string_state("GuidePintuKuning"):
@@ -88,6 +89,12 @@ func _on_dialogic_signal(argument:String):
 		door_dialogue = true
 	if argument == "jujur":
 		GameStateManager.set_characteristic("Jujur", true)
+
+func set_character_positions(save_data):
+	# Set ucing's position if available
+	if save_data.ucing_pos:
+		if ucing:
+			ucing.global_position = save_data.ucing_pos
 
 
 #region DIALOGUE MANAGER

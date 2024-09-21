@@ -1,0 +1,159 @@
+[gd_scene load_steps=10 format=3 uid="uid://ebfw8tc25he6"]
+
+[ext_resource type="Script" path="res://Storyline/Closing/closing_animation.gd" id="1_ejlnc"]
+[ext_resource type="VideoStream" path="res://Storyline/Closing/videos/Perfect-Ending.ogv" id="1_q0e2v"]
+[ext_resource type="VideoStream" path="res://Storyline/Closing/videos/Imperfect-Ending.ogv" id="2_umwqn"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="4_v6lhs"]
+[ext_resource type="AudioStream" uid="uid://bqpm8dvddo4di" path="res://Sounds/Music/piano.mp3" id="4_vry4k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_axeji"]
+font = ExtResource("4_v6lhs")
+font_size = 46
+
+[sub_resource type="Animation" id="Animation_epj4g"]
+resource_name = "credit"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(452, 579), Vector2(452, -2447)]
+}
+
+[sub_resource type="Animation" id="Animation_tdafx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Credit:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(452, 579)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rfycg"]
+_data = {
+"RESET": SubResource("Animation_tdafx"),
+"credit": SubResource("Animation_epj4g")
+}
+
+[node name="ClosingAnimation" type="Node2D"]
+script = ExtResource("1_ejlnc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Perfect" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -816.0
+offset_top = -544.0
+offset_right = 816.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_q0e2v")
+
+[node name="Imperfect" type="VideoStreamPlayer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -816.0
+offset_top = -544.0
+offset_right = 816.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_umwqn")
+
+[node name="Credit" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -508.0
+offset_top = 579.0
+offset_right = 508.0
+offset_bottom = 3842.0
+grow_horizontal = 2
+text = "Terima Kasih telah bermain
+Detective Ucing: The Hollow Woods
+
+Ditunggu kisah Ucing dan kawan-kawan
+selanjutnya!
+
+----------
+Credits:
+-Game Design / Storyline-
+Alizza Deli Satria
+Balqis Asy-Syifa Lumbun
+
+-Illustrator
+Alizza Deli Satria
+Balqis Asy-Syifa Lumbun
+
+-Programming-
+Daril Muhammad Rafan Syah
+Balqis Asy-Syifa Lumbun
+
+-Sound Design-
+Daril Muhammad Rafan Syah
+Alizza Deli Satria
+
+-Dosen Pembimbing-
+Ichlasul Affan, S.Kom., M.Kom.
+
+-Audio-
+Cave Ambience
+by Gioele Fazzeri from Pixabay
+
+Cricket Sound
+by felix_quinol from Pixabay
+
+Rainy Days (Piano)
+by M-Murray 
+https://freesound.org/s/695951/
+
+Classroom Ambience
+by joedeshon
+https://freesound.org/s/258094/
+----------
+
+Made with Love <3
+by Go Go Gemastik
+
+"
+label_settings = SubResource("LabelSettings_axeji")
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_rfycg")
+}
+
+[node name="Outro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vry4k")
+volume_db = 24.0
+autoplay = true

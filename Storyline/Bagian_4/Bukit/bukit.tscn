@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://d3wpacxywkmf0"]
+[gd_scene load_steps=67 format=3 uid="uid://d3wpacxywkmf0"]
 
 [ext_resource type="Texture2D" uid="uid://d3il8lruqe1hl" path="res://Storyline/Bagian_4/Bukit/sprites/Bukit/base.jpg" id="1_1gg6y"]
 [ext_resource type="Script" path="res://Storyline/Bagian_4/Bukit/bukit.gd" id="1_5eadk"]
@@ -58,7 +58,8 @@
 [ext_resource type="Texture2D" uid="uid://qrsjoqmi3gqd" path="res://Storyline/Bagian_4/Bukit/sprites/Bukit/animasi lighting/Timeline 1_0022.png" id="52_nynh5"]
 [ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="58_qe1x6"]
 [ext_resource type="AudioStream" uid="uid://degaii2x7dghi" path="res://Sounds/BG Noise/Halaman belakang asrama.mp3" id="58_s5kw7"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="59_a2awm"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="59_a2awm"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="60_vpv1t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mcw3c"]
 animations = [{
@@ -138,6 +139,12 @@ animations = [{
 }]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6l37s"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k342u"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dnddx"]
+normal = Vector2(1, 0)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qq1ey"]
 animations = [{
@@ -256,6 +263,16 @@ shape = SubResource("WorldBoundaryShape2D_6l37s")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionLayout/HillSlope"]
 polygon = PackedVector2Array(1129, 2630, 2081, 2103, 2689, 1836, 3293, 1660, 4726, 1321, 5671, 1152, 7132, 1066, 8235, 1059, 9008, 1069)
 
+[node name="Walls" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="RWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(9001, 794)
+shape = SubResource("WorldBoundaryShape2D_k342u")
+
+[node name="LWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(0, 1437)
+shape = SubResource("WorldBoundaryShape2D_dnddx")
+
 [node name="FrontLayout" type="Node2D" parent="."]
 z_index = 10
 
@@ -326,6 +343,9 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("59_a2awm")
 bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("60_vpv1t")]
+ucing = NodePath("../MC")
 
 [connection signal="following" from="." to="Buba" method="_following"]
 [connection signal="following" from="." to="Maung" method="_following"]

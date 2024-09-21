@@ -6,8 +6,6 @@ extends LineEdit
 @onready var base = $"../../TextureRect/BaseLight"
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	self.modulate.a = 0.2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,7 +14,7 @@ func _process(delta):
 
 
 func _on_mouse_entered():
-	self.modulate.a = 0.9
+	self.modulate.a = 1
 	other1.visible = false
 	other2.visible = false
 	other3.visible = false
@@ -25,7 +23,7 @@ func _on_mouse_entered():
 
 
 func _on_mouse_exited():
-	self.modulate.a = 0.9
+	self.modulate.a = 1
 	other1.visible = true
 	other2.visible = true
 	other3.visible = true

@@ -69,6 +69,9 @@ func _on_area_goa_body_exited(body):
 func _input(event):
 	if event.is_action_pressed("talk"):
 		if on_goa:
+			ucing.disable_movement()
+			Dialogic.start("B4_depan_goa")
+			await Dialogic.timeline_ended
 			TransitionScreen.transition_loading()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_packed(goa)

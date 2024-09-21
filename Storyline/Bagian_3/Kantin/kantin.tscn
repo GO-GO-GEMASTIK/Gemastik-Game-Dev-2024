@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dydi28b6emnr2"]
+[gd_scene load_steps=27 format=3 uid="uid://dydi28b6emnr2"]
 
 [ext_resource type="Texture2D" uid="uid://tdrijru7ir0d" path="res://Storyline/Bagian_3/Kantin/sprites/base.jpg" id="1_3kfik"]
 [ext_resource type="Script" path="res://Storyline/Bagian_3/Kantin/kantin.gd" id="1_ed60l"]
@@ -11,7 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://demipxcjfphxj" path="res://Characters/Cula/cula.png" id="9_hdokw"]
 [ext_resource type="AudioStream" uid="uid://dlf1hb0f16ypq" path="res://Sounds/BG Noise/canteen-ambience.mp3" id="10_o2f35"]
 [ext_resource type="AudioStream" uid="uid://chx4xitr2ekdx" path="res://Sounds/BG Noise/roomtone-whitenoise.mp3" id="11_dckhs"]
-[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/pop.mp3" id="12_elied"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="12_elied"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="13_jeipt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pxfh3"]
 
@@ -319,6 +320,9 @@ bus = &"BG Noise"
 unique_name_in_owner = true
 stream = ExtResource("12_elied")
 bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_jeipt")]
+ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="Areas/AreaMakan" to="." method="_on_area_makan_body_entered"]
 [connection signal="body_exited" from="Areas/AreaMakan" to="." method="_on_area_makan_body_exited"]
