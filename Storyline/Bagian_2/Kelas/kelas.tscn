@@ -774,6 +774,9 @@ position = Vector2(2196, 751)
 papan = NodePath("../Areas/AreaPapan")
 SPEED = 390
 
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("24_qe61u")]
+ucing = NodePath("../MC")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 0
 
@@ -782,9 +785,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.001
 grow_horizontal = 2
 texture = ExtResource("2_sb1v5")
@@ -819,9 +822,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.001
 grow_horizontal = 2
 texture = ExtResource("15_5r3pa")
@@ -831,9 +834,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("17_jrd7v")
@@ -878,9 +881,6 @@ bus = &"BG Noise"
 unique_name_in_owner = true
 stream = ExtResource("23_py2bm")
 bus = &"OpenDoor"
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("24_qe61u")]
-ucing = NodePath("../MC")
 
 [connection signal="go_to_papan" from="." to="Otan" method="to_papan"]
 [connection signal="go_to_papan" from="." to="Cula" method="to_papan"]

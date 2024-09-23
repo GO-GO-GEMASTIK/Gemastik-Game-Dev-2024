@@ -366,10 +366,11 @@ collision_layer = 2
 texture = ExtResource("15_bbfqv")
 offset = Vector2(6500, 540)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_vmpkp")]
 layer = 0
+ucing = NodePath("../Chara/MC")
 
-[node name="AnimasiKelelawar" type="AnimatedSprite2D" parent="CanvasLayer"]
+[node name="AnimasiKelelawar" type="AnimatedSprite2D" parent="SaveGame"]
 visible = false
 position = Vector2(-34, 0)
 sprite_frames = SubResource("SpriteFrames_g55p6")
@@ -377,13 +378,13 @@ frame = 1
 frame_progress = 0.902765
 offset = Vector2(1000, 540)
 
-[node name="GuideTask8" type="TextureRect" parent="CanvasLayer"]
+[node name="GuideTask8" type="TextureRect" parent="SaveGame"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("38_a1wm0")
 
-[node name="Button" type="Button" parent="CanvasLayer/GuideTask8"]
+[node name="Button" type="Button" parent="SaveGame/GuideTask8"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -398,13 +399,13 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("39_56cta")
 
-[node name="GuideTask7" type="TextureRect" parent="CanvasLayer"]
+[node name="GuideTask7" type="TextureRect" parent="SaveGame"]
 visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("46_bfw18")
 
-[node name="Button" type="Button" parent="CanvasLayer/GuideTask7"]
+[node name="Button" type="Button" parent="SaveGame/GuideTask7"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -418,6 +419,9 @@ offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("39_56cta")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -455,12 +459,9 @@ position = Vector2(9974, 641)
 stream = ExtResource("52_jiqve")
 volume_db = 3.962
 
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_vmpkp")]
-ucing = NodePath("../Chara/MC")
-
 [connection signal="following" from="." to="Chara/Maung" method="_following"]
 [connection signal="following" from="." to="Chara/Buba" method="_following"]
 [connection signal="body_entered" from="Areas/AreaKandang" to="." method="_on_area_kandang_body_entered"]
 [connection signal="body_exited" from="Areas/AreaKandang" to="." method="_on_area_kandang_body_exited"]
-[connection signal="pressed" from="CanvasLayer/GuideTask8/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/GuideTask7/Button" to="." method="_on_button_lock_pressed"]
+[connection signal="pressed" from="SaveGame/GuideTask8/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SaveGame/GuideTask7/Button" to="." method="_on_button_lock_pressed"]

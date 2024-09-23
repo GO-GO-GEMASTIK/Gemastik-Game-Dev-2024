@@ -82,6 +82,7 @@ func _on_area_camera_body_entered(body):
 		part_1()
 
 func _on_button_pressed():
+	print("MASUKK")
 	TransitionScreen.transition_between()
 	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_packed(task_6)

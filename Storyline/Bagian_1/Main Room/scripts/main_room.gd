@@ -49,7 +49,7 @@ func _ready():
 	
 	ucing.set_global_position(GameStateManager.get_pos_main())
 	if GameStateManager.get_pos_state("TanggaMain"):
-		#ucing.set_global_position(Vector2(3700, 846))
+		ucing.set_global_position(Vector2(3700, 846))
 		GameStateManager.set_pos_state("TanggaMain", false)
 	if GameStateManager.get_pos_state("KeluarKelas"):
 		#ucing.set_global_position(Vector2(3200, 846))
@@ -121,7 +121,10 @@ func _input(event):
 	if !dialogue_is_running:
 		if event.is_action_pressed("talk") and on_otan:
 			if !talked_to_otan:
+				ucing.disable_movement()
 				dialogue_starter("otan")
+				await Dialogic.timeline_ended
+				ucing.enable_movement()
 			else:
 				dialogue_starter("otan_reminding")
 		if event.is_action_pressed("talk") and on_door:

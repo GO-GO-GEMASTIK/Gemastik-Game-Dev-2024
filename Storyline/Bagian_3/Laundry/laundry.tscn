@@ -357,6 +357,9 @@ texture = ExtResource("5_mufae")
 position = Vector2(2141, 850)
 collision_layer = 4
 
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_kxvk3")]
+ucing = NodePath("../MC")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GuideTask" type="TextureRect" parent="CanvasLayer"]
@@ -416,9 +419,6 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("12_u4wio")
 bus = &"OpenDoor"
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_kxvk3")]
-ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="Areas/AreaBaju" to="." method="_on_area_baju_body_entered"]
 [connection signal="body_exited" from="Areas/AreaBaju" to="." method="_on_area_baju_body_exited"]

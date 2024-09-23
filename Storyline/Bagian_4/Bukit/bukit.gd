@@ -12,7 +12,7 @@ signal r_out
 
 var hutan := false
 var kawasan_hutan_dialog := false
-var tbc = load("res://Storyline/14_TBC/to_be_continued.tscn")
+var tbc = load("res://Storyline/TBC/to_be_continued.tscn")
 var hutan_scene = load("res://Storyline/Bagian_4/Hutan/hutan.tscn")
 
 var smooth_zoom:float = 0.9

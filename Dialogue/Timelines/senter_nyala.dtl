@@ -1,6 +1,5 @@
 Ucing: Semoga senter ini bisa menyala sekarang.
-- Nyalakan senter.
-	[signal arg="On"]
+[signal arg="On"]
 [wait time="2.0"]
 [signal arg="Go"]
 Ucing: Sudah menyala. Aku harap baterainya cukup.

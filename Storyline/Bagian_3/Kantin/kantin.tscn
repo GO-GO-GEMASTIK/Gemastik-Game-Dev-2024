@@ -294,6 +294,9 @@ position = Vector2(2180, 810)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_hdokw")
 
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_jeipt")]
+ucing = NodePath("../MC")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -320,9 +323,6 @@ bus = &"BG Noise"
 unique_name_in_owner = true
 stream = ExtResource("12_elied")
 bus = &"SFX"
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_jeipt")]
-ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="Areas/AreaMakan" to="." method="_on_area_makan_body_entered"]
 [connection signal="body_exited" from="Areas/AreaMakan" to="." method="_on_area_makan_body_exited"]

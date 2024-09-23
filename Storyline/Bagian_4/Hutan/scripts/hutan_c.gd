@@ -22,6 +22,7 @@ const ZOOM_SPEED = 2
 
 var next_scene: bool = false
 var on_goa: bool = false
+var dialog_running = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -70,9 +71,12 @@ func _input(event):
 	if event.is_action_pressed("talk"):
 		if on_goa:
 			ucing.disable_movement()
-			Dialogic.start("B4_depan_goa")
-			await Dialogic.timeline_ended
-			TransitionScreen.transition_loading()
-			await TransitionScreen.on_transition_finished
-			get_tree().change_scene_to_packed(goa)
+			if !dialog_running:
+				dialog_running = true
+				Dialogic.start("B4_depan_goa")
+				await Dialogic.timeline_ended
+				dialog_running = false
+				TransitionScreen.transition_loading()
+				await TransitionScreen.on_transition_finished
+				get_tree().change_scene_to_packed(goa)
 

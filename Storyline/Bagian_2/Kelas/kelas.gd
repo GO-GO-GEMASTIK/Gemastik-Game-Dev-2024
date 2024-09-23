@@ -115,8 +115,8 @@ func part_1():
 	maung.duduk()
 	otan.duduk()
 	
-	#Dialogic.start("dialog_perkenalan")
-	Dialogic.start("placeholder")
+	Dialogic.start("dialog_perkenalan")
+	#Dialogic.start("placeholder")
 	await Dialogic.timeline_ended
 	
 	ucing.enable_movement()

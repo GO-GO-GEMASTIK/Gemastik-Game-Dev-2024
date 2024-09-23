@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=61 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Storage Room/storage_room.gd" id="1_qp5mm"]
 [ext_resource type="Texture2D" uid="uid://l4pl62b5cyt3" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/base.jpg" id="2_yfugn"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/warning box.png" id="45_gcn08"]
 [ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="46_a40nk"]
 [ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="49_homvg"]
+[ext_resource type="AudioStream" uid="uid://dlsphhpluxam4" path="res://Sounds/SFX/kardus/kardus jatoh.mp3" id="50_841n4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -351,10 +352,17 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("44_hlwxj")
 flip_h = true
 
+[node name="BoxJatuh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("50_841n4")
+volume_db = 14.95
+
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1946, 67)
 stream = ExtResource("44_u1iqs")
 autoplay = true
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_homvg")]
+ucing = NodePath("../MC")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -406,9 +414,6 @@ offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("46_a40nk")
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_homvg")]
-ucing = NodePath("../MC")
 
 [connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
 [connection signal="start_task" from="Box" to="." method="_on_box_start_task"]

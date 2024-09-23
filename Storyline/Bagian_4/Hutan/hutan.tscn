@@ -113,6 +113,9 @@ SPEED = 385
 position = Vector2(235, 949)
 ucing = NodePath("../MC")
 
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("20_dvv56")]
+ucing = NodePath("../Chara/MC")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GuideTask" type="TextureRect" parent="CanvasLayer"]
@@ -266,9 +269,6 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = ExtResource("19_u7le5")
 bus = &"SFX"
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("20_dvv56")]
-ucing = NodePath("../Chara/MC")
 
 [connection signal="following" from="." to="Chara/Buba" method="_following"]
 [connection signal="following" from="." to="Chara/Maung" method="_following"]

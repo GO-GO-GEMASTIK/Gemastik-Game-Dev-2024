@@ -59,7 +59,7 @@ func _physics_process(delta):
 			elif direction > 0:
 				last_facing_left = false
 		else:
-			velocity.x = move_toward(velocity.x, 0, 20)
+			velocity.x = move_toward(velocity.x, 0, 100)
 		
 		# Play or stop walking sound based on movement and ground state...
 	

@@ -12,9 +12,9 @@ signal following
 @onready var otan = $OtanCula/Otan
 @onready var torachan = $Torachan
 
-@onready var animasi_kelelawar = $CanvasLayer/AnimasiKelelawar
-@onready var guide_task_8 = $CanvasLayer/GuideTask8
-@onready var guide_task_7 = $CanvasLayer/GuideTask7
+@onready var animasi_kelelawar = $SaveGame/AnimasiKelelawar
+@onready var guide_task_8 = $SaveGame/GuideTask8
+@onready var guide_task_7 = $SaveGame/GuideTask7
 @onready var darken = $FrontLayout/Darken
 @onready var animation = $AnimationPlayer
 @onready var pop = %Pop

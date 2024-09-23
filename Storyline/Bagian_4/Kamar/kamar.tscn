@@ -760,6 +760,9 @@ offset_right = 3000.0
 offset_bottom = 1080.0
 texture = ExtResource("29_ygo44")
 
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("66_p40i7")]
+ucing = NodePath("../MC")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
@@ -813,9 +816,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("58_egdx4")
@@ -825,9 +828,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.002
 grow_horizontal = 2
 texture = ExtResource("52_cnr2l")
@@ -846,9 +849,9 @@ self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -470.5
+offset_left = 489.5
 offset_top = 50.0
-offset_right = 470.5
+offset_right = 1430.5
 offset_bottom = 259.0
 grow_horizontal = 2
 texture = ExtResource("60_tw7nk")
@@ -885,9 +888,6 @@ bus = &"OpenDoor"
 stream = ExtResource("65_kr4m4")
 volume_db = -20.612
 bus = &"BGM"
-
-[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("66_p40i7")]
-ucing = NodePath("../MC")
 
 [connection signal="following" from="." to="Maung" method="_following"]
 [connection signal="following" from="." to="Buba" method="_following"]

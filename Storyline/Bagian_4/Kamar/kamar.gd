@@ -65,6 +65,7 @@ func _on_dialogic_signal(argument:String):
 #region ---STORYLINE---
 # === BAGIAN 3 ===
 func run_b3_part_1():
+	night_ambience.set_visible(false)
 	bird_chirps.play()
 	maung.set_visible(false)
 	buba.set_visible(false)

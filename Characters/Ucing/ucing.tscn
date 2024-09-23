@@ -198,7 +198,24 @@ shape = SubResource("RectangleShape2D_ieknj")
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(52, 204)
 stream = ExtResource("13_ts65y")
-volume_db = -20.0
+pitch_scale = 0.9
+bus = &"Walking"
+
+[node name="WalkKayu" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(52, 204)
+stream = ExtResource("13_ts65y")
+pitch_scale = 0.9
+bus = &"Walking"
+
+[node name="WalkRumput" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(52, 204)
+stream = ExtResource("13_ts65y")
+pitch_scale = 0.9
+bus = &"Walking"
+
+[node name="WalkBatu" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(52, 204)
+stream = ExtResource("13_ts65y")
 pitch_scale = 0.9
 bus = &"Walking"
 

@@ -10,6 +10,7 @@ signal start_task
 @onready var task_warning = %TaskWarning
 @onready var buba = %Buba
 @onready var canvas_layer = %CanvasLayer
+@onready var box_jatuh = $"../BoxJatuh"
 
 var camera: Camera2D
 var animation_played = false
@@ -44,6 +45,7 @@ func _on_animation_player_animation_finished(anim_name):
 func _on_body_entered(body):
 	if body.name == "MC" and !animation_played and !GameStateManager.is_task_completed(1):
 		ucing.disable_movement()
+		box_jatuh.play()
 		box.play("dropped")
 		Dialogic.start("box_jatuh")
 		animation_played = true

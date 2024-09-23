@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=70 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Script" path="res://Storyline/Bagian_1/Main Room/scripts/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan-alt/otan.tscn" id="2_b88js"]
@@ -829,10 +829,10 @@ tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.4, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(489.5, 50), Vector2(489.5, 100)]
+"values": [Vector2(489.5, 50), Vector2(489.5, 100), Vector2(489.5, 100), Vector2(489.5, 50)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -841,17 +841,46 @@ tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.4, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_o7c2v"]
+resource_name = "show_tutorial_auto_close"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialPlayer/Tutorial:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 100), Vector2(489.5, 100), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialPlayer/Tutorial:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dvw62"]
 _data = {
 "RESET": SubResource("Animation_h8lue"),
 "hide_tutorial": SubResource("Animation_dwrgm"),
-"show_tutorial": SubResource("Animation_g3sm5")
+"show_tutorial": SubResource("Animation_g3sm5"),
+"show_tutorial_auto_close": SubResource("Animation_o7c2v")
 }
 
 [node name="Main" type="Node2D"]
@@ -999,10 +1028,11 @@ collision_mask = 4
 ucing = NodePath("../../MC")
 guide_player = NodePath("../../CanvasLayer/GuidePlayer")
 
-[node name="PintuLaundry" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("guide_player")]
+[node name="PintuLaundry" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing", "guide_player")]
 position = Vector2(5515, 716)
 collision_mask = 4
 script = ExtResource("7_wwuew")
+ucing = NodePath("../../MC")
 guide_player = NodePath("../../CanvasLayer/GuidePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/PintuLaundry"]
@@ -1024,10 +1054,11 @@ libraries = {
 stream = ExtResource("54_mfs8a")
 bus = &"SFX"
 
-[node name="PintuKantin" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("guide_player")]
+[node name="PintuKantin" type="Area2D" parent="GuideIcon" node_paths=PackedStringArray("ucing", "guide_player")]
 position = Vector2(6796, 715)
 collision_mask = 4
 script = ExtResource("7_wwuew")
+ucing = NodePath("../../MC")
 guide_player = NodePath("../../CanvasLayer/GuidePlayer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/PintuKantin"]
