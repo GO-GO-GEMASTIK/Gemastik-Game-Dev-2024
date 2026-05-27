@@ -1,0 +1,37 @@
+set {Jujur} = GameStateManager.get_characteristic("Jujur")
+set {KerjaSama} = GameStateManager.get_characteristic("KerjaSama")
+set {Menghargai} = GameStateManager.get_characteristic("Menghargai")
+Otan (MarahOtan): Hei Cula, minggir, aku mau lihat!
+Cula (Marah): Aku tidak mau disalip tukang onar!
+Maung: Lihat, Buba, aku dapat 2 poin hijau!
+Buba: Benarkah? Itu pencapaian yang bagus, Maung!\
+Ayo kita sama-sama hijaukan poin kita!
+"Bu Cilla": Ucing, lihat poin pertamamu.
+if {KerjaSama} == true:
+	Maung: Aku memberimu poin suka bekerja sama juga, Ucing!
+	Buba (Marah): Ah.. padahal itu rahasia, Maung!\
+Tapi setidaknya, kamu sudah tahu sikap baikmu dapat membahagiakan teman.
+else:
+	Ucing (BingungKaget): "Aku tidak suka bekerja sama?"
+	Ucing (KepalaUcing): Mungkin lain kali aku harus coba berkelompok..\
+Padahal Buba dan Maung ramah ya.
+"Bu Cilla": Coba kalian lihat poin selanjutnya.
+if {Jujur} == true:
+	Ucing: Benarkah? Mungkinkah si Otan bilang bahwa aku jujur?
+	Cula: Hmm, mungkin saja, tapi jujur kepada Otan tidak akan memberikan manfaat apapun, anak baru.
+	Buba (KepalaBuba): Tidak apa, Ucing. Selalu ada kejutan berkah untuk orang yang jujur!
+else:
+	Ucing: Sepertinya aku mendapatkan ini karena membohongi Otan..
+	Ucing (SedihTakut): Padahal ia juga membohongiku.\
+Ah, mulai sekarang, aku tidak mau menjadi pembohong yang merugikan!
+	Buba: Benarkah? Kau membohongi Otan? Tapi.. kamu malah dibawa tersesat ke gudang setelahnya!
+	Buba (Marah): Kebohongan akan merugikan dirimu. Pegang kata-katamu, cing!
+"Bu Cilla": Poin terakhir, Ucing.
+if {Menghargai} == true:
+	Ucing (KepalaUcing): Benarkah aku menghargai teman?
+	Buba (KepalaBuba): Mungkin? Yang jelas, aku senang punya teman sepertimu yang suka berterima kasih setelah dibantu.
+	Buba: Ditambah dengan sikap bertanggung jawabmu.
+else:
+	Ucing (BingungKaget): Ah.., apa mungkin karena aku bersikap sombong setelah merapikan kotak-kotak kemarin ya?
+	Ucing (KepalaUcing): Baiklah, aku akan menjadi anak yang lebih rendah hati dan menghargai semua temanku.
+	[wait time="1.0"]

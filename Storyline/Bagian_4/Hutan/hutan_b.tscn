@@ -1,0 +1,473 @@
+[gd_scene load_steps=49 format=3 uid="uid://c0bvq1um8vbc5"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Hutan/scripts/hutan_b.gd" id="1_p10f7"]
+[ext_resource type="Texture2D" uid="uid://m6r6dg25kra4" path="res://Storyline/Bagian_4/Hutan/sprites/base_crop/base-b.png" id="2_prdo6"]
+[ext_resource type="Texture2D" uid="uid://b3hwfjhek3qnq" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0000.png" id="3_krnrm"]
+[ext_resource type="Texture2D" uid="uid://dphr1e7sr31es" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0001.png" id="4_3p3c6"]
+[ext_resource type="Texture2D" uid="uid://d3jcjugxxj76s" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0002.png" id="5_gupah"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="5_hyxrx"]
+[ext_resource type="Texture2D" uid="uid://pml6fmaue88t" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0003.png" id="6_vvc1e"]
+[ext_resource type="Texture2D" uid="uid://d1te3w3063ypj" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0004.png" id="7_say7t"]
+[ext_resource type="Texture2D" uid="uid://cxp0r3huvs7ei" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0005.png" id="8_rgfgg"]
+[ext_resource type="Texture2D" uid="uid://drkcu6xfor4pv" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0006.png" id="9_pql4j"]
+[ext_resource type="Texture2D" uid="uid://c2farb53ixw0g" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0007.png" id="10_8akod"]
+[ext_resource type="Texture2D" uid="uid://c5n6pxuaweb06" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0008.png" id="11_qnyo5"]
+[ext_resource type="Texture2D" uid="uid://vbq1il8do50t" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0009.png" id="12_ephtt"]
+[ext_resource type="Texture2D" uid="uid://byuypb6hg2ed4" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0010.png" id="13_vx01t"]
+[ext_resource type="Texture2D" uid="uid://bnv4o2urgyl4p" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0011.png" id="14_85uox"]
+[ext_resource type="Texture2D" uid="uid://6bmag7lyyhcu" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0012.png" id="15_ho30f"]
+[ext_resource type="Texture2D" uid="uid://bps2rg7y2kq2d" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0013.png" id="16_itlyn"]
+[ext_resource type="Texture2D" uid="uid://dckagoqugd5xs" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0014.png" id="17_t5fvl"]
+[ext_resource type="Texture2D" uid="uid://5rxvt4cvykk4" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0015.png" id="18_naisw"]
+[ext_resource type="Texture2D" uid="uid://d0vbnlcmn70po" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0016.png" id="19_y5b2g"]
+[ext_resource type="Texture2D" uid="uid://ctym8ujepwsh4" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0017.png" id="20_aans3"]
+[ext_resource type="Texture2D" uid="uid://b0oboyuj41hl2" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0018.png" id="21_ukcqq"]
+[ext_resource type="Texture2D" uid="uid://cx4dbqfdrm2st" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0019.png" id="22_vv16j"]
+[ext_resource type="Texture2D" uid="uid://b8hnjv5otcexk" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0020.png" id="23_tt4bl"]
+[ext_resource type="Texture2D" uid="uid://bdg3otdulqry2" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0021.png" id="24_odgd3"]
+[ext_resource type="Texture2D" uid="uid://d2imobxkklmgx" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0022.png" id="25_henkl"]
+[ext_resource type="Texture2D" uid="uid://d1tlk2ngyypme" path="res://Storyline/Bagian_4/Hutan/sprites/animasi bintang ( di atas front light )/Timeline 1_0023.png" id="26_ivd1y"]
+[ext_resource type="Texture2D" uid="uid://cucbkcgctie0l" path="res://Storyline/Bagian_4/Hutan/sprites/front_crop/front_b.png" id="27_lwv6k"]
+[ext_resource type="Texture2D" uid="uid://ogiwcfqb7agx" path="res://Storyline/Bagian_4/Hutan/sprites/front light.png" id="28_hwcgr"]
+[ext_resource type="PackedScene" uid="uid://baxmed1yrxcqf" path="res://Characters/Buba/buba.tscn" id="30_0ween"]
+[ext_resource type="PackedScene" uid="uid://xcm1p056rmos" path="res://Characters/Maung/maung.tscn" id="31_pbp5c"]
+[ext_resource type="PackedScene" uid="uid://xo6adaet2b35" path="res://Utility/DirectionPlayer/direction_player.tscn" id="32_iwcjw"]
+[ext_resource type="Texture2D" uid="uid://4wqjb0eu2ii2" path="res://Storyline/Bagian_4/Hutan/sprites/daun/1.png" id="33_ht2gj"]
+[ext_resource type="Texture2D" uid="uid://nvf04t42g4g3" path="res://Storyline/Bagian_4/Hutan/sprites/daun/2.png" id="34_kjagm"]
+[ext_resource type="Texture2D" uid="uid://cd8ptrickfkka" path="res://Storyline/Bagian_4/Hutan/sprites/daun/3.png" id="35_moqcb"]
+[ext_resource type="Texture2D" uid="uid://cbkbtp2rxdhoc" path="res://Storyline/Bagian_4/Hutan/sprites/daun/4.png" id="36_w0vbn"]
+[ext_resource type="Texture2D" uid="uid://dqt87qu7v0ud0" path="res://Storyline/Bagian_4/Hutan/sprites/daun/5.png" id="37_cf0ac"]
+[ext_resource type="Texture2D" uid="uid://bb3sevvy1t3mv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/6.png" id="38_whciw"]
+[ext_resource type="Texture2D" uid="uid://twmnts31o5wv" path="res://Storyline/Bagian_4/Hutan/sprites/daun/7.png" id="39_xidnq"]
+[ext_resource type="AudioStream" uid="uid://gwi6ouaeqtcl" path="res://Sounds/BG Noise/Hutan.mp3" id="40_ejy5r"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="41_pxpff"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="42_8ablc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0a0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_krnrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3p3c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gupah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vvc1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_say7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rgfgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pql4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8akod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qnyo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ephtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vx01t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_85uox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ho30f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_itlyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t5fvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_naisw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_y5b2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aans3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ukcqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vv16j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tt4bl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_odgd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_henkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ivd1y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qdge1"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1xfkj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3upmi"]
+
+[sub_resource type="Curve" id="Curve_iww2o"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, -83.0769), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_qa2j6"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.692308), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Hutan" type="Node2D"]
+script = ExtResource("1_p10f7")
+
+[node name="BackLayout" type="Node2D" parent="."]
+
+[node name="HutanB" type="TextureRect" parent="BackLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_prdo6")
+
+[node name="AnimasiBintang" type="AnimatedSprite2D" parent="BackLayout"]
+sprite_frames = SubResource("SpriteFrames_g0a0b")
+autoplay = "default"
+frame = 7
+frame_progress = 0.224402
+offset = Vector2(5000, 1836)
+
+[node name="FrontLayout" type="Node2D" parent="."]
+z_index = 10
+
+[node name="Front" type="TextureRect" parent="FrontLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("27_lwv6k")
+
+[node name="Lightning" type="TextureRect" parent="FrontLayout"]
+texture = ExtResource("28_hwcgr")
+
+[node name="CollisionLayout" type="Node2D" parent="."]
+
+[node name="Grounding" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CollisionLayout/Grounding"]
+polygon = PackedVector2Array(14, 2021, 1702, 2023, 1887, 2063, 2309, 2223, 3735, 2673, 4219, 2831, 4883, 3108, 5351, 3319, 6025, 3575, 6548, 3693, 6654, 3707, 7319, 3705, 9989, 3701, 9991, 3748, 19, 3747)
+
+[node name="Walls" type="StaticBody2D" parent="CollisionLayout"]
+
+[node name="LWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(0, 945)
+shape = SubResource("WorldBoundaryShape2D_qdge1")
+
+[node name="RWall" type="CollisionShape2D" parent="CollisionLayout/Walls"]
+position = Vector2(10000, 2912)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_1xfkj")
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaNext" type="Area2D" parent="Areas"]
+position = Vector2(9747, 3336)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaNext"]
+scale = Vector2(18.1386, 26.6004)
+shape = SubResource("RectangleShape2D_3upmi")
+
+[node name="Chara" type="Node2D" parent="."]
+position = Vector2(0, 766)
+
+[node name="MC" parent="Chara" instance=ExtResource("5_hyxrx")]
+position = Vector2(435, 975)
+collision_layer = 6
+
+[node name="Buba" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("30_0ween")]
+z_index = 1
+position = Vector2(105, 919)
+ucing = NodePath("../MC")
+SPEED = 385
+
+[node name="Maung" parent="Chara" node_paths=PackedStringArray("ucing") instance=ExtResource("31_pbp5c")]
+position = Vector2(235, 949)
+ucing = NodePath("../MC")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DirectionPlayer" parent="CanvasLayer" instance=ExtResource("32_iwcjw")]
+
+[node name="Leaves" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(735, 0)
+
+[node name="Daun1" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("33_ht2gj")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun2" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("34_kjagm")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun3" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("35_moqcb")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun4" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("36_w0vbn")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun5" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("37_cf0ac")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun6" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("38_whciw")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun7" type="CPUParticles2D" parent="Leaves"]
+amount = 3
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("39_xidnq")
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Leaves2" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(8390, 2100)
+
+[node name="Daun1" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("33_ht2gj")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun2" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("34_kjagm")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun3" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("35_moqcb")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun4" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("36_w0vbn")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun5" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("37_cf0ac")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun6" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("38_whciw")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Daun7" type="CPUParticles2D" parent="Leaves2"]
+amount = 5
+lifetime = 2.0
+speed_scale = 0.5
+texture = ExtResource("39_xidnq")
+emission_shape = 3
+emission_rect_extents = Vector2(1500, 1)
+gravity = Vector2(500, 980)
+initial_velocity_min = 1.0
+initial_velocity_max = 15.0
+angle_max = 10.0
+angle_curve = SubResource("Curve_iww2o")
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_qa2j6")
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="HutanAmbience" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("40_ejy5r")
+volume_db = -10.0
+autoplay = true
+bus = &"SFX"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("41_pxpff")
+bus = &"SFX"
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("42_8ablc")]
+ucing = NodePath("../Chara/MC")
+
+[connection signal="following" from="." to="Chara/Buba" method="_following"]
+[connection signal="following" from="." to="Chara/Maung" method="_following"]
+[connection signal="r_in" from="." to="CanvasLayer/DirectionPlayer" method="r_in"]
+[connection signal="r_out" from="." to="CanvasLayer/DirectionPlayer" method="r_out"]
+[connection signal="body_entered" from="Areas/AreaNext" to="." method="_on_area_next_body_entered"]
+[connection signal="body_exited" from="Areas/AreaNext" to="." method="_on_area_next_body_exited"]

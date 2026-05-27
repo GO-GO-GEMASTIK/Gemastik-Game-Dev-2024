@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://xcmyjmxtqxc8"]
+
+[ext_resource type="Texture2D" uid="uid://b5qis07374du5" path="res://Sprites/Tasks/Task 4/Items/ebi.png" id="1_h51mp"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/scripts/on_plate_drag.gd" id="2_2v54g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wto3g"]
+
+[node name="Ebi" type="Sprite2D"]
+texture = ExtResource("1_h51mp")
+script = ExtResource("2_2v54g")
+
+[node name="Ebi" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ebi"]
+position = Vector2(29, -23)
+rotation = 0.261799
+scale = Vector2(13.7102, 6.25343)
+shape = SubResource("CircleShape2D_wto3g")
+
+[connection signal="area_entered" from="Ebi" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Ebi" to="." method="_on_area_2d_area_exited"]
+[connection signal="input_event" from="Ebi" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Ebi" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Ebi" to="." method="_on_mouse_exited"]

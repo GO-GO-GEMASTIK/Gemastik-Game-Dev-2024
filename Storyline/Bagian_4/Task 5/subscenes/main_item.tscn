@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4pai623exbp1"]
+
+[ext_resource type="Texture2D" uid="uid://ctpimwq4y2rww" path="res://Storyline/Bagian_4/Task 5/sprites/5 1.png" id="1_51ryn"]
+[ext_resource type="Script" path="res://Storyline/Bagian_4/Task 5/scripts/main_item.gd" id="18_30n5t"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="19_4revk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d4a3v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_51ryn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wpaa"]
+
+[node name="MainItemSprite" type="AnimatedSprite2D" node_paths=PackedStringArray("finish_sound")]
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_d4a3v")
+autoplay = "default"
+script = ExtResource("18_30n5t")
+finish_sound = NodePath("FinishSound")
+
+[node name="MainItem" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainItem"]
+rotation = -0.261799
+scale = Vector2(14.3924, 16.7592)
+shape = SubResource("RectangleShape2D_4wpaa")
+
+[node name="FinishSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_4revk")
+bus = &"SFX"
+
+[connection signal="input_event" from="MainItem" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="MainItem" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="MainItem" to="." method="_on_area_2d_mouse_exited"]

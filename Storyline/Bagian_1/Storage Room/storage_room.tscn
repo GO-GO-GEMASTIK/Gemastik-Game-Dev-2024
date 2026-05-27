@@ -1,0 +1,422 @@
+[gd_scene load_steps=61 format=3 uid="uid://2dpf4vwnxdxn"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_1/Storage Room/storage_room.gd" id="1_qp5mm"]
+[ext_resource type="Texture2D" uid="uid://l4pl62b5cyt3" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/base.jpg" id="2_yfugn"]
+[ext_resource type="Texture2D" uid="uid://r6uyc6w0rqk5" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0000.png" id="3_clcht"]
+[ext_resource type="Texture2D" uid="uid://buo7t2c6nqqca" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/front acc.png" id="3_h4gmm"]
+[ext_resource type="Texture2D" uid="uid://bfcue38xqs5md" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/front lighting.png" id="4_gjhbj"]
+[ext_resource type="Texture2D" uid="uid://dxpkblquk0k7m" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0001.png" id="4_sbou6"]
+[ext_resource type="Texture2D" uid="uid://bvwqbksoapjjo" path="res://Storyline/Bagian_1/Storage Room/sprites/Gudang/lighting on.png" id="5_1b8qv"]
+[ext_resource type="Texture2D" uid="uid://y4oytpbcgr0h" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0002.png" id="5_ykg3p"]
+[ext_resource type="Texture2D" uid="uid://2bnr3ckobsit" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0003.png" id="6_kv11r"]
+[ext_resource type="Texture2D" uid="uid://dwfmmk8u7a4av" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0004.png" id="7_74xw6"]
+[ext_resource type="Texture2D" uid="uid://13pg2y4p4wb4" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0005.png" id="8_rd27h"]
+[ext_resource type="Texture2D" uid="uid://yq71b2gjsgcx" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0006.png" id="9_i72y3"]
+[ext_resource type="Texture2D" uid="uid://t5dgjvydkufi" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0007.png" id="10_46ymg"]
+[ext_resource type="Texture2D" uid="uid://bxu23igimcu6y" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0008.png" id="11_1icxb"]
+[ext_resource type="Texture2D" uid="uid://dp15e711qcjdv" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0009.png" id="12_3fahp"]
+[ext_resource type="Texture2D" uid="uid://exj012aqdvbf" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0010.png" id="13_76xub"]
+[ext_resource type="Texture2D" uid="uid://dkpsi6jhsvan0" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0011.png" id="14_mn83y"]
+[ext_resource type="Texture2D" uid="uid://b1q1o3tuqrgiq" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0012.png" id="15_bpero"]
+[ext_resource type="Texture2D" uid="uid://dfm0tyyfsyabl" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0013.png" id="16_glvpm"]
+[ext_resource type="Texture2D" uid="uid://m4aa8usoppuc" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0014.png" id="17_lc6lt"]
+[ext_resource type="Texture2D" uid="uid://bbwwvsdo4pu3s" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0015.png" id="18_s35d2"]
+[ext_resource type="Texture2D" uid="uid://brfe2cf4medsg" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0016.png" id="19_8n7g5"]
+[ext_resource type="Texture2D" uid="uid://bhtlvdiuy11f0" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0017.png" id="20_c3hsg"]
+[ext_resource type="Texture2D" uid="uid://tmegati2ov1g" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0018.png" id="21_715vq"]
+[ext_resource type="Texture2D" uid="uid://dqmjyycmbqplq" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0019.png" id="22_78wos"]
+[ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0020.png" id="23_gw6c8"]
+[ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0021.png" id="24_qh5hu"]
+[ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Storyline/Bagian_1/Storage Room/sprites/Animasi Lightning/lighting animation_0022.png" id="25_bahit"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="27_2hg52"]
+[ext_resource type="Script" path="res://Storyline/Bagian_1/Storage Room/scripts/Box.gd" id="28_gjxsm"]
+[ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0000.png" id="29_injsf"]
+[ext_resource type="Texture2D" uid="uid://b3y1dyoa4hq6f" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0001.png" id="30_1oqi7"]
+[ext_resource type="Texture2D" uid="uid://hc6n0iucrdan" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0002.png" id="31_l4hrt"]
+[ext_resource type="Texture2D" uid="uid://hdwds2cgwhc2" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0003.png" id="32_5673p"]
+[ext_resource type="Texture2D" uid="uid://644uvfa8gooy" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0004.png" id="33_h1eqg"]
+[ext_resource type="Texture2D" uid="uid://1dc5sednmma8" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0005.png" id="34_uvobn"]
+[ext_resource type="Texture2D" uid="uid://4t8btidyeqt" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0006.png" id="35_lymjm"]
+[ext_resource type="Texture2D" uid="uid://bgtrs82edumib" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0007.png" id="36_2noam"]
+[ext_resource type="Texture2D" uid="uid://ce1wmhna4ntsu" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0008.png" id="37_yg3ib"]
+[ext_resource type="Texture2D" uid="uid://cerorxydwubcm" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0009.png" id="38_x017k"]
+[ext_resource type="Texture2D" uid="uid://btk08lqdktfix" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0010.png" id="39_jmost"]
+[ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0011.png" id="40_42jci"]
+[ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box jatuh_0012.png" id="41_amnve"]
+[ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Storyline/Bagian_1/Storage Room/sprites/box jatuh/box_idle.png" id="42_kf0wf"]
+[ext_resource type="Texture2D" uid="uid://bdf833x47qa3t" path="res://Characters/Buba/Buba.png" id="44_hlwxj"]
+[ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/BG Noise/gudang.mp3" id="44_u1iqs"]
+[ext_resource type="Texture2D" uid="uid://c26nxskdvosr7" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/warning box.png" id="45_gcn08"]
+[ext_resource type="Texture2D" uid="uid://bvykd8cepaxhi" path="res://Storyline/Bagian_1/Storage Room/sprites/warnings/button ok.png" id="46_a40nk"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="49_homvg"]
+[ext_resource type="AudioStream" uid="uid://dlsphhpluxam4" path="res://Sounds/SFX/kardus/kardus jatoh.mp3" id="50_841n4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_clcht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sbou6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ykg3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kv11r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_74xw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rd27h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i72y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46ymg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1icxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3fahp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_76xub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mn83y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bpero")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_glvpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lc6lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s35d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8n7g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c3hsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_715vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_78wos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gw6c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qh5hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bahit")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qon2x"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hwl7q"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ncbp"]
+normal = Vector2(1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a055b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_injsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1oqi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_l4hrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5673p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h1eqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uvobn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_lymjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2noam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_yg3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_x017k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jmost")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_42jci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}],
+"loop": false,
+"name": &"dropped",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_kf0wf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}],
+"loop": true,
+"name": &"mess",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
+size = Vector2(47.5101, 8.52518)
+
+[sub_resource type="Animation" id="Animation_x2136"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0vlkl"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0mluc"]
+resource_name = "fade_to_normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fe4pt"]
+_data = {
+"RESET": SubResource("Animation_x2136"),
+"fade_to_black": SubResource("Animation_0vlkl"),
+"fade_to_normal": SubResource("Animation_0mluc")
+}
+
+[node name="StorageRoom" type="Node2D"]
+script = ExtResource("1_qp5mm")
+
+[node name="MapLayout" type="Node2D" parent="."]
+
+[node name="Gudang" type="TextureRect" parent="MapLayout"]
+offset_right = 3780.0
+offset_bottom = 1080.0
+texture = ExtResource("2_yfugn")
+stretch_mode = 2
+
+[node name="FrontProps" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(884, 532)
+texture = ExtResource("3_h4gmm")
+
+[node name="DarkLightning" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(1394, 531)
+texture = ExtResource("4_gjhbj")
+
+[node name="SpotLightning" type="Sprite2D" parent="MapLayout"]
+z_index = 10
+position = Vector2(650, 540)
+texture = ExtResource("5_1b8qv")
+
+[node name="LightAnimation" type="AnimatedSprite2D" parent="MapLayout"]
+visible = false
+position = Vector2(1462, 538)
+sprite_frames = SubResource("SpriteFrames_6j02s")
+autoplay = "default"
+frame_progress = 0.232318
+
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
+
+[node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2253, 999)
+shape = SubResource("WorldBoundaryShape2D_qon2x")
+
+[node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2788, 546)
+shape = SubResource("WorldBoundaryShape2D_hwl7q")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(7, 505)
+shape = SubResource("WorldBoundaryShape2D_3ncbp")
+
+[node name="Box" type="Area2D" parent="."]
+position = Vector2(646, 560)
+script = ExtResource("28_gjxsm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Box"]
+sprite_frames = SubResource("SpriteFrames_a055b")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
+position = Vector2(7, 113)
+scale = Vector2(2.98735, 51.7618)
+shape = SubResource("RectangleShape2D_6d3xw")
+
+[node name="MC" parent="." instance=ExtResource("27_2hg52")]
+unique_name_in_owner = true
+position = Vector2(2272, 842)
+SPEED = 350.0
+
+[node name="Buba" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(2381, 805)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("44_hlwxj")
+flip_h = true
+
+[node name="BoxJatuh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("50_841n4")
+volume_db = 14.95
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1946, 67)
+stream = ExtResource("44_u1iqs")
+autoplay = true
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("49_homvg")]
+ucing = NodePath("../MC")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_fe4pt")
+}
+
+[node name="TaskWarning" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("45_gcn08")
+
+[node name="Button" type="Button" parent="CanvasLayer/TaskWarning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 50.0
+offset_right = 136.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("46_a40nk")
+
+[connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
+[connection signal="start_task" from="Box" to="." method="_on_box_start_task"]
+[connection signal="animation_finished" from="Box/AnimatedSprite2D" to="Box" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="Box" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/TaskWarning/Button" to="Box" method="_on_button_pressed"]

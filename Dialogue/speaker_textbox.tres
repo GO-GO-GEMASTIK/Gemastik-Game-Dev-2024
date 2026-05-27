@@ -13,12 +13,23 @@
 [sub_resource type="Resource" id="Resource_bxi78"]
 script = ExtResource("2_7jqtx")
 scene = ExtResource("1_ocp1u")
-overrides = {}
+overrides = {
+"disabled": "true"
+}
 
 [sub_resource type="Resource" id="Resource_o6e43"]
 script = ExtResource("2_7jqtx")
 scene = ExtResource("3_1s5k4")
-overrides = {}
+overrides = {
+"box_size": "Vector2(900, 240)",
+"custom_normal_font": "\"res://Dialogue/Storytime.ttf\"",
+"name_label_custom_size": "45.0",
+"name_label_customfont": "\"res://Dialogue/Storytime.ttf\"",
+"name_label_use_global_font": "false",
+"name_label_use_global_size": "false",
+"text_custom_size": "35.0",
+"text_use_global_size": "false"
+}
 
 [sub_resource type="Resource" id="Resource_slwjt"]
 script = ExtResource("2_7jqtx")
@@ -28,12 +39,22 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_kld35"]
 script = ExtResource("2_7jqtx")
 scene = ExtResource("5_uv4aa")
-overrides = {}
+overrides = {
+"box_width": "300.0",
+"font_custom": "\"res://Dialogue/Storytime.ttf\"",
+"font_extra_size": "20.0",
+"font_text_size": "24.0",
+"font_title_size": "25.0"
+}
 
 [sub_resource type="Resource" id="Resource_jjxlv"]
 script = ExtResource("2_7jqtx")
 scene = ExtResource("6_uv38e")
-overrides = {}
+overrides = {
+"font_custom": "\"res://Dialogue/Storytime.ttf\"",
+"font_size_custom": "40.0",
+"font_size_use_global": "false"
+}
 
 [sub_resource type="Resource" id="Resource_y5oiv"]
 script = ExtResource("2_7jqtx")
@@ -43,7 +64,10 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_fkjvs"]
 script = ExtResource("2_7jqtx")
 scene = ExtResource("8_n6hvk")
-overrides = {}
+overrides = {
+"font_custom_normal": "\"res://Dialogue/Storytime.ttf\"",
+"font_custom_size": "24.0"
+}
 
 [resource]
 script = ExtResource("9_lnp8n")
@@ -52,4 +76,4 @@ base_overrides = {
 "global_bg_color": "Color(0.298039, 0.2, 0.113725, 0.901961)"
 }
 layers = Array[ExtResource("2_7jqtx")]([SubResource("Resource_bxi78"), SubResource("Resource_o6e43"), SubResource("Resource_slwjt"), SubResource("Resource_kld35"), SubResource("Resource_jjxlv"), SubResource("Resource_y5oiv"), SubResource("Resource_fkjvs")])
-metadata/_latest_layer = 0
+metadata/_latest_layer = 1

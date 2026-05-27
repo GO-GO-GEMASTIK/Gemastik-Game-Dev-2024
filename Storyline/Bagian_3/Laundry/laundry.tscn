@@ -1,0 +1,427 @@
+[gd_scene load_steps=29 format=3 uid="uid://cyse53tnxmq8f"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Laundry/laundry.gd" id="1_2lbf6"]
+[ext_resource type="Texture2D" uid="uid://bb2nhd68arwwx" path="res://Storyline/Bagian_3/Laundry/sprites/base.jpg" id="1_ke2ra"]
+[ext_resource type="Texture2D" uid="uid://bu0woclvsl7sq" path="res://Storyline/Bagian_3/Laundry/sprites/baju only.png" id="2_06pda"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/task.png" id="4_fpgbr"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/Ucing/ucing.tscn" id="4_ng4od"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door/door.png" id="5_mufae"]
+[ext_resource type="Texture2D" uid="uid://b3s377k66plnd" path="res://Storyline/Bagian_3/Laundry/sprites/warning box.png" id="6_msn7e"]
+[ext_resource type="Texture2D" uid="uid://g346tdujjsgs" path="res://Storyline/Bagian_2/Kelas/sprites/TaskWarning/button ok.png" id="7_4n3xt"]
+[ext_resource type="Texture2D" uid="uid://pllfaxgnc6wa" path="res://Sprites/Guide UI/pintu_kantin.png" id="9_qdimd"]
+[ext_resource type="AudioStream" uid="uid://bfdutyo0a50b3" path="res://Sounds/BG Noise/laundry-ambience.mp3" id="10_pulen"]
+[ext_resource type="AudioStream" uid="uid://53es03pbnn37" path="res://Sounds/SFX/UI related/pop.mp3" id="11_bd4be"]
+[ext_resource type="AudioStream" uid="uid://d4bfa1fv01yx0" path="res://Sounds/SFX/pintu/open_door.mp3" id="12_u4wio"]
+[ext_resource type="PackedScene" uid="uid://dnjd1i675jxib" path="res://Utility/SaveGame/save_game.tscn" id="13_kxvk3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sao2q"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vniqk"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0lwcj"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vknog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ni38"]
+size = Vector2(19.102, 30.3244)
+
+[sub_resource type="Animation" id="Animation_hki6k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaBaju/TaskIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/AreaBaju/TaskIcon:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Areas/AreaPintu/DoorIcon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Areas/AreaPintu/DoorIcon:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/PintuKantin:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(489.5, 50)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/PintuKantin:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uvyii"]
+resource_name = "float_door"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaPintu/DoorIcon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -160), Vector2(0, -180), Vector2(0, -160)]
+}
+
+[sub_resource type="Animation" id="Animation_xbxl3"]
+resource_name = "float_task"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaBaju/TaskIcon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -280), Vector2(0, -300), Vector2(0, -280)]
+}
+
+[sub_resource type="Animation" id="Animation_tud5q"]
+resource_name = "hide_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaPintu/DoorIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lhvhu"]
+resource_name = "hide_kantin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/PintuKantin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 90), Vector2(489.5, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/PintuKantin:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v4vp1"]
+resource_name = "hide_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaBaju/TaskIcon:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vtqec"]
+resource_name = "show_door"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaPintu/DoorIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, -160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/AreaPintu/DoorIcon:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tr7ld"]
+resource_name = "show_kantin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/PintuKantin:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(489.5, 50), Vector2(489.5, 90)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/PintuKantin:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3h82r"]
+resource_name = "show_task"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Areas/AreaBaju/TaskIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, -280)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Areas/AreaBaju/TaskIcon:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_leacs"]
+_data = {
+"RESET": SubResource("Animation_hki6k"),
+"float_door": SubResource("Animation_uvyii"),
+"float_task": SubResource("Animation_xbxl3"),
+"hide_door": SubResource("Animation_tud5q"),
+"hide_kantin": SubResource("Animation_lhvhu"),
+"hide_task": SubResource("Animation_v4vp1"),
+"show_door": SubResource("Animation_vtqec"),
+"show_kantin": SubResource("Animation_tr7ld"),
+"show_task": SubResource("Animation_3h82r")
+}
+
+[node name="Laundry" type="Node2D"]
+script = ExtResource("1_2lbf6")
+
+[node name="MapLayout" type="Node2D" parent="."]
+
+[node name="Laundry" type="TextureRect" parent="MapLayout"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ke2ra")
+
+[node name="TumpukanBaju" type="Sprite2D" parent="MapLayout"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("2_06pda")
+offset = Vector2(1250, 540)
+
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
+
+[node name="Floor" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2147, 1006)
+shape = SubResource("WorldBoundaryShape2D_sao2q")
+
+[node name="RWall" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2501, 495)
+shape = SubResource("WorldBoundaryShape2D_vniqk")
+
+[node name="LWall" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(0, 639)
+shape = SubResource("WorldBoundaryShape2D_0lwcj")
+
+[node name="Areas" type="Node2D" parent="."]
+
+[node name="AreaBaju" type="Area2D" parent="Areas"]
+unique_name_in_owner = true
+position = Vector2(880, 822)
+collision_mask = 4
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaBaju"]
+scale = Vector2(15.9621, 13.9902)
+shape = SubResource("RectangleShape2D_vknog")
+
+[node name="TaskIcon" type="Sprite2D" parent="Areas/AreaBaju"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -300)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_fpgbr")
+
+[node name="AreaPintu" type="Area2D" parent="Areas"]
+position = Vector2(2163, 731)
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/AreaPintu"]
+scale = Vector2(16.7522, 16.7522)
+shape = SubResource("RectangleShape2D_0ni38")
+
+[node name="DoorIcon" type="Sprite2D" parent="Areas/AreaPintu"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -180)
+scale = Vector2(0.844862, 0.760376)
+texture = ExtResource("5_mufae")
+
+[node name="MC" parent="." instance=ExtResource("4_ng4od")]
+position = Vector2(2141, 850)
+collision_layer = 4
+
+[node name="SaveGame" parent="." node_paths=PackedStringArray("ucing") instance=ExtResource("13_kxvk3")]
+ucing = NodePath("../MC")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GuideTask" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_msn7e")
+
+[node name="Button" type="Button" parent="CanvasLayer/GuideTask"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 30.0
+offset_right = 136.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("7_4n3xt")
+
+[node name="PintuKantin" type="TextureRect" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -470.5
+offset_top = 50.0
+offset_right = 470.5
+offset_bottom = 259.0
+grow_horizontal = 2
+texture = ExtResource("9_qdimd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_leacs")
+}
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="LaundryAmbience" type="AudioStreamPlayer2D" parent="Sounds"]
+position = Vector2(1374, 800)
+stream = ExtResource("10_pulen")
+volume_db = -12.0
+autoplay = true
+bus = &"BG Noise"
+
+[node name="Pop" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("11_bd4be")
+bus = &"SFX"
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("12_u4wio")
+bus = &"OpenDoor"
+
+[connection signal="body_entered" from="Areas/AreaBaju" to="." method="_on_area_baju_body_entered"]
+[connection signal="body_exited" from="Areas/AreaBaju" to="." method="_on_area_baju_body_exited"]
+[connection signal="body_entered" from="Areas/AreaPintu" to="." method="_on_area_pintu_body_entered"]
+[connection signal="body_exited" from="Areas/AreaPintu" to="." method="_on_area_pintu_body_exited"]
+[connection signal="pressed" from="CanvasLayer/GuideTask/Button" to="." method="_on_button_pressed"]

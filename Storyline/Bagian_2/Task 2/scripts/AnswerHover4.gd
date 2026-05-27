@@ -1,0 +1,28 @@
+extends LineEdit
+
+@onready var other1 = $"../../Question_1"
+@onready var other2 = $"../../Question_2"
+@onready var other3 = $"../../Question_3"
+@onready var base = $"../../TextureRect/BaseLight"
+
+
+
+func _on_mouse_entered():
+	self.modulate.a = 1
+	other1.visible = false
+	other2.visible = false
+	other3.visible = false
+	base.visible = true
+
+
+
+func _on_mouse_exited():
+	self.modulate.a = 1
+	other1.visible = true
+	other2.visible = true
+	other3.visible = true
+	base.visible = false
+
+
+func _on_gui_input(event):
+	pass

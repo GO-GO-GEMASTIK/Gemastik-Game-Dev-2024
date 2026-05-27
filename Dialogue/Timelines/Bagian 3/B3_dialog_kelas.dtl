@@ -1,0 +1,39 @@
+Buba: Ucing! apakah kau sudah dengar?
+Ucing: Belum, Buba. Apa yang terjadi?
+Buba (BingungKaget): Kebun sekolah kita, pakaian-pakaian kita, rusak.
+Buba: Dan hilangnya persediaan makanan kita!
+Cula: Aku mengambil beberapa gambarnya dengan kamera mahalku. \
+Ini, anak baru. Coba lihat.
+set {Jujur} = GameStateManager.get_characteristic("Jujur")
+if {Jujur} == false:
+	Cula (Marah): Apakah itu ulahmu, Ucing? \
+Semua itu terjadi setelah kau pindah kesini.
+	Ucing (BingungKaget): Hei, apa-apaan ini? Jangan sembarang menuduhku!\
+Tentu saja bukan aku!
+	Cula: Benarkah? \
+Tapi kau mendapat vote sebagai pembohong di sesi voting kemarin.
+	Ucing (BingungKaget): Serius, itu bukan aku!
+	Cula: Huuu, pembohong.. pembohong..
+Otan (FlatOtan): Sebenarnya..., aku melihat siapa pelakunya kemarin malam...!
+Otan: Ada... sosok aneh... yang datang dari hutan!
+Otan (FlatOtan): Itu pasti... monster!
+Ucing (BingungKaget): Tunggu, benarkah itu? \
+Sebutkan ciri-cirinya.
+Otan (FlatOtan): ...Pokoknya ia besar sekali!! Ia bertanduk! \
+Berbulu lebat.. dan..-\
+POKOKNYA IA SERAM!!
+Maung (Sedih): Monster? ...Hiks..!! Aku takut...Aaaah!\
+Aaaaaa!
+Buba (Marah): Sudahlah Otan! Jangan mengada-ada!\
+Jangan terlalu sering berbohong!
+Cula (Marah): Iya, mana ada monster di sekitar sini?\
+Ceritamu cuma membuat si cengeng ini ketakutan!
+Maung (Sedih): Aku tidak cengeng...huaaaa...aku tidak cengeng, kan?
+Buba (KepalaBuba): ...Maung, kamu ingat hasil voting Otan kemarin apa?\
+Seharusnya kamu tidak perlu menangis. Otan cuma bercanda.
+Otan (MarahOtan): Aku tidak berbohong kali ini! \
+...Keamanan kita terancam ..oleh monster!
+Maung (Sedih): Aku.. hiks... tidak mau dibohongi kamu lagi, Otan..! \
+Aku tahu kamu hobi berbohong..!
+Buba (KepalaBuba): Sst, sudahlah! Tugas kerja bakti kita sudah dibagikan!\
+Ayo lihat papannya dan kita segera bekerja.

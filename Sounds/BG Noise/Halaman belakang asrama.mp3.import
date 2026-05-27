@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://degaii2x7dghi"
+path="res://.godot/imported/Halaman belakang asrama.mp3-dfab4170b928b8ca578f66c4c5a80233.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BG Noise/Halaman belakang asrama.mp3"
+dest_files=["res://.godot/imported/Halaman belakang asrama.mp3-dfab4170b928b8ca578f66c4c5a80233.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

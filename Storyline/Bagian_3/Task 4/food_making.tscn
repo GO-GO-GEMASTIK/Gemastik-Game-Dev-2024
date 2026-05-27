@@ -1,0 +1,162 @@
+[gd_scene load_steps=21 format=3 uid="uid://cvcbtrandysc0"]
+
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/food_making.gd" id="1_xorr1"]
+[ext_resource type="Texture2D" uid="uid://dbpyx57p8vmg4" path="res://Sprites/Tasks/Task 4/background.jpg" id="2_bfeml"]
+[ext_resource type="Texture2D" uid="uid://cq3dxv3au02tp" path="res://Sprites/Tasks/Task 4/warning .png" id="3_fl4li"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/scripts/warning_screen.gd" id="4_1iya4"]
+[ext_resource type="Texture2D" uid="uid://c03eks4wi1bxq" path="res://Sprites/Tasks/Task 4/button ok.png" id="4_ph0bt"]
+[ext_resource type="Texture2D" uid="uid://royvaqhp3ad" path="res://Sprites/Tasks/Task 4/Done Image/ebi done.png" id="5_oxbg2"]
+[ext_resource type="Texture2D" uid="uid://dkjb16ao7pxl2" path="res://Sprites/Tasks/Task 4/Done Image/egg done.png" id="6_4a3d0"]
+[ext_resource type="Texture2D" uid="uid://b05hay83pte6" path="res://Sprites/Tasks/Task 4/Done Image/milk done.png" id="7_02ks4"]
+[ext_resource type="Texture2D" uid="uid://xg3sj1fsjmr0" path="res://Sprites/Tasks/Task 4/Done Image/nugget done.png" id="8_nf4nl"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/scripts/on_off.gd" id="9_x0biy"]
+[ext_resource type="Texture2D" uid="uid://dnmxt74ijp220" path="res://Sprites/Tasks/Task 4/Animations/egg_on.png" id="10_caxbv"]
+[ext_resource type="Texture2D" uid="uid://c2lke545t1iyf" path="res://Sprites/Tasks/Task 4/Animations/nugget_ on.png" id="11_7rhsi"]
+[ext_resource type="Texture2D" uid="uid://b0ogvdlrs8aup" path="res://Sprites/Tasks/Task 4/Animations/milk_on.png" id="12_csr1u"]
+[ext_resource type="Texture2D" uid="uid://cwtev3qsjnm67" path="res://Sprites/Tasks/Task 4/Animations/ebi_on.png" id="13_su83x"]
+[ext_resource type="Script" path="res://Storyline/Bagian_3/Task 4/scripts/main_plate.gd" id="14_o6pmo"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="15_775vy"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="16_37pr4"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="17_e0676"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vokk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip8tw"]
+size = Vector2(380, 394)
+
+[node name="FoodMaking" type="Node2D" node_paths=PackedStringArray("finish_sound")]
+script = ExtResource("1_xorr1")
+finish_sound = NodePath("Audio/FinishSFX")
+
+[node name="Base" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_bfeml")
+
+[node name="WarningScreen2" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 0
+texture = ExtResource("3_fl4li")
+script = ExtResource("4_1iya4")
+
+[node name="ButtonOk2" type="Button" parent="WarningScreen2"]
+layout_mode = 0
+offset_left = 824.0
+offset_top = 584.0
+offset_right = 1096.0
+offset_bottom = 677.0
+icon = ExtResource("4_ph0bt")
+flat = true
+
+[node name="MainPlate" type="Area2D" parent="." node_paths=PackedStringArray("correct_sound")]
+position = Vector2(962, 430)
+script = ExtResource("14_o6pmo")
+correct_sound = NodePath("../Audio/CorrectSFX")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MainPlate"]
+scale = Vector2(28.4757, 28.1458)
+shape = SubResource("CircleShape2D_vokk5")
+
+[node name="EbiDone" type="Sprite2D" parent="MainPlate"]
+visible = false
+position = Vector2(222, 542)
+texture = ExtResource("5_oxbg2")
+
+[node name="EggDone" type="Sprite2D" parent="MainPlate"]
+visible = false
+position = Vector2(-212, 396)
+texture = ExtResource("6_4a3d0")
+
+[node name="MilkDone" type="Sprite2D" parent="MainPlate"]
+visible = false
+position = Vector2(224, 396)
+texture = ExtResource("7_02ks4")
+
+[node name="NuggetDone" type="Sprite2D" parent="MainPlate"]
+visible = false
+position = Vector2(-214, 542)
+texture = ExtResource("8_nf4nl")
+
+[node name="FoodContainer" type="Node" parent="."]
+
+[node name="PlateEgg" type="Area2D" parent="FoodContainer"]
+position = Vector2(191, 235)
+script = ExtResource("9_x0biy")
+
+[node name="On" type="Sprite2D" parent="FoodContainer/PlateEgg"]
+visible = false
+position = Vector2(10, 1.5)
+texture = ExtResource("10_caxbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FoodContainer/PlateEgg"]
+shape = SubResource("RectangleShape2D_ip8tw")
+
+[node name="PlateNugget" type="Area2D" parent="FoodContainer"]
+position = Vector2(191, 844)
+script = ExtResource("9_x0biy")
+
+[node name="On" type="Sprite2D" parent="FoodContainer/PlateNugget"]
+visible = false
+position = Vector2(6, 8)
+texture = ExtResource("11_7rhsi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FoodContainer/PlateNugget"]
+shape = SubResource("RectangleShape2D_ip8tw")
+
+[node name="PlateMilk" type="Area2D" parent="FoodContainer"]
+position = Vector2(1727.5, 844)
+script = ExtResource("9_x0biy")
+
+[node name="On" type="Sprite2D" parent="FoodContainer/PlateMilk"]
+visible = false
+position = Vector2(1, 5)
+texture = ExtResource("12_csr1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FoodContainer/PlateMilk"]
+shape = SubResource("RectangleShape2D_ip8tw")
+
+[node name="PlateEbi" type="Area2D" parent="FoodContainer"]
+position = Vector2(1728, 234)
+script = ExtResource("9_x0biy")
+
+[node name="On" type="Sprite2D" parent="FoodContainer/PlateEbi"]
+visible = false
+position = Vector2(-5.5, 1.5)
+texture = ExtResource("13_su83x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FoodContainer/PlateEbi"]
+shape = SubResource("RectangleShape2D_ip8tw")
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("15_775vy")
+autoplay = true
+bus = &"Music"
+
+[node name="FinishSFX" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("16_37pr4")
+bus = &"SFX"
+
+[node name="CorrectSFX" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("17_e0676")
+bus = &"SFX"
+
+[connection signal="pressed" from="WarningScreen2/ButtonOk2" to="WarningScreen2" method="_on_button_ok_2_pressed"]
+[connection signal="area_entered" from="MainPlate" to="." method="_on_main_plate_area_entered"]
+[connection signal="area_entered" from="MainPlate" to="MainPlate" method="_on_area_entered"]
+[connection signal="area_exited" from="MainPlate" to="." method="_on_main_plate_area_exited"]
+[connection signal="area_exited" from="MainPlate" to="MainPlate" method="_on_area_exited"]
+[connection signal="input_event" from="FoodContainer/PlateEgg" to="." method="_on_plate_egg_input_event"]
+[connection signal="mouse_entered" from="FoodContainer/PlateEgg" to="FoodContainer/PlateEgg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FoodContainer/PlateEgg" to="FoodContainer/PlateEgg" method="_on_mouse_exited"]
+[connection signal="input_event" from="FoodContainer/PlateNugget" to="." method="_on_plate_nugget_input_event"]
+[connection signal="mouse_entered" from="FoodContainer/PlateNugget" to="FoodContainer/PlateNugget" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FoodContainer/PlateNugget" to="FoodContainer/PlateNugget" method="_on_mouse_exited"]
+[connection signal="input_event" from="FoodContainer/PlateMilk" to="." method="_on_plate_milk_input_event"]
+[connection signal="mouse_entered" from="FoodContainer/PlateMilk" to="FoodContainer/PlateMilk" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FoodContainer/PlateMilk" to="FoodContainer/PlateMilk" method="_on_mouse_exited"]
+[connection signal="input_event" from="FoodContainer/PlateEbi" to="." method="_on_plate_ebi_input_event"]
+[connection signal="mouse_entered" from="FoodContainer/PlateEbi" to="FoodContainer/PlateEbi" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FoodContainer/PlateEbi" to="FoodContainer/PlateEbi" method="_on_mouse_exited"]

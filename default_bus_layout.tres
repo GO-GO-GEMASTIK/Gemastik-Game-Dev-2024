@@ -1,16 +1,75 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://bgsph6bkevtwi"]
+[gd_resource type="AudioBusLayout" load_steps=9 format=3 uid="uid://bgsph6bkevtwi"]
+
+[sub_resource type="AudioEffectPanner" id="AudioEffectPanner_0ail5"]
+resource_name = "Panner"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_6l038"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_8eag1"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_1l4md"]
+resource_name = "Reverb"
+room_size = 0.63
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_cw3de"]
+resource_name = "EQ"
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_o3dy6"]
+resource_name = "Compressor"
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_svycd"]
+resource_name = "Chorus"
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_12gbt"]
+resource_name = "Filter"
 
 [resource]
-bus/0/volume_db = 2.647
+bus/0/volume_db = -5.04224
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = 0.464998
+bus/1/volume_db = 1.45601
 bus/1/send = &"Master"
-bus/2/name = &"Music"
+bus/1/effect/0/effect = SubResource("AudioEffectPanner_0ail5")
+bus/1/effect/0/enabled = false
+bus/1/effect/1/effect = SubResource("AudioEffectReverb_6l038")
+bus/1/effect/1/enabled = false
+bus/2/name = &"BGM"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -0.725993
+bus/2/volume_db = -1.51925
 bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_8eag1")
+bus/2/effect/0/enabled = true
+bus/3/name = &"BG Noise"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -10.5236
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectReverb_1l4md")
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource("AudioEffectEQ_cw3de")
+bus/3/effect/1/enabled = false
+bus/3/effect/2/effect = SubResource("AudioEffectCompressor_o3dy6")
+bus/3/effect/2/enabled = false
+bus/4/name = &"OpenDoor"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -3.11736
+bus/4/send = &"Master"
+bus/4/effect/0/effect = SubResource("AudioEffectChorus_svycd")
+bus/4/effect/0/enabled = true
+bus/5/name = &"Walking"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = -3.11736
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectFilter_12gbt")
+bus/5/effect/0/enabled = true

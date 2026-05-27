@@ -1,0 +1,48 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "Torachan",
+"description": "",
+"display_name": "Torachan",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"Marah": {
+"export_overrides": {
+"image": "\"res://Characters/Torachan/ekspresi/marah.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 150),
+"scale": 1.8,
+"scene": ""
+},
+"Sedih": {
+"export_overrides": {
+"image": "\"res://Characters/Torachan/ekspresi/sedih.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 150),
+"scale": 1.8,
+"scene": ""
+},
+"Torachan": {
+"export_overrides": {
+"image": "\"res://Characters/Torachan/monster.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 150),
+"scale": 1.8,
+"scene": ""
+}
+},
+"scale": 1.0
+}

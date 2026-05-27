@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" load_steps=2 format=3 uid="uid://dpsq5cdw3wshd"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_h06y5"]
+
+[resource]
+script = ExtResource("1_h06y5")
+entries = {
+"Buba": {
+"case_sensitive": false,
+"color": Color(0.996078, 0.988235, 0.784314, 1),
+"name": "Buba",
+"text": "Buba ialah seekor kerbau kecil yang disebut Anoa. Anoa memiliki bulu yang pendek dan tanduk yang melengkung ke belakang, mereka dapat ditemukan di daerah Sulawesi Tenggara.",
+"title": "Buba"
+},
+"Cula": {
+"color": Color(0.996078, 0.988235, 0.784314, 1),
+"name": "Cula",
+"text": "Cula merupakan Badak Bercula satu yang merupakan salah satu spesies badak paling langka di dunia. Sesuai namanya, bisa dilihat kalau Cula memiliki satu cula di bagian hidung!",
+"title": "Cula"
+},
+"Maung": {
+"case_sensitive": false,
+"color": Color(0.996078, 0.988235, 0.784314, 1),
+"name": "Maung",
+"text": "Maung merupakan seekor Harimau Sumatera. Dapat ditemukan di pulau Sumatera, mereka memiliki ukuran yang lebih kecil dibandingkan harimau lainnya, dengan bulu yang lebih gelap dan garis-garis hitam tebal.",
+"title": "Maung"
+},
+"Otan": {
+"case_sensitive": false,
+"color": Color(0.996078, 0.988235, 0.784314, 1),
+"name": "Otan",
+"text": "Otan adalah seekor Orang Utan, kera besar yang hidup di hutan hujan tropis dan memiliki bulu merah kecoklatan dan dikenal sangat cerdas.",
+"title": "Otan"
+},
+"Ucing": {
+"case_sensitive": true,
+"color": Color(0.996094, 0.987886, 0.78598, 1),
+"extra": "",
+"name": "Ucing",
+"text": "Ucing merupakan seekor Kucing Hutan. Jenis kucing ini berbulu coklat kemerahan, memiliki telinga yang besar, dan moncong berwarna putih, seperti Ucing!
+",
+"title": "Ucing"
+}
+}
+enabled = true
+_translation_id = ""
+_translation_keys = {}

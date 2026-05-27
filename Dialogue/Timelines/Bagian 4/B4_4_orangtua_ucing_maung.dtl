@@ -1,0 +1,20 @@
+Maung: Itu kedua orang tuamu?
+Ucing: Ya. Mereka adalah polisi detektif yang hebat. Aku ingin menjadi seperti mereka
+Ucing (BingungKaget): Aku akan pergi ke hutan dan mencari Otan & Cula
+Maung (Bingung): Wah, apakah kamu yakin Ucing?
+Ucing: Ya. Aku ingin berani dan menolong banyak orang seperti kedua orang tuaku
+Maung: Kau tau Ucing?
+Maung (Sedih): Ibuku meninggal saat melahirkan aku. Aku dibesarkan oleh ayahku. Ia adalah harimau yang hebat dan berani.
+Maung: Suatu hari desa kami dirampok oleh singa dan beruang perampok. Ayahku melawan dan menahan mereka semua. Aku dibawa oleh teman ayahku agar selamat.
+Maung: Namun setelah itu aku dan ayahku tidak pernah bertemu lagi. Dan aku akhirnya tinggal di asrama ini...
+Maung: Aku ingat perompak perompak itu sangat jahat, aku sangat takut. Itu sangat membuatku trauma.
+Maung (Marah): Tapi melihatmu ingin meniru kedua orangtua-mu, memberikan aku kekuatan dan keberanian untuk menjadi hebat seperti ayahku.
+Maung (Maung): Aku akan ikut denganmu Ucing!
+[signal arg="buba_datang"]
+Buba: Maaf aku mendengar pembicaraan kalian diam-diam.
+Buba: Bolehkah aku ikut dengan kalian???
+[signal arg="buba_pindah"]
+[wait time="1.0"]
+Ucing: Ya, tentu saja Buba!
+Maung: Sebaiknya kita pergi sekarang. Seharusnya tidak ada yang mengawasi pintu belakang!
+Buba: Baiklah, ayo segera pergi!

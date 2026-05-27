@@ -11,54 +11,83 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://Storyline/1_Main Menu/main_menu.tscn"
+run/main_scene="res://Storyline/Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://Sprites/Main Characters/sketch.png"
+config/icon="res://Characters/Ucing/ucing.png"
 
 [autoload]
 
-ZIndexManager="*res://Utility/ZIndexManager.gd"
-TransitionScreen="*res://Utility/transition_screen.tscn"
-GameStateManager="*res://Utility/GameStateManager.gd"
+ZIndexManager="*res://Utility/IndexManager/ZIndexManager.gd"
+TransitionScreen="*res://Utility/Transition/transition_screen.tscn"
+GameStateManager="*res://Utility/GameStateManager/GameStateManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"Buba": "res://Dialogue/Characters/Buba.dch",
-"Characters/Maung": "res://Dialogue/Characters/Maung.dch",
-"Otan": "res://Dialogue/Characters/Otan.dch",
-"Ucing": "res://Dialogue/Characters/Ucing.dch",
-"character": "res://Characters/Maung/character.dch",
+"Bu Cilla": "res://Characters/Bu Cilla/Bu Cilla.dch",
+"Buba": "res://Characters/Buba/Buba.dch",
+"Cula": "res://Characters/Cula/Cula.dch",
+"Maung": "res://Characters/Maung/Maung.dch",
+"Monster": "res://Characters/Torachan/Monster.dch",
+"Otan": "res://Characters/Otan/Otan.dch",
+"Ucing": "res://Characters/Ucing/Ucing.dch",
+"papan": "res://Dialogue/papan.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
-"box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
-"dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
+"B3_after_food": "res://Dialogue/Timelines/Bagian 3/B3_after_food.dtl",
+"B3_after_laundry": "res://Dialogue/Timelines/Bagian 3/B3_after_laundry.dtl",
+"B3_dialog_kelas": "res://Dialogue/Timelines/Bagian 3/B3_dialog_kelas.dtl",
+"B3_mendapat_tugas": "res://Dialogue/Timelines/Bagian 3/B3_mendapat_tugas.dtl",
+"B3_monolog_kamar": "res://Dialogue/Timelines/Bagian 3/B3_monolog_kamar.dtl",
+"B4_10_monster_end": "res://Dialogue/Timelines/Bagian 4/B4_10_monster_end.dtl",
+"B4_1_kamar_malam": "res://Dialogue/Timelines/Bagian 4/B4_1_kamar_malam.dtl",
+"B4_2_kamar_pagi": "res://Dialogue/Timelines/Bagian 4/B4_2_kamar_pagi.dtl",
+"B4_3_kamar_malam_kedua": "res://Dialogue/Timelines/Bagian 4/B4_3_kamar_malam_kedua.dtl",
+"B4_4_orangtua_ucing_maung": "res://Dialogue/Timelines/Bagian 4/B4_4_orangtua_ucing_maung.dtl",
+"B4_5_hutan_ketemu_kamera": "res://Dialogue/Timelines/Bagian 4/B4_5_hutan_ketemu_kamera.dtl",
+"B4_6_hutan_after_kamera": "res://Dialogue/Timelines/Bagian 4/B4_6_hutan_after_kamera.dtl",
+"B4_7_dalam_goa": "res://Dialogue/Timelines/Bagian 4/B4_7_dalam_goa.dtl",
+"B4_8_senter_fixed": "res://Dialogue/Timelines/Bagian 4/B4_8_senter_fixed.dtl",
+"B4_9_after_gembok": "res://Dialogue/Timelines/Bagian 4/B4_9_after_gembok.dtl",
+"B4_depan_goa": "res://Dialogue/Timelines/Bagian 4/B4_depan_goa.dtl",
+"B4_kawasan_hutan": "res://Dialogue/Timelines/Bagian 4/B4_kawasan_hutan.dtl",
+"B4_melihat_tembok": "res://Dialogue/Timelines/Bagian 4/B4_melihat_tembok.dtl",
+"box_jatuh": "res://Dialogue/Timelines/Bagian 1/box_jatuh.dtl",
+"box_selesai": "res://Dialogue/Timelines/Bagian 1/box_selesai.dtl",
+"dialog_kelas": "res://Dialogue/Timelines/Bagian 2/dialog_kelas.dtl",
+"dialog_kelas_after_2": "res://Dialogue/Timelines/Bagian 2/dialog_kelas_after_2.dtl",
+"dialog_papan": "res://Dialogue/Timelines/Bagian 2/dialog_papan.dtl",
+"dialog_perkenalan": "res://Dialogue/Timelines/Bagian 2/dialog_perkenalan.dtl",
+"dialog_sifat": "res://Dialogue/Timelines/Bagian 2/dialog_sifat.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
-"gudang": "res://Dialogue/Timelines/gudang.dtl",
-"gudang_buba": "res://Dialogue/Timelines/gudang_buba.dtl",
-"intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
-"ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
-"ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
-"ke_koridor_utama": "res://Dialogue/Timelines/ke_koridor_utama.dtl",
+"gudang": "res://Dialogue/Timelines/Bagian 1/gudang.dtl",
+"intro_main_room": "res://Dialogue/Timelines/Bagian 1/intro_main_room.dtl",
 "locked_door": "res://Dialogue/Timelines/locked_door.dtl",
-"main_room": "res://Dialogue/Timelines/main_room.dtl",
-"otan": "res://Dialogue/Timelines/main_room.dtl",
-"papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
-"scary": "res://Dialogue/Timelines/scary.dtl",
+"main_room": "res://Dialogue/Timelines/Bagian 1/main_room.dtl",
+"otan": "res://Dialogue/Timelines/Bagian 1/main_room.dtl",
+"otan_reminding": "res://Dialogue/Timelines/Bagian 1/otan_reminding.dtl",
+"papan_tulis": "res://Dialogue/Timelines/Bagian 1/intro_main_room.dtl",
+"placeholder": "res://Dialogue/Timelines/placeholder.dtl",
+"scary": "res://Dialogue/Timelines/Bagian 1/scary.dtl",
 "senter_nyala": "res://Dialogue/Timelines/senter_nyala.dtl",
-"susun_kotak": "res://Dialogue/Timelines/susun_kotak.dtl",
-"terjebak": "res://Dialogue/Timelines/terjebak.dtl",
+"testing": "res://Dialogue/Timelines/testing.dtl",
 "unable_door": "res://Dialogue/Timelines/unable_door.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
-layout/style_list=["res://Dialogue/speaker_textbox.tres"]
+layout/style_list=["res://Dialogue/speaker_textbox.tres", "res://Dialogue/vn_style.tres"]
 layout/default_style="res://Dialogue/speaker_textbox.tres"
-glossary/default_case_sensitive=true
-variables={}
+glossary/default_case_sensitive=false
+variables={
+"Jujur": false,
+"KerjaSama": false,
+"Menghargai": false,
+"kejujuran": 0,
+"kerjasama": 0,
+"rendah_hati": 0
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -76,13 +105,14 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+glossary/glossary_files=["res://Dialogue/Glossary/glossary_ucing.tres"]
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -163,9 +193,19 @@ key_d={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
 ]
 }
+run={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="npc"
+2d_physics/layer_3="ucing"
+2d_physics/layer_4="items"
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.051971, 0.051971, 0.051971, 1)
